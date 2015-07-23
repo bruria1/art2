@@ -95,3 +95,89 @@
 .region-top .flexslider:hover .flex-direction-nav a.flex-next {
   right: auto !important;
 }
+
+/**********  exhibition page ************/
+/* line 102, ../../sass/components/arts-rtl.scss */
+.node-type-exhibition #wrapper-title #page-title {
+  border-left: 1px solid;
+  margin-left: 7px;
+  padding-left: 11px;
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+}
+/* line 112, ../../sass/components/arts-rtl.scss */
+.node-type-exhibition .treasurers-designers .field-name-field-treasurers-name {
+  border-left: 1px solid;
+  margin-left: 7px;
+  padding-left: 11px;
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+/* line 121, ../../sass/components/arts-rtl.scss */
+.node-type-exhibition .treasurers-designers .field-name-field-designers .field-item {
+  float: right;
+  margin-left: 5px;
+  margin-right: 0;
+}
+/* line 129, ../../sass/components/arts-rtl.scss */
+.node-type-exhibition .dates .open {
+  border-left: 1px solid;
+  margin-left: 7px;
+  padding-left: 11px;
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+/* line 137, ../../sass/components/arts-rtl.scss */
+.node-type-exhibition .dates .label {
+  float: right;
+  margin-left: 5px;
+  margin-right: 0;
+}
+/* line 142, ../../sass/components/arts-rtl.scss */
+.node-type-exhibition .dates .field {
+  float: right;
+}
+
+/* line 149, ../../sass/components/arts-rtl.scss */
+#block-views-also-intersting-block .views-row {
+  margin-left: 24px;
+  margin-right: 0;
+}
+/* line 153, ../../sass/components/arts-rtl.scss */
+#block-views-also-intersting-block .views-row-last {
+  margin-left: 0;
+}
+
+/**********  exhibition gallery************/
+/* line 161, ../../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .view-footer, #block-views-exhibition-gallery-block .view-footer {
+  float: left;
+  margin-left: 1px;
+  margin-right: 0;
+}
+/* line 165, ../../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .view-footer div, #block-views-exhibition-gallery-block .view-footer div {
+  float: left;
+  margin-right: 5px;
+  margin-left: 0;
+}
+/* line 172, ../../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-prev {
+  right: 0;
+  left: auto;
+}
+/* line 176, ../../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-next {
+  right: 30px;
+  left: auto;
+  background-position: 0px 0;
+}
+/* line 181, ../../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-prev {
+  right: 0px;
+  left: auto;
+  background-position: -38px 0;
+}
