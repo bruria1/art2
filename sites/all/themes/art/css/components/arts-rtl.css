@@ -27,7 +27,7 @@
 }
 
 /* line 29, ../../sass/components/arts-rtl.scss */
-#main-menu {
+#block-system-main-menu {
   float: right;
 }
 
@@ -180,4 +180,22 @@
   right: 0px;
   left: auto;
   background-position: -38px 0;
+}
+
+/*****************  footer  ************/
+/* line 192, ../../sass/components/arts-rtl.scss */
+#footer #block-block-1 {
+  background: url("../images/huji.png") no-repeat right center transparent;
+  float: right;
+  padding: 12px 55px 12px 16px;
+}
+/* line 197, ../../sass/components/arts-rtl.scss */
+#footer #block-block-3 {
+  float: right;
+}
+/* line 200, ../../sass/components/arts-rtl.scss */
+#footer #block-block-2 {
+  padding-right: 16px;
+  padding-left: 0;
+  float: left;
 }
