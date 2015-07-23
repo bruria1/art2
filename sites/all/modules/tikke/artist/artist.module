@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Artist feature.
+ */
+
+include_once 'artist.features.inc';

@@ -1,0 +1,56 @@
+***************
+*** 41,63 ****
+   * @see FeedsProcessor::existingEntityId()
+   */
+  function field_validation_feeds_existing_entity_id($target, $value, $entity_type, $bundle_name) {
+    module_load_include('inc', 'ctools', 'includes/export');
+    $unique_rules = ctools_export_load_object('field_validation_rule', 'conditions', array('entity_type' => $entity_type, 'bundle' => $bundle_name, 'field_name' => $target, 'validator' => 'field_validation_unique_validator'));
+    $unique_rule = reset($unique_rules);
+    if (!empty($unique_rule)) {
+      // Get unique entity ID from unique field value. Note that we are not using
+      // field_validation_unique_validator::validate() because we don't want to
+      // fire set_error().
+      $query = new EntityFieldQuery();
+-     $result = $query->entityCondition('entity_type', $entity_type)
+-       ->entityCondition('bundle', $bundle_name)
+-       ->fieldCondition($target, $unique_rule->col, $value, '=')
+-       // Run the query as user 1.
+-       ->addMetaData('account', user_load(1))
+-       ->execute();
+      if (isset($result[$entity_type])) {
+        $ids = array_keys($result[$entity_type]);
+        return reset($ids);
+      }
+    }
+- }--- 41,71 ----
+   * @see FeedsProcessor::existingEntityId()
+   */
+  function field_validation_feeds_existing_entity_id($target, $value, $entity_type, $bundle_name) {
++   global $language_content;
++ 
+    module_load_include('inc', 'ctools', 'includes/export');
+    $unique_rules = ctools_export_load_object('field_validation_rule', 'conditions', array('entity_type' => $entity_type, 'bundle' => $bundle_name, 'field_name' => $target, 'validator' => 'field_validation_unique_validator'));
+    $unique_rule = reset($unique_rules);
++ 
+    if (!empty($unique_rule)) {
+      // Get unique entity ID from unique field value. Note that we are not using
+      // field_validation_unique_validator::validate() because we don't want to
+      // fire set_error().
+      $query = new EntityFieldQuery();
++     $query = new EntityFieldQuery();
++     $query->entityCondition('entity_type', $entity_type);
++     $query->entityCondition('bundle', $bundle_name);
++     $query->fieldCondition($target, $unique_rule->col, $value, '=');
++ 
++     if($unique_rule->settings['data'] == 'per_language'){
++     $query->propertyCondition('language', $language_content->language, '=');
++ 			       }
++     // Run the query as user 1.
++     $query->addMetaData('account', user_load(1));
++     $result = $query->execute();
+      if (isset($result[$entity_type])) {
+        $ids = array_keys($result[$entity_type]);
+        return reset($ids);
+      }
+    }
++ }

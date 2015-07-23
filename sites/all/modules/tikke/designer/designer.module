@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Designer feature.
+ */
+
+include_once 'designer.features.inc';

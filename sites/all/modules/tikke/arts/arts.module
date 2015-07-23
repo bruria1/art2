@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Arts feature.
+ */
+
+include_once 'arts.features.inc';

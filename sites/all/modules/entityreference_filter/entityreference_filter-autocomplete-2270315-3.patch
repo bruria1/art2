@@ -1,0 +1,183 @@
+diff --git a/entityreference_filter.module b/entityreference_filter.module
+index ab4d9b0..8e21cef 100644
+--- a/entityreference_filter.module
++++ b/entityreference_filter.module
+@@ -28,6 +28,14 @@ function entityreference_filter_menu() {
+     'file' => 'entityreference_filter.views.inc',
+   );
+ 
++  $items['entityreference_filter/autocomplete/%/%/%/%'] = array(
++    'title' => 'Autocomplete views entityreference filter',
++    'page callback' => 'entityreference_filter_autocomplete',
++    'page arguments' => array(2, 3, 4, 5),
++    'access callback' => TRUE,
++    'type' => MENU_CALLBACK,
++  );
++
+   return $items;
+ }
+ 
+@@ -67,3 +75,29 @@ function entityreference_filter_exposed_form_after_build($form) {
+ 
+   return $form;
+ }
++
++function entityreference_filter_autocomplete($view_name, $display_name, $controlling_filter, $args = '', $string = '') {
++  // Check that the view is valid and the display still exists.
++  $view = views_get_view($view_name);
++  $view->set_display($display_name);
++  $view->build();
++  $filter = $view->filter[$controlling_filter];
++
++  if (!empty($filter->options['reference_display'])) {
++    // Make sure the view is rebuild with the right arguments
++    $filter->view->args = $args == 'NULL' ? array() : explode(',', $args);
++    $result = $filter->get_configured_views_result(array('match' => $string, 'match_operator' => 'CONTAINS'));
++  }
++
++  if (!empty($result)) {
++    foreach ( $result as $id => $label ) {
++      $label_stripped = preg_replace("/\s+/", ' ', trim(strip_tags($label)));
++      $output["{$label_stripped} ($id)"] = $label;
++    }
++  }
++  else {
++    $output = array();
++  }
++
++  drupal_json_output($output);;
++}
+diff --git a/views/entityreference_filter_view_result.inc b/views/entityreference_filter_view_result.inc
+index 7c2fa63..6b0df20 100644
+--- a/views/entityreference_filter_view_result.inc
++++ b/views/entityreference_filter_view_result.inc
+@@ -11,12 +11,41 @@
+  * @ingroup views_filter_handlers
+  */
+ class entityreference_filter_view_result extends views_handler_filter_in_operator {
++  function exposed_form(&$form, &$form_state) {
++    parent::exposed_form($form, $form_state);
++
++    if ($this->options['expose']['reference_widget'] == 'autocomplete') {
++      $identifier = $this->options['expose']['identifier'];
++      $args = $this->get_view_args();
++      $args = !empty($args) ? implode(',', $args) : 'NULL';
++      $autocomplete_arguments = "{$this->view->name}/{$this->view->current_display}/{$this->options['id']}/{$args}";
++      $element = &$form[$identifier];
++      $element['#type'] = 'textfield';
++      $element['#autocomplete_path'] = "entityreference_filter/autocomplete/{$autocomplete_arguments}";
++      unset($element['#options'], $element['#size'], $element['#multiple']);
++    }
++  }
++
++  function exposed_validate(&$form, &$form_state) {
++    parent::exposed_validate($form, $form_state);
++
++    $identifier = $this->options['expose']['identifier'];
++
++    if ($this->options['expose']['reference_widget'] == 'autocomplete') {
++      if ($value = &$form_state['values'][$identifier]) {
++        if (preg_match("/.+\((\d+)\)/", $value, $matches)) {
++          $value = $matches[1];
++        }
++      }
++    }
++  }
+ 
+   function option_definition() {
+     $options = parent::option_definition();
+ 
+     $options['reference_display'] = array('default' => '');
+     $options['reference_arguments'] = array('default' => '');
++    $options['expose']['contains']['reference_widget'] = array('default' => 'select');
+     $options['expose']['contains']['hide_empty_filter'] = array('default' => TRUE, 'bool' => TRUE);
+ 
+     return $options;
+@@ -28,6 +57,10 @@ class entityreference_filter_view_result extends views_handler_filter_in_operato
+     if (!empty($form_state['exposed'])) {
+       // Run time.
+       $identifier = $this->options['expose']['identifier'];
++      if ($this->options['expose']['reference_widget'] == 'autocomplete') {
++        return;
++      }
++
+       if ((isset($this->options['reference_arguments'])) && (strpos($this->options['reference_arguments'], '[') !== FALSE)) {
+         // This filter depends on other filters dynamically,
+         // store data for configuring Drupal.settings.
+@@ -73,7 +106,7 @@ class entityreference_filter_view_result extends views_handler_filter_in_operato
+       }
+       $form_state['input'][$identifier] = $default_value;
+ 
+-      if ((empty($values)) && (!empty($this->options['expose']['hide_empty_filter']))) {
++      if ((empty($values)) && (!empty($this->options['expose']['hide_empty_filter'])) && $this->options['expose']['reference_widget'] == 'select') {
+         // Hide the form element.
+         if (isset($form['value'])) {
+           $form['value']['#prefix'] = '<div class="element-hidden">';
+@@ -145,6 +178,16 @@ class entityreference_filter_view_result extends views_handler_filter_in_operato
+   function expose_form(&$form, &$form_state) {
+     parent::expose_form($form, $form_state);
+ 
++    $form['expose']['reference_widget'] = array(
++      '#type' => 'select',
++      '#title' => t('Exposed widget'),
++      '#default_value' => isset($this->options['expose']['reference_widget']) ? $this->options['expose']['reference_widget'] : '',
++      '#options' => array(
++        'select' => t('Select list'),
++        'autocomplete' => t('Autocomplete field'),
++      ),
++    );
++
+     $form['expose']['hide_empty_filter'] = array(
+       '#type' => 'checkbox',
+       '#title' => t('Hide empty filter'),
+@@ -163,6 +206,10 @@ class entityreference_filter_view_result extends views_handler_filter_in_operato
+       }
+     }
+ 
++    if ($this->options['expose']['reference_widget'] == 'autocomplete') {
++      unset($this->options['expose']['multiple']);
++    }
++
+     return $info;
+   }
+ 
+@@ -194,7 +241,7 @@ class entityreference_filter_view_result extends views_handler_filter_in_operato
+     parent::query();
+   }
+ 
+-  function get_configured_views_result() {
++  function get_configured_views_result($entityreference_options = array()) {
+     if (empty($this->options['reference_display'])) {
+       return array();
+     }
+@@ -210,10 +257,17 @@ class entityreference_filter_view_result extends views_handler_filter_in_operato
+     $view->is_cacheable = FALSE;
+     $view->set_items_per_page(0);
+     // Make the display render the result as array.
+-    $view->display_handler->set_option('entityreference_options', array('limit' => 0));
++    // Make sure not to override any entityreference options set elsewhere
++    $entityreference_options += array('limit' => 0);
++    $view->display_handler->set_option('entityreference_options', $entityreference_options);
++    $args = $this->get_view_args();
++    $result = $view->execute_display($display_name, $args);
+ 
+-    $filters_by_identifier = array();
++    return $result ? $result : array();
++  }
+ 
++  function get_view_args() {
++    $filters_by_identifier = array();
+     $args = $this->view->args;
+     if (isset($this->options['reference_arguments'])) {
+       $arg_str = trim($this->options['reference_arguments']);
+@@ -289,9 +343,7 @@ class entityreference_filter_view_result extends views_handler_filter_in_operato
+       }
+     }
+ 
+-    $result = $view->execute_display($display_name, $args);
+-
+-    return $result ? $result : array();
++    return $args;
+   }
+ 
+   function dynamic_filter_depends_on($filter_name) {

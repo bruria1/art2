@@ -1,0 +1,97 @@
+/* line 4, ../../sass/components/arts-rtl.scss */
+#block-search-form label {
+  right: 47px;
+  margin-right: -39px;
+}
+/* line 8, ../../sass/components/arts-rtl.scss */
+#block-search-form .form-item {
+  float: right;
+}
+/* line 11, ../../sass/components/arts-rtl.scss */
+#block-search-form input.form-text {
+  padding-right: 3px;
+}
+/* line 14, ../../sass/components/arts-rtl.scss */
+#block-search-form input.form-submit {
+  background: url("../images/search-icon.png") no-repeat 0 0 transparent;
+  float: left;
+  left: 6px;
+  right: auto;
+}
+
+/**********  main menu  **************/
+/* line 24, ../../sass/components/arts-rtl.scss */
+#triangle-topleft {
+  border-right-width: 0;
+  border-left-width: 126px;
+}
+
+/* line 29, ../../sass/components/arts-rtl.scss */
+#main-menu {
+  float: right;
+}
+
+/* line 33, ../../sass/components/arts-rtl.scss */
+.menu-button {
+  float: right;
+  padding: 11px 16px 6px 11px;
+}
+/* line 36, ../../sass/components/arts-rtl.scss */
+.menu-button .text {
+  float: right;
+}
+/* line 39, ../../sass/components/arts-rtl.scss */
+.menu-button .lines {
+  float: left;
+  padding-right: 13px;
+  padding-left: 0;
+}
+
+/*********  front  ***********/
+/* line 51, ../../sass/components/arts-rtl.scss */
+.region-top .text-slide .wrapper-width .text {
+  left: 0;
+  right: auto;
+  text-align: left;
+}
+/* line 56, ../../sass/components/arts-rtl.scss */
+.region-top .text-slide .wrapper-width .artist {
+  float: right;
+  border-left: 1px solid #fff;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+/* line 65, ../../sass/components/arts-rtl.scss */
+.region-top .text-slide .wrapper-width .continue {
+  float: right;
+  clear: right;
+}
+/* line 73, ../../sass/components/arts-rtl.scss */
+.region-top .flex-direction-nav a.flex-prev {
+  background-position: 29px 0;
+  right: 20px;
+  left: auto;
+}
+/* line 78, ../../sass/components/arts-rtl.scss */
+.region-top .flex-direction-nav a.flex-next {
+  left: 20px;
+  right: auto;
+  background-position: 120px 0px;
+}
+/* line 85, ../../sass/components/arts-rtl.scss */
+.region-top .flexslider:hover .flex-direction-nav a.flex-next {
+  left: 20px !important;
+  right: auto;
+}
+/* line 89, ../../sass/components/arts-rtl.scss */
+.region-top .flexslider:hover .flex-direction-nav a.flex-prev {
+  right: 20px !important;
+  left: auto;
+}
+/* line 93, ../../sass/components/arts-rtl.scss */
+.region-top .flexslider:hover .flex-direction-nav a.flex-next {
+  right: auto !important;
+}

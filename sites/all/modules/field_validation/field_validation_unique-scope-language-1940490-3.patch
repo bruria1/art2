@@ -1,0 +1,129 @@
+diff --git a/field_validation.feeds.inc b/field_validation.feeds.inc
+index cc3a885..3c71f40 100644
+--- a/field_validation.feeds.inc
++++ b/field_validation.feeds.inc
+@@ -41,23 +41,31 @@ function field_validation_feeds_processor_targets_alter(&$targets, $entity_type,
+  * @see FeedsProcessor::existingEntityId()
+  */
+ function field_validation_feeds_existing_entity_id($target, $value, $entity_type, $bundle_name) {
++  global $language_content;
++
+   module_load_include('inc', 'ctools', 'includes/export');
+   $unique_rules = ctools_export_load_object('field_validation_rule', 'conditions', array('entity_type' => $entity_type, 'bundle' => $bundle_name, 'field_name' => $target, 'validator' => 'field_validation_unique_validator'));
+   $unique_rule = reset($unique_rules);
++
+   if (!empty($unique_rule)) {
+     // Get unique entity ID from unique field value. Note that we are not using
+     // field_validation_unique_validator::validate() because we don't want to
+     // fire set_error().
+     $query = new EntityFieldQuery();
+-    $result = $query->entityCondition('entity_type', $entity_type)
+-      ->entityCondition('bundle', $bundle_name)
+-      ->fieldCondition($target, $unique_rule->col, $value, '=')
+-      // Run the query as user 1.
+-      ->addMetaData('account', user_load(1))
+-      ->execute();
++    $query = new EntityFieldQuery();
++    $query->entityCondition('entity_type', $entity_type);
++    $query->entityCondition('bundle', $bundle_name);
++    $query->fieldCondition($target, $unique_rule->col, $value, '=');
++
++    if($unique_rule->settings['data'] == 'per_language'){
++    $query->propertyCondition('language', $language_content->language, '=');
++			       }
++    // Run the query as user 1.
++    $query->addMetaData('account', user_load(1));
++    $result = $query->execute();
+     if (isset($result[$entity_type])) {
+       $ids = array_keys($result[$entity_type]);
+       return reset($ids);
+     }
+   }
+-}
+\ No newline at end of file
++}
+diff --git a/plugins/validator/field_validation_unique_validator.inc b/plugins/validator/field_validation_unique_validator.inc
+index 764e24f..5b0d202 100644
+--- a/plugins/validator/field_validation_unique_validator.inc
++++ b/plugins/validator/field_validation_unique_validator.inc
+@@ -40,7 +40,7 @@ class field_validation_unique_validator extends field_validation_validator {
+         $query->entityCondition('entity_type', $this->rule->entity_type);
+         $query->entityCondition('bundle', $this->rule->bundle);
+       }
+-
++ 
+       list($id, $vid, $bundle) = entity_extract_ids($this->rule->entity_type, $this->entity);
+       if ($this->rule->entity_type == 'user' && arg(0) =='user' && arg(2) =='edit' && empty($id)) {
+         $id = arg(1);
+@@ -69,6 +69,11 @@ class field_validation_unique_validator extends field_validation_validator {
+       $query->addMetaData('account', user_load(1));
+       $query->fieldCondition($this->rule->field_name, $this->rule->col, $this->value);
+ 
++      // Do the check per language
++      if (isset($this->rule->settings['per_language']) && $this->rule->settings['per_language'] && $scope != 'global') {
++        $query->propertyCondition('language', $this->entity->language, '=');
++      }
++
+       // Do the check per user
+       if (isset($this->rule->settings['per_user']) && $this->rule->settings['per_user'] && $scope != 'global') {
+         global $user;
+@@ -141,6 +146,14 @@ class field_validation_unique_validator extends field_validation_validator {
+       ),  
+       '#default_value' => isset($default_settings['data']) ? $default_settings['data'] : '',
+     );
++    $form['settings']['per_language'] = array(
++      '#title' => t('Per language'),
++      '#type' => 'checkbox',
++      '#default_value' => isset($default_settings['per_language']) ? $default_settings['per_language'] : '',
++      '#states' => array(
++        'invisible' => array(':input[name="settings[data]"]' => array('value' => 'global')),
++      ),
++    );
+     $form['settings']['per_user'] = array(
+       '#title' => t('Per user'),
+       '#type' => 'checkbox', 
+@@ -164,4 +177,4 @@ class field_validation_unique_validator extends field_validation_validator {
+     );
+     return $token_help;
+   }
+-}
+\ No newline at end of file
++}
+diff --git a/property_validation/plugins/validator/property_validation_unique_validator.inc b/property_validation/plugins/validator/property_validation_unique_validator.inc
+index 5a46ee0..3ffbcf7 100644
+--- a/property_validation/plugins/validator/property_validation_unique_validator.inc
++++ b/property_validation/plugins/validator/property_validation_unique_validator.inc
+@@ -31,6 +31,11 @@ class property_validation_unique_validator extends property_validation_validator
+         $query->entityCondition('bundle', $this->rule->bundle);
+       }
+ 
++      // Do the check per language
++      if (isset($this->rule->settings['per_language']) && $this->rule->settings['per_language'] && $scope != 'global') {
++        $query->propertyCondition('language', $this->entity->language, '=');
++      }
++
+       list($id, $vid, $bundle) = entity_extract_ids($this->rule->entity_type, $this->entity);
+       if ($this->rule->entity_type == 'user' && arg(0) =='user' && arg(2) =='edit' && empty($id)) {
+         $id = arg(1);
+@@ -73,6 +78,14 @@ class property_validation_unique_validator extends property_validation_validator
+       ),  
+       '#default_value' => isset($default_settings['data']) ? $default_settings['data'] : '',
+     );
++    $form['settings']['per_language'] = array(
++      '#title' => t('Per language'),
++      '#type' => 'checkbox',
++      '#default_value' => isset($default_settings['per_language']) ? $default_settings['per_language'] : '',
++      '#states' => array(
++        'invisible' => array(':input[name="settings[data]"]' => array('value' => 'global')),
++      ),
++    );
+     parent::settings_form($form, $form_state);
+   }
+   
+@@ -86,4 +99,4 @@ class property_validation_unique_validator extends property_validation_validator
+     );
+     return $token_help;
+   }
+-}
+\ No newline at end of file
++}

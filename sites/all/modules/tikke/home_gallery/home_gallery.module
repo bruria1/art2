@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the home gallery feature.
+ */
+
+include_once 'home_gallery.features.inc';

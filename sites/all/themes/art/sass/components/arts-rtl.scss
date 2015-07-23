@@ -1,0 +1,96 @@
+// The search block
+
+#block-search-form{
+  label{
+    right: 47px;
+    margin-right: -39px;
+  }
+  .form-item{
+    float: right;
+  }
+  input.form-text{
+    padding-right: 3px;
+  }
+  input.form-submit{
+    background: url("../images/search-icon.png") no-repeat 0 0 transparent;
+    float: left;
+    left: 6px;
+    right: auto;
+  }
+}
+
+/**********  main menu  **************/
+
+#triangle-topleft{
+  border-right-width: 0;
+  border-left-width: 126px;
+}
+
+#main-menu{
+  float: right;
+}
+
+.menu-button{
+  float: right;
+  padding: 11px 16px 6px 11px;;
+  .text{
+    float: right;
+  }
+  .lines{
+    float: left;
+    padding-right: 13px;
+    padding-left: 0;
+  }
+}
+
+/*********  front  ***********/
+
+.region-top{
+  .text-slide{
+    .wrapper-width{
+      .text{
+        left: 0;
+        right: auto;
+        text-align: left;
+      }
+      .artist{
+        float: right;
+        border-left: 1px solid #fff;
+        margin-left: 10px;
+        padding-left: 10px;
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+      }
+      .continue{
+        float: right;
+        clear: right;
+      }
+    }
+  }
+  .flex-direction-nav{
+    a{
+      &.flex-prev {
+        background-position: 29px 0;
+        right: 20px;
+        left: auto;
+      }
+      &.flex-next {
+        left: 20px;
+        right: auto;
+        background-position: 120px 0px;
+      }
+    }
+  }
+  .flexslider:hover .flex-direction-nav a.flex-next{
+    left: 20px!important;
+    right: auto;
+  }
+  .flexslider:hover .flex-direction-nav a.flex-prev{
+    right: 20px!important;
+    left: auto;
+  }
+  .flexslider:hover .flex-direction-nav a.flex-next{
+    right: auto!important;
+  }
+}
