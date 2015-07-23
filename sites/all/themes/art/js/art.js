@@ -21,24 +21,27 @@ $height = $(window).height()-138;
 $width = ($(window).width()-1200)/2+276;
 $jcaruselwidth = $(window).width()*0.94/3;
 
+$("#block-system-main-menu").addClass("hide");
+
+
 $(".menu-button").click(function(){
-  if ($("#main-menu").hasClass("hide")){
+  if ($("body").hasClass("display-menu")){
+    $("#square").addClass("hide").removeClass("display");
+    $("#triangle-topleft").addClass("hide").removeClass("display");
+    $("#block-system-main-menuu").addClass("hide").removeClass("display");
+    $("body").removeClass("display-menu");
+  }
+  else {
     $("#triangle-topleft").addClass("display").removeClass("hide");
     $("#square").addClass("display").removeClass("hide");
-    $("#main-menu").addClass("display").removeClass("hide");
+    $("#block-system-main-menu").addClass("display").removeClass("hide");
     $("body").addClass("display-menu");
-    $(".display-menu #main-menu").css("height", $height); 
+    $(".display-menu #block-system-main-menu").css("height", $height); 
     $(".display-menu #square").css("height", $height); 
     $("#triangle-topleft").css("border-bottom-width", $height);
     $(".i18n-he #triangle-topleft").css("right", $width);  
     $(".i18n-en #triangle-topleft").css("left", $width);  
-    $(".display-menu #square").css("width", $width); 
-  }
-  else if ($("#main-menu").hasClass("display")){
-    $("#square").addClass("hide").removeClass("display");
-    $("#triangle-topleft").addClass("hide").removeClass("display");
-    $("#main-menu").addClass("hide").removeClass("display");
-    $("body").removeClass("display-menu");
+    $(".display-menu #square").css("width", $width);
   }
 });
 
