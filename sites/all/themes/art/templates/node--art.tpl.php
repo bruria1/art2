@@ -49,7 +49,7 @@
     print render($content['field_material']); 
     print render($content['field_sizes']); ?>
   </div>
-
+  <div class="clear">
     <?php print render($content['field_text']); ?>
 
 <div id="share">
@@ -74,7 +74,7 @@
         <img src="/sites/all/themes/art/images//mail.png" alt="Email" />
     </a>
   </div>
-
+</div>
 
 </div> 
 

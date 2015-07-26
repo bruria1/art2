@@ -160,8 +160,24 @@ body{
 		width: 100%;
     padding-bottom: 13px!important;
     a{
-      font-size: 1.7em;
+      font-size: 1.5em;
       color: #fff;
+    }
+    a.active, a.active-trail{
+      color: $green;
+      font-family:'almoni-900';
+    }
+    ul{
+      padding-top: 10px!important;
+      li{
+        padding-bottom: 0!important;
+      }
+      a{
+        font-size: 1.2em;
+      }
+      a.active{
+        color: #fff;
+      }
     }
 	}
 }
@@ -169,6 +185,9 @@ body{
 .display-menu{
   #block-system-main-menu ul{
     position: absolute;
+    ul{
+      position: relative;
+    }
   }
 }
 #block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
@@ -781,13 +800,85 @@ header {
     max-width: 800px;
     margin: 0 auto;
   }
-  .field-name-field-text{
+  .clear{
     clear: both;
+  }
+  .field-name-field-text{
     padding-top: 75px;
     max-width: 655px;
     margin: 0 auto;
   }
   .field-name-field-material{
     margin-top:20px;
+  }
+}
+
+/*********  the gallery   ***********/
+
+#block-views-the-gallery-block{
+  .views-row{
+    position: relative;
+    overflow: hidden;
+    img{
+      margin-bottom: -8px;
+    }
+  }
+  .views-row-1{
+    float: left;
+    width: 59%;
+  }
+  .views-row-2, .views-row-3{
+    float: right;
+    width: 39%;
+  }
+  .views-row-4{
+    float: right;
+    width: 59%;
+  }
+  .views-row-5, .views-row-6{
+    float: left;
+    width: 39%;
+  }
+  .views-field-title{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    bottom: -48px;
+    text-align: center;
+    font-size: 1.6em;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    a{
+      color: #fff;
+      padding: 12px 0;
+      width: 100%;
+      display: block;
+    }
+    .title{
+      font-family:'almoni-700', arial;
+      display: inline-block;
+      border-left: 1px solid;
+      padding-left: 10px;
+      margin-left: 2px;
+    }
+  }
+  .views-row:hover{
+    .views-field-title{
+      bottom: 0;
+    }
+  }
+}
+
+.node-2594{
+  text-align: center;
+  .field-name-field-text{
+    max-width: 884px;
+    margin: 0 auto;
+  }
+  #page-title{
+    font-family:'almoni-900', arial;
+    font-weight: normal;
+    font-size: 1.6em;
+    line-height: 1em;
   }
 }
