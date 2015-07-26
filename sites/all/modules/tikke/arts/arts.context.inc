@@ -29,23 +29,23 @@ function arts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-arts_galleries-block_2' => array(
+          'module' => 'views',
+          'delta' => 'arts_galleries-block_2',
+          'region' => 'content-top',
+          'weight' => '-22',
+        ),
         'views-arts_galleries-block' => array(
           'module' => 'views',
           'delta' => 'arts_galleries-block',
-          'region' => 'content',
-          'weight' => '-10',
+          'region' => 'content-top',
+          'weight' => '-21',
         ),
-        'system-main' => array(
-          'module' => 'system',
-          'delta' => 'main',
-          'region' => 'content',
-          'weight' => '-9',
-        ),
-        'views-arts_galleries-block_1' => array(
+        'views-also_intersting-block_1' => array(
           'module' => 'views',
-          'delta' => 'arts_galleries-block_1',
-          'region' => 'content',
-          'weight' => '-8',
+          'delta' => 'also_intersting-block_1',
+          'region' => 'content-bottom',
+          'weight' => '-10',
         ),
       ),
     ),

@@ -17,9 +17,10 @@ function arts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
+          'field_delimiter' => '',
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
@@ -28,7 +29,7 @@ function arts_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -72,10 +73,10 @@ function arts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -145,10 +146,13 @@ function arts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -182,11 +186,13 @@ function arts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_delimiter' => '',
+        ),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -228,7 +234,7 @@ function arts_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -272,7 +278,7 @@ function arts_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -309,13 +315,14 @@ function arts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => 1,
+          'field_delimiter' => '',
+          'link' => 0,
         ),
         'type' => 'entityreference_label',
-        'weight' => 18,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -358,10 +365,13 @@ function arts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -398,7 +408,7 @@ function arts_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -436,11 +446,13 @@ function arts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_delimiter' => '',
+        ),
         'type' => 'text_default',
-        'weight' => 21,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -472,78 +484,6 @@ function arts_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-art-field_gallery_grid'
-  $field_instances['node-art-field_gallery_grid'] = array(
-    'bundle' => 'art',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_gallery_grid',
-    'label' => 'תמונות - גלריית גריד תחתונה',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 1,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'filefield_paths' => array(
-        'active_updating' => 0,
-        'file_name' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
-        ),
-        'file_path' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => 'gallery_grid/[node:nid]',
-        ),
-        'retroactive_update' => 0,
-      ),
-      'filefield_paths_enabled' => 1,
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'dragndrop_upload_image',
-      'settings' => array(
-        'allow_replace' => 0,
-        'droppable_area_text' => 'גרירת קבצים לאזור הזה',
-        'media_browser' => 0,
-        'multiupload' => 1,
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'bar',
-        'standard_upload' => 1,
-        'upload_button_text' => 'העלאה',
-        'upload_event' => 'auto',
-      ),
-      'type' => 'dragndrop_upload_image',
-      'weight' => 8,
-    ),
-  );
-
   // Exported field_instance: 'node-art-field_large_image_grid'
   $field_instances['node-art-field_large_image_grid'] = array(
     'bundle' => 'art',
@@ -559,7 +499,7 @@ function arts_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -595,11 +535,13 @@ function arts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_delimiter' => '',
+        ),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 17,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -636,11 +578,13 @@ function arts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_delimiter' => '',
+        ),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -681,7 +625,7 @@ function arts_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -723,9 +667,11 @@ function arts_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_delimiter' => '',
+        ),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -773,7 +719,6 @@ function arts_field_default_field_instances() {
   t('שנת היצירה');
   t('תוכן היצירה');
   t('תמונה גדולה');
-  t('תמונות - גלריית גריד תחתונה');
   t('תקציר היצירה');
 
   return $field_instances;
