@@ -153,7 +153,6 @@ body{
   position: relative;
   width: 100%;
   ul{
-    position: absolute;
     width: 100%;
     bottom: 8%;
   }
@@ -167,6 +166,11 @@ body{
 	}
 }
 
+.display-menu{
+  #block-system-main-menu ul{
+    position: absolute;
+  }
+}
 #block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
 	opacity: 0;
 }
@@ -568,7 +572,9 @@ header {
   }
 }
 
-#block-views-also-intersting-block{
+/****  exhibition & art footer  *********/
+
+#block-views-also-intersting-block, #block-views-also-intersting-block-1{
   max-width: 715px;
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -637,9 +643,10 @@ header {
     }
   }
 }
-/**********  exhibition gallery************/
+/**********  exhibition & art gallery************/
 
-#block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block{
+#block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block,
+#block-views-arts-galleries-block, #block-views-arts-galleries-block-2{
   .view-footer{
     float: right;
     margin-top: 6px;
@@ -732,5 +739,55 @@ header {
     line-height: 1.2em;
     float: right;
     padding-top: 9px;
+  }
+}
+
+/**********  art page  ***********/
+
+.node-type-art{
+  .region-content-top{
+      width: 60%;
+      float: right;
+  }
+  .right{
+    float: left;
+    width: 38%;
+  }
+  .field-name-field-artis{
+    font-size: 1.2em;
+    font-family:'almoni-900', arial;
+  }
+  #page-title{
+    font-size: 1.2em;
+    float: left;
+    line-height: 1em;
+    font-weight: normal;
+    margin-right: 5px;
+  }
+  .field-name-field-art-date{
+    font-size: 1.2em;
+  }
+  .field-name-field-campus{
+    margin-top: 25px;
+    &:before{
+      border-top: 1px solid;
+      content: "";
+      display: block;
+      padding-top: 6px;
+      width: 42px;
+    }
+  }
+  #content{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .field-name-field-text{
+    clear: both;
+    padding-top: 75px;
+    max-width: 655px;
+    margin: 0 auto;
+  }
+  .field-name-field-material{
+    margin-top:20px;
   }
 }

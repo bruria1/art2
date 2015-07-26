@@ -145,7 +145,7 @@
   }
 }
 
-#block-views-also-intersting-block{
+#block-views-also-intersting-block, #block-views-also-intersting-block-1{
   .views-row{
     margin-left: 24px;
     margin-right: 0;
@@ -157,7 +157,8 @@
 
 /**********  exhibition gallery************/
 
-#block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block{
+#block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block,
+#block-views-arts-galleries-block, #block-views-arts-galleries-block-2{
   .view-footer{
     float: left;
     margin-left: 1px;
@@ -201,5 +202,21 @@
     padding-right: 16px;
     padding-left: 0;
     float: left;
+  }
+}
+
+/**********  art page  ***********/
+
+.node-type-art{
+  .region-content-top{
+      float: left;
+  }
+  .right{
+    float: right;
+  }
+  #page-title{
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
   }
 }

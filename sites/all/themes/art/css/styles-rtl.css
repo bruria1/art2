@@ -536,62 +536,84 @@ html.js .collapsed .fieldset-legend {
 }
 
 /* line 149, ../sass/components/arts-rtl.scss */
-#block-views-also-intersting-block .views-row {
+#block-views-also-intersting-block .views-row, #block-views-also-intersting-block-1 .views-row {
   margin-left: 24px;
   margin-right: 0;
 }
 /* line 153, ../sass/components/arts-rtl.scss */
-#block-views-also-intersting-block .views-row-last {
+#block-views-also-intersting-block .views-row-last, #block-views-also-intersting-block-1 .views-row-last {
   margin-left: 0;
 }
 
 /**********  exhibition gallery************/
-/* line 161, ../sass/components/arts-rtl.scss */
-#block-views-exhibition-gallery-block-2 .view-footer, #block-views-exhibition-gallery-block .view-footer {
+/* line 162, ../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .view-footer, #block-views-exhibition-gallery-block .view-footer,
+#block-views-arts-galleries-block .view-footer, #block-views-arts-galleries-block-2 .view-footer {
   float: left;
   margin-left: 1px;
   margin-right: 0;
 }
-/* line 165, ../sass/components/arts-rtl.scss */
-#block-views-exhibition-gallery-block-2 .view-footer div, #block-views-exhibition-gallery-block .view-footer div {
+/* line 166, ../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .view-footer div, #block-views-exhibition-gallery-block .view-footer div,
+#block-views-arts-galleries-block .view-footer div, #block-views-arts-galleries-block-2 .view-footer div {
   float: left;
   margin-right: 5px;
   margin-left: 0;
 }
-/* line 172, ../sass/components/arts-rtl.scss */
-#block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-prev {
+/* line 173, ../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-prev,
+#block-views-arts-galleries-block .owl-controls .owl-next,
+#block-views-arts-galleries-block .owl-controls .owl-prev, #block-views-arts-galleries-block-2 .owl-controls .owl-next, #block-views-arts-galleries-block-2 .owl-controls .owl-prev {
   right: 0;
   left: auto;
 }
-/* line 176, ../sass/components/arts-rtl.scss */
-#block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-next {
+/* line 177, ../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-next,
+#block-views-arts-galleries-block .owl-controls .owl-next, #block-views-arts-galleries-block-2 .owl-controls .owl-next {
   right: 30px;
   left: auto;
   background-position: 0px 0;
 }
-/* line 181, ../sass/components/arts-rtl.scss */
-#block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-prev {
+/* line 182, ../sass/components/arts-rtl.scss */
+#block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-prev,
+#block-views-arts-galleries-block .owl-controls .owl-prev, #block-views-arts-galleries-block-2 .owl-controls .owl-prev {
   right: 0px;
   left: auto;
   background-position: -38px 0;
 }
 
 /*****************  footer  ************/
-/* line 192, ../sass/components/arts-rtl.scss */
+/* line 193, ../sass/components/arts-rtl.scss */
 #footer #block-block-1 {
   background: url("../images/huji.png") no-repeat right center transparent;
   float: right;
   padding: 12px 55px 12px 16px;
 }
-/* line 197, ../sass/components/arts-rtl.scss */
+/* line 198, ../sass/components/arts-rtl.scss */
 #footer #block-block-3 {
   float: right;
 }
-/* line 200, ../sass/components/arts-rtl.scss */
+/* line 201, ../sass/components/arts-rtl.scss */
 #footer #block-block-2 {
   padding-right: 16px;
   padding-left: 0;
   float: left;
+}
+
+/**********  art page  ***********/
+/* line 211, ../sass/components/arts-rtl.scss */
+.node-type-art .region-content-top {
+  float: left;
+}
+/* line 214, ../sass/components/arts-rtl.scss */
+.node-type-art .right {
+  float: right;
+}
+/* line 217, ../sass/components/arts-rtl.scss */
+.node-type-art #page-title {
+  float: right;
+  margin-left: 5px;
+  margin-right: 0;
 }
 
 /* SMACSS theme rules */

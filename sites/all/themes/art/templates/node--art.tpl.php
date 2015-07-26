@@ -9,16 +9,13 @@
 ?>
 
 
-
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<div class="right">
 
 <div id="wrapper-title">
-     <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-     <?php if(isset($node->field_sub_title['und'][0]['value'])) { ?>
-        <div class="sub-title"> 
-           <?php print $node->field_sub_title['und'][0]['value']; ?>
-        </div>
-   <?php }?>
+    <?php print render($content['field_artis']); ?>
+    <h1 class="page__title title" id="page-title"><?php print $title; ?>, </h1>
+    <?php print render($content['field_art_date']);  ?>
 </div>
 
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
@@ -47,43 +44,13 @@
     hide($content['comments']);
     hide($content['links']);
   ?>
-  <?php print render($content['field_copyright']); ?>
-
-  <?php print render($content['field_campus']); ?>
-  <?php print render($content['field_exh_location']); ?>
-  <div class="treasurers-designers">
-    <?php print render($content['field_treasurers_name']); ?>
-    <?php print render($content['field_designers']); ?>
-  </div>
-  <div class="dates">
-    <div class="open">
-    <?php if (render($content['field_exh_open_date'])){?>
-      <div class="label"><?php print t("Opening Date:");?></div>
-      <?php print render($content['field_exh_open_date']); 
-    } else if (render($content['field_month_date'])){?>
-          <div class="label"><?php print t("Opening Date:");?></div>
-          <?php print render($content['field_month_date']); 
-    } else if (render($content['field_date_year'])){?>
-          <div class="label"><?php print t("Opening Date:");?></div>
-          <?php print render($content['field_date_year']); 
-    }?> 
-    </div> 
-    <div class="close"><?php
-  if (render($content['field_full_date_2'])){?>
-      <div class="label"><?php print t("Closing Date:");?></div>
-      <?php print render($content['field_full_date_2']); 
-  } else if (render($content['field_month_date_2'])){?>
-        <div class="label"><?php print t("Closing Date:");?></div>
-        <?php print render($content['field_month_date_2']); 
-    }
-    else if (render($content['field_year_date_2'])){?>
-        <div class="label"><?php print t("Closing Date:");?></div>
-        <?php print render($content['field_year_date_2']); 
-    }?>
-    </div>
+    <?php print render($content['field_campus']); 
+    print render($content['field_art_location_text']); 
+    print render($content['field_material']); 
+    print render($content['field_sizes']); ?>
   </div>
 
-  <?php print render($content['field_text']); ?>
+    <?php print render($content['field_text']); ?>
 
 <div id="share">
   <div class="pinterest link">
@@ -109,9 +76,7 @@
   </div>
 
 
-</div>  
-
-  <?php print render($content['flippy_pager']);?> 
+</div> 
 
   <?php print render($content['links']); ?>
 

@@ -62,7 +62,7 @@
 <script>
 	
 	jQuery(function(){		
-		jQuery('.i18n-he .view-display-id-block .owl-carousel').owlCarousel({
+		jQuery('.i18n-he .view-display-id-block_2 .owl-carousel').owlCarousel({
 			rtl:true,
 			loop:false,
 			margin:10,
@@ -76,7 +76,7 @@
 });
 
   jQuery(function(){    
-    jQuery('.i18n-en .view-display-id-block .owl-carousel').owlCarousel({
+    jQuery('.i18n-en .view-display-id-block_2 .owl-carousel').owlCarousel({
       rtl:false,
       loop:false,
       margin:10,
@@ -88,5 +88,6 @@
       }
     }); 
 });
+
 </script>
 

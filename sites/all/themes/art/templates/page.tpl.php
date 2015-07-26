@@ -12,7 +12,6 @@
 <div id="page">
 
   <header class="header" id="header" role="banner">
-
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
     <?php endif; ?>
@@ -95,22 +94,12 @@
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
+      <?php print render($tabs); ?>
       <a id="main-content"></a>
       <?php print render($page['content-top']); ?>
       <?php print render($title_prefix); ?>
-      <div id="wrapper-title">
-        <?php if ($title): ?>
-          <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-        <?php endif; 
-        if(isset($node->field_sub_title['und'][0]['value'])) { ?>
-              <div class="sub-title"> 
-                <?php print $node->field_sub_title['und'][0]['value']; ?>
-              </div>
-        <?php }?>
-      </div>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
-      <?php print render($tabs); ?>
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>

@@ -48,7 +48,6 @@ $(".menu-button").click(function(){
 $("#block-search-form .form-type-textfield label").removeClass("element-invisible");
 
 if ($("body").hasClass("node-type-exhibition")){
-    $("ul.jcarousel li").css("width", $jcaruselwidth); 
 
     $(".view-exhibition-gallery .grid").click(function(){
       $("#block-views-exhibition-gallery-block .view").addClass("display").removeClass("hide");
@@ -58,6 +57,19 @@ if ($("body").hasClass("node-type-exhibition")){
     $(".view-exhibition-gallery .one").click(function(){
       $("#block-views-exhibition-gallery-block-2 .view").addClass("display").removeClass("hide");
       $("#block-views-exhibition-gallery-block .view").addClass("hide").removeClass("display");
+    });
+}
+
+if ($("body").hasClass("node-type-art")){
+
+    $(".view-arts-galleries .grid").click(function(){
+      $("#block-views-arts-galleries-block-2 .view").addClass("display").removeClass("hide");
+      $("#block-views-arts-galleries-block .view").addClass("hide").removeClass("display");
+    });
+
+    $(".view-arts-galleries .one").click(function(){
+      $("#block-views-arts-galleries-block .view").addClass("display").removeClass("hide");
+      $("#block-views-arts-galleries-block-2 .view").addClass("hide").removeClass("display");
     });
 }
 
