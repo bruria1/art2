@@ -31,19 +31,17 @@ function home_gallery_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'flexslider';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* שדה: תוכן: גלריית היצירה */
-  $handler->display->display_options['fields']['field_art_gallery']['id'] = 'field_art_gallery';
-  $handler->display->display_options['fields']['field_art_gallery']['table'] = 'field_data_field_art_gallery';
-  $handler->display->display_options['fields']['field_art_gallery']['field'] = 'field_art_gallery';
-  $handler->display->display_options['fields']['field_art_gallery']['label'] = '';
-  $handler->display->display_options['fields']['field_art_gallery']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_art_gallery']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_art_gallery']['settings'] = array(
+  /* שדה: תוכן: תמונה למצגת */
+  $handler->display->display_options['fields']['field_image_slideshow']['id'] = 'field_image_slideshow';
+  $handler->display->display_options['fields']['field_image_slideshow']['table'] = 'field_data_field_image_slideshow';
+  $handler->display->display_options['fields']['field_image_slideshow']['field'] = 'field_image_slideshow';
+  $handler->display->display_options['fields']['field_image_slideshow']['label'] = '';
+  $handler->display->display_options['fields']['field_image_slideshow']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_slideshow']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_slideshow']['settings'] = array(
     'image_style' => '',
-    'image_link' => 'content',
+    'image_link' => '',
   );
-  $handler->display->display_options['fields']['field_art_gallery']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_art_gallery']['delta_offset'] = '0';
   /* שדה: תוכן: כותרת */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -51,27 +49,24 @@ function home_gallery_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* שדה: תוכן: אמן/ית היצירה */
-  $handler->display->display_options['fields']['field_artis']['id'] = 'field_artis';
-  $handler->display->display_options['fields']['field_artis']['table'] = 'field_data_field_artis';
-  $handler->display->display_options['fields']['field_artis']['field'] = 'field_artis';
-  $handler->display->display_options['fields']['field_artis']['label'] = '';
-  $handler->display->display_options['fields']['field_artis']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_artis']['settings'] = array(
-    'link' => 0,
-  );
-  /* שדה: תוכן: תקציר לעמוד */
-  $handler->display->display_options['fields']['field_teaser']['id'] = 'field_teaser';
-  $handler->display->display_options['fields']['field_teaser']['table'] = 'field_data_field_teaser';
-  $handler->display->display_options['fields']['field_teaser']['field'] = 'field_teaser';
-  $handler->display->display_options['fields']['field_teaser']['label'] = '';
-  $handler->display->display_options['fields']['field_teaser']['element_label_colon'] = FALSE;
-  /* שדה: תוכן: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* שדה: תוכן: כותרת משנה */
+  $handler->display->display_options['fields']['field_second_title']['id'] = 'field_second_title';
+  $handler->display->display_options['fields']['field_second_title']['table'] = 'field_data_field_second_title';
+  $handler->display->display_options['fields']['field_second_title']['field'] = 'field_second_title';
+  $handler->display->display_options['fields']['field_second_title']['label'] = '';
+  $handler->display->display_options['fields']['field_second_title']['element_label_colon'] = FALSE;
+  /* שדה: תוכן: קישור */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['alter']['text'] = '20';
+  $handler->display->display_options['fields']['field_link']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['type'] = 'link_absolute';
   /* Sort criterion: תוכן: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -101,6 +96,29 @@ function home_gallery_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: תוכן: מפורסם */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: תוכן: סוג */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'hp_slideshow' => 'hp_slideshow',
+  );
+  /* Filter criterion: תוכן: שפה */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['block_description'] = 'מצגת לעמוד הבית';
   $translatables['home_page_slideshow'] = array(
     t('Master'),
@@ -110,6 +128,7 @@ function home_gallery_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('20'),
     t('Block'),
     t('מצגת לעמוד הבית'),
   );
