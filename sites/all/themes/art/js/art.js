@@ -23,12 +23,20 @@ $jcaruselwidth = $(window).width()*0.94/3;
 
 $("#block-system-main-menu").addClass("hide");
 
+$("#main").click(function(){
+  if ($("body").hasClass("display-menu")){
+    $("#square").addClass("hide").removeClass("display");
+    $("#triangle-topleft").addClass("hide").removeClass("display");
+    $("#block-system-main-menu").addClass("hide").removeClass("display");
+    $("body").removeClass("display-menu");
+  }
+});
 
 $(".menu-button").click(function(){
   if ($("body").hasClass("display-menu")){
     $("#square").addClass("hide").removeClass("display");
     $("#triangle-topleft").addClass("hide").removeClass("display");
-    $("#block-system-main-menuu").addClass("hide").removeClass("display");
+    $("#block-system-main-menu").addClass("hide").removeClass("display");
     $("body").removeClass("display-menu");
   }
   else {
@@ -44,6 +52,8 @@ $(".menu-button").click(function(){
     $(".display-menu #square").css("width", $width);
   }
 });
+
+
 
 $("#block-search-form .form-type-textfield label").removeClass("element-invisible");
 

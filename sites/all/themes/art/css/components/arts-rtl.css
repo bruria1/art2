@@ -1,17 +1,17 @@
-/* line 4, ../../sass/components/arts-rtl.scss */
+/* line 18, ../../sass/components/arts-rtl.scss */
 #block-search-form label {
   right: 47px;
   margin-right: -39px;
 }
-/* line 8, ../../sass/components/arts-rtl.scss */
+/* line 22, ../../sass/components/arts-rtl.scss */
 #block-search-form .form-item {
   float: right;
 }
-/* line 11, ../../sass/components/arts-rtl.scss */
+/* line 25, ../../sass/components/arts-rtl.scss */
 #block-search-form input.form-text {
   padding-right: 3px;
 }
-/* line 14, ../../sass/components/arts-rtl.scss */
+/* line 28, ../../sass/components/arts-rtl.scss */
 #block-search-form input.form-submit {
   background: url("../images/search-icon.png") no-repeat 0 0 transparent;
   float: left;
@@ -19,28 +19,43 @@
   right: auto;
 }
 
+@media (max-width: 767px) {
+  /* line 37, ../../sass/components/arts-rtl.scss */
+  #logo .logo-art {
+    clear: right;
+  }
+  /* line 40, ../../sass/components/arts-rtl.scss */
+  #logo .logo-art .he {
+    display: block;
+  }
+  /* line 43, ../../sass/components/arts-rtl.scss */
+  #logo .logo-art .en {
+    display: none;
+  }
+}
+
 /**********  main menu  **************/
-/* line 24, ../../sass/components/arts-rtl.scss */
+/* line 52, ../../sass/components/arts-rtl.scss */
 #triangle-topleft {
   border-right-width: 0;
   border-left-width: 126px;
 }
 
-/* line 29, ../../sass/components/arts-rtl.scss */
+/* line 57, ../../sass/components/arts-rtl.scss */
 #block-system-main-menu {
   float: right;
 }
 
-/* line 33, ../../sass/components/arts-rtl.scss */
+/* line 61, ../../sass/components/arts-rtl.scss */
 .menu-button {
   float: right;
   padding: 11px 16px 6px 11px;
 }
-/* line 36, ../../sass/components/arts-rtl.scss */
+/* line 64, ../../sass/components/arts-rtl.scss */
 .menu-button .text {
   float: right;
 }
-/* line 39, ../../sass/components/arts-rtl.scss */
+/* line 67, ../../sass/components/arts-rtl.scss */
 .menu-button .lines {
   float: left;
   padding-right: 13px;
@@ -48,14 +63,14 @@
 }
 
 /*********  front  ***********/
-/* line 51, ../../sass/components/arts-rtl.scss */
+/* line 79, ../../sass/components/arts-rtl.scss */
 .region-top .text-slide .wrapper-width .text {
   left: 0;
   right: auto;
   text-align: left;
 }
-/* line 56, ../../sass/components/arts-rtl.scss */
-.region-top .text-slide .wrapper-width .artist {
+/* line 84, ../../sass/components/arts-rtl.scss */
+.region-top .text-slide .wrapper-width .title {
   float: right;
   border-left: 1px solid #fff;
   margin-left: 10px;
@@ -64,40 +79,44 @@
   margin-right: 0;
   padding-right: 0;
 }
-/* line 65, ../../sass/components/arts-rtl.scss */
+/* line 93, ../../sass/components/arts-rtl.scss */
+.region-top .text-slide .wrapper-width .second-title {
+  float: right;
+}
+/* line 96, ../../sass/components/arts-rtl.scss */
 .region-top .text-slide .wrapper-width .continue {
   float: right;
   clear: right;
 }
-/* line 73, ../../sass/components/arts-rtl.scss */
+/* line 104, ../../sass/components/arts-rtl.scss */
 .region-top .flex-direction-nav a.flex-prev {
   background-position: 29px 0;
   right: 20px;
   left: auto;
 }
-/* line 78, ../../sass/components/arts-rtl.scss */
+/* line 109, ../../sass/components/arts-rtl.scss */
 .region-top .flex-direction-nav a.flex-next {
   left: 20px;
   right: auto;
   background-position: 120px 0px;
 }
-/* line 85, ../../sass/components/arts-rtl.scss */
+/* line 116, ../../sass/components/arts-rtl.scss */
 .region-top .flexslider:hover .flex-direction-nav a.flex-next {
   left: 20px !important;
   right: auto;
 }
-/* line 89, ../../sass/components/arts-rtl.scss */
+/* line 120, ../../sass/components/arts-rtl.scss */
 .region-top .flexslider:hover .flex-direction-nav a.flex-prev {
   right: 20px !important;
   left: auto;
 }
-/* line 93, ../../sass/components/arts-rtl.scss */
+/* line 124, ../../sass/components/arts-rtl.scss */
 .region-top .flexslider:hover .flex-direction-nav a.flex-next {
   right: auto !important;
 }
 
 /**********  exhibition page ************/
-/* line 102, ../../sass/components/arts-rtl.scss */
+/* line 133, ../../sass/components/arts-rtl.scss */
 .node-type-exhibition #wrapper-title #page-title {
   border-left: 1px solid;
   margin-left: 7px;
@@ -106,7 +125,7 @@
   padding-right: 0;
   margin-right: 0;
 }
-/* line 112, ../../sass/components/arts-rtl.scss */
+/* line 143, ../../sass/components/arts-rtl.scss */
 .node-type-exhibition .treasurers-designers .field-name-field-treasurers-name {
   border-left: 1px solid;
   margin-left: 7px;
@@ -115,13 +134,13 @@
   margin-right: 0;
   padding-right: 0;
 }
-/* line 121, ../../sass/components/arts-rtl.scss */
+/* line 152, ../../sass/components/arts-rtl.scss */
 .node-type-exhibition .treasurers-designers .field-name-field-designers .field-item {
   float: right;
   margin-left: 5px;
   margin-right: 0;
 }
-/* line 129, ../../sass/components/arts-rtl.scss */
+/* line 160, ../../sass/components/arts-rtl.scss */
 .node-type-exhibition .dates .open {
   border-left: 1px solid;
   margin-left: 7px;
@@ -130,57 +149,57 @@
   margin-right: 0;
   padding-right: 0;
 }
-/* line 137, ../../sass/components/arts-rtl.scss */
+/* line 168, ../../sass/components/arts-rtl.scss */
 .node-type-exhibition .dates .label {
   float: right;
   margin-left: 5px;
   margin-right: 0;
 }
-/* line 142, ../../sass/components/arts-rtl.scss */
+/* line 173, ../../sass/components/arts-rtl.scss */
 .node-type-exhibition .dates .field {
   float: right;
 }
 
-/* line 149, ../../sass/components/arts-rtl.scss */
+/* line 180, ../../sass/components/arts-rtl.scss */
 #block-views-also-intersting-block .views-row, #block-views-also-intersting-block-1 .views-row {
   margin-left: 24px;
   margin-right: 0;
 }
-/* line 153, ../../sass/components/arts-rtl.scss */
+/* line 184, ../../sass/components/arts-rtl.scss */
 #block-views-also-intersting-block .views-row-last, #block-views-also-intersting-block-1 .views-row-last {
   margin-left: 0;
 }
 
 /**********  exhibition gallery************/
-/* line 162, ../../sass/components/arts-rtl.scss */
+/* line 193, ../../sass/components/arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .view-footer, #block-views-exhibition-gallery-block .view-footer,
 #block-views-arts-galleries-block .view-footer, #block-views-arts-galleries-block-2 .view-footer {
   float: left;
   margin-left: 1px;
   margin-right: 0;
 }
-/* line 166, ../../sass/components/arts-rtl.scss */
+/* line 197, ../../sass/components/arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .view-footer div, #block-views-exhibition-gallery-block .view-footer div,
 #block-views-arts-galleries-block .view-footer div, #block-views-arts-galleries-block-2 .view-footer div {
   float: left;
   margin-right: 5px;
   margin-left: 0;
 }
-/* line 173, ../../sass/components/arts-rtl.scss */
+/* line 204, ../../sass/components/arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-prev,
 #block-views-arts-galleries-block .owl-controls .owl-next,
 #block-views-arts-galleries-block .owl-controls .owl-prev, #block-views-arts-galleries-block-2 .owl-controls .owl-next, #block-views-arts-galleries-block-2 .owl-controls .owl-prev {
   right: 0;
   left: auto;
 }
-/* line 177, ../../sass/components/arts-rtl.scss */
+/* line 208, ../../sass/components/arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-next,
 #block-views-arts-galleries-block .owl-controls .owl-next, #block-views-arts-galleries-block-2 .owl-controls .owl-next {
   right: 30px;
   left: auto;
   background-position: 0px 0;
 }
-/* line 182, ../../sass/components/arts-rtl.scss */
+/* line 213, ../../sass/components/arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-prev,
 #block-views-arts-galleries-block .owl-controls .owl-prev, #block-views-arts-galleries-block-2 .owl-controls .owl-prev {
   right: 0px;
@@ -189,17 +208,17 @@
 }
 
 /*****************  footer  ************/
-/* line 193, ../../sass/components/arts-rtl.scss */
+/* line 224, ../../sass/components/arts-rtl.scss */
 #footer #block-block-1 {
   background: url("../images/huji.png") no-repeat right center transparent;
   float: right;
   padding: 12px 55px 12px 16px;
 }
-/* line 198, ../../sass/components/arts-rtl.scss */
+/* line 229, ../../sass/components/arts-rtl.scss */
 #footer #block-block-3 {
   float: right;
 }
-/* line 201, ../../sass/components/arts-rtl.scss */
+/* line 232, ../../sass/components/arts-rtl.scss */
 #footer #block-block-2 {
   padding-right: 16px;
   padding-left: 0;
@@ -207,15 +226,15 @@
 }
 
 /**********  art page  ***********/
-/* line 211, ../../sass/components/arts-rtl.scss */
+/* line 242, ../../sass/components/arts-rtl.scss */
 .node-type-art .region-content-top {
   float: left;
 }
-/* line 214, ../../sass/components/arts-rtl.scss */
+/* line 245, ../../sass/components/arts-rtl.scss */
 .node-type-art .right {
   float: right;
 }
-/* line 217, ../../sass/components/arts-rtl.scss */
+/* line 248, ../../sass/components/arts-rtl.scss */
 .node-type-art #page-title {
   float: right;
   margin-left: 5px;

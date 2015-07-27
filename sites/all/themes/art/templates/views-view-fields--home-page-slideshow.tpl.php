@@ -24,15 +24,15 @@
  * @ingroup views_templates
  */
 
-preg_match('/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\']*)/i', $fields['field_art_gallery']->content, $matches); ?>
+preg_match('/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\']*)/i', $fields['field_image_slideshow']->content, $matches); ?>
 
-<a href="/node/<?php print $row->nid; ?>">
+<a href="<?php print $fields['field_link']->content; ?>">
 <div class="text-slide">
   <div class="wrapper-width">
   	  <div class="text">
   	  	<div class="name">
-		<span class="artist"><?php print $fields['field_artis']->content; ?> </span>
 		<span class="title"><?php print $fields['title']->content; ?> </span>
+		<span class="second-title"><?php print $fields['field_second_title']->content; ?> </span>
 	  </div>
 	  <div class="continue">...</div>
 	</div>

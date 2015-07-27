@@ -1,3 +1,17 @@
+
+ @mixin res($media) {
+  @if $media == s {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $media == m {
+    @media (min-width: 481px) and (max-width: 767px) { @content; }
+  }
+  @if $media == s-m {
+    @media (max-width: 767px) { @content; }
+  }
+}
+
+
 // The search block
 
 #block-search-form{
@@ -16,6 +30,20 @@
     float: left;
     left: 6px;
     right: auto;
+  }
+}
+
+#logo{
+  .logo-art{
+    @include res(s-m){
+      clear: right;
+      .he{
+        display: block;
+      }
+      .en{
+        display: none;
+      }
+    }
   }
 }
 
@@ -53,7 +81,7 @@
         right: auto;
         text-align: left;
       }
-      .artist{
+      .title{
         float: right;
         border-left: 1px solid #fff;
         margin-left: 10px;
@@ -61,6 +89,9 @@
         border-right: none;
         margin-right: 0;
         padding-right: 0;
+      }
+      .second-title{
+        float:right;
       }
       .continue{
         float: right;

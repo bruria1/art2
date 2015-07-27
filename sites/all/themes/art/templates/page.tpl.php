@@ -13,7 +13,12 @@
 
   <header class="header" id="header" role="banner">
     <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" />
+        <div class="logo-art">
+            <img class="he" src="/sites/all/themes/art/images/art-logo-h.png">
+            <img class="en" src="/sites/all/themes/art/images/art-logo-e.png">
+        </div>
+      </a>
     <?php endif; ?>
 
     <?php if ($site_name || $site_slogan): ?>

@@ -1,3 +1,17 @@
+
+ @mixin res($media) {
+  @if $media == s {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $media == m {
+    @media (min-width: 481px) and (max-width: 767px) { @content; }
+  }
+  @if $media == s-m {
+    @media (max-width: 767px) { @content; }
+  }
+}
+
+
 /***********  fonts ****************/
 
 @font-face{
@@ -145,16 +159,18 @@ body{
 }
 
 #block-system-main-menu{
+  width: 260px;
   box-sizing:border-box;
 	float: left;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   opacity: 1;
   position: relative;
-  width: 100%;
+  max-width: 100%;
   ul{
     width: 100%;
     bottom: 8%;
+    position: absolute;
   }
   li{
 		width: 100%;
@@ -169,6 +185,7 @@ body{
     }
     ul{
       padding-top: 10px!important;
+      position: relative;
       li{
         padding-bottom: 0!important;
       }
@@ -182,14 +199,15 @@ body{
 	}
 }
 
-.display-menu{
-  #block-system-main-menu ul{
-    position: absolute;
-    ul{
-      position: relative;
-    }
-  }
+.region-navigation{
+  height: 0;
+  overflow: hidden;
 }
+.display-menu .region-navigation{
+  height: auto;
+  overflow: visible;
+}
+
 #block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
 	opacity: 0;
 }
@@ -285,8 +303,9 @@ body.front{
     .name{
         background-color: $green;
         padding: 8px 14px 5px;
+        overflow: hidden;
     }
-    .artist{
+    .title{
       float: left;
       font-size: 1.6em;
       font-weight: bold;
@@ -294,8 +313,9 @@ body.front{
       margin-right: 10px;
       padding-right: 10px;
     }
-    .title{
+    .second-title{
       font-size: 1.3em;
+      float: left;
     }
     .continue{
       margin-top: 6px;
@@ -359,10 +379,58 @@ header {
   padding: 47px 3% 39px!important;
   height: 138px;
   position: relative;
+  @include res(s-m){
+    padding: 12px!important;
+  }
 }
 
 #logo{
   float: right;
+  width: 80%;
+  @include res(s-m){
+    width: 100%;
+  }
+  .header__logo-image{
+    width: 40.8%;
+    float: right;
+    padding-left: 1%;
+  }
+  .logo-art{
+    float: right;
+    width: 56%;
+    position: relative;
+    @include res(s-m){
+      margin-top: 15px;
+      margin-right: 23px;
+    }
+    &:before{
+      border-right: 2px solid #000;
+      height: 35px;
+      content: "";
+      display: block;
+      margin-top: 7px;
+      float: right;
+      position: absolute;
+      top:6px;
+      @include res(s-m){
+        border-right: medium none;
+        border-top: 2px solid #000;
+        width: 35px;
+        top: -10px;
+        right: 7px;
+      }
+
+    }
+    img{
+      padding-right: 10px;
+    }
+    @include res(s-m){
+      .he{
+        display: none;
+        padding: 0;
+      }
+    }
+  }
 }
 
 // the Header region 
@@ -370,6 +438,9 @@ header {
 	float: left;
 	clear: none !important;
   left: 0;
+  @include res(s-m){
+    display: none;
+  }
 }
 
 // The language switcher blcok
@@ -724,9 +795,13 @@ header {
   font-size: 0.66em;
   width: 715px;
   padding: 0 0 20px 0;
+  line-height: 1.2em;
   strong{
     font-weight: normal;
     font-family:'almoni-700', arial;
+  }
+  a{
+    color: #000;
   }
   p{
     margin: 0;
@@ -735,7 +810,6 @@ header {
     background: url("../images/huji.png") no-repeat left center transparent;
     box-sizing: border-box;
     float: left;
-    line-height: 1.2em;
     padding: 12px 16px 12px 55px;
     width: 36%;
     a{
@@ -755,7 +829,6 @@ header {
     box-sizing: border-box;
     padding-left: 16px;
     margin-top: 12px;
-    line-height: 1.2em;
     float: right;
     padding-top: 9px;
   }
