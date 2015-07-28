@@ -179,7 +179,6 @@ body{
 
 .region-navigation{
   @include width;
-  position: absolute;
 }
 
 #block-system-main-menu{
@@ -248,7 +247,7 @@ body{
     z-index: 5;
   }
   #triangle-topleft, #square{
-    z-index: 3;
+    z-index: -1;
   }
 }
 
