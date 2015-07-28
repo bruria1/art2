@@ -17,7 +17,7 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
-$height = $(window).height()-138;
+$height = $(window).height()-118;
 $width = ($(window).width()-1200)/2+276;
 $jcaruselwidth = $(window).width()*0.94/3;
 

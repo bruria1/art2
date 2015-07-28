@@ -68,6 +68,9 @@
     float: left;
     padding-right: 13px;
     padding-left: 0;
+    @include res(s-m){
+      padding-left: 6px;
+    }
   }
 }
 

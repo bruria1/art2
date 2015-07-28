@@ -10,7 +10,7 @@
     <?php print render($page['top']); ?>
 
 <div id="page">
-
+  <div class="wrapper-header">
   <header class="header" id="header" role="banner">
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" />
@@ -54,9 +54,8 @@
     <?php print render($page['header']); ?>
 
   </header>
-
-    <div id="navigation">
-      <div class="wrapper-width">
+</div>
+      <div class="wrapper-width menu">
       <div class="menu-button">
         <div class="text"><?php print t("Menu"); ?></div>
         <div class="lines">
@@ -66,6 +65,8 @@
         </div>
       </div>
     </div>
+    <div id="navigation">
+
       <?php if ($main_menu): ?>
       <div class="wrapper-width">
         <nav id="main-menu" class="hide" role="navigation" tabindex="-1">

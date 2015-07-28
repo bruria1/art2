@@ -87,10 +87,16 @@ body{
 
 #navigation{
   top:138px;
+  @include res(s-m){
+    top: 20px;
+    position: relative;
+  }
 }
 
 .display-menu #navigation{
-  z-index: 200;
+  @include res(s-m){
+    width: 100%;
+  }
 }
 
 #content{
@@ -100,6 +106,7 @@ body{
 #main{
   @include width;
 }
+
 /* 
  * main menu
  ****************************************/
@@ -112,6 +119,16 @@ body{
 	z-index: 200;
 	cursor: pointer;
 	position: absolute;
+  @include res(s-m){
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0!important;
+    margin-right: 10px;
+    right: 0;
+    top: 67px;
+    z-index: 300;
+  }
 	span{
 		width: 17px;
 		height: 2px;
@@ -125,11 +142,17 @@ body{
 		float: left;
 		font-family:   'almoni-700', sans-serif;
 		font-size: 1.5em;
+    @include res(s-m){
+      display: none;
+    }
 	}
 	.lines{
 		float: left;
 		padding-left: 13px;
     padding-top: 6px;
+    @include res(s-m){
+      padding-top: 8px;
+    }
 	}
 }
 
@@ -156,10 +179,12 @@ body{
 
 .region-navigation{
   @include width;
+  position: absolute;
 }
 
 #block-system-main-menu{
   width: 260px;
+  margin-top: -20px;
   box-sizing:border-box;
 	float: left;
   transition: all 0.5s;
@@ -167,6 +192,9 @@ body{
   opacity: 1;
   position: relative;
   max-width: 100%;
+  @include res(s-m){
+      margin-top: -56px;
+  }
   ul{
     width: 100%;
     bottom: 8%;
@@ -178,6 +206,9 @@ body{
     a{
       font-size: 1.5em;
       color: #fff;
+      @include res(s-m){
+        font-size: 1em;
+      }
     }
     a.active, a.active-trail{
       color: $green;
@@ -191,6 +222,9 @@ body{
       }
       a{
         font-size: 1.2em;
+        @include res(s-m){
+          font-size: 0.7em;
+        }
       }
       a.active{
         color: #fff;
@@ -199,13 +233,23 @@ body{
 	}
 }
 
+.display-menu #block-system-main-menu{
+  z-index: 300;
+}
+
 .region-navigation{
   height: 0;
   overflow: hidden;
 }
-.display-menu .region-navigation{
-  height: auto;
-  overflow: visible;
+.display-menu{
+  .region-navigation{
+    height: auto;
+    overflow: visible;
+    z-index: 5;
+  }
+  #triangle-topleft, #square{
+    z-index: 3;
+  }
 }
 
 #block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
@@ -221,18 +265,22 @@ body{
   }
 }
 #square{
-  background-color: rgba(77, 77, 77, 0.9);
+  background-color: rgba(77, 77, 77, 0.95);
   position: absolute;
   z-index: -1;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
+    margin-top: -20px;
+    @include res(s-m){
+      width: 130px!important;
+    }
 }
 
 #triangle-topleft{
   width: 0;
   height: 0;
   border-style: solid;
-  border-color: transparent transparent rgba(77, 77, 77, 0.9) transparent;
+  border-color: transparent transparent rgba(77, 77, 77, 0.95) transparent;
   position: absolute;
   top: 0;
   border-top-width: 0;
@@ -241,6 +289,11 @@ body{
   opacity: 1;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
+  margin-top: -20px;
+  z-index: -1;
+  @include res(s-m){
+    right: 130px!important;
+  }
 }
 
 /* 
@@ -277,6 +330,9 @@ body.front{
 	width: 100%;
 	bottom: 0;
   overflow: hidden;
+  @include res(s-m){
+  height: calc(100% - 118px);
+  }
   .slide{
       -webkit-background-size: cover!important;
       -moz-background-size: cover!important;
@@ -374,13 +430,20 @@ body.front{
  ****************************************/
 
 // Logo
+
+.wrapper-header{
+  background-color: #fcfcfc;
+  width: 100%;
+}
 header {
   @include width;
   padding: 47px 3% 39px!important;
   height: 138px;
   position: relative;
+  z-index: 300;
   @include res(s-m){
     padding: 12px!important;
+    height: 118px;
   }
 }
 
@@ -394,6 +457,9 @@ header {
     width: 40.8%;
     float: right;
     padding-left: 1%;
+    @include res(s-m){
+      width: auto;
+    }
   }
   .logo-art{
     float: right;
@@ -401,7 +467,10 @@ header {
     position: relative;
     @include res(s-m){
       margin-top: 15px;
-      margin-right: 23px;
+      width: auto;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding-right: 30px;
     }
     &:before{
       border-right: 2px solid #000;
@@ -417,7 +486,7 @@ header {
         border-top: 2px solid #000;
         width: 35px;
         top: -10px;
-        right: 7px;
+        right: 34px;
       }
 
     }
