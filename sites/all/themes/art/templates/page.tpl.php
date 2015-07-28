@@ -10,8 +10,9 @@
     <?php print render($page['top']); ?>
 
 <div id="page">
-  <div class="wrapper-header">
   <header class="header" id="header" role="banner">
+      <div class="wrapper-header">
+
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" />
         <div class="logo-art">
@@ -52,9 +53,9 @@
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
+</div>
 
   </header>
-</div>
       <div class="wrapper-width menu">
       <div class="menu-button">
         <div class="text"><?php print t("Menu"); ?></div>

@@ -87,6 +87,7 @@ body{
 
 #navigation{
   top:138px;
+  z-index: 2;
   @include res(s-m){
     top: 20px;
     position: relative;
@@ -96,6 +97,8 @@ body{
 .display-menu #navigation{
   @include res(s-m){
     width: 100%;
+    position: absolute;
+    top: 138px;
   }
 }
 
@@ -430,19 +433,20 @@ body.front{
 
 // Logo
 
-.wrapper-header{
-  background-color: #fcfcfc;
-  width: 100%;
-}
+
 header {
-  @include width;
+  width: 100%;
   padding: 47px 3% 39px!important;
   height: 138px;
   position: relative;
   z-index: 300;
+  background-color: #fcfcfc;
   @include res(s-m){
     padding: 12px!important;
     height: 118px;
+  }
+  .wrapper-header{
+    @include width;
   }
 }
 
