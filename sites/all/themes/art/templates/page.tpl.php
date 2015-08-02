@@ -66,7 +66,7 @@
         </div>
       </div>
     </div>
-    <div id="navigation">
+    <div id="navigation" class="close-menu">
 
       <?php if ($main_menu): ?>
       <div class="wrapper-width">
