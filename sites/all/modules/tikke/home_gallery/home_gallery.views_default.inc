@@ -31,7 +31,7 @@ function home_gallery_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'flexslider';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* שדה: תוכן: תמונה למצגת */
+  /* שדה: תוכן: תמונה - דסקטופ */
   $handler->display->display_options['fields']['field_image_slideshow']['id'] = 'field_image_slideshow';
   $handler->display->display_options['fields']['field_image_slideshow']['table'] = 'field_data_field_image_slideshow';
   $handler->display->display_options['fields']['field_image_slideshow']['field'] = 'field_image_slideshow';
@@ -60,13 +60,35 @@ function home_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['label'] = '';
-  $handler->display->display_options['fields']['field_link']['alter']['text'] = '20';
-  $handler->display->display_options['fields']['field_link']['alter']['trim_whitespace'] = TRUE;
-  $handler->display->display_options['fields']['field_link']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['text'] = '<div class="text-slide">
+  <div class="wrapper-width">
+  	  <div class="text">
+  	  	<div class="name">
+		<span class="title">[title]</span>
+		<span class="second-title">[field_second_title] </span>
+	  </div>
+	  <div class="continue">...</div>
+	</div>
+  </div>
+</div>';
+  $handler->display->display_options['fields']['field_link']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['type'] = 'link_absolute';
+  /* שדה: תוכן: תמונה - מובייל */
+  $handler->display->display_options['fields']['field_image_slideshow_mobile']['id'] = 'field_image_slideshow_mobile';
+  $handler->display->display_options['fields']['field_image_slideshow_mobile']['table'] = 'field_data_field_image_slideshow_mobile';
+  $handler->display->display_options['fields']['field_image_slideshow_mobile']['field'] = 'field_image_slideshow_mobile';
+  $handler->display->display_options['fields']['field_image_slideshow_mobile']['label'] = '';
+  $handler->display->display_options['fields']['field_image_slideshow_mobile']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_slideshow_mobile']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_slideshow_mobile']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
   /* Sort criterion: תוכן: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -128,7 +150,17 @@ function home_gallery_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('20'),
+    t('<div class="text-slide">
+  <div class="wrapper-width">
+  	  <div class="text">
+  	  	<div class="name">
+		<span class="title">[title]</span>
+		<span class="second-title">[field_second_title] </span>
+	  </div>
+	  <div class="continue">...</div>
+	</div>
+  </div>
+</div>'),
     t('Block'),
     t('מצגת לעמוד הבית'),
   );
