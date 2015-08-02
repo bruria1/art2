@@ -36,7 +36,7 @@ function home_gallery_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_image_slideshow',
-    'label' => 'תמונה למצגת',
+    'label' => 'תמונה - דסקטופ',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -57,7 +57,7 @@ function home_gallery_field_default_field_instances() {
             'pathauto' => 0,
             'transliterate' => 0,
           ),
-          'value' => 'exh-top/[node:nid]',
+          'value' => 'slide/',
         ),
         'retroactive_update' => 0,
       ),
@@ -79,6 +79,78 @@ function home_gallery_field_default_field_instances() {
       ),
       'type' => 'image_image',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-hp_slideshow-field_image_slideshow_mobile'
+  $field_instances['node-hp_slideshow-field_image_slideshow_mobile'] = array(
+    'bundle' => 'hp_slideshow',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image_slideshow_mobile',
+    'label' => 'תמונה - מובייל',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => 'slide/',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'file_entity_inline' => 1,
+        'file_entity_inline_fields' => array(),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 7,
     ),
   );
 
@@ -137,7 +209,7 @@ function home_gallery_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -190,7 +262,8 @@ function home_gallery_field_default_field_instances() {
   t('יש לרשום את הקישור באופן כזה: node/123');
   t('כותרת משנה');
   t('קישור');
-  t('תמונה למצגת');
+  t('תמונה - דסקטופ');
+  t('תמונה - מובייל');
 
   return $field_instances;
 }
