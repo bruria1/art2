@@ -568,7 +568,7 @@ html.js .collapsed .fieldset-legend {
 
 /* line 186, ../sass/components/arts-rtl.scss */
 #block-views-also-intersting-block .views-row, #block-views-also-intersting-block-1 .views-row {
-  margin-left: 24px;
+  margin-left: 3.5%;
   margin-right: 0;
 }
 /* line 190, ../sass/components/arts-rtl.scss */
@@ -620,31 +620,67 @@ html.js .collapsed .fieldset-legend {
   float: right;
   padding: 12px 55px 12px 16px;
 }
-/* line 235, ../sass/components/arts-rtl.scss */
+@media (max-width: 767px) {
+  /* line 230, ../sass/components/arts-rtl.scss */
+  #footer #block-block-1 {
+    background: none;
+    padding: 0;
+  }
+}
+/* line 239, ../sass/components/arts-rtl.scss */
 #footer #block-block-3 {
   float: right;
 }
-/* line 238, ../sass/components/arts-rtl.scss */
+/* line 242, ../sass/components/arts-rtl.scss */
 #footer #block-block-2 {
   padding-right: 16px;
   padding-left: 0;
   float: left;
 }
+@media (max-width: 767px) {
+  /* line 242, ../sass/components/arts-rtl.scss */
+  #footer #block-block-2 {
+    margin: 0;
+    text-align: left;
+  }
+}
 
 /**********  art page  ***********/
-/* line 248, ../sass/components/arts-rtl.scss */
+/* line 256, ../sass/components/arts-rtl.scss */
 .node-type-art .region-content-top {
   float: left;
 }
-/* line 251, ../sass/components/arts-rtl.scss */
+/* line 259, ../sass/components/arts-rtl.scss */
 .node-type-art .right {
   float: right;
 }
-/* line 254, ../sass/components/arts-rtl.scss */
+@media (max-width: 767px) {
+  /* line 264, ../sass/components/arts-rtl.scss */
+  .node-type-art #wrapper-title .field-name-field-artis {
+    border-left: 1px solid;
+    margin-left: 5px;
+    padding-left: 8px;
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+/* line 274, ../sass/components/arts-rtl.scss */
 .node-type-art #page-title {
   float: right;
+  margin-right: 0px;
   margin-left: 5px;
-  margin-right: 0;
+}
+@media (max-width: 767px) {
+  /* line 281, ../sass/components/arts-rtl.scss */
+  .node-type-art .place .field-name-field-campus, .node-type-art .place .field-name-field-material, .node-type-art .details .field-name-field-campus, .node-type-art .details .field-name-field-material {
+    border-left: 1px solid;
+    padding-left: 5px;
+    margin-left: 5px;
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+  }
 }
 
 /* SMACSS theme rules */

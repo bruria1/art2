@@ -27,7 +27,7 @@ $(window).resize(function() {
   $jcaruselwidth = $(window).width()*0.94/3;
 });
 
-if ($("body").hasClass("page-node-2594")) {
+if ($("body").hasClass("page-node-2598")) {
    $i = 1;
    $(".views-row").each(function(){
      $class = "place"+$i++;
@@ -101,7 +101,13 @@ if ($("body").hasClass("node-type-art")){
     });
 }
 
-
+/********  to top - mobile  ************/
+  $('.top-button').click(function(){
+      $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+    return false;
+  });
 
 
   }
