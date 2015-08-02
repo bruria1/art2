@@ -136,6 +136,9 @@
 
 </div>
 
+  <div class="top-button"><?php print t("Back to Top")?></div>
+
+
 <?php print render($page['footer']); ?>
 
 <?php print render($page['bottom']); ?>

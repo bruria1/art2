@@ -107,6 +107,7 @@ body{
 
 #navigation.close-menu{
   overflow: hidden;
+  height: 0;
 }
 
 #content{
@@ -115,6 +116,13 @@ body{
 
 #main{
   @include width;
+  @include res(s-m){
+    padding: 0;
+  }
+}
+
+p {
+    margin: 0.5em 0;
 }
 
 /* 
@@ -158,7 +166,7 @@ body{
 	}
 	.lines{
 		float: left;
-		padding-left: 13px;
+		padding-left: 7px;
     padding-top: 6px;
     @include res(s-m){
       padding-top: 8px;
@@ -677,6 +685,9 @@ header {
   #wrapper-title{
     margin: 48px auto 0;
     text-align: center;
+    @include res(s-m){
+      background-color: $gray;
+    }
     #page-title{
       font-family:'almoni-900', arial;
       border-right: 1px solid;
@@ -781,24 +792,41 @@ header {
   border-top: 1px solid;
   border-bottom: 1px solid;
   margin: 13px auto;
+  @include res(s-m){
+    border: none;
+    max-width: 100%;
+    margin-bottom: 70px;
+  }
   h2{
       font-family:'almoni-900';
       font-size: 1.17em;
       color: $green;
       text-align: center;
       margin-top: 17px;
-
+      @include res(s-m){
+        background-color: $gray;
+        color: #fff;
+        padding: 5px 0;
+      }
   }
   .view-content{
     display: block;
     text-align: center;
     margin-top: 14px;
     margin-bottom: 43px;
+    @include res(s-m){
+      width: 573px;
+      max-width: 100%;
+      margin: 17px auto 0;
+    }
   }
   .views-field-title{
     opacity: 0;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+    @include res(s-m){
+      opacity: 1;
+    }
     a{
       padding: 27% 0;
       position: absolute;
@@ -807,17 +835,33 @@ header {
       font-family:'almoni-900';
       font-size: 1.17em;
       color: #fff;
+      @include res(s-m){
+        font-size: 0.7em;
+        color: #000;
+        line-height: 1em;
+        bottom: -30px;
+        height: 28px;
+        padding: 0;
+        text-align: center;
+        font-family:'almoni-700';
+      } 
     }
   }
   .views-row{
     display: inline-block;
     position: relative;
-    margin-right: 24px;
+    margin-right: 3.5%;
+    @include res(s-m){
+      width: 29.5%;
+    }
     &:hover{
       .views-field-title{
         opacity: 1;
         a{
           background-color:  rgba(83, 83, 83, 0.79);
+          @include res(s-m){
+            background-color: transparent;
+          }
         }
       }
     }
@@ -830,6 +874,9 @@ header {
 
 #share{
   text-align: center;
+  @include res(s-m){
+    display: none;
+  }
   .link{
     display: inline;
     width: 25px;
@@ -853,6 +900,9 @@ header {
     float: right;
     margin-top: 6px;
     margin-right: 1px;
+    @include res(s-m){
+      display: none;
+    }
     p{
       margin: 0;
     }
@@ -877,6 +927,11 @@ header {
     margin: 0 auto;
     display: block;
   }
+  .owl-nav{
+    @include res(s-m){
+      display: none;
+    }
+  }
   .owl-controls{
     .owl-next, .owl-prev{
       height: 24px;
@@ -897,9 +952,46 @@ header {
       left: 0px;
       background-position:0px 0;   
     }
+    .owl-dots{
+      @include res(s-m){
+        text-align: center;
+        .owl-dot{
+          display: inline-block;
+        }
+        .owl-dot span{
+          width: 7px;
+          height: 7px;
+          background-color: #4f5050;
+          border-radius: 50%;
+          display: block;
+          margin: 0 3px;
+        }
+        .owl-dot.active span{
+          background-color: $green;
+        }
+      }
+    }
   }
 }
 
+#block-views-arts-galleries-block-2, #block-views-exhibition-gallery-block{
+  @include res(s-m){
+    display: none;
+  }
+}
+
+#block-views-arts-galleries-block, #block-views-exhibition-gallery-block-2{
+  .hide.view{
+    @include res(s-m){
+      height: auto;
+      img{
+        height: 318px;
+        width: auto;
+      }
+    }
+  }
+
+}
 /*****************  footer  ************/
 
 #footer{
@@ -908,12 +1000,20 @@ header {
   width: 715px;
   padding: 0 0 20px 0;
   line-height: 1.2em;
+  @include res(s-m){
+    background-color: $gray;
+    color: #fff;
+    padding: 7px 3%;
+  }
   strong{
     font-weight: normal;
     font-family:'almoni-700', arial;
   }
   a{
     color: #000;
+    @include res(s-m){
+      color: #fff;
+    }
   }
   p{
     margin: 0;
@@ -924,8 +1024,10 @@ header {
     float: left;
     padding: 12px 16px 12px 55px;
     width: 36%;
-    a{
-      color: #000;
+    @include res(s-m){
+      background: none;
+      padding: 0;
+      width: 70%;
     }
   }
   #block-block-3{
@@ -935,6 +1037,14 @@ header {
     border-right: 1px solid;
     border-left: 1px solid;
     margin-top: 12px;
+    @include res(s-m){
+      clear: both;
+      border: none;
+      width: 100%;
+      strong{
+        display: none;
+      }
+    }
   }
   #block-block-2{
     width: 18%;
@@ -943,23 +1053,75 @@ header {
     margin-top: 12px;
     float: right;
     padding-top: 9px;
+    @include res(s-m){
+      width: 30%;
+      margin: 0;
+      text-align: right;
+    }
   }
 }
 
+.top-button{
+  display: none;
+  @include res(s-m){
+    display: block;
+    width: 130px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font-size: 1.1em;
+    background-color: $green;
+    color: #fff;
+    display: block;
+    margin-bottom: 26px;
+    text-align: center;
+    cursor: pointer;
+  }
+}
 /**********  art page  ***********/
 
 .node-type-art{
   .region-content-top{
       width: 60%;
       float: right;
+      margin-bottom: 10px;
+      @include res(s-m){
+        width: 100%;
+      }
   }
   .right{
     float: left;
     width: 38%;
+    @include res(s-m){
+      width: 100%;
+    }
   }
   .field-name-field-artis{
     font-size: 1.2em;
     font-family:'almoni-900', arial;
+  }
+  article{
+    @include res(s-m){
+      text-align: center;
+    }
+  }
+  #wrapper-title{
+    @include res(s-m){
+      margin-top: 5px;
+      background-color: $gray;
+      width: 100%;
+      color: #fff;
+      padding: 15px 0 10px;
+      .field-name-field-artis{
+        display: inline-block;
+        border-right: 1px solid;
+        margin-right: 5px;
+        padding-right: 8px;
+      }
+      #page-title, .field-name-field-art-date{
+        float: none;
+        display: inline-block;
+      }
+    }
   }
   #page-title{
     font-size: 1.2em;
@@ -971,14 +1133,41 @@ header {
   .field-name-field-art-date{
     font-size: 1.2em;
   }
+  .place, .details{
+    @include res(s-m){
+      text-align: center;
+      .field-name-field-art-location-text, .field-name-field-campus,
+      .field-name-field-material, .field-name-field-sizes{
+        display: inline-block;
+        line-height: 1em;
+      }
+      .field-name-field-campus, .field-name-field-material{
+        border-right: 1px solid;
+        padding-right: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .place, .detailt, .clear{
+    @include res(s-m){
+      @include width;
+    }
+  }
   .field-name-field-campus{
     margin-top: 25px;
+    @include res(s-m){
+      margin-top: 7px;
+    }
     &:before{
       border-top: 1px solid;
       content: "";
       display: block;
       padding-top: 6px;
       width: 42px;
+      @include res(s-m){
+        border: none;
+        padding: 0;
+      }
     }
   }
   #content{
@@ -989,12 +1178,24 @@ header {
     clear: both;
   }
   .field-name-field-text{
-    padding-top: 75px;
     max-width: 655px;
     margin: 0 auto;
+    &:before{
+      @include res(s-m){
+        border-top: 1px solid;
+        content: "";
+        display: block;
+        padding-top: 6px;
+        width: 120px;
+        margin: 0 auto;
+      }
+    }
   }
   .field-name-field-material{
     margin-top:20px;
+    @include res(s-m){
+      margin-top: 5px;
+    }
   }
 }
 
@@ -1079,7 +1280,7 @@ header {
   }
 }
 
-.node-2594{
+.node-2598{
   text-align: center;
   .field-name-field-text{
     max-width: 884px;

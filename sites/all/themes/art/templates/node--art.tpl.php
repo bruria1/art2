@@ -44,10 +44,14 @@
     hide($content['comments']);
     hide($content['links']);
   ?>
+    <div class="place">
     <?php print render($content['field_campus']); 
-    print render($content['field_art_location_text']); 
-    print render($content['field_material']); 
-    print render($content['field_sizes']); ?>
+    print render($content['field_art_location_text']); ?>
+    </div>
+    <div class="details">
+      <?php print render($content['field_material']); 
+      print render($content['field_sizes']); ?>
+    </div>
   </div>
   <div class="clear">
     <?php print render($content['field_text']); ?>
@@ -77,6 +81,8 @@
 </div>
 
 </div> 
+
+
 
   <?php print render($content['links']); ?>
 

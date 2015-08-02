@@ -184,7 +184,7 @@
 
 #block-views-also-intersting-block, #block-views-also-intersting-block-1{
   .views-row{
-    margin-left: 24px;
+    margin-left: 3.5%;
     margin-right: 0;
   }
   .views-row-last{
@@ -231,6 +231,10 @@
     background: url("../images/huji.png") no-repeat right center transparent;
     float: right;
     padding: 12px 55px 12px 16px;
+    @include res(s-m){
+      background: none;
+      padding: 0;
+    }
   }
   #block-block-3{
     float: right;
@@ -239,6 +243,10 @@
     padding-right: 16px;
     padding-left: 0;
     float: left;
+    @include res(s-m){
+      margin: 0;
+      text-align: left;
+    }
   }
 }
 
@@ -251,9 +259,33 @@
   .right{
     float: right;
   }
+  #wrapper-title{
+    @include res(s-m){
+      .field-name-field-artis{
+        border-left: 1px solid;
+        margin-left: 5px;
+        padding-left: 8px;
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
   #page-title{
     float: right;
+    margin-right: 0px;
     margin-left: 5px;
-    margin-right: 0;
+  }
+  .place, .details{
+    @include res(s-m){
+      .field-name-field-campus, .field-name-field-material{
+        border-left: 1px solid;
+        padding-left: 5px;
+        margin-left: 5px;
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
   }
 }
