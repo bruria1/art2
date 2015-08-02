@@ -343,6 +343,25 @@ body.front{
       height: 100%;
       width: 100%;
   }
+  .desk{
+    @include res(s-m){
+      display: none;
+    }
+  }
+  .flex-control-paging{
+    display: none;
+    bottom: 0;
+    z-index: 300;
+    @include res(s-m){
+      display: block;
+    }
+  }
+  .mobile{
+    display: none;
+    @include res(s-m){
+      display: block;
+    }
+  }
   .text-slide{
     position: absolute;
     width: 100%;

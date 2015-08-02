@@ -26,18 +26,8 @@
 
 preg_match('/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\']*)/i', $fields['field_image_slideshow']->content, $matches); ?>
 
-<a href="<?php print $fields['field_link']->content; ?>">
-<div class="text-slide">
-  <div class="wrapper-width">
-  	  <div class="text">
-  	  	<div class="name">
-		<span class="title"><?php print $fields['title']->content; ?> </span>
-		<span class="second-title"><?php print $fields['field_second_title']->content; ?> </span>
-	  </div>
-	  <div class="continue">...</div>
-	</div>
-  </div>
-</div>
-</a>
+<?php print $fields['field_link']->content; ?>
 
-	<div class="slide" style="background:  url('<?php print $matches[1]; ?>') no-repeat center 0 fixed;"></div>
+	<div class="slide desk" style="background:  url('<?php print $matches[1]; ?>') no-repeat center 0 fixed;"></div>
+<?php preg_match('/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\']*)/i', $fields['field_image_slideshow_mobile']->content, $matches); ?>
+	<div class="slide mobile" style="background:  url('<?php print $matches[1]; ?>') no-repeat center 0 fixed;"></div>
