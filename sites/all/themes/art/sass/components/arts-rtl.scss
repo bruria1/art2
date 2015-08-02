@@ -78,11 +78,14 @@
 
 .region-top{
   .text-slide{
-    .wrapper-width{
+    .wrapper{
       .text{
-        left: 0;
+        left: 60px;
         right: auto;
         text-align: left;
+        @include res(s-m){
+          left: 20px;
+        }
       }
       .title{
         float: right;
