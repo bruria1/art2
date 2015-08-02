@@ -9,6 +9,9 @@
   @if $media == s-m {
     @media (max-width: 767px) { @content; }
   }
+  @if $media == l {
+    @media (max-width: 1195px) { @content; }
+  }
 }
 
 
@@ -100,6 +103,10 @@ body{
     position: absolute;
     top: 138px;
   }
+}
+
+#navigation.close-menu{
+  overflow: hidden;
 }
 
 #content{
@@ -256,6 +263,7 @@ body{
 
 #block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
 	opacity: 0;
+  z-index: -100;
 }
 
 @media (max-width: 1200px){
@@ -1000,21 +1008,46 @@ header {
       margin-bottom: -8px;
     }
   }
-  .views-row-1{
+  .place1{
     float: left;
-    width: 59%;
+    width: 60%;
+    .views-field-field-exh-gallery-top{
+      display: none;
+    }
   }
-  .views-row-2, .views-row-3{
+  .place2, .place3{
     float: right;
-    width: 39%;
+    width: 36.8%;
+    .views-field-field-exh-gallery-top-1{
+      display: none;
+    }
   }
-  .views-row-4{
-    float: right;
-    width: 59%;
-  }
-  .views-row-5, .views-row-6{
+  .place4, .place5{
     float: left;
-    width: 39%;
+    width: 36.8%;
+    .views-field-field-exh-gallery-top-1{
+      display: none;
+    }
+  }
+  .place6{
+    float: right;
+    width: 60%;
+    .views-field-field-exh-gallery-top{
+      display: none;
+    }
+  }
+  .place2, .place4{
+    margin-bottom: 37px;
+    @include res(l){
+      margin-bottom: 3.5%;
+    }
+  }
+  .place1, .place4{
+    clear: both;
+    margin-top: 37px;
+  }
+  .views-row-first{
+    margin-top: 0;
   }
   .views-field-title{
     position: absolute;

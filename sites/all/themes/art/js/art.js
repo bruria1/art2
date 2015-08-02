@@ -17,9 +17,24 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
-$height = $(window).height()-118;
-$width = ($(window).width()-1200)/2+276;
-$jcaruselwidth = $(window).width()*0.94/3;
+  $height = $(window).height()-118;
+  $width = ($(window).width()-1200)/2+276;
+  $jcaruselwidth = $(window).width()*0.94/3;
+
+$(window).resize(function() {
+  $height = $(window).height()-118;
+  $width = ($(window).width()-1200)/2+276;
+  $jcaruselwidth = $(window).width()*0.94/3;
+});
+
+if ($("body").hasClass("page-node-2594")) {
+   $i = 1;
+   $(".views-row").each(function(){
+     $class = "place"+$i++;
+     $(this).addClass($class); 
+     if ($i>6) { $i=1;}
+    });
+};
 
 $("#block-system-main-menu").addClass("hide");
 
@@ -29,6 +44,7 @@ $("#main").click(function(){
     $("#triangle-topleft").addClass("hide").removeClass("display");
     $("#block-system-main-menu").addClass("hide").removeClass("display");
     $("body").removeClass("display-menu");
+    $("#navigation").addClass("close-menu");
   }
 });
 
@@ -38,6 +54,7 @@ $(".menu-button").click(function(){
     $("#triangle-topleft").addClass("hide").removeClass("display");
     $("#block-system-main-menu").addClass("hide").removeClass("display");
     $("body").removeClass("display-menu");
+    $("#navigation").addClass("close-menu");
   }
   else {
     $("#triangle-topleft").addClass("display").removeClass("hide");
@@ -50,6 +67,7 @@ $(".menu-button").click(function(){
     $(".i18n-he #triangle-topleft").css("right", $width);  
     $(".i18n-en #triangle-topleft").css("left", $width);  
     $(".display-menu #square").css("width", $width);
+    $("#navigation").removeClass("close-menu");
   }
 });
 
@@ -82,6 +100,9 @@ if ($("body").hasClass("node-type-art")){
       $("#block-views-arts-galleries-block-2 .view").addClass("hide").removeClass("display");
     });
 }
+
+
+
 
   }
 };
