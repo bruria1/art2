@@ -322,10 +322,11 @@ p {
   z-index: -1;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
-  margin-top: -10px;
+  margin-top: -20px;
   @include res(s-m){
     width: 170px!important;
     background-color:  rgba(59, 142, 135, 0.94);
+    margin-top: -10px;
   }
 }
 
@@ -342,13 +343,14 @@ p {
   opacity: 1;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
-  margin-top: -10px;
+  margin-top: -20px;
   z-index: -1;
   @include res(s-m){
     right: 170px!important;
     border-color: transparent rgba(59, 142, 135, 0.94) transparent transparent;
     border-right-width: 0;
     border-left-width: 90px;
+    margin-top: -10px;
   }
 }
 
@@ -949,9 +951,62 @@ header {
     cursor: pointer;
     img{
       margin: 8px 10px;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+    .lines{
+      float: left;
+      padding-left: 7px;
+      padding-top: 6px;
+    }
+    span{
+      width: 20px;
+      height: 2px;
+      margin-bottom: 4px;
+      background-color: #fff;
+      display: block;  
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      position: absolute;
+    }
+    .line1{
+      right: 14px;
+      top: 17px;
+      transform: rotate(-28deg);
+      -ms-transform: rotate(-28deg); 
+      -webkit-transform: rotate(-28deg); 
+    }
+    .line3{
+      right: 14px;
+      top: 23px;
+      transform: rotate(28deg);
+      -ms-transform: rotate(-8deg); 
+      -webkit-transform: rotate(28deg);
     }
   }
 }
+
+.display-social .social-button{
+  img{
+    opacity: 0;
+  }
+  span{
+    margin: 0;
+    right: 10px;
+    top: 19px;
+  }
+  .line1{
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+  }
+  .line3{
+    transform: rotate(135deg);
+    -ms-transform: rotate(135deg); 
+    -webkit-transform: rotate(135deg); 
+  }
+}
+
 
 .share-triangle{
   width: 0;
