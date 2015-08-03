@@ -15,10 +15,7 @@
 
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" />
-        <div class="logo-art">
-            <img class="he" src="/sites/all/themes/art/images/art-logo-h.png">
-            <img class="en" src="/sites/all/themes/art/images/art-logo-e.png">
-        </div>
+        <div class="logo-mobile he"><img src="/sites/all/themes/art/images/logo-mobile.png"></div>
       </a>
     <?php endif; ?>
 
@@ -66,6 +63,38 @@
         </div>
       </div>
     </div>
+
+    <div class="social-button"><img src="/sites/all/themes/art/images/share.png"></div>
+    <div id="share-mobile" class="hide">
+        <div class="facebook link">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://<?php echo $_SERVER['HTTP_HOST'];?>/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
+        '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+        <div class="image"><img src="/sites/all/themes/art/images/facebook-mobile.png" alt="Share on Facebook"/></div>
+              <div class="text"><?php print t("Facebook"); ?></div>
+              </a>
+        </div>
+        <div class="twitter link">
+            <a href="https://twitter.com/home?status=http://<?php echo $_SERVER['HTTP_HOST'];?>/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
+            '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+            <div class="image"><img src="/sites/all/themes/art/images/twitter-mobile.png" alt="Share on Twitter"/></div>
+                <?php print t("Twitter"); ?>
+            </a>
+        </div>
+                <div class="pinterest link">
+          <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+              <div class="image"><img src="/sites/all/themes/art/images/pinterest-mobile.png" alt="Pinterest" /></div>
+              <?php print t("Pinterest"); ?>
+          </a>
+        </div>
+        <div class="mail link">
+          <a href="/forward?path=node/<?php print $node->nid; ?>">
+              <div class="image"><img src="/sites/all/themes/art/images//mail-mobile.png" alt="Email" /></div>
+              <?php print t("Mail"); ?>
+          </a>
+        </div>
+    </div>
+    <div class="share-triangle hide"></div>
+
     <div id="navigation" class="close-menu">
 
       <?php if ($main_menu): ?>

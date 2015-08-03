@@ -33,25 +33,17 @@
   }
 }
 
-#logo{
-  .logo-art{
-    @include res(s-m){
-      clear: right;
-      .he{
-        display: block;
-      }
-      .en{
-        display: none;
-      }
-    }
-  }
-}
-
 /**********  main menu  **************/
 
 #triangle-topleft{
   border-right-width: 0;
   border-left-width: 126px;
+  @include res(s-m){
+    right: 170px!important;
+    border-color: transparent rgba(59, 142, 135, 0.94) transparent transparent;
+    border-right-width: 90px;
+    border-left-width: 0;
+  }
 }
 
 #block-system-main-menu{
@@ -69,8 +61,19 @@
     padding-right: 13px;
     padding-left: 0;
     @include res(s-m){
-      padding-left: 6px;
+      padding-left: 10px;
     }
+  }
+}
+
+/*********  share  *********/
+
+.social-button{
+  @include res(s-m){
+    float: left;
+    margin-left: 10px;
+    left: 0;
+    right: auto;
   }
 }
 
