@@ -64,7 +64,11 @@
       </div>
     </div>
 
-    <div class="social-button"><img src="/sites/all/themes/art/images/share.png"></div>
+    <div class="social-button">
+      <img src="/sites/all/themes/art/images/share.png">
+      <span class="line1"></span>
+      <span class="line3"></span>
+    </div>
     <div id="share-mobile" class="hide">
         <div class="facebook link">
             <a href="https://www.facebook.com/sharer/sharer.php?u=http://<?php echo $_SERVER['HTTP_HOST'];?>/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
