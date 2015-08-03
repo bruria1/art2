@@ -102,6 +102,7 @@ body{
     width: 100%;
     position: absolute;
     top: 138px;
+    z-index: 300;
   }
 }
 
@@ -138,8 +139,8 @@ p {
 	cursor: pointer;
 	position: absolute;
   @include res(s-m){
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     padding: 0!important;
     margin-right: 10px;
@@ -148,7 +149,7 @@ p {
     z-index: 300;
   }
 	span{
-		width: 17px;
+		width: 20px;
 		height: 2px;
 		margin-bottom: 4px;
 		background-color: #fff;
@@ -169,7 +170,7 @@ p {
 		padding-left: 7px;
     padding-top: 6px;
     @include res(s-m){
-      padding-top: 8px;
+      padding-top: 13px;
     }
 	}
 }
@@ -210,30 +211,63 @@ p {
   position: relative;
   max-width: 100%;
   @include res(s-m){
-      margin-top: -56px;
+      margin-top: -20px;
+      width: 210px;
   }
   ul{
     width: 100%;
     bottom: 8%;
     position: absolute;
+    @include res(s-m){
+      bottom: auto;
+      top: 60px;
+    }
+  }
+  li.is-collapsed:before, li.is-expanded:before{
+    @include res(s-m){
+      content: "";
+      display: block;
+      float: right;
+      height: 20px;
+      width: 13px;
+      background: url("../images/triangle-menu.png")no-repeat top right;
+      position: absolute;
+      top: 9px;
+    }
+  }
+  li.is-collapsed:before{
+  }
+  li.is-expanded:before{
+    -webkit-transform:rotate(30deg);
+    -moz-transform:rotate(30deg);
+    transform: rotate(30deg);
+    top: 4px;
   }
   li{
 		width: 100%;
     padding-bottom: 13px!important;
+    position: relative;
     a{
       font-size: 1.5em;
       color: #fff;
       @include res(s-m){
         font-size: 1em;
+        padding-right: 15px!important;
       }
     }
     a.active, a.active-trail{
       color: $green;
       font-family:'almoni-900';
+      @include res(s-m){
+        color: #fff;
+      }
     }
     ul{
       padding-top: 10px!important;
       position: relative;
+      @include res(s-m){
+        top: 0;
+      }
       li{
         padding-bottom: 0!important;
       }
@@ -288,10 +322,11 @@ p {
   z-index: -1;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
-    margin-top: -20px;
-    @include res(s-m){
-      width: 130px!important;
-    }
+  margin-top: -10px;
+  @include res(s-m){
+    width: 170px!important;
+    background-color:  rgba(59, 142, 135, 0.94);
+  }
 }
 
 #triangle-topleft{
@@ -307,12 +342,16 @@ p {
   opacity: 1;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
-  margin-top: -20px;
+  margin-top: -10px;
   z-index: -1;
   @include res(s-m){
-    right: 130px!important;
+    right: 170px!important;
+    border-color: transparent rgba(59, 142, 135, 0.94) transparent transparent;
+    border-right-width: 0;
+    border-left-width: 90px;
   }
 }
+
 
 /* 
  * FRONT
@@ -489,69 +528,30 @@ header {
   position: relative;
   z-index: 300;
   background-color: #fcfcfc;
+  padding: 12px;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.93);
   @include res(s-m){
     padding: 12px!important;
-    height: 118px;
+    height: 127px;
   }
   .wrapper-header{
     @include width;
   }
-}
-
-#logo{
-  float: right;
-  width: 80%;
-  @include res(s-m){
-    width: 100%;
-  }
-  .header__logo-image{
-    width: 40.8%;
-    float: right;
-    padding-left: 1%;
+  #logo{
     @include res(s-m){
-      width: auto;
-    }
-  }
-  .logo-art{
-    float: right;
-    width: 56%;
-    position: relative;
-    @include res(s-m){
-      margin-top: 15px;
-      width: auto;
-      max-width: 100%;
-      box-sizing: border-box;
-      padding-right: 30px;
-    }
-    &:before{
-      border-right: 2px solid #000;
-      height: 35px;
-      content: "";
       display: block;
-      margin-top: 7px;
-      float: right;
-      position: absolute;
-      top:6px;
+      float: none;
+      text-align: center;
+    }
+    .logo-mobile{
+      display: none;
       @include res(s-m){
-        border-right: medium none;
-        border-top: 2px solid #000;
-        width: 35px;
-        top: -10px;
-        right: 34px;
-      }
-
-    }
-    img{
-      padding-right: 10px;
-    }
-    @include res(s-m){
-      .he{
-        display: none;
-        padding: 0;
+        display: block;
       }
     }
   }
 }
+
 
 // the Header region 
 .header__region {
@@ -871,6 +871,7 @@ header {
   }
 }
 
+/**********  share ************/
 
 #share{
   text-align: center;
@@ -890,6 +891,96 @@ header {
         background-color: $green;
       }
     }
+  }
+}
+
+#share-mobile{
+  display: none;
+  @include res(s-m){
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    float: left;
+    width: 170px;
+    display: block;
+    background-color: rgba(21, 121, 135, 0.91);
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    padding-top: 60px;
+    box-sizing: border-box;
+    .image{
+      width: 35px;
+      float: right;
+    }
+    a{
+      color: #fff;
+    }
+  }
+  .link{
+      clear: both;
+      margin-bottom: 13px;
+      height: 30px;
+      box-sizing: border-box;
+      transition: opacity 0.5s;
+      -webkit-transition: opacity 0.5s;
+  }
+  .facebook{
+    margin-bottom: 20px;
+    .text{
+      padding-top: 5px;
+    }
+  }
+}
+
+.social-button{
+  display: none;
+  @include res(s-m){
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $dark-green;
+    float: right;
+    margin-right: 10px;
+    right: 0;
+    top: 67px;
+    z-index: 300;
+    position: absolute;
+    cursor: pointer;
+    img{
+      margin: 8px 10px;
+    }
+  }
+}
+
+.share-triangle{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  top: 127px;
+  border-bottom-width: 0;
+  opacity: 1;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  z-index: 100;
+  left: 170px!important;
+  border-color: rgba(21, 121, 135, 0.91) transparent transparent;
+  border-right-width: 90px;
+  border-left-width: 0;
+}
+
+#share-mobile.hide, .share-triangle.hide{
+  opacity: 0;
+  height: 0!important;
+  overflow: hidden;
+  padding-top: 0;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  .link{
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
   }
 }
 /**********  exhibition & art gallery************/
@@ -1076,6 +1167,9 @@ header {
     text-align: center;
     cursor: pointer;
   }
+}
+.front .top-button{
+  display: none;
 }
 /**********  art page  ***********/
 
