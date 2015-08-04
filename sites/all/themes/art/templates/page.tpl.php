@@ -51,8 +51,6 @@
 
     <?php print render($page['header']); ?>
 </div>
-
-  </header>
       <div class="wrapper-width menu">
       <div class="menu-button">
         <div class="text"><?php print t("Menu"); ?></div>
@@ -63,17 +61,21 @@
         </div>
       </div>
     </div>
-
+    <?php if ( !empty($node) ) {?>
     <div class="social-button">
       <img src="/sites/all/themes/art/images/share.png">
       <span class="line1"></span>
       <span class="line3"></span>
     </div>
+    <?php } ?>
+  </header>
+
+<?php if ( !empty($node) ) {?>
     <div id="share-mobile" class="hide">
         <div class="facebook link">
             <a href="https://www.facebook.com/sharer/sharer.php?u=http://<?php echo $_SERVER['HTTP_HOST'];?>/node/<?php print $node->nid ?>" onclick="javascript:window.open(this.href,
         '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-        <div class="image"><img src="/sites/all/themes/art/images/facebook-mobile.png" alt="Share on Facebook"/></div>
+              <div class="image"><img src="/sites/all/themes/art/images/facebook-mobile.png" alt="Share on Facebook"></div>
               <div class="text"><?php print t("Facebook"); ?></div>
               </a>
         </div>
@@ -98,7 +100,7 @@
         </div>
     </div>
     <div class="share-triangle hide"></div>
-
+<?php } ?>
     <div id="navigation" class="close-menu">
 
       <?php if ($main_menu): ?>

@@ -39,7 +39,6 @@
   border-right-width: 0;
   border-left-width: 126px;
   @include res(s-m){
-    right: 170px!important;
     border-color: transparent rgba(59, 142, 135, 0.94) transparent transparent;
     border-right-width: 90px;
     border-left-width: 0;
@@ -52,7 +51,12 @@
 
 .menu-button{
   float: right;
-  padding: 11px 16px 6px 11px;;
+  padding: 11px 16px 6px 11px;
+  @include res(s-m){
+    right: 0;
+    left: auto;
+    margin-right: 10px;
+  }
   .text{
     float: right;
   }
@@ -66,6 +70,15 @@
   }
 }
 
+@media (max-width: 1200px){
+  #triangle-topleft{
+    right: 260px!important;
+    @include res(s-m){
+      right: 170px!important;
+    }
+  }
+}
+
 /*********  share  *********/
 
 .social-button{
@@ -74,7 +87,56 @@
     margin-left: 10px;
     left: 0;
     right: auto;
+    img{
+      margin: 8px 10px;
+    }
   }
+}
+
+#share-mobile{
+  @include res(s-m){
+    float: left;
+    left: 0;
+    right: auto;
+    .image{
+      float: right;
+    }
+  }
+}
+
+.display-social .social-button{
+  img{
+    opacity: 0;
+  }
+  span{
+    margin: 0;
+    right: 10px;
+    top: 19px;
+  }
+  .line1{
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+  }
+  .line3{
+    transform: rotate(135deg);
+    -ms-transform: rotate(135deg); 
+    -webkit-transform: rotate(135deg); 
+  }
+}
+
+
+.share-triangle{
+  left: 170px!important;
+  right: auto!important;
+  border-right-width: 90px;
+  border-left-width: 0;
+}
+
+
+/* the Header region  */
+.header__region {
+  float: left;
 }
 
 /*********  front  ***********/

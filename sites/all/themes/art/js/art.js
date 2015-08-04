@@ -17,14 +17,37 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
-  $height = $(window).height()-118;
+  $height = $(window).height();
   $width = ($(window).width()-1200)/2+276;
-  $jcaruselwidth = $(window).width()*0.94/3;
+  $simplewidth = ($(window).width());
 
 $(window).resize(function() {
-  $height = $(window).height()-118;
+  $height = $(window).height();
   $width = ($(window).width()-1200)/2+276;
-  $jcaruselwidth = $(window).width()*0.94/3;
+  $simplewidth = ($(window).width());
+      if ($simplewidth < 768){
+      $(".i18n-en #triangle-topleft").css("border-top-width", $height);
+      $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
+      $(".i18n-he #triangle-topleft").css("border-bottom-width", $height);
+      $(".i18n-he #triangle-topleft").css("border-top-width", "0");
+    }
+    else{
+      $("#triangle-topleft").css("border-bottom-width", $height);
+      $("#triangle-topleft").css("border-top-width", "0");
+    }
+});
+
+$(document).ready(function(){       
+      $scroll_pos = 0;
+      $(document).scroll(function() { 
+        $scroll_pos = $(this).scrollTop();
+        if($scroll_pos > 0) {
+            $("body").addClass('scroll');
+        }
+        else {
+            $("body").removeClass('scroll');
+        }
+      });
 });
 
 if ($("body").hasClass("page-node-2598")) {
@@ -71,7 +94,16 @@ $(".menu-button").click(function(){
     $("body").addClass("display-menu");
     $(".display-menu #block-system-main-menu").css("height", $height); 
     $(".display-menu #square").css("height", $height); 
-    $("#triangle-topleft").css("border-bottom-width", $height);
+    if ($simplewidth < 768){
+      $(".i18n-en #triangle-topleft").css("border-top-width", $height);
+      $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
+      $(".i18n-he #triangle-topleft").css("border-bottom-width", $height);
+      $(".i18n-he #triangle-topleft").css("border-top-width", "0");
+    }
+    else{
+      $("#triangle-topleft").css("border-bottom-width", $height);
+      $("#triangle-topleft").css("border-top-width", "0");
+    }
     $(".i18n-he #triangle-topleft").css("right", $width);  
     $(".i18n-en #triangle-topleft").css("left", $width);  
     $(".display-menu #square").css("width", $width);
