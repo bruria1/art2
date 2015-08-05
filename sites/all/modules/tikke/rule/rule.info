@@ -1,0 +1,15 @@
+name = rules
+core = 7.x
+package = Features
+dependencies[] = entity
+dependencies[] = rules
+dependencies[] = translaterule
+features[features_api][] = api:2
+features[rules_config][] = rules_change_artists_node_title
+features[rules_config][] = rules_close_full
+features[rules_config][] = rules_close_month
+features[rules_config][] = rules_close_year
+features[rules_config][] = rules_open_month
+features[rules_config][] = rules_save_date_exhibition
+features[rules_config][] = rules_translate_artists_to_english
+features[rules_config][] = rules_year_open

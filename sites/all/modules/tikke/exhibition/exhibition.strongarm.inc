@@ -14,7 +14,7 @@ function exhibition_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_exhibition';
-  $strongarm->value = 'edit-i18n';
+  $strongarm->value = 'edit-flippy';
   $export['additional_settings__active_tab_exhibition'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -63,8 +63,14 @@ function exhibition_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '14',
+            'weight' => '16',
             'visible' => FALSE,
+          ),
+        ),
+        'flippy_pager' => array(
+          'default' => array(
+            'weight' => '12',
+            'visible' => TRUE,
           ),
         ),
       ),
