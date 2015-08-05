@@ -2649,7 +2649,7 @@ header #logo .logo-mobile {
   padding-right: 11px;
 }
 /* line 785, ../sass/components/_arts.scss */
-.node-type-exhibition .treasurers-designers .field-name-field-designers .field-item {
+.node-type-exhibition .treasurers-designers .field-name-field-designers .field-item, .node-type-exhibition .treasurers-designers .field-name-field-treasurers-name .field-item {
   float: left;
   margin-right: 5px;
 }

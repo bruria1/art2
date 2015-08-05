@@ -620,7 +620,7 @@ html.js .collapsed .fieldset-legend {
   padding-right: 0;
 }
 /* line 223, ../sass/components/arts-rtl.scss */
-.node-type-exhibition .treasurers-designers .field-name-field-designers .field-item {
+.node-type-exhibition .treasurers-designers .field-name-field-designers .field-item, .node-type-exhibition .treasurers-designers .field-name-field-treasurers-name .field-item {
   float: right;
   margin-left: 5px;
   margin-right: 0;
