@@ -119,7 +119,7 @@ p {
   #header{
     height: 56px;
     position: fixed;
-    padding: 7px 0 10px!important;
+    padding: 7px 3% 10px!important;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.93);
   }
   .region-header{
@@ -130,13 +130,16 @@ p {
     }
   }
   .menu-button{
-    bottom: 10px;
+    bottom: 0px;
   }
   .logo-mobile{
     display: none!important;
   }
   .wrapper-header{
     position: relative;
+    .wrapper-header-inside{
+      position: relative;
+    }
   }
   .header__logo {
     display: block;
@@ -381,7 +384,7 @@ p {
   position: absolute;
   top: 0;
   border-left-width: 0;
-  border-right-width: 126px;
+  border-right-width: 208px;
   opacity: 1;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
@@ -613,39 +616,13 @@ header {
 // The language switcher blcok
 #block-lang-dropdown-language {
   float: left;
-	select {
-		height: 27px;
-		color: $white;
-    font-size: 0.8;
-    width: 88px!important;
-    cursor: pointer;
-    text-indent: 0.01px;
-    text-overflow: “”;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    max-width: 150%;
-    border: none;
-    text-align: right;
-    padding-right: 5px;
-	}
-  option{
-    background-color: #fff;
-    color: #000;
-  }
+    select {
+      height: 27px;
+      color: $white;
+      width: 88px!important;
+   }
   .form-type-select {
-    overflow: hidden;
-    float: left;
-    width: 100%;
-    height: 27px;
-    line-height: 31px;
     background: url("../images/lang_triangle.png") no-repeat 10px center #000;
-    text-align:-moz-center;
-    text-align:-webkit-center;
-    margin: 0px;
-  }
-  .form-type-select select::-ms-expand {
-    display: none;
   }
 }
 
@@ -726,6 +703,41 @@ header {
   
 }
 
+/************  design select  ************/
+
+#block-lang-dropdown-language, #block-views-arts-block {
+  select {
+    font-size: 0.8;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: “”;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    max-width: 150%;
+    border: none;
+    text-align: right;
+    padding-right: 5px;
+  }
+  option{
+    background-color: #fff;
+    color: #000;
+  }
+  .form-type-select {
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    height: 27px;
+    line-height: 31px;
+    text-align:-moz-center;
+    text-align:-webkit-center;
+    margin: 0px;
+  }
+  .form-type-select select::-ms-expand {
+    display: none;
+  }
+}
+
 /**********  exhibition page ************/
 
 .node-type-exhibition{
@@ -772,7 +784,6 @@ header {
     text-align: center;
     margin: 10px auto 0;
     line-height: 0.8em;
-    height: 23px;
     .field{
       display: inline-block;
     }
@@ -785,6 +796,7 @@ header {
       .field-item{
         float: left;
         margin-right: 5px;
+        text-align: left;
       }
     }
   }
@@ -792,6 +804,7 @@ header {
     line-height: 0.8em;
     clear: none;
     text-align: center;
+    margin-top: -5px;
     .close, .open{
       display: inline-block;
     }
@@ -875,7 +888,7 @@ header {
       opacity: 1;
     }
     a{
-      padding: 27% 0;
+      padding: 27.5% 0;
       position: absolute;
       width: 100%;
       display: block;
@@ -1484,5 +1497,77 @@ header {
     font-weight: normal;
     font-size: 1.6em;
     line-height: 1em;
+  }
+}
+
+/**** art at the capus **/
+
+.page-node-9{
+  #main{
+    width: 900px;
+  }
+  #wrapper-title{
+    text-align: center;
+    font-family: 'almoni-900', sans-serif;
+  }
+}
+
+#block-views-arts-block{
+  a{
+    color: #000;
+  }
+  img{
+    border:1px solid #bebebe;
+  }
+  .views-field-title{
+    font-size: 0.7em;
+    font-family: 'almoni-700', sans-serif;
+    line-height: 0.7;
+    margin: 15px auto 0;
+    width: 78%;
+  }
+  .views-field-field-teaser{
+    font-size: 0.7em;
+    margin: 0 auto;
+    width: 78%;
+  }
+  .masonry-item{
+    width: 32%;
+    margin-bottom: 40px;
+  }
+  .views-field-field-art-gallery{
+    a{
+      width: 100%;
+      display: block;
+      img{
+        display: block;
+        margin: 0 auto;
+        width: 78%;
+      }
+    }
+  }
+  .view-content{
+    margin: 0 auto;
+  }
+  select{
+    height: 23px;
+    color: #fff;
+    width: 200px!important;
+  }
+  .form-type-select {
+    background: url("../images/lang_triangle.png") no-repeat 10px center #3e3e3f;
+  }
+  #edit-field-campus-tid-wrapper .form-type-select {
+    background: url("../images/lang_triangle.png") no-repeat 10px center $green;
+  }
+  input.form-submit{
+    background-color: $green;
+    border: medium none;
+    color: #fff;
+    height: 27px;
+    margin: 24px 0 0;
+    padding: 2px 16px 10px;
+    font-family: 'almoni-900', sans-serif;
+    font-size: 1.1em;
   }
 }

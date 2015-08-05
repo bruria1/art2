@@ -75,6 +75,20 @@
 		});	
 });
 
+ $(document).ready(function () {
+     $("a[rel^='prettyPhoto']").prettyPhoto();
+
+     $(".owl-slider").owlCarousel({
+
+         autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+         items: 4,
+         itemsDesktop: [1199, 3],
+         itemsDesktopSmall: [979, 3]
+
+     });
+ });
+ 
   jQuery(function(){    
     jQuery('.i18n-en .view-display-id-block .owl-carousel').owlCarousel({
       rtl:false,
