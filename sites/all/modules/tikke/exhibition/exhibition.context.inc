@@ -41,11 +41,11 @@ function exhibition_context_default_contexts() {
           'region' => 'content-top',
           'weight' => '-9',
         ),
-        'views-exhibition_gallery-block_1' => array(
+        'views-also_intersting-block' => array(
           'module' => 'views',
-          'delta' => 'exhibition_gallery-block_1',
-          'region' => 'content',
-          'weight' => '-9',
+          'delta' => 'also_intersting-block',
+          'region' => 'content-bottom',
+          'weight' => '-10',
         ),
       ),
     ),

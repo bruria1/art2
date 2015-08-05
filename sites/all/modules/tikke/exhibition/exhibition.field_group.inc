@@ -48,20 +48,22 @@ function exhibition_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
-    'label' => 'אוצרים ומעצבים',
+    'label' => 'אוצרים ומעצבים ואמנים',
     'weight' => '25',
     'children' => array(
       0 => 'field_designers',
       1 => 'field_treasurers_name',
+      2 => 'field_copyright',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'אוצרים ומעצבים ואמנים',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-designers field-group-tab',
         'required_fields' => 1,
+        'classes' => 'group-designers field-group-tab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_designers|node|exhibition|form'] = $field_group;
@@ -143,8 +145,7 @@ function exhibition_field_group_info() {
     'label' => 'מדיה',
     'weight' => '26',
     'children' => array(
-      0 => 'field_exh_gallery_bottom',
-      1 => 'field_exh_gallery_top',
+      0 => 'field_exh_gallery_top',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
