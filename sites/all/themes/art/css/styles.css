@@ -3622,10 +3622,19 @@ header #logo .logo-mobile {
   border: medium none;
   color: #fff;
   height: 27px;
-  margin: 24px 0 0;
+  margin: 0;
   padding: 2px 16px 10px;
   font-family: 'almoni-900', sans-serif;
   font-size: 1.1em;
+}
+/* line 1579, ../sass/components/_arts.scss */
+#block-views-arts-block .views-submit-button {
+  padding-right: 0 !important;
+}
+/* line 1582, ../sass/components/_arts.scss */
+#block-views-arts-block .views-exposed-form {
+  width: 510px;
+  margin: 0 auto 30px;
 }
 
 /**

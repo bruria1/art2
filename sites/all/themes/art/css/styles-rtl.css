@@ -763,6 +763,18 @@ html.js .collapsed .fieldset-legend {
   }
 }
 
+/**** art at the capus **/
+/* line 361, ../sass/components/arts-rtl.scss */
+.views-exposed-form .views-exposed-widget {
+  float: right;
+  padding: 0.5em  0 0 1em;
+}
+
+/* line 366, ../sass/components/arts-rtl.scss */
+.views-submit-button {
+  padding-left: 0 !important;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */
