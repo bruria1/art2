@@ -40,7 +40,7 @@ function exhibition_views_default_views() {
   $handler->display->display_options['style_options']['easing'] = '';
   $handler->display->display_options['style_options']['vertical'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* שדה: תוכן: גלריית תערוכה - אזור עליון */
+  /* שדה: תוכן: גלריית תערוכה */
   $handler->display->display_options['fields']['field_exh_gallery_top']['id'] = 'field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['table'] = 'field_data_field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['field'] = 'field_exh_gallery_top';
@@ -62,7 +62,7 @@ function exhibition_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Sort criterion: תוכן: גלריית תערוכה - אזור עליון (field_exh_gallery_top:fid) */
+  /* Sort criterion: תוכן: גלריית תערוכה (field_exh_gallery_top:fid) */
   $handler->display->display_options['sorts']['field_exh_gallery_top_fid']['id'] = 'field_exh_gallery_top_fid';
   $handler->display->display_options['sorts']['field_exh_gallery_top_fid']['table'] = 'field_data_field_exh_gallery_top';
   $handler->display->display_options['sorts']['field_exh_gallery_top_fid']['field'] = 'field_exh_gallery_top_fid';
@@ -115,7 +115,7 @@ function exhibition_views_default_views() {
 <div class="one"></div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* שדה: תוכן: גלריית תערוכה - אזור עליון */
+  /* שדה: תוכן: גלריית תערוכה */
   $handler->display->display_options['fields']['field_exh_gallery_top']['id'] = 'field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['table'] = 'field_data_field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['field'] = 'field_exh_gallery_top';
@@ -157,7 +157,7 @@ function exhibition_views_default_views() {
 <div class="one"></div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* שדה: תוכן: גלריית תערוכה - אזור עליון */
+  /* שדה: תוכן: גלריית תערוכה */
   $handler->display->display_options['fields']['field_exh_gallery_top']['id'] = 'field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['table'] = 'field_data_field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['field'] = 'field_exh_gallery_top';
@@ -171,7 +171,7 @@ function exhibition_views_default_views() {
   $handler->display->display_options['fields']['field_exh_gallery_top']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_exh_gallery_top']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: תוכן: גלריית תערוכה - אזור עליון (field_exh_gallery_top:fid) */
+  /* Sort criterion: תוכן: גלריית תערוכה (field_exh_gallery_top:fid) */
   $handler->display->display_options['sorts']['field_exh_gallery_top_fid']['id'] = 'field_exh_gallery_top_fid';
   $handler->display->display_options['sorts']['field_exh_gallery_top_fid']['table'] = 'field_data_field_exh_gallery_top';
   $handler->display->display_options['sorts']['field_exh_gallery_top_fid']['field'] = 'field_exh_gallery_top_fid';
@@ -365,7 +365,7 @@ function exhibition_views_default_views() {
       'label' => 'פרסום תוכן',
     ),
   );
-  /* שדה: תוכן: גלריית תערוכה - אזור עליון */
+  /* שדה: תוכן: גלריית תערוכה */
   $handler->display->display_options['fields']['field_exh_gallery_top']['id'] = 'field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['table'] = 'field_data_field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['field'] = 'field_exh_gallery_top';
@@ -681,7 +681,7 @@ function exhibition_views_default_views() {
       'label' => 'פרסום תוכן',
     ),
   );
-  /* שדה: תוכן: גלריית תערוכה - אזור עליון */
+  /* שדה: תוכן: גלריית תערוכה */
   $handler->display->display_options['fields']['field_exh_gallery_top']['id'] = 'field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['table'] = 'field_data_field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['field'] = 'field_exh_gallery_top';
@@ -840,7 +840,7 @@ function exhibition_views_default_views() {
       'label' => 'פרסום תוכן',
     ),
   );
-  /* שדה: תוכן: גלריית תערוכה - אזור עליון */
+  /* שדה: תוכן: גלריית תערוכה */
   $handler->display->display_options['fields']['field_exh_gallery_top']['id'] = 'field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['table'] = 'field_data_field_exh_gallery_top';
   $handler->display->display_options['fields']['field_exh_gallery_top']['field'] = 'field_exh_gallery_top';

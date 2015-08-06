@@ -38,13 +38,13 @@ function pages_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'metatags' => array(
           'weight' => '8',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
           'weight' => '7',

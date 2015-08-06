@@ -62,7 +62,7 @@ function home_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_link']['label'] = '';
   $handler->display->display_options['fields']['field_link']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_link']['alter']['text'] = '<div class="text-slide">
-  <div class="wrapper-width">
+  <div class="wrapper">
   	  <div class="text">
   	  	<div class="name">
 		<span class="title">[title]</span>
@@ -151,7 +151,7 @@ function home_gallery_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('<div class="text-slide">
-  <div class="wrapper-width">
+  <div class="wrapper">
   	  <div class="text">
   	  	<div class="name">
 		<span class="title">[title]</span>

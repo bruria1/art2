@@ -41,27 +41,8 @@ function home_gallery_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'hp/desktop',
       'file_extensions' => 'png gif jpg jpeg',
-      'filefield_paths' => array(
-        'active_updating' => 0,
-        'file_name' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
-        ),
-        'file_path' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => 'slide/',
-        ),
-        'retroactive_update' => 0,
-      ),
-      'filefield_paths_enabled' => 1,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -113,27 +94,8 @@ function home_gallery_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'hp/mobile',
       'file_extensions' => 'png gif jpg jpeg',
-      'filefield_paths' => array(
-        'active_updating' => 0,
-        'file_name' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
-        ),
-        'file_path' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => 'slide/',
-        ),
-        'retroactive_update' => 0,
-      ),
-      'filefield_paths_enabled' => 1,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',

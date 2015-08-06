@@ -18,7 +18,7 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
   $height = $(window).height();
-  $width = ($(window).width()-1200)/2+276;
+  $width = ($(window).width()-1200)/2+250;
   $simplewidth = ($(window).width());
 
 $(window).resize(function() {

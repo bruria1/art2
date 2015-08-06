@@ -112,7 +112,7 @@ function arts_field_default_field_instances() {
         ),
         'retroactive_update' => 0,
       ),
-      'filefield_paths_enabled' => 1,
+      'filefield_paths_enabled' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
