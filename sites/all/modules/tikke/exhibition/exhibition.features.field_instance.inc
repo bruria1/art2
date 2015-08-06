@@ -321,32 +321,13 @@ function exhibition_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_exh_gallery_top',
-    'label' => 'גלריית תערוכה - אזור עליון',
+    'label' => 'גלריית תערוכה',
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'exhibition',
       'file_extensions' => 'png gif jpg jpeg',
-      'filefield_paths' => array(
-        'active_updating' => 0,
-        'file_name' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
-        ),
-        'file_path' => array(
-          'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
-          ),
-          'value' => 'exh-top/[node:nid]',
-        ),
-        'retroactive_update' => 0,
-      ),
-      'filefield_paths_enabled' => 1,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -972,7 +953,7 @@ function exhibition_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('גלריית תערוכה - אזור עליון');
+  t('גלריית תערוכה');
   t('כותרת משנה');
   t('לשימוש פנימי בלבד, אין צורך למלא שדה זה.');
   t('מיקום התערוכה');

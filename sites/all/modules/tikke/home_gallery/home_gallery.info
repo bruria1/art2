@@ -2,7 +2,6 @@ name = home gallery
 core = 7.x
 package = Features
 dependencies[] = features
-dependencies[] = filefield_paths
 dependencies[] = image
 dependencies[] = link
 dependencies[] = node
