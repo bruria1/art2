@@ -3633,8 +3633,25 @@ header #logo .logo-mobile {
 }
 /* line 1582, ../sass/components/_arts.scss */
 #block-views-arts-block .views-exposed-form {
-  width: 510px;
+  width: 550px;
   margin: 0 auto 30px;
+  max-width: 100%;
+}
+/* line 1586, ../sass/components/_arts.scss */
+#block-views-arts-block .views-exposed-form label {
+  display: none;
+}
+/* line 1590, ../sass/components/_arts.scss */
+#block-views-arts-block .views-widget-sort-order {
+  display: none;
+}
+/* line 1593, ../sass/components/_arts.scss */
+#block-views-arts-block .form-item-field-art-type-tid select {
+  width: 110px !important;
+}
+/* line 1596, ../sass/components/_arts.scss */
+#block-views-arts-block .form-item-sort-by select {
+  width: 100px !important;
 }
 
 /**
