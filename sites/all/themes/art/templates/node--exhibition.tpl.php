@@ -9,7 +9,9 @@
 ?>
 
 
-
+      <?php if ($unpublished): ?>
+        <mark class="unpublished"><?php print t('Unpublished'); ?></mark>
+      <?php endif; ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
 <div id="wrapper-title">
@@ -21,7 +23,7 @@
    <?php }?>
 </div>
 
-  <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
+  <?php if ($title_prefix || $title_suffix || $display_submitted || !$page && $title): ?>
     <header>
       <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>
@@ -36,9 +38,7 @@
         </p>
       <?php endif; ?>
 
-      <?php if ($unpublished): ?>
-        <mark class="unpublished"><?php print t('Unpublished'); ?></mark>
-      <?php endif; ?>
+
     </header>
   <?php endif; ?>
 
