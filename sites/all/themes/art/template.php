@@ -132,3 +132,19 @@ function art_preprocess_block(&$variables, $hook) {
 // */
 
 
+function art_form_alter(&$form, $form_state, $form_id) {
+  if($form['#id'] == 'views-exposed-form-arts-block'){
+    foreach ($form['field_campus_tid']['#options'] as $key => &$option) {
+      if ($key == 'All') {
+        $option = t('Campus Name');
+      } 
+    }
+    foreach ($form['field_art_type_tid']['#options'] as $key => &$option) {
+      if ($key == 'All') {
+        $option = t('Art Type');
+      } 
+    }
+
+  }
+
+}
