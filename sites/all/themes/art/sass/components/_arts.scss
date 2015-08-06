@@ -1580,7 +1580,20 @@ header {
     padding-right: 0!important;
   }
   .views-exposed-form{
-    width: 510px;
+    width: 550px;
     margin: 0 auto 30px;
+    max-width: 100%;
+    label{
+      display: none;
+    }
+  }
+  .views-widget-sort-order{
+    display: none;
+  }
+  .form-item-field-art-type-tid select{
+    width: 110px!important;
+  }
+  .form-item-sort-by select{
+    width: 100px!important;
   }
 }

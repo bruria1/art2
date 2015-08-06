@@ -172,6 +172,12 @@ if ($("body").hasClass("node-type-art")){
     return false;
   });
 
+/********  art at the campus  ************/
+
+
+$("#edit-sort-order").val("ASC");
+
+
 
   }
 };
