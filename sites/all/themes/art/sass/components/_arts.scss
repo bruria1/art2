@@ -1525,21 +1525,33 @@ header {
   img{
     border:1px solid #bebebe;
   }
-  .views-field-title{
+  .views-field-field-artis{
     font-size: 0.7em;
     font-family: 'almoni-700', sans-serif;
-    line-height: 0.7;
+    line-height: 0.9;
     margin: 15px auto 0;
     width: 78%;
+    .title{
+      font-family: 'almoni-700', sans-serif;
+    }
+    @include res(s-m){
+      width: 100%;
+    }
   }
   .views-field-field-teaser{
     font-size: 0.7em;
     margin: 0 auto;
     width: 78%;
+    @include res(s-m){
+      width: 100%;
+    }
   }
   .masonry-item{
     width: 32%;
     margin-bottom: 40px;
+    @include res(s-m){
+      width: 100%;
+    }
   }
   .views-field-field-art-gallery{
     a{
@@ -1549,6 +1561,9 @@ header {
         display: block;
         margin: 0 auto;
         width: 78%;
+        @include res(s-m){
+          width: 100%;
+        }
       }
     }
   }
@@ -1596,4 +1611,8 @@ header {
   .form-item-sort-by select{
     width: 100px!important;
   }
+}
+
+.ajax-progress{
+  display: none;
 }
