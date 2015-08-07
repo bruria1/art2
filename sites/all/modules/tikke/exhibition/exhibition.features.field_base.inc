@@ -430,6 +430,36 @@ function exhibition_field_default_field_bases() {
     'type' => 'datetime',
   );
 
+  // Exported field_base: 'field_place_site'
+  $field_bases['field_place_site'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_place_site',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'place_site',
+          'parent' => 0,
+        ),
+      ),
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_treasurers_name'
   $field_bases['field_treasurers_name'] = array(
     'active' => 1,

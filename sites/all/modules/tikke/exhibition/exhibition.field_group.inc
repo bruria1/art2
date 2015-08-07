@@ -91,6 +91,7 @@ function exhibition_field_group_info() {
       7 => 'field_full_date_2',
       8 => 'field_month_date_2',
       9 => 'field_year_date_2',
+      10 => 'field_place_site',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
