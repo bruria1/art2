@@ -50,9 +50,9 @@ $(document).ready(function(){
       });
 });
 
-if ($("body").hasClass("page-node-2598")) {
+if ($("div").hasClass("view-the-gallery")) {
    $i = 1;
-   $(".views-row").each(function(){
+   $(".view-the-gallery .views-row").each(function(){
      $class = "place"+$i++;
      $(this).addClass($class); 
      if ($i>6) { $i=1;}

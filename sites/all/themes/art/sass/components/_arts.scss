@@ -1345,7 +1345,10 @@ header {
     font-size: 1.2em;
   }
   .place, .details{
+    float: right;
+    clear: right;
     @include res(s-m){
+      float: none;
       text-align: center;
       .field-name-field-art-location-text, .field-name-field-campus,
       .field-name-field-material, .field-name-field-sizes{
@@ -1412,7 +1415,7 @@ header {
 
 /*********  the gallery   ***********/
 
-#block-views-the-gallery-block{
+.view-the-gallery{
   .views-row{
     position: relative;
     overflow: hidden;
@@ -1492,11 +1495,11 @@ header {
   }
 }
 
-.node-2598{
+.page-taxonomy-term{
   text-align: center;
-  .field-name-field-text{
+  #block-views-term-description-block{
     max-width: 884px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
   #page-title{
     font-family:'almoni-900', arial;
@@ -1527,7 +1530,6 @@ header {
   }
   .views-field-field-artis{
     font-size: 0.7em;
-    font-family: 'almoni-700', sans-serif;
     line-height: 0.9;
     margin: 15px auto 0;
     width: 78%;

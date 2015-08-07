@@ -141,7 +141,10 @@
       <a id="main-content"></a>
       <?php print render($page['content-top']); ?>
       <?php print render($title_prefix); ?>
-      <?php print render($title_suffix); ?>
+      <?php print render($title_suffix);
+      if(arg(0) == 'taxonomy' && arg(1) == 'term') {?>
+        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+      <?php } ?>
       <?php print $messages; ?>
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?>

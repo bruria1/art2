@@ -49,7 +49,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 22,
     ),
   );
 
@@ -141,7 +141,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 17,
+      'weight' => 28,
     ),
   );
 
@@ -247,7 +247,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+10',
       ),
       'type' => 'date_select',
-      'weight' => 16,
+      'weight' => 27,
     ),
   );
 
@@ -393,7 +393,7 @@ function exhibition_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 23,
     ),
   );
 
@@ -449,7 +449,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+10',
       ),
       'type' => 'date_popup',
-      'weight' => 14,
+      'weight' => 25,
     ),
   );
 
@@ -505,7 +505,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+0',
       ),
       'type' => 'date_popup',
-      'weight' => 18,
+      'weight' => 29,
     ),
   );
 
@@ -561,7 +561,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+10',
       ),
       'type' => 'date_select',
-      'weight' => 15,
+      'weight' => 26,
     ),
   );
 
@@ -617,7 +617,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+0',
       ),
       'type' => 'date_select',
-      'weight' => 19,
+      'weight' => 30,
     ),
   );
 
@@ -653,7 +653,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 13,
+      'weight' => 24,
     ),
   );
 
@@ -710,6 +710,45 @@ function exhibition_field_default_field_instances() {
       ),
       'type' => 'date_popup',
       'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_place_site'
+  $field_instances['node-exhibition-field_place_site'] = array(
+    'bundle' => 'exhibition',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+        ),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 22,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_place_site',
+    'label' => 'מיקום התערוכה באתר',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 21,
     ),
   );
 
@@ -947,7 +986,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+0',
       ),
       'type' => 'date_select',
-      'weight' => 20,
+      'weight' => 31,
     ),
   );
 
@@ -957,6 +996,7 @@ function exhibition_field_default_field_instances() {
   t('כותרת משנה');
   t('לשימוש פנימי בלבד, אין צורך למלא שדה זה.');
   t('מיקום התערוכה');
+  t('מיקום התערוכה באתר');
   t('קמפוס ');
   t('שמות אמנים');
   t('שמות האוצרים');
