@@ -105,9 +105,6 @@ body{
 
 #main{
   @include width;
-  @include res(s-m){
-    padding: 0;
-  }
 }
 
 p {
@@ -746,6 +743,11 @@ header {
 /**********  exhibition page ************/
 
 .node-type-exhibition{
+  #main{
+    @include res(s-m){
+      padding: 0;
+    }
+  }
   #wrapper-title{
     margin: 48px auto 0;
     text-align: center;
@@ -1291,6 +1293,11 @@ header {
 /**********  art page  ***********/
 
 .node-type-art{
+  #main{
+    @include res(s-m){
+      padding: 0;
+    }
+  }
   .region-content-top{
       width: 60%;
       float: right;
