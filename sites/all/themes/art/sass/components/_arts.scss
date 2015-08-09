@@ -134,6 +134,7 @@ p {
     padding: 15px 3% 10px;
     width: 100%;
     text-align: center;
+    box-sizing:border-box;
   }
 }
 
@@ -452,9 +453,6 @@ p {
       top:0!important;
     }
   }
-}
-
-@media (max-height: 472px){
   #share-mobile{
     height: 472px!important;
     position: absolute!important;
@@ -1694,6 +1692,7 @@ header {
 .page-node-9, .page-node-10{
   #main{
     width: 900px;
+    max-width: 100%;
   }
   #wrapper-title{
     text-align: center;
@@ -1738,7 +1737,7 @@ header {
       width: 48%;
     }
     @include res(s){
-      width: 100%;
+      width: 99%;
     }
   }
   .views-field-field-art-gallery{
