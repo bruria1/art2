@@ -64,7 +64,6 @@
   @include res(s-m){
     right: 0;
     left: auto;
-    margin-right: 10px;
   }
   .text{
     float: right;
@@ -93,7 +92,6 @@
 .social-button{
   @include res(s-m){
     float: left;
-    margin-left: 10px;
     left: 0;
     right: auto;
     img{
