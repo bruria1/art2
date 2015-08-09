@@ -1214,20 +1214,24 @@ header {
 
 
 .share-triangle{
-  width: 0;
-  height: 0;
-  border-style: solid;
-  position: fixed;
-  top: 0;
-  border-bottom-width: 0;
-  opacity: 1;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-  z-index: 100;
-  right: 170px!important;
-  border-color: rgba(21, 121, 135, 0.91) transparent transparent;
-  border-left-width: 90px;
-  border-right-width: 0;
+  display: none;
+  @include res(s-m){
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: fixed;
+    top: 0;
+    border-bottom-width: 0;
+    opacity: 1;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    z-index: 100;
+    right: 170px!important;
+    border-color: rgba(21, 121, 135, 0.91) transparent transparent;
+    border-left-width: 90px;
+    border-right-width: 0;
+  }
 }
 
 #share-mobile.hide, .share-triangle.hide{
@@ -1236,7 +1240,7 @@ header {
   border-right-width: 0px;
   border-top-width: 0px;
   overflow: hidden;
-  height: 0!important;
+  z-index: -200;
   .link{
     height: 0;
     overflow: hidden;
@@ -1380,7 +1384,11 @@ header {
     @include res(s-m){
       background: none;
       padding: 0;
-      width: 70%;
+      width: 50%;
+    }
+    @include res(s){
+      width: 100%;
+      text-align: center!important;
     }
   }
   #block-block-3{
@@ -1408,9 +1416,13 @@ header {
     padding-top: 9px;
     text-align: right;
     @include res(s-m){
-      width: 30%;
+      width: 50%;
       margin: 0;
       text-align: right;
+    }
+    @include res(s){
+      width: 100%;
+      text-align: center!important;
     }
   }
 }
@@ -1441,6 +1453,10 @@ header {
     @include res(s-m){
       padding: 0;
     }
+  }
+  #page-title{
+    width: auto;
+    padding: 0;
   }
   .region-content-top{
       width: 60%;
@@ -1473,6 +1489,7 @@ header {
       width: 100%;
       color: #fff;
       padding: 15px 0 10px;
+      text-align: center;
       .field-name-field-artis{
         display: inline-block;
         border-right: 1px solid;
@@ -1499,7 +1516,7 @@ header {
     float: left;
     clear: left;
     @include res(s-m){
-      float: none;
+      float: none!important;
       text-align: center;
       .field-name-field-art-location-text, .field-name-field-campus,
       .field-name-field-material, .field-name-field-sizes{

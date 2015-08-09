@@ -342,6 +342,7 @@
   }
   #wrapper-title{
     @include res(s-m){
+      text-align: center;
       .field-name-field-artis{
         border-left: 1px solid;
         margin-left: 5px;
