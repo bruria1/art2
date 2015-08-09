@@ -97,13 +97,13 @@ $(".menu-button").click(function(){
     $(".display-menu #block-system-main-menu").css("height", $height); 
     $(".display-menu #square").css("height", $heightsquare); 
     if ($simplewidth < 768){
-      $(".i18n-en #triangle-topleft").css("border-top-width", $height);
+      $(".i18n-en #triangle-topleft").css("border-top-width", $heightsquare);
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
-      $(".i18n-he #triangle-topleft").css("border-bottom-width", $height);
+      $(".i18n-he #triangle-topleft").css("border-bottom-width", $heightsquare);
       $(".i18n-he #triangle-topleft").css("border-top-width", "0");
     }
     else{
-      $("#triangle-topleft").css("border-bottom-width", $height);
+      $("#triangle-topleft").css("border-bottom-width", $heightsquare);
       $("#triangle-topleft").css("border-top-width", "0");
     }
     $(".i18n-he #triangle-topleft").css("right", $width);  
