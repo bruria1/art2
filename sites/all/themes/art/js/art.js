@@ -117,7 +117,7 @@ $(".menu-button").click(function(){
 });
 
 $(".share-triangle").css("border-top-width", $height);
-$("#share-mobile").css("height", $height); 
+$("#share-mobile").css("height", $heightsquare); 
 
 
 $(".social-button").click(function(){
