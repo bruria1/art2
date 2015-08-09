@@ -376,7 +376,7 @@ p {
   #triangle-topleft{
     left: 260px!important;
     @include res(s-m){
-      left: 170px!important
+      left: 169px!important
     }
   }
 }
@@ -384,6 +384,7 @@ p {
   background-color: rgba(77, 77, 77, 0.95);
   position: absolute;
   z-index: -1;
+  top: 0;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
   @include res(s-m){
