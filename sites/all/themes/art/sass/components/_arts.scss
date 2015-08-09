@@ -378,7 +378,7 @@ p {
   #triangle-topleft{
     left: 260px!important;
     @include res(s-m){
-      left: 169px!important
+      left: 170px!important
     }
   }
 }
@@ -424,10 +424,13 @@ p {
     height: 454px!important;
   }
   #triangle-topleft{
-  border-bottom-width: 454px;
+  border-bottom-width: 454px!important;
   }
   .scroll #block-system-main-menu ul{
-    top: 180px;
+    top: 180px!important;
+    ul{
+      top:0!important;
+    }
   }
 }
 
