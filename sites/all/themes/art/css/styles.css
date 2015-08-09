@@ -1879,7 +1879,7 @@ p {
 @media (max-width: 767px) {
   /* line 162, ../sass/components/_arts.scss */
   .scroll #block-system-main-menu ul {
-    top: 130px;
+    top: 180px;
   }
   /* line 165, ../sass/components/_arts.scss */
   .scroll #block-system-main-menu ul ul {
