@@ -188,7 +188,7 @@ if ($("body").hasClass("node-type-art")){
 
   $('.social-button').click(function(){
     if ($("body").hasClass("display-social")){
-      if ($height < 369){
+      if ($height < 473){
         $("html, body").animate({
               scrollTop: 0
           }, 600);

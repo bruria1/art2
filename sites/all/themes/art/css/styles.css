@@ -2264,16 +2264,16 @@ p {
     top: 0 !important;
   }
 }
-@media (max-height: 368px) {
+@media (max-height: 472px) {
   /* line 458, ../sass/components/_arts.scss */
   #share-mobile {
-    height: 368px !important;
+    height: 472px !important;
     position: absolute !important;
   }
 
   /* line 462, ../sass/components/_arts.scss */
   .share-triangle {
-    border-top-width: 368px !important;
+    border-top-width: 472px !important;
     position: absolute !important;
   }
 }
