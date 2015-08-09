@@ -176,13 +176,26 @@ if ($("body").hasClass("node-type-art")){
 
   $('.menu-button').click(function(){
       if ($("body").hasClass("display-menu")){
+        if ($height < 473){
+          $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+        return false;
+      }
+    }
+  });
+
+
+  $('.social-button').click(function(){
+    if ($("body").hasClass("display-social")){
+      if ($height < 369){
         $("html, body").animate({
               scrollTop: 0
           }, 600);
       return false;
+      }
     }
   });
-
 
 /********  art at the campus  ************/
 

@@ -131,7 +131,7 @@ p {
     background-color: #515252;
     color: #fff;
     margin-top: 5px;
-    padding: 15px 0 10px;
+    padding: 15px 3% 10px;
     width: 100%;
     text-align: center;
   }
@@ -446,14 +446,24 @@ p {
   #triangle-topleft{
   border-bottom-width: 472px!important;
   }
-  .scroll #block-system-main-menu ul{
-    top: 180px!important;
+  .scroll #block-system-main-menu ul, #block-system-main-menu ulv{
+    top: 100px!important;
     ul{
       top:0!important;
     }
   }
 }
 
+@media (max-height: 368px){
+  #share-mobile{
+    height: 368px!important;
+    position: absolute!important;
+  }
+  .share-triangle{
+     border-top-width: 368px!important;
+     position: absolute!important;
+  }
+}
 /* 
  * FRONT
  ****************************************/
@@ -807,7 +817,7 @@ header {
     text-align: center;
     @include res(s-m){
       background-color: $gray;
-      padding: 10px 0;
+      padding: 10px 3%;
     }
     #page-title{
       font-family:'almoni-900', arial;
@@ -889,10 +899,27 @@ header {
     .field{
       display: inline-block;
     }
+    .field-label{
+      @include res(s){
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    }
+    .field-items{
+      @include res(s){
+        width: 100%;
+        text-align: center;
+        float: none;
+      }
+    }
     .field-name-field-treasurers-name{
       border-right: 1px solid;
       margin-right: 7px;
       padding-right: 11px;
+      @include res(s){
+        border: none!important;
+      }
     }
     .field-name-field-designers, .field-name-field-treasurers-name{
       .field-item{
@@ -910,11 +937,26 @@ header {
     .close, .open{
       display: inline-block;
       margin-bottom: 11px;
+      @include res(s){
+        width: 100%;
+        .label{
+          width: 100%;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+        .field{
+          width: 100%;
+          text-align: center;
+        }
+      }
     }
     .open{
       border-right: 1px solid;
       margin-right: 7px;
       padding-right: 11px;
+      @incclude res(s){
+        border: none;
+      }
     }
     .label{
       font-weight: bold;
