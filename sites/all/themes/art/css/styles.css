@@ -2206,7 +2206,7 @@ p {
 }
 
 /**********  menu and share in small screen  **********/
-@media (max-height: 454px) {
+@media (max-height: 472px) {
   /* line 419, ../sass/components/_arts.scss */
   #navigation {
     position: absolute;
@@ -2214,12 +2214,12 @@ p {
 
   /* line 422, ../sass/components/_arts.scss */
   #block-system-main-menu, #square {
-    height: 454px !important;
+    height: 472px !important;
   }
 
   /* line 425, ../sass/components/_arts.scss */
   #triangle-topleft {
-    border-bottom-width: 454px !important;
+    border-bottom-width: 472px !important;
   }
 
   /* line 428, ../sass/components/_arts.scss */
