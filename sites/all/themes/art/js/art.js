@@ -116,7 +116,7 @@ $(".menu-button").click(function(){
   }
 });
 
-$(".share-triangle").css("border-top-width", $height);
+$(".share-triangle").css("border-top-width", $heightsquare);
 $("#share-mobile").css("height", $heightsquare); 
 
 
