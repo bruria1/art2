@@ -161,6 +161,9 @@ p {
   #block-system-main-menu ul{
     @include res(s-m){
       top: 130px;
+      ul{
+        top: 0;
+      }
     }
   }
   #share-mobile{
