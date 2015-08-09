@@ -12,11 +12,12 @@
    <mark class="unpublished"><?php print t('Unpublished'); ?></mark>
 <?php endif; ?>
 
-<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
 <div id="wrapper-title">
   <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
 </div>
+
+<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($title_prefix || $title_suffix || $display_submitted || !$page && $title): ?>
     <header>

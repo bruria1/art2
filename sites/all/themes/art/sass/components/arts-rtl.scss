@@ -415,6 +415,9 @@
   }
   .views-exposed-form{
     width: 550px;
+    @include res(s-m){
+      width: 287px;
+    }
   }
   select{
     width: 200px!important;

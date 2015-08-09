@@ -11,7 +11,6 @@
       <?php if ($unpublished): ?>
         <mark class="unpublished"><?php print t('Unpublished'); ?></mark>
       <?php endif; ?>
-<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 <div class="right">
 
 <div id="wrapper-title">
@@ -19,6 +18,8 @@
     <h1 class="page__title title" id="page-title"><?php print $title; ?>, </h1>
     <?php print render($content['field_art_date']);  ?>
 </div>
+
+<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($title_prefix || $title_suffix || $display_submitted || !$page && $title): ?>
     <header>
