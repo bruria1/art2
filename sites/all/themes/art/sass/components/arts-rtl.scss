@@ -56,6 +56,12 @@
 
 #block-system-main-menu{
   float: right;
+  li.is-collapsed:before, li.is-expanded:before{
+    @include res(s-m){
+      float: right;
+      background: url("../images/triangle-menu.png")no-repeat top right;
+    }
+  }
 }
 
 .menu-button{
@@ -342,7 +348,6 @@
   }
   #wrapper-title{
     @include res(s-m){
-      text-align: center;
       .field-name-field-artis{
         border-left: 1px solid;
         margin-left: 5px;

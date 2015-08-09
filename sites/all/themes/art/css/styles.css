@@ -2071,10 +2071,10 @@ p {
   #block-system-main-menu li.is-collapsed:before, #block-system-main-menu li.is-expanded:before {
     content: "";
     display: block;
-    float: right;
+    float: left;
     height: 20px;
     width: 13px;
-    background: url("../images/triangle-menu.png") no-repeat top right;
+    background: url("../images/triangle-menu-en.png") no-repeat top left;
     position: absolute;
     top: 9px;
   }
@@ -2101,7 +2101,7 @@ p {
   /* line 331, ../sass/components/_arts.scss */
   #block-system-main-menu li a {
     font-size: 1em;
-    padding-right: 15px !important;
+    padding: 0 15px !important;
   }
 }
 /* line 339, ../sass/components/_arts.scss */
