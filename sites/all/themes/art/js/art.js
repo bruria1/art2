@@ -174,6 +174,16 @@ if ($("body").hasClass("node-type-art")){
     return false;
   });
 
+  $('.menu-button').click(function(){
+      if ($("body").hasClass("display-menu")){
+        $("html, body").animate({
+              scrollTop: 0
+          }, 600);
+      return false;
+    }
+  });
+
+
 /********  art at the campus  ************/
 
 

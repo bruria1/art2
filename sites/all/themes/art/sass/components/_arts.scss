@@ -101,10 +101,20 @@ body{
 
 #content{
   padding: 54px 0 0 0;
+  @include res(s-m){
+    padding: 20px 0 0;
+  }
 }
 
 #main{
   @include width;
+  @include res(s-m){
+    padding: 0;
+    width: 100%;
+    article{
+      @include width;
+    }
+  }
 }
 
 p {
@@ -114,6 +124,17 @@ p {
 .unpublished{
   position: absolute;
   top: 0;
+}
+
+#page-title{
+  @include res(s-m){
+    background-color: #515252;
+    color: #fff;
+    margin-top: 5px;
+    padding: 15px 0 10px;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /***********  header scroll  **********/
@@ -781,16 +802,12 @@ header {
 /**********  exhibition page ************/
 
 .node-type-exhibition{
-  #main{
-    @include res(s-m){
-      padding: 0;
-    }
-  }
   #wrapper-title{
     margin: 48px auto 0;
     text-align: center;
     @include res(s-m){
       background-color: $gray;
+      padding: 10px 0;
     }
     #page-title{
       font-family:'almoni-900', arial;
@@ -801,10 +818,18 @@ header {
       margin-right: 7px;
       padding-right: 11px;
       display: inline-block;
+      width: auto;
+      @include res(s-m){
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }  
     .sub-title{
       font-size: 1.3em;
       display: inline;
+      @include res(s-m){
+        color: #fff;
+      }
     }
   }
   .field{
@@ -812,6 +837,9 @@ header {
   }
   .field-name-field-campus{
     margin-top: 33px;
+    @include res(s-m){
+      margin-top: 9px;
+    }
     &:before{
       border-top: 1px solid;
       content: "";
@@ -819,16 +847,45 @@ header {
       margin: 0 auto;
       padding-top: 17px;
       width: 42px;
+      @include res(s-m){
+        display: none;
+      }
     }
   }
   .field-name-field-text{
     max-width: 877px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+    .media-element{
+      display: none;
+    }
+    @include res(s-m){
+      margin-top: 20px;
+      &:before{
+        border-top: 1px solid;
+        content: "";
+        display: block;
+        margin: 0 auto;
+        padding-top: 17px;
+        width: 120px;
+      }
+      .media-element{
+          display: block;
+          ul{
+            display: none;
+          }
+      }
+      img{
+          display: block;
+          width: 96%;
+          margin: 20px auto;
+          height: auto;
+      }
+    }
   }
   .treasurers-designers{
     text-align: center;
-    margin: 10px auto 0;
-    line-height: 0.8em;
+    margin: 10px auto;
+    line-height: 0.6em;
     .field{
       display: inline-block;
     }
@@ -846,12 +903,13 @@ header {
     }
   }
   .dates{
-    line-height: 0.8em;
+    line-height: 0.6em;
     clear: none;
     text-align: center;
     margin-top: -5px;
     .close, .open{
       display: inline-block;
+      margin-bottom: 11px;
     }
     .open{
       border-right: 1px solid;
@@ -884,6 +942,9 @@ header {
     }
   }
   .field-name-field-copyright{
+    @include res(s-m){
+      color: #fff;
+    }
     .field-item{
       display: inline;
     }
@@ -1479,12 +1540,18 @@ header {
     .views-field-field-exh-gallery-top{
       display: none;
     }
+    @include res(s-m){
+      width: 100%;
+    }
   }
   .place2, .place3{
     float: left;
     width: 36.8%;
     .views-field-field-exh-gallery-top-1{
       display: none;
+    }
+    @include res(s-m){
+      width: 100%;
     }
   }
   .place4, .place5{
@@ -1494,12 +1561,18 @@ header {
     .views-field-field-exh-gallery-top-1{
       display: none;
     }
+    @include res(s-m){
+      width: 100%;
+    }
   }
   .place6{
     float: left;
     width: 60%;
     .views-field-field-exh-gallery-top{
       display: none;
+    }
+    @include res(s-m){
+      width: 100%;
     }
   }
   .place2, .place4{
@@ -1524,11 +1597,21 @@ header {
     font-size: 1.6em;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+    @include res(s-m){
+      bottom: 7px;
+      margin-bottom: 20px;
+      position: relative;
+      background-color: transparent;
+      font-size: 1em;
+    }
     a{
       color: #fff;
       padding: 12px 0;
       width: 100%;
       display: block;
+      @include res(s-m){
+        color: #000;
+      }
     }
     .title{
       font-family:'almoni-700', arial;
@@ -1556,6 +1639,11 @@ header {
     font-weight: normal;
     font-size: 1.6em;
     line-height: 1em;
+  }
+  #main{
+    @include res(s-m){
+      padding: 0;
+    }
   }
 }
 
@@ -1598,13 +1686,16 @@ header {
     margin: 0 auto;
     width: 78%;
     @include res(s-m){
-      width: 100%;
+      display: none;
     }
   }
   .masonry-item{
     width: 32%;
     margin-bottom: 40px;
-    @include res(s-m){
+    @include res(m){
+      width: 48%;
+    }
+    @include res(s){
       width: 100%;
     }
   }
@@ -1653,6 +1744,9 @@ header {
     width: 600px;
     margin: 0 auto 30px;
     max-width: 100%;
+    @include res(s-m){
+      width: 334px;
+    }
     label{
       display: none;
     }
@@ -1660,11 +1754,27 @@ header {
   .views-widget-sort-order{
     display: none;
   }
-  .form-item-field-art-type-tid select{
-    width: 112px!important;
+  .views-widget-filter-field_art_type_tid{
+    @include res(s-m){
+      padding: 0;
+    }
+    select{
+      width: 112px!important;
+      @include res(s-m){
+        display: none;
+      }
+    }
   }
-  .form-item-sort-by select{
-    width: 111px!important;
+  .views-widget-sort-by{
+    @include res(s-m){
+      padding: 0;
+    } 
+    select{
+      width: 111px!important;
+      @include res(s-m){
+        display: none;
+      }
+    }
   }
 }
 

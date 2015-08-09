@@ -825,37 +825,43 @@ html.js .collapsed .fieldset-legend {
 #block-views-arts-block .views-exposed-form {
   width: 550px;
 }
-/* line 419, ../sass/components/arts-rtl.scss */
+@media (max-width: 767px) {
+  /* line 416, ../sass/components/arts-rtl.scss */
+  #block-views-arts-block .views-exposed-form {
+    width: 287px;
+  }
+}
+/* line 422, ../sass/components/arts-rtl.scss */
 #block-views-arts-block select {
   width: 200px !important;
 }
-/* line 422, ../sass/components/arts-rtl.scss */
+/* line 425, ../sass/components/arts-rtl.scss */
 #block-views-arts-block .form-item-field-art-type-tid select {
   width: 110px !important;
 }
-/* line 425, ../sass/components/arts-rtl.scss */
+/* line 428, ../sass/components/arts-rtl.scss */
 #block-views-arts-block .form-item-sort-by select {
   width: 100px !important;
 }
 
-/* line 430, ../sass/components/arts-rtl.scss */
+/* line 433, ../sass/components/arts-rtl.scss */
 .views-exposed-form .views-exposed-widget {
   float: right;
   padding: 0.5em  0 0 1em;
 }
 
-/* line 435, ../sass/components/arts-rtl.scss */
+/* line 438, ../sass/components/arts-rtl.scss */
 .views-submit-button {
   padding-left: 0 !important;
 }
 
 /************  design select  ************/
-/* line 443, ../sass/components/arts-rtl.scss */
+/* line 446, ../sass/components/arts-rtl.scss */
 #block-lang-dropdown-language select, #block-views-arts-block select {
   text-align: right;
   padding-right: 5px;
 }
-/* line 447, ../sass/components/arts-rtl.scss */
+/* line 450, ../sass/components/arts-rtl.scss */
 #block-lang-dropdown-language .form-type-select, #block-views-arts-block .form-type-select {
   float: left;
 }

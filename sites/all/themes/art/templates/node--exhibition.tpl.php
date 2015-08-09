@@ -12,7 +12,6 @@
       <?php if ($unpublished): ?>
         <mark class="unpublished"><?php print t('Unpublished'); ?></mark>
       <?php endif; ?>
-<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
 <div id="wrapper-title">
      <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
@@ -21,7 +20,12 @@
            <?php print $node->field_sub_title['und'][0]['value']; ?>
         </div>
    <?php }?>
+   <div class="design">
+  <?php print render($content['field_copyright']); ?>
+    </div>
 </div>
+
+<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($title_prefix || $title_suffix || $display_submitted || !$page && $title): ?>
     <header>
@@ -47,7 +51,6 @@
     hide($content['comments']);
     hide($content['links']);
   ?>
-  <?php print render($content['field_copyright']); ?>
 
   <?php print render($content['field_campus']); ?>
   <?php print render($content['field_exh_location']); ?>
