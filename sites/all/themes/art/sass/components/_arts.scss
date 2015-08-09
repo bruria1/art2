@@ -415,15 +415,15 @@ p {
 
 /**********  menu and share in small screen  **********/
 
-@media (max-height: 454px){
+@media (max-height: 472px){
   #navigation{
     position: absolute;
   }
   #block-system-main-menu, #square{
-    height: 454px!important;
+    height: 472px!important;
   }
   #triangle-topleft{
-  border-bottom-width: 454px!important;
+  border-bottom-width: 472px!important;
   }
   .scroll #block-system-main-menu ul{
     top: 180px!important;
