@@ -20,11 +20,13 @@ Drupal.behaviors.my_custom_behavior = {
   $height = $(window).height();
   $width = ($(window).width()-1200)/2+250;
   $simplewidth = ($(window).width());
+  $heightsquare = $(window).height()+200;
 
 $(window).resize(function() {
   $height = $(window).height();
   $width = ($(window).width()-1200)/2+276;
   $simplewidth = ($(window).width());
+  $heightsquare = $(window).height()+200;
       if ($simplewidth < 768){
       $(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
@@ -93,7 +95,7 @@ $(".menu-button").click(function(){
     $("#block-system-main-menu").addClass("display").removeClass("hide");
     $("body").addClass("display-menu");
     $(".display-menu #block-system-main-menu").css("height", $height); 
-    $(".display-menu #square").css("height", $height); 
+    $(".display-menu #square").css("height", $heightsquare); 
     if ($simplewidth < 768){
       $(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
