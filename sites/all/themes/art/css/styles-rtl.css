@@ -478,7 +478,7 @@ html.js .collapsed .fieldset-legend {
 @media (max-width: 1200px) and (max-width: 767px) {
   /* line 82, ../sass/components/arts-rtl.scss */
   #triangle-topleft {
-    right: 169px !important;
+    right: 170px !important;
   }
 }
 
