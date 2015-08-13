@@ -57,16 +57,17 @@
 #block-system-main-menu{
   float: right;
   li.is-collapsed:before, li.is-expanded:before{
-    @include res(s-m){
       float: right;
       background: url("../images/triangle-menu.png")no-repeat top right;
-    }
   }
+}
+
+#block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
+  margin-right: -100%;
 }
 
 .menu-button{
   float: right;
-  padding: 11px 16px 6px 11px;
   @include res(s-m){
     right: 0;
     left: auto;
@@ -315,7 +316,7 @@
   #block-block-1{
     background: url("../images/huji.png") no-repeat right center transparent;
     float: right;
-    padding: 12px 55px 12px 16px;
+    padding: 12px 55px 12px 6px;
     text-align: right;
     @include res(s-m){
       background: none;
@@ -326,7 +327,7 @@
     float: right;
   }
   #block-block-2{
-    padding-right: 16px;
+    padding-right: 6px;
     padding-left: 0;
     float: left;
     text-align: left;

@@ -141,6 +141,12 @@ p {
 /***********  header scroll  **********/
 
 .scroll{
+  #block-system-main-menu ul{
+    top: 65px;
+    ul{
+      top: 0;
+    }
+  }
   #header{
     height: 56px;
     position: fixed;
@@ -181,14 +187,6 @@ p {
       bottom:10px;
     }
   }
-  #block-system-main-menu ul{
-    @include res(s-m){
-      top: 180px;
-      ul{
-        top: 0;
-      }
-    }
-  }
   #share-mobile{
     @include res(s-m){
       padding-top: 130px;
@@ -212,7 +210,7 @@ p {
 	color: #fff;
 	overflow: hidden;
 	float: left;
-	padding: 11px 11px 6px 16px;
+	padding:9px 13px 8px;
 	z-index: 200;
 	cursor: pointer;
 	position: absolute;
@@ -285,9 +283,9 @@ p {
   width: 260px;
   box-sizing:border-box;
 	float: left;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  opacity: 1;
+  transition: margin 0.5s;
+  -webkit-transition: margin 0.5s;
+  margin: 0;
   position: relative;
   max-width: 100%;
   @include res(s-m){
@@ -295,17 +293,12 @@ p {
   }
   ul{
     width: 100%;
-    bottom: 8%;
+    top: 140px;
     position: absolute;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
-    @include res(s-m){
-      bottom: auto;
-      top: 180px;
-    }
   }
   li.is-collapsed:before, li.is-expanded:before{
-    @include res(s-m){
       content: "";
       display: block;
       float: left;
@@ -314,15 +307,13 @@ p {
       background: url("../images/triangle-menu-en.png")no-repeat top left;
       position: absolute;
       top: 9px;
-    }
   }
-  li.is-collapsed:before{
-  }
-  li.is-expanded:before{
+  li.expanded:before{
     -webkit-transform:rotate(30deg);
     -moz-transform:rotate(30deg);
     transform: rotate(30deg);
-    top: 4px;
+    top: 6px;
+    right: 4px;
   }
   li{
 		width: 100%;
@@ -331,12 +322,12 @@ p {
     a{
       font-size: 1.5em;
       color: #fff;
+      padding: 0 15px!important;
       @include res(s-m){
         font-size: 1em;
-        padding: 0 15px!important;
       }
     }
-    a.active, a.active-trail{
+    a.active, a.active-trail, a:hover{
       color: $green;
       font-family:'almoni-900';
       @include res(s-m){
@@ -346,9 +337,7 @@ p {
     ul{
       padding-top: 10px!important;
       position: relative;
-      @include res(s-m){
-        top: 0;
-      }
+      top: 0;
       li{
         padding-bottom: 0!important;
       }
@@ -358,7 +347,7 @@ p {
           font-size: 0.7em;
         }
       }
-      a.active{
+      a.active, a:hover{
         color: #fff;
       }
     }
@@ -385,7 +374,7 @@ p {
 }
 
 #block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
-	opacity: 0;
+	margin-left: -100%;
   z-index: -100;
 }
 
@@ -408,8 +397,9 @@ p {
   position: absolute;
   z-index: -1;
   top: 0;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
+  margin: 0;
+  transition: margin 0.5s;
+  -webkit-transition: margin 0.5s;
   @include res(s-m){
     background-color:  rgba(59, 142, 135, 0.94);
   }
@@ -424,9 +414,9 @@ p {
   top: 0;
   border-left-width: 0;
   border-right-width: 208px;
-  opacity: 1;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
+  margin: 0;
+  transition: margin 0.5s;
+  -webkit-transition: margin 0.5s;
   z-index: -1;
   @include res(s-m){
     border-color: rgba(59, 142, 135, 0.94) transparent transparent;
@@ -447,8 +437,8 @@ p {
   #triangle-topleft{
   border-bottom-width: 472px!important;
   }
-  .scroll #block-system-main-menu ul, #block-system-main-menu ulv{
-    top: 100px!important;
+  .scroll #block-system-main-menu ul, #block-system-main-menu ul{
+    top: 140px!important;
     ul{
       top:0!important;
     }
@@ -787,6 +777,8 @@ header {
     border: none;
     text-align: left;
     padding-left: 5px;
+    position: relative;
+    top: -2px;
   }
   option{
     background-color: #fff;
@@ -1103,8 +1095,8 @@ header {
 #share-mobile{
   display: none;
   @include res(s-m){
-    transition: opacity 0.5s;
-    -webkit-transition: opacity 0.5s;
+    transition: margin 0.5s;
+    -webkit-transition: margin 0.5s;
     float: right;
     width: 170px;
     display: block;
@@ -1114,6 +1106,7 @@ header {
     right: 0;
     z-index: 100;
     padding-top: 180px;
+    margin-right: 0;
     box-sizing: border-box;
     .image{
       width: 35px;
@@ -1223,9 +1216,9 @@ header {
     position: fixed;
     top: 0;
     border-bottom-width: 0;
-    opacity: 1;
-    transition: opacity 0.5s;
-    -webkit-transition: opacity 0.5s;
+    margin: 0;
+    transition: margin 0.5s;
+    -webkit-transition: margin 0.5s;
     z-index: 100;
     right: 170px!important;
     border-color: rgba(21, 121, 135, 0.91) transparent transparent;
@@ -1235,7 +1228,7 @@ header {
 }
 
 #share-mobile.hide, .share-triangle.hide{
-  opacity: 0;
+  margin-left: -100%;
   padding-top: 0;
   border-right-width: 0px;
   border-top-width: 0px;
@@ -1378,8 +1371,8 @@ header {
     background: url("../images/huji.png") no-repeat left center transparent;
     box-sizing: border-box;
     float: left;
-    padding: 12px 16px 12px 55px;
-    width: 34%;
+    padding: 12px 6px 12px 55px;
+    width: 33%;
     text-align: left;
     @include res(s-m){
       background: none;
@@ -1392,7 +1385,7 @@ header {
     }
   }
   #block-block-3{
-    width: 43%;
+    width: 45%;
     float: left;
     text-align: center;
     border-right: 1px solid;
@@ -1408,12 +1401,11 @@ header {
     }
   }
   #block-block-2{
-    width: 22%;
+    width: 21%;
     box-sizing: border-box;
-    padding-left: 16px;
+    padding-left: 6px;
     margin-top: 12px;
     float: right;
-    padding-top: 9px;
     text-align: right;
     @include res(s-m){
       width: 50%;
