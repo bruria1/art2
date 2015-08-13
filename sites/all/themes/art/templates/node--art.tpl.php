@@ -15,8 +15,12 @@
 
 <div id="wrapper-title">
     <?php print render($content['field_artis']); ?>
-    <h1 class="page__title title" id="page-title"><?php print $title; ?>, </h1>
-    <?php print render($content['field_art_date']);  ?>
+    <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+    <?php if (render($content['field_art_date'])) { ?>
+      <span class="comma">,</span>
+      <?php print render($content['field_art_date']);  
+    } ?>
+
 </div>
 
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>

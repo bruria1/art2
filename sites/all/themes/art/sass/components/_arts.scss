@@ -142,9 +142,9 @@ p {
 
 .scroll{
   #block-system-main-menu ul{
-    top: 65px;
+    margin-top: 65px!important;
     ul{
-      top: 0;
+      margin-top: 0!important;
     }
   }
   #header{
@@ -293,8 +293,7 @@ p {
   }
   ul{
     width: 100%;
-    top: 140px;
-    position: absolute;
+    margin-top: 140px!important;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
   }
@@ -337,7 +336,7 @@ p {
     ul{
       padding-top: 10px!important;
       position: relative;
-      top: 0;
+      margin-top: 0;
       li{
         padding-bottom: 0!important;
       }
@@ -438,9 +437,9 @@ p {
   border-bottom-width: 472px!important;
   }
   .scroll #block-system-main-menu ul, #block-system-main-menu ul{
-    top: 140px!important;
+    margin-top: 140px!important;
     ul{
-      top:0!important;
+      margin-top:0!important;
     }
   }
   #share-mobile{
@@ -835,6 +834,10 @@ header {
   .field{
     text-align: center;
   }
+  .field-name-field-exh-location{
+    line-height: 1em;
+    margin-bottom: 20px;
+  }
   .field-name-field-campus{
     margin-top: 33px;
     @include res(s-m){
@@ -845,7 +848,7 @@ header {
       content: "";
       display: block;
       margin: 0 auto;
-      padding-top: 17px;
+      padding-top: 10px;
       width: 42px;
       @include res(s-m){
         display: none;
@@ -1072,6 +1075,7 @@ header {
 /**********  share ************/
 
 #share{
+  margin-bottom: 40px;
   text-align: center;
   @include res(s-m){
     display: none;
@@ -1246,7 +1250,7 @@ header {
 #block-views-arts-galleries-block, #block-views-arts-galleries-block-2{
   .view-footer{
     float: right;
-    margin-top: 6px;
+    margin-top: 39px;
     margin-right: 1px;
     @include res(s-m){
       display: none;
@@ -1257,18 +1261,27 @@ header {
     div{
       float: right;
       cursor: pointer;
-      background: url("../images/grid_on.png") no-repeat 0 0 transparent;
+      background: url("../images/grid_on.png") no-repeat -50px 0 transparent;
       width: 21px;
       height: 21px;
       margin-left: 5px;
+      &:hover{
+        background-position: 0px 0;
+      }
     }
     .one{
-      background-position: -25px 0;
+      background-position: -75px 0;
+      &:hover{
+        background-position: -75px 0;
+      }
     }
   }
   .hide.view{
     height: 0;
     overflow: hidden;
+  }
+  .owl-stage{
+    margin: 0 auto;
   }
   .owl-carousel .owl-item img{
     width: auto;
@@ -1286,14 +1299,14 @@ header {
       width: 17px;
       background: url("../images/gallery-arrows.png") no-repeat 0 0 transparent;
       padding: 0;
-      margin: 6px 0 0 0;
+      margin: 30px 0 0 0;
       position: absolute;
       left: 0;
       text-indent: -9999px;
     }
     .owl-next{
       left: 30px;
-      background-position: -38px 0;   
+      background-position: -28px 0;   
       position: absolute;  
     }
     .owl-prev{
@@ -1325,6 +1338,19 @@ header {
 #block-views-arts-galleries-block-2, #block-views-exhibition-gallery-block{
   @include res(s-m){
     display: none;
+  }
+  .display{
+    .view-footer{
+      div{
+        background: url("../images/grid_on.png") no-repeat 0px 0 transparent;
+      }
+      .one{
+        background-position: -25px 0;
+        &:hover{
+          background-position: -75px 0;
+        }
+      }
+    }
   }
 }
 
@@ -1446,6 +1472,10 @@ header {
       padding: 0;
     }
   }
+  #content {
+    margin: 0 auto;
+    max-width: 800px;
+}
   #page-title{
     width: auto;
     padding: 0;
@@ -1453,7 +1483,7 @@ header {
   .region-content-top{
       width: 60%;
       float: right;
-      margin-bottom: 10px;
+      margin-bottom: 60px;
       @include res(s-m){
         width: 100%;
       }
@@ -1499,10 +1529,15 @@ header {
     float: left;
     line-height: 1em;
     font-weight: normal;
+  }
+  #wrapper-title span{
+    float: left;
     margin-right: 5px;
   }
   .field-name-field-art-date{
     font-size: 1.2em;
+    line-height: 1em;
+    float: left;
   }
   .place, .details{
     float: left;
@@ -1543,10 +1578,6 @@ header {
         padding: 0;
       }
     }
-  }
-  #content{
-    max-width: 800px;
-    margin: 0 auto;
   }
   .clear{
     clear: both;
@@ -1699,10 +1730,6 @@ header {
 /**** art at the capus **/
 
 .page-node-9, .page-node-10{
-  #main{
-    width: 900px;
-    max-width: 100%;
-  }
   #wrapper-title{
     text-align: center;
     font-family: 'almoni-900', sans-serif;
@@ -1722,7 +1749,7 @@ header {
   .views-field-field-artis{
     font-size: 0.7em;
     line-height: 0.9;
-    margin: 15px auto 0;
+    margin-top: 15px;
     width: 78%;
     .title{
       font-family: 'almoni-700', sans-serif;
@@ -1730,6 +1757,9 @@ header {
     @include res(s-m){
       width: 100%;
     }
+  }
+  .place3 .views-field-field-artis, .place4 .views-field-field-artis{
+    margin: 15px auto 0;
   }
   .views-field-field-teaser{
     font-size: 0.7em;
@@ -1740,28 +1770,37 @@ header {
     }
   }
   .masonry-item{
-    width: 32%;
+    width: 24%;
     margin-bottom: 40px;
-    @include res(m){
+    @include res(s-m){
       width: 48%;
-    }
-    @include res(s){
-      width: 99%;
     }
   }
   .views-field-field-art-gallery{
     a{
-      width: 100%;
+      width: 78%;
       display: block;
+      overflow: hidden;
       img{
         display: block;
         margin: 0 auto;
-        width: 78%;
+        -webkit-transition: all 1s ease; /* Safari and Chrome */
+        -moz-transition: all 1s ease; /* Firefox */
+        -ms-transition: all 1s ease; /* IE 9 */
+        -o-transition: all 1s ease; /* Opera */
+        transition: all 1s ease;
         @include res(s-m){
           width: 100%;
         }
       }
     }
+  }
+  .views-row:hover img{
+    -webkit-transform:scale(1.1); /* Safari and Chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    -ms-transform:scale(1.1); /* IE 9 */
+    -o-transform:scale(1.1); /* Opera */
+     transform:scale(1.1);
   }
   .view-content{
     margin: 0 auto;
@@ -1791,12 +1830,7 @@ header {
     padding-right: 0!important;
   }
   .views-exposed-form{
-    width: 600px;
-    margin: 0 auto 30px;
-    max-width: 100%;
-    @include res(s-m){
-      width: 334px;
-    }
+    margin-bottom: 30px;
     label{
       display: none;
     }

@@ -305,7 +305,7 @@
     .owl-prev{
       right: 0px;
       left: auto;
-      background-position: -38px 0;   
+      background-position: -28px 0;   
     }
   }
 }
@@ -348,6 +348,14 @@
     float: right;
   }
   #wrapper-title{
+    .field-name-field-art-date{
+      float: right;
+    }
+    span{
+      float: right;
+      margin-right: 0px;
+      margin-left: 5px;
+    }
     @include res(s-m){
       .field-name-field-artis{
         border-left: 1px solid;
@@ -361,8 +369,6 @@
   }
   #page-title{
     float: right;
-    margin-right: 0px;
-    margin-left: 5px;
   }
   .place, .details{
     float: right;
@@ -419,12 +425,6 @@
   }
   .views-widget-sort-order{
     display: none;
-  }
-  .views-exposed-form{
-    width: 550px;
-    @include res(s-m){
-      width: 287px;
-    }
   }
   select{
     width: 200px!important;

@@ -61,6 +61,15 @@ if ($("div").hasClass("view-the-gallery")) {
     });
 };
 
+if ($("div").hasClass("view-arts")) {
+   $art = 1;
+   $(".view-arts .views-row").each(function(){
+     $class = "place"+$art++;
+     $(this).addClass($class); 
+     if ($art>4) { $art=1;}
+    });
+};
+
 $("#block-system-main-menu").addClass("hide");
 
 $("#main").click(function(){
