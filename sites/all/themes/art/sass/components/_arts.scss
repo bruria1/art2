@@ -308,10 +308,10 @@ p {
     @include res(s-m){
       content: "";
       display: block;
-      float: right;
+      float: left;
       height: 20px;
       width: 13px;
-      background: url("../images/triangle-menu.png")no-repeat top right;
+      background: url("../images/triangle-menu-en.png")no-repeat top left;
       position: absolute;
       top: 9px;
     }
@@ -333,7 +333,7 @@ p {
       color: #fff;
       @include res(s-m){
         font-size: 1em;
-        padding-right: 15px!important;
+        padding: 0 15px!important;
       }
     }
     a.active, a.active-trail{
