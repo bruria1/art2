@@ -19,13 +19,13 @@ Drupal.behaviors.my_custom_behavior = {
 
   $height = $(window).height();
   $width = ($(window).width()-1200)/2+250;
-  $simplewidth = ($(window).width());
+  $simplewidth = $(window).width();
   $heightsquare = $(window).height()+200;
 
 $(window).resize(function() {
   $height = $(window).height();
-  $width = ($(window).width()-1200)/2+276;
-  $simplewidth = ($(window).width());
+  $width = ($(window).width()-1200)/2+250;
+  $simplewidth = $(window).width();
   $heightsquare = $(window).height()+200;
       if ($simplewidth < 768){
       $(".i18n-en #triangle-topleft").css("border-top-width", $height);
@@ -74,6 +74,24 @@ $("#main").click(function(){
 });
 
 $("#main").click(function(){
+  if ($("body").hasClass("display-social")){
+    $("body").removeClass("display-social");
+    $("#share-mobile").addClass("hide");
+    $(".share-triangle").addClass("hide");
+  }
+});
+
+$(".region-top").click(function(){
+  if ($("body").hasClass("display-menu")){
+    $("#square").addClass("hide").removeClass("display");
+    $("#triangle-topleft").addClass("hide").removeClass("display");
+    $("#block-system-main-menu").addClass("hide").removeClass("display");
+    $("body").removeClass("display-menu");
+    $("#navigation").addClass("close-menu");
+  }
+});
+
+$(".region-top").click(function(){
   if ($("body").hasClass("display-social")){
     $("body").removeClass("display-social");
     $("#share-mobile").addClass("hide");
