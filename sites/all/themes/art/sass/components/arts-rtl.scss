@@ -95,6 +95,13 @@
   }
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  #triangle-topleft{
+    @include res(s-m){
+      right: 169px!important;
+    }
+  }
+}
 /*********  share  *********/
 
 .social-button{
