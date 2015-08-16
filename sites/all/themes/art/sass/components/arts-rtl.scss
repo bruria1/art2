@@ -453,3 +453,19 @@
     float: left;
   }
 }
+
+/************  contact   **************/
+
+.node-webform{
+  .field-name-field-text{
+    float: right;
+  }
+  #webform-client-form-11{
+    float: left;
+    input, textarea{
+      &.form-submit{
+        float: left;
+      }
+    }
+  }
+}

@@ -157,6 +157,9 @@ p {
     padding: 7px 3% 10px!important;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.93);
   }
+  #main{
+    padding-top: 56px;
+  }
   .region-header{
     position: absolute;
     top: 0;
@@ -1328,6 +1331,49 @@ header {
       }
     }
   }
+  .one-img .owl-dots{
+    display: none!important;
+  }
+  .view-header{
+    display: none;
+  }
+  .one-img, .two-img{
+    .view-footer{
+      display: none;
+    }
+  }
+}
+
+#block-views-exhibition-gallery-block{
+  &.ex-one-img, &.ex-two-img{
+    display: none;
+  }
+}
+
+#block-views-exhibition-gallery-block-2{
+  &.ex-one-img, &.ex-two-img{
+    display: block!important;
+    .view{
+      height: auto!important;
+    }
+    .view-footer{
+      display: none;
+    }
+
+  }
+  &.ex-two-img{
+    .owl-controls{
+      height: 52px;
+    }
+  }
+}
+
+#block-views-arts-galleries-block{
+  .one-img{
+    .owl-controls{
+      display: none;
+    }
+  }
 }
 
 #block-views-arts-galleries-block-2, #block-views-exhibition-gallery-block{
@@ -1859,4 +1905,46 @@ header {
 
 .ajax-progress{
   display: none;
+}
+
+/************  contact   **************/
+
+.node-webform{
+  .field-name-field-text{
+    width: 48%;
+    float: left;
+    @include res(s-m){
+      width: 100%;
+    }
+  }
+  #webform-client-form-11{
+    width: 48%;
+    float: right;
+    .grippie{
+      display: none;
+    }
+    @include res(s-m){
+      width: 100%;
+    }
+    label{
+      font-weight: normal;
+      padding: 5px;
+    }
+    input, textarea{
+      padding: 5px;
+      border: 1px solid #000;
+      width: 100%;
+      &.form-submit{
+        width: auto;
+        padding: 10px 20px;
+        float: right;
+        background-color: $green;
+        color: #fff;
+        border: none;
+        @include res(s-m){
+          width: 100%;
+        }
+      }
+    }
+  }
 }
