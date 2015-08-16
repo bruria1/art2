@@ -193,6 +193,13 @@ if ($("body").hasClass("node-type-art")){
     });
 }
 
+/********  hide control if only one image (product gallery) **********/
+
+$image_number=$('.owl-item').length;
+if ($image_number==0){
+    $(".owl-dots").css({ display: "none" });
+};
+
 /********  to top - mobile  ************/
   $('.top-button').click(function(){
       $("html, body").animate({

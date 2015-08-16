@@ -64,6 +64,7 @@
 
 #block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
   margin-right: -100%;
+  margin-left: 0;
 }
 
 .menu-button{
@@ -147,6 +148,10 @@
   border-left-width: 0;
 }
 
+#share-mobile.hide, .share-triangle.hide{
+  margin-left: -100%;
+  margin-right: 0;
+}
 
 /* the Header region  */
 .header__region {
@@ -373,16 +378,6 @@
   .place, .details{
     float: right;
     clear: right;
-    @include res(s-m){
-      .field-name-field-campus, .field-name-field-material{
-        border-left: 1px solid;
-        padding-left: 5px;
-        margin-left: 5px;
-        border-right: none;
-        margin-right: 0;
-        padding-right: 0;
-      }
-    }
   }
 }
 
