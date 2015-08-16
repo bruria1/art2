@@ -135,6 +135,10 @@ p {
     width: 100%;
     text-align: center;
     box-sizing:border-box;
+    font-family:'almoni-900', arial;
+    font-weight: normal;
+    font-size: 1.6em;
+    line-height: 1em;
   }
 }
 
@@ -283,8 +287,8 @@ p {
   width: 260px;
   box-sizing:border-box;
 	float: left;
-  transition: margin 0.5s;
-  -webkit-transition: margin 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
   margin: 0;
   position: relative;
   max-width: 100%;
@@ -374,7 +378,6 @@ p {
 
 #block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
 	margin-left: -100%;
-  z-index: -100;
 }
 
 @media (max-width: 1200px){
@@ -397,8 +400,8 @@ p {
   z-index: -1;
   top: 0;
   margin: 0;
-  transition: margin 0.5s;
-  -webkit-transition: margin 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
   @include res(s-m){
     background-color:  rgba(59, 142, 135, 0.94);
   }
@@ -414,8 +417,8 @@ p {
   border-left-width: 0;
   border-right-width: 208px;
   margin: 0;
-  transition: margin 0.5s;
-  -webkit-transition: margin 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
   z-index: -1;
   @include res(s-m){
     border-color: rgba(59, 142, 135, 0.94) transparent transparent;
@@ -831,7 +834,7 @@ header {
       }
     }
   }
-  .field{
+  .field-name-field-campus, .field-name-field-exh-location{
     text-align: center;
   }
   .field-name-field-exh-location{
@@ -912,6 +915,8 @@ header {
       padding-right: 11px;
       @include res(s){
         border: none!important;
+        margin: 0!important;
+        padding: 0!important;
       }
     }
     .field-name-field-designers, .field-name-field-treasurers-name{
@@ -1232,17 +1237,7 @@ header {
 }
 
 #share-mobile.hide, .share-triangle.hide{
-  margin-left: -100%;
-  padding-top: 0;
-  border-right-width: 0px;
-  border-top-width: 0px;
-  overflow: hidden;
-  z-index: -200;
-  .link{
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-  }
+  margin-right: -100%;
 }
 /**********  exhibition & art gallery************/
 
@@ -1479,6 +1474,7 @@ header {
   #page-title{
     width: auto;
     padding: 0;
+    font-family:'almoni-400', arial;
   }
   .region-content-top{
       width: 60%;
@@ -1497,7 +1493,7 @@ header {
   }
   .field-name-field-artis{
     font-size: 1.2em;
-    font-family:'almoni-900', arial;
+    font-family:'almoni-700', arial;
   }
   article{
     @include res(s-m){
@@ -1517,10 +1513,16 @@ header {
         border-right: 1px solid;
         margin-right: 5px;
         padding-right: 8px;
+        margin-top: 0;
       }
       #page-title, .field-name-field-art-date{
-        float: none;
+        float: none!important;
         display: inline-block;
+        margin-top: 0;
+      }
+      .comma, .field-name-field-art-date{
+        float: none!important;
+        line-height: 0.6em;
       }
     }
   }
@@ -1550,10 +1552,15 @@ header {
         display: inline-block;
         line-height: 1em;
       }
-      .field-name-field-campus, .field-name-field-material{
-        border-right: 1px solid;
-        padding-right: 5px;
-        margin-right: 5px;
+    }
+    .line{
+      position: relative;
+      top: -18px;
+    }
+    .line, .line-place{
+      display: none;
+      @include res(s-m){
+        display: inline-block;
       }
     }
   }
@@ -1714,12 +1721,6 @@ header {
     max-width: 884px;
     margin: 0 auto 20px;
   }
-  #page-title{
-    font-family:'almoni-900', arial;
-    font-weight: normal;
-    font-size: 1.6em;
-    line-height: 1em;
-  }
   #main{
     @include res(s-m){
       padding: 0;
@@ -1749,17 +1750,14 @@ header {
   .views-field-field-artis{
     font-size: 0.7em;
     line-height: 0.9;
-    margin-top: 15px;
+    margin: 15px auto 0;
     width: 78%;
     .title{
       font-family: 'almoni-700', sans-serif;
     }
     @include res(s-m){
-      width: 100%;
+      text-align: center;
     }
-  }
-  .place3 .views-field-field-artis, .place4 .views-field-field-artis{
-    margin: 15px auto 0;
   }
   .views-field-field-teaser{
     font-size: 0.7em;
@@ -1781,17 +1779,14 @@ header {
       width: 78%;
       display: block;
       overflow: hidden;
+      margin: 0 auto;
       img{
         display: block;
-        margin: 0 auto;
         -webkit-transition: all 1s ease; /* Safari and Chrome */
         -moz-transition: all 1s ease; /* Firefox */
         -ms-transition: all 1s ease; /* IE 9 */
         -o-transition: all 1s ease; /* Opera */
         transition: all 1s ease;
-        @include res(s-m){
-          width: 100%;
-        }
       }
     }
   }

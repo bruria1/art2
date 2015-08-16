@@ -49,10 +49,16 @@
   ?>
     <div class="place">
     <?php print render($content['field_campus']); 
+     if ((render($content['field_campus'])) && (render($content['field_art_location_text']))) { ?>
+      <span class="line-place">|</span>
+    <?php }
     print render($content['field_art_location_text']); ?>
     </div>
     <div class="details">
       <?php print render($content['field_material']); 
+      if ((render($content['field_material'])) && (render($content['field_sizes']))) { ?>
+        <span class="line">|</span>
+      <?php }
       print render($content['field_sizes']); ?>
     </div>
   </div>
