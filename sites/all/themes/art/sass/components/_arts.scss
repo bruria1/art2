@@ -637,9 +637,13 @@ header {
   -webkit-transition: all 0.5s;
   @include res(s-m){
     padding: 12px!important;
-    height: auto;
+    height: 112px;
     padding-bottom: 0!important;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.93);
+    overflow: hidden;
+  }
+  @include res(s){
+    height: 90px;
   }
   .wrapper-header{
     @include width;
@@ -654,8 +658,11 @@ header {
         height: auto;
         margin-bottom: 8px;
         max-width: 300px;
-        width: 71%;
+        width:230px;
       }
+    }
+    @include res(s){
+      width: 200px;
     }
     .logo-mobile{
       display: none;
@@ -1239,6 +1246,11 @@ header {
   }
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+ .share-triangle{
+    right: 169px!important;
+ }
+}
 #share-mobile.hide, .share-triangle.hide{
   margin-right: -100%;
 }
@@ -1915,6 +1927,7 @@ header {
     float: left;
     @include res(s-m){
       width: 100%;
+      text-align: center;
     }
   }
   #webform-client-form-11{
@@ -1941,6 +1954,7 @@ header {
         background-color: $green;
         color: #fff;
         border: none;
+        margin-bottom: 20px;
         @include res(s-m){
           width: 100%;
         }
