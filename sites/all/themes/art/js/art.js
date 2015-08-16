@@ -219,10 +219,12 @@ if ($("body").hasClass("node-type-art")){
 
 /********  to top - mobile  ************/
   $('.top-button').click(function(){
+    if ($height < 473){
       $("html, body").animate({
             scrollTop: 0
         }, 600);
     return false;
+  }
   });
 
   $('.menu-button').click(function(){
