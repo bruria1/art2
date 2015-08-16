@@ -60,6 +60,7 @@
 
 </div><?php /* class view */ ?>
 <script>
+
 	
 	jQuery(function(){		
 		jQuery('.i18n-he .view-display-id-block .owl-carousel').owlCarousel({

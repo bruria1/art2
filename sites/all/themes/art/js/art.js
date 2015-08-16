@@ -17,6 +17,28 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
+
+/*********   number of image at gallery  *******/
+
+$artimg=$(".view-arts-galleries .view-header").html();
+if ($artimg==1){
+  $(".view-arts-galleries").addClass("one-img");
+}
+else if ($artimg==2){
+  $(".view-arts-galleries").addClass("two-img");
+}
+
+$exhimg=$(".view-exhibition-gallery .view-header").html();
+if ($exhimg==1){
+  $("#block-views-exhibition-gallery-block").addClass("ex-one-img");
+  $("#block-views-exhibition-gallery-block-2").addClass("ex-one-img");
+}
+else if ($exhimg==2){
+  $("#block-views-exhibition-gallery-block").addClass("ex-two-img");
+  $("#block-views-exhibition-gallery-block-2").addClass("ex-two-img");
+}
+
+
   $height = $(window).height();
   $width = ($(window).width()-1200)/2+250;
   $simplewidth = $(window).width();
@@ -43,7 +65,7 @@ $(document).ready(function(){
       $scroll_pos = 0;
       $(document).scroll(function() { 
         $scroll_pos = $(this).scrollTop();
-        if($scroll_pos > 150) {
+        if($scroll_pos > 0) {
             $("body").addClass('scroll');
         }
         else {
@@ -193,12 +215,7 @@ if ($("body").hasClass("node-type-art")){
     });
 }
 
-/********  hide control if only one image (product gallery) **********/
 
-$image_number=$('.owl-item').length;
-if ($image_number==0){
-    $(".owl-dots").css({ display: "none" });
-};
 
 /********  to top - mobile  ************/
   $('.top-button').click(function(){

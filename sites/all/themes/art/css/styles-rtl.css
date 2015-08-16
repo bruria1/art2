@@ -869,6 +869,20 @@ html.js .collapsed .fieldset-legend {
   float: left;
 }
 
+/************  contact   **************/
+/* line 460, ../sass/components/arts-rtl.scss */
+.node-webform .field-name-field-text {
+  float: right;
+}
+/* line 463, ../sass/components/arts-rtl.scss */
+.node-webform #webform-client-form-11 {
+  float: left;
+}
+/* line 466, ../sass/components/arts-rtl.scss */
+.node-webform #webform-client-form-11 input.form-submit, .node-webform #webform-client-form-11 textarea.form-submit {
+  float: left;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A-rtl"; */
 /* @import "theme-B-rtl"; */
