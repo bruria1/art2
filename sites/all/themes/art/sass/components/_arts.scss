@@ -94,11 +94,6 @@ body{
   position: fixed;
 }
 
-#navigation.close-menu{
-  overflow: hidden;
-  height: 0;
-}
-
 #content{
   padding: 54px 0 0 0;
   @include res(s-m){
@@ -152,13 +147,22 @@ p {
     }
   }
   #header{
-    height: 56px;
     position: fixed;
     padding: 7px 3% 10px!important;
-    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.93);
   }
   #main{
     padding-top: 56px;
+  }
+  .menu-wrapper{
+    position: fixed;
+    top: 13px;
+    .menu-button{
+      padding-left: 1px;
+    }
+    .text{
+      width: 0;
+      overflow: hidden;
+    }
   }
   .region-header{
     position: absolute;
@@ -208,20 +212,26 @@ p {
 #navigation .links li, #navigation .menu li{
   padding: 0 10px;
 }
- .wrapper-width.menu{
-  padding: 0;
- }
+
+.menu-wrapper{
+    position: absolute;
+    top: 35px;
+    z-index: 400;
+    width: 100%;
+    height: 0;
+    .menu-inside-wrapper{
+      @include width;
+    }
+}
 
 .menu-button{
 	background-color: $green;
 	color: #fff;
 	overflow: hidden;
 	float: left;
-	padding:9px 13px 8px;
+	padding:5px 13px 7px;
 	z-index: 200;
 	cursor: pointer;
-	position: absolute;
-  top:67px;
   @include res(s-m){
     width: 40px;
     height: 40px;
@@ -246,6 +256,9 @@ p {
 		float: left;
 		font-family:   'almoni-700', sans-serif;
 		font-size: 1.5em;
+        transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    width: 65px;
     @include res(s-m){
       display: none;
     }
@@ -292,7 +305,6 @@ p {
 	float: left;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
-  margin: 0;
   position: relative;
   max-width: 100%;
   @include res(s-m){
@@ -369,6 +381,11 @@ p {
   overflow: hidden;
 }
 .display-menu{
+  #navigation{
+    z-index: 300;
+    margin-right: 0;
+    margin-left: 0;
+  }
   .region-navigation{
     height: auto;
     overflow: visible;
@@ -379,8 +396,10 @@ p {
   }
 }
 
-#block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
+#navigation{
 	margin-left: -100%;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 
 @media (max-width: 1200px){
@@ -402,7 +421,6 @@ p {
   position: absolute;
   z-index: -1;
   top: 0;
-  margin: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   @include res(s-m){
@@ -419,7 +437,6 @@ p {
   top: 0;
   border-left-width: 0;
   border-right-width: 208px;
-  margin: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   z-index: -1;
@@ -486,13 +503,13 @@ body.front{
 }
 
 .region-top{
-	height: calc(100% - 138px);
+	height: calc(100% - 94px);
 	position: absolute;
 	width: 100%;
 	bottom: 0;
   overflow: hidden;
   @include res(s-m){
-    height: calc(100% - 118px);
+    height: calc(100% - 74px);
   }
   .slide{
       -webkit-background-size: cover!important;
@@ -627,14 +644,14 @@ body.front{
 
 header {
   width: 100%;
-  padding: 30px 0 39px!important;
-  height: 138px;
+  padding: 33px 0 20px!important;
   position: relative;
-  z-index: 300;
   background-color: #fcfcfc;
   padding: 12px;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.93);
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  z-index: 200;
   @include res(s-m){
     padding: 12px!important;
     height: auto;
@@ -646,16 +663,11 @@ header {
     position: relative;
   }
   #logo{
-    @include res(s-m){
-      display: block;
-      float: none;
-      text-align: center;
-      img{
-        height: auto;
-        margin-bottom: 8px;
-        max-width: 300px;
-        width: 71%;
-      }
+    width: 40%;
+    text-align: center;
+    margin-left: 28%;
+    img{
+      margin: 0 auto;
     }
     .logo-mobile{
       display: none;
@@ -672,6 +684,8 @@ header {
 	float: right;
 	clear: none !important;
   left: 0;
+  width: 30%;
+  margin-top: 10px;
   @include res(s-m){
     display: none;
   }
@@ -682,11 +696,11 @@ header {
   float: left;
     select {
       height: 27px;
-      color: $white;
-      width: 88px!important;
+      color: #000;
+      width: 65px!important;
    }
   .form-type-select {
-    background: url("../images/lang_triangle.png") no-repeat right center #000;
+    background: url("../images/lang_triangle.png") no-repeat left center transparent;
   }
 }
 
@@ -724,9 +738,8 @@ header {
 // The search block
 
 #block-search-form{
-  padding-top: 9px;
   float: right;
-  clear: left;
+  margin-left: 16px;
   .container-inline{
     position: relative;
   }
@@ -749,9 +762,9 @@ header {
     font-size: 14px;
     padding-left: 5px;
     padding-top: 2px;
-    width: 183px;
+    width: 143px;
     background-color: transparent;
-    height: 23px;
+    height: 26px;
   }
   input.form-submit{
     background: url("../images/search-icon.png") no-repeat 0 0 transparent;
@@ -781,7 +794,7 @@ header {
     max-width: 150%;
     border: none;
     text-align: left;
-    padding-left: 5px;
+    padding-left: 7px;
     position: relative;
     top: -2px;
   }

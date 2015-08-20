@@ -15,6 +15,9 @@
 // The search block
 
 #block-search-form{
+  float: left;
+  margin-left: 0;
+  margin-right: 16px;
   label{
     right: 47px;
     margin-right: -39px;
@@ -40,6 +43,12 @@
     right: auto;
     left: 0;
   }
+  .menu-wrapper{
+    .menu-button{
+      padding-left: 13px;
+      padding-right: 1px;
+    }
+  }
 }
 
 /**********  main menu  **************/
@@ -62,10 +71,11 @@
   }
 }
 
-#block-system-main-menu.hide, #triangle-topleft.hide, #square.hide{
-  margin-right: -100%;
+#navigation{
+  margin-right: -50%;
   margin-left: 0;
 }
+
 
 .menu-button{
   float: right;
@@ -165,10 +175,15 @@
   float: left;
 }
 
+#logo{
+    margin-right: 28%;
+    margin-left: 0!important;
+}
+
 // The language switcher blcok
 #block-lang-dropdown-language {
   .form-type-select {
-    background: url("../images/lang_triangle.png") no-repeat left center #000;
+    background: url("../images/lang_triangle.png") no-repeat right center transparent;
   }
 }
 /*********  front  ***********/
@@ -454,7 +469,7 @@
 #block-lang-dropdown-language, #block-views-arts-block {
   select {
     text-align: right;
-    padding-right: 5px;
+    padding-right: 7px;
   }
   .form-type-select {
     float: left;

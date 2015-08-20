@@ -40,13 +40,13 @@ else if ($exhimg==2){
 
 
   $height = $(window).height();
-  $width = ($(window).width()-1200)/2+250;
+  $width = ($(window).width()-1310)/2+240;
   $simplewidth = $(window).width();
   $heightsquare = $(window).height()+200;
 
 $(window).resize(function() {
   $height = $(window).height();
-  $width = ($(window).width()-1200)/2+250;
+  $width = ($(window).width()-1310)/2+240;
   $simplewidth = $(window).width();
   $heightsquare = $(window).height()+200;
       if ($simplewidth < 768){
@@ -65,7 +65,7 @@ $(document).ready(function(){
       $scroll_pos = 0;
       $(document).scroll(function() { 
         $scroll_pos = $(this).scrollTop();
-        if($scroll_pos > 0) {
+        if($scroll_pos > 20) {
             $("body").addClass('scroll');
         }
         else {

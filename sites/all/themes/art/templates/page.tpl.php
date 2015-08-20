@@ -13,6 +13,7 @@
   <header class="header" id="header" role="banner">
       <div class="wrapper-header">
           <div class="wrapper-header-inside">
+
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" />
         <div class="logo-mobile he"><img src="/sites/all/themes/art/images/logo-mobile.png"></div>
@@ -51,16 +52,7 @@
 
     <?php print render($page['header']); ?>
 </div>
-      <div class="wrapper-width menu">
-      <div class="menu-button">
-        <div class="text"><?php print t("Menu"); ?></div>
-        <div class="lines">
-          <span class="line1"></span>
-          <span class="line2"></span>
-          <span class="line3"></span>
-        </div>
-      </div>
-    </div>
+
     <?php if ( !empty($node) ) {?>
     <div class="social-button">
       <img src="/sites/all/themes/art/images/share.png">
@@ -102,6 +94,19 @@
     </div>
     <div class="share-triangle hide"></div>
 <?php } ?>
+  <div class="menu-wrapper">
+      <div class="menu-inside-wrapper">
+
+      <div class="menu-button">
+        <div class="text"><?php print t("Menu"); ?></div>
+        <div class="lines">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
+      </div>
+    </div>
+    </div>
     <div id="navigation" class="close-menu">
 
       <?php if ($main_menu): ?>
