@@ -57,7 +57,7 @@
   border-right-width: 0;
   border-left-width: 126px;
   @include res(s-m){
-    border-color: transparent rgba(59, 142, 135, 0.94) transparent transparent;
+    border-color: transparent rgba(77, 77, 77, 0.95) transparent transparent;
     border-right-width: 90px;
     border-left-width: 0;
   }
@@ -72,7 +72,7 @@
 }
 
 #navigation{
-  margin-right: -50%;
+  margin-right: -100%;
   margin-left: 0;
 }
 
@@ -178,6 +178,10 @@
 #logo{
     margin-right: 28%;
     margin-left: 0!important;
+    @include res(s-m){
+      margin-right: 0!important;
+      float: left!important;
+    }
 }
 
 // The language switcher blcok
@@ -352,6 +356,14 @@
   }
   #block-block-3{
     float: right;
+    @include res(m){
+      p{
+        float: right;
+      }
+      .view-last-update{
+        float: left;
+      }
+    }
   }
   #block-block-2{
     padding-right: 6px;

@@ -143,6 +143,9 @@ p {
   #header{
     position: fixed;
     padding: 7px 3% 10px!important;
+    @include res(s-m){
+      padding: 5px 12px 5px!important;
+    }
   }
   #main{
     padding-top: 56px;
@@ -170,9 +173,6 @@ p {
     bottom: auto!important;
     top: 0;
   }
-  .logo-mobile{
-    display: none!important;
-  }
   .wrapper-header{
     position: relative;
     .wrapper-header-inside{
@@ -183,8 +183,19 @@ p {
     display: block;
     float: none;
     text-align: center;
+    @include res(s-m){
+      margin: 0!important;
+    }
     img{
       height: 40px;
+      @include res(s-m){
+        height: auto;
+      }
+    }
+    .logo-mobile{
+      @include res(s-m){
+        margin: 0!important;
+      }
     }
   }
   .social-button, .menu-button{
@@ -216,6 +227,9 @@ p {
     .menu-inside-wrapper{
       @include width;
     }
+    @include res(s-m){
+      top: 26px;
+    }
 }
 
 .menu-button{
@@ -227,15 +241,10 @@ p {
 	z-index: 200;
 	cursor: pointer;
   @include res(s-m){
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
     padding: 0!important;
-    margin: 0px;
-    left: 0;
     z-index: 300;
-    bottom: 20px;
-    top: auto;
+    background-color: transparent;
+    height: 25px;
   }
 	span{
 		width: 20px;
@@ -245,6 +254,11 @@ p {
 		display: block;  
 		transition: all 0.5s;
   	-webkit-transition: all 0.5s;
+    @include res(s-m){
+      width: 25px;
+      background-color: #000; 
+      margin-bottom: 6px;
+    }
 	}
 	.text{
 		float: left;
@@ -261,10 +275,6 @@ p {
 		float: left;
 		padding-left: 7px;
     padding-top: 6px;
-    @include res(s-m){
-      padding-top: 13px;
-      padding-left: 10px;
-    }
 	}
 }
 
@@ -309,6 +319,9 @@ p {
     margin-top: 170px!important;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+    @include res(s-m){
+      margin-top: 80px!important;
+    }
   }
   li.is-collapsed:before, li.is-expanded:before{
       content: "";
@@ -417,9 +430,6 @@ p {
   top: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
-  @include res(s-m){
-    background-color:  rgba(59, 142, 135, 0.94);
-  }
 }
 
 #triangle-topleft{
@@ -435,7 +445,7 @@ p {
   -webkit-transition: all 0.5s;
   z-index: -1;
   @include res(s-m){
-    border-color: rgba(59, 142, 135, 0.94) transparent transparent;
+    border-color: rgba(77, 77, 77, 0.95) transparent transparent;
     border-left-width: 0;
     border-right-width: 90px;
   }
@@ -497,14 +507,11 @@ body.front{
 }
 
 .region-top{
-	height: calc(100% - 94px);
+	height: 100%;
 	position: absolute;
 	width: 100%;
 	bottom: 0;
   overflow: hidden;
-  @include res(s-m){
-    height: calc(100% - 74px);
-  }
   .slide{
       -webkit-background-size: cover!important;
       -moz-background-size: cover!important;
@@ -633,9 +640,6 @@ body.front{
  * HEADER THEME
  ****************************************/
 
-// Logo
-
-
 header {
   width: 100%;
   padding: 33px 0 20px!important;
@@ -647,10 +651,10 @@ header {
   -webkit-transition: all 0.5s;
   z-index: 200;
   @include res(s-m){
-    padding: 12px!important;
+    padding: 12px 12px 15px!important;
     height: auto;
-    padding-bottom: 0!important;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.93);
+    z-index: 400;
   }
   .wrapper-header{
     @include width;
@@ -660,13 +664,28 @@ header {
     width: 40%;
     text-align: center;
     margin-left: 28%;
+    @include res(s-m){
+      width: auto;
+      margin-left: 0;
+      float: right;
+      margin-bottom: 7px;
+    }
     img{
       margin: 0 auto;
+      @include res(s-m){
+        margin: 0 auto -8px;
+      }
+    }
+   .header__logo-image{
+      @include res(s-m){
+        display: none;
+      }
     }
     .logo-mobile{
       display: none;
       @include res(s-m){
         display: block;
+        margin-top: 9px;
       }
     }
   }
@@ -1110,7 +1129,7 @@ header {
     }
   }
 }
-
+/*
 #share-mobile{
   display: none;
   @include res(s-m){
@@ -1254,6 +1273,7 @@ header {
 #share-mobile.hide, .share-triangle.hide{
   margin-right: -100%;
 }
+*/
 /**********  exhibition & art gallery************/
 
 #block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block,
@@ -1476,6 +1496,14 @@ header {
       width: 100%;
       strong{
         display: none;
+      }
+    }
+    @include res(m){
+      p{
+        float: left;
+      }
+      .view-last-update{
+        float: right;
       }
     }
   }
