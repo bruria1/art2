@@ -52,7 +52,7 @@
 
     <?php print render($page['header']); ?>
 </div>
-
+<!--
     <?php if ( !empty($node) ) {?>
     <div class="social-button">
       <img src="/sites/all/themes/art/images/share.png">
@@ -60,9 +60,10 @@
       <span class="line3"></span>
     </div>
     <?php } ?>
+-->
   </div>
   </header>
-
+<!--
 <?php if ( !empty($node) ) {?>
     <div id="share-mobile" class="hide">
         <div class="facebook link">
@@ -94,6 +95,7 @@
     </div>
     <div class="share-triangle hide"></div>
 <?php } ?>
+-->
   <div class="menu-wrapper">
       <div class="menu-inside-wrapper">
 
