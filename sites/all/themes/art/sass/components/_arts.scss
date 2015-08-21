@@ -320,7 +320,7 @@ p {
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     @include res(s-m){
-      margin-top: 80px!important;
+      margin-top: 150px!important;
     }
   }
   li.is-collapsed:before, li.is-expanded:before{
@@ -331,14 +331,21 @@ p {
       width: 13px;
       background: url("../images/triangle-menu-en.png")no-repeat top left;
       position: absolute;
-      top: 9px;
+      top: 6px;
+      @include res(s-m){
+        background-size: 7px!important;
+        top: 8px;
+      }
   }
   li.expanded:before{
-    -webkit-transform:rotate(30deg);
-    -moz-transform:rotate(30deg);
-    transform: rotate(30deg);
-    top: 6px;
-    right: 4px;
+    -webkit-transform:rotate(-30deg);
+    -moz-transform:rotate(-30deg);
+    transform: rotate(-30deg);
+    top: 2px;
+    left: 13px;
+    @include res(s-m){
+      top: 4px;
+    }
   }
   li{
 		width: 100%;
@@ -347,9 +354,10 @@ p {
     a{
       font-size: 1.5em;
       color: #fff;
-      padding: 0 15px!important;
+      padding: 0 18px!important;
       @include res(s-m){
         font-size: 1em;
+        padding: 0 15px!important;
       }
     }
     a.active, a.active-trail, a:hover{
@@ -451,6 +459,31 @@ p {
   }
 }
 
+#block-locale-language{
+  display: none;
+  clear: left;
+  float: left;
+  padding: 0 25px;
+  @include res(s-m){
+    display: block;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  li{
+    list-style-type: none;
+    &.active{
+      display: none;
+    }
+  }
+  a{
+    color: #fff;
+    &:hover{
+      font-family: "almoni-900";
+    }
+  }
+}
 /**********  menu and share in small screen  **********/
 
 @media (max-height: 472px){

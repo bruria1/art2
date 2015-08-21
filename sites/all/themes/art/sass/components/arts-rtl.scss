@@ -69,6 +69,13 @@
       float: right;
       background: url("../images/triangle-menu.png")no-repeat top right;
   }
+  li.expanded:before{
+    -webkit-transform:rotate(30deg);
+    -moz-transform:rotate(30deg);
+    transform: rotate(30deg);
+    right: 4px;
+    left: auto;
+  }
 }
 
 #navigation{
@@ -112,8 +119,13 @@
     }
   }
 }
-/*********  share  *********/
 
+#block-locale-language{
+  clear: right;
+  float: right;
+}
+/*********  share  *********/
+/*
 .social-button{
   @include res(s-m){
     float: left;
@@ -168,7 +180,7 @@
 #share-mobile.hide, .share-triangle.hide{
   margin-left: -100%;
   margin-right: 0;
-}
+}*/
 
 /* the Header region  */
 .header__region {
