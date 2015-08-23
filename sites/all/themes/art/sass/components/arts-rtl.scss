@@ -198,10 +198,21 @@
 
 // The language switcher blcok
 #block-lang-dropdown-language {
+  float: left;
   .form-type-select {
     background: url("../images/lang_triangle.png") no-repeat right center transparent;
   }
 }
+
+.block-text-resize {
+  float: left;
+  margin-right: 6px;
+  margin-left: 0;
+  a{
+        background: url("../images/aaa.png") no-repeat center center transparent!important;
+  }
+}
+
 /*********  front  ***********/
 
 .region-top{
@@ -356,11 +367,13 @@
 /*****************  footer  ************/
 
 #footer{
+  width: 760px;
   #block-block-1{
     background: url("../images/huji.png") no-repeat right center transparent;
     float: right;
     padding: 12px 55px 12px 6px;
     text-align: right;
+    width: 33%;
     @include res(s-m){
       background: none;
       padding: 0;
@@ -368,6 +381,7 @@
   }
   #block-block-3{
     float: right;
+    width: 45%;
     @include res(m){
       p{
         float: right;
@@ -382,6 +396,7 @@
     padding-left: 0;
     float: left;
     text-align: left;
+    width: 21%;
     @include res(s-m){
       margin: 0;
       text-align: left;
