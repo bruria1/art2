@@ -1,88 +1,50 @@
 /*
-Error: Undefined variable: "$green".
-        on line 480 of /home/art/public_html/sites/all/themes/art/sass/components/arts-rtl.scss
+Error: Invalid CSS after "...56247809dd2407e": expected "{", was "}"
+        on line 1059 of /home/art/public_html/sites/all/themes/art/sass/components/arts-rtl.scss
 
-475: #block-views-arts-block{
-476:   .form-type-select {
-477:     background: url("../images/sort-triangle.png") no-repeat left center #3e3e3f;
-478:   }
-479:   #edit-field-campus-tid-wrapper .form-type-select {
-480:     background: url("../images/sort-triangle.png") no-repeat left center $green;
-481:   }
-482:   .views-widget-sort-order{
-483:     display: none;
-484:   }
-485:   select{
+1054:         float: left;
+1055:       }
+1056:     }
+1057:   }
+1058: >>>>>>> 84a936f968a511ac977c2e02456247809dd2407e
+1059: }
 
 Backtrace:
-/home/art/public_html/sites/all/themes/art/sass/components/arts-rtl.scss:480
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `map'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `_perform'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
+/home/art/public_html/sites/all/themes/art/sass/components/arts-rtl.scss:1059
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1101:in `expected'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1096:in `tok!'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:641:in `block'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:661:in `block_child'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:653:in `block_contents'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:642:in `block'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:661:in `block_child'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:653:in `block_contents'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:642:in `block'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:635:in `ruleset'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:660:in `block_child'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:653:in `block_contents'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:117:in `stylesheet'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:42:in `parse'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/engine.rb:393:in `_to_tree'
 /usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
 /usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
 /usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 /usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
 /usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:293:in `watch'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `call'
-/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/usr/local/bin/compass:23:in `load'
-/usr/local/bin/compass:23:in `<main>'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `call'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/usr/local/rubies/ruby-2.1.6/lib/ruby/gems/2.1.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 480 of /home/art/public_html/sites/all/themes/art/sass/components/arts-rtl.scss\A \A 475: #block-views-arts-block{\A 476:   .form-type-select {\A 477:     background: url(\"../images/sort-triangle.png\") no-repeat left center #3e3e3f;\A 478:   }\A 479:   #edit-field-campus-tid-wrapper .form-type-select {\A 480:     background: url(\"../images/sort-triangle.png\") no-repeat left center $green;\A 481:   }\A 482:   .views-widget-sort-order{\A 483:     display: none;\A 484:   }\A 485:   select{"; }
+  content: "Error: Invalid CSS after \"...56247809dd2407e\": expected \"{\", was \"}\"\A         on line 1059 of /home/art/public_html/sites/all/themes/art/sass/components/arts-rtl.scss\A \A 1054:         float: left;\A 1055:       }\A 1056:     }\A 1057:   }\A 1058: >>>>>>> 84a936f968a511ac977c2e02456247809dd2407e\A 1059: }"; }

@@ -14,12 +14,14 @@
       <?php endif; ?>
 
 <div id="wrapper-title">
+    <div class="title">
      <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
      <?php if(isset($node->field_sub_title['und'][0]['value'])) { ?>
         <div class="sub-title"> 
            <?php print $node->field_sub_title['und'][0]['value']; ?>
         </div>
    <?php }?>
+ </div>
    <div class="design">
   <?php print render($content['field_copyright']); ?>
     </div>

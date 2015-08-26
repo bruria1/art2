@@ -40,19 +40,15 @@ else if ($exhimg==2){
 
 
   $height = $(window).height();
-  $width = ($(window).width()-1310)/2+240;
   $simplewidth = $(window).width();
   $heightsquare = $(window).height()+200;
 
 $(window).resize(function() {
-  $width = ($(window).width()-1310)/2+240;
   $height = $(window).height();
   $simplewidth = $(window).width();
   $heightsquare = $(window).height()+200;
+  $(".display-menu #square").css("height", $heightsquare); 
   $("#ovr1 .ovr_inner").css("height", $height);  
-  $(".i18n-he #triangle-topleft").css("right", $width);  
-  $(".i18n-en #triangle-topleft").css("left", $width);  
-  $(".display-menu #square").css("width", $width);
       if ($simplewidth < 768){
       $(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
@@ -158,9 +154,6 @@ $(".menu-button").click(function(){
       $("#triangle-topleft").css("border-bottom-width", $heightsquare);
       $("#triangle-topleft").css("border-top-width", "0");
     }
-    $(".i18n-he #triangle-topleft").css("right", $width);  
-    $(".i18n-en #triangle-topleft").css("left", $width);  
-    $(".display-menu #square").css("width", $width);
     $("#navigation").removeClass("close-menu");
     $("body").removeClass("display-social");
 //    $("#share-mobile").addClass("hide");
@@ -265,6 +258,41 @@ $(".overlay").click(function(){
     jQuery("#ovr1").css("display","none");
     jQuery("#ovr1 img").attr("src" , "");      
   });
+
+
+/********  text resize  ************/
+
+$('#text_resize_reset').addClass("active");
+
+if ($('#main').css('font-size') > '18px'){
+    $('#text_resize_increase').addClass("active");
+    $('#text_resize_decrease').removeClass("active");
+    $('#text_resize_reset').removeClass("active");
+}
+
+if ($('#main').css('font-size') < '18px'){
+    $('#text_resize_increase').removeClass("active");
+    $('#text_resize_decrease').addClass("active");
+    $('#text_resize_reset').removeClass("active");
+}
+
+$('.block-text-resize .changer').click(function(){
+  if ($('#main').css('font-size') < '18px'){
+    $('#text_resize_increase').removeClass("active");
+    $('#text_resize_decrease').addClass("active");
+    $('#text_resize_reset').removeClass("active");
+  }
+  else if ($('#main').css('font-size') > '18px'){
+      $('#text_resize_increase').addClass("active");
+      $('#text_resize_decrease').removeClass("active");
+      $('#text_resize_reset').removeClass("active");
+  }
+  else{
+      $('#text_resize_increase').removeClass("active");
+      $('#text_resize_decrease').removeClass("active");
+      $('#text_resize_reset').addClass("active");
+  }
+});
 
 
   }
