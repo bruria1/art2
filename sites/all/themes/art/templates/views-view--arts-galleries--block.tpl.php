@@ -1,39 +1,16 @@
 <div id='ovr1' class='overlay' onclick='closeOvr()'>
-	<div class='ovr_inner'>
-		<span class='close_btn'>close</span>
-		<img />
-	</div>
+  <div class='ovr_inner'>
+ <!--   <span class='close_btn'>close</span> -->
+    <img />
+  </div>
 </div>
 <script>
-	function closeOvr(){
-		jQuery("#ovr1").css("display","none");
-	}
+  function closeOvr(){
+    jQuery("#ovr1").css("display","none");
+  }
+  $("#ovr1").click(function(){
+  });
 </script>
-<style>
-.overlay{
-  position: fixed;
-  display:none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background-color: rgba(0,0,0,0.5); /*dim the background*/
-}
-.ovr_inner {
-  background: #fff;
-  width: auto;
-  height: auto;
-  padding:0px;
-  display: inline;
-  margin: 0 auto;
-  top: 180px;
-  position: relative;
-}
-.ovr_inner img {
-	padding:10px;
-}
-</style>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -96,25 +73,24 @@
 
 </div><?php /* class view */ ?>
 <script>
-	jQuery(".views-field-field-art-gallery img").click(function(){			
-			jQuery("#ovr1 img").attr("src" , this.src.replace(/styles.+?public\//g,""));			
-			jQuery("#ovr1 img").css("max-width","99%");
-			jQuery("#ovr1").css("display","block");
-	});
-	
-	jQuery(function(){		
-		jQuery('.i18n-he .view-display-id-block .owl-carousel').owlCarousel({
-			rtl:true,
-			loop:false,
-			margin:10,
-			nav:true,
-			dots: true,
-			responsive:{
-				0:{
-					items:1
-				}
-			}
-		});	
+  jQuery(".views-field-field-art-gallery img").click(function(){      
+      jQuery("#ovr1 img").attr("src" , this.src.replace(/styles.+?public\//g,""));      
+      jQuery("#ovr1").css("display","block");
+  });
+  
+  jQuery(function(){    
+    jQuery('.i18n-he .view-display-id-block .owl-carousel').owlCarousel({
+      rtl:true,
+      loop:false,
+      margin:10,
+      nav:true,
+      dots: true,
+      responsive:{
+        0:{
+          items:1
+        }
+      }
+    }); 
 });
 
   jQuery(function(){    

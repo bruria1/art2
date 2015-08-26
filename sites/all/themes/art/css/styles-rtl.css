@@ -916,39 +916,44 @@ html.js .collapsed .fieldset-legend {
 #block-views-arts-block .form-item-sort-by select {
   width: 100px !important;
 }
+/* line 494, ../sass/components/arts-rtl.scss */
+#block-views-arts-block .views-exposed-widgets {
+  margin: 0 auto;
+  width: 48%;
+}
 
-/* line 496, ../sass/components/arts-rtl.scss */
+/* line 500, ../sass/components/arts-rtl.scss */
 .views-exposed-form .views-exposed-widget {
   float: right;
   padding: 0.5em  0 0 1em;
 }
 
-/* line 501, ../sass/components/arts-rtl.scss */
+/* line 505, ../sass/components/arts-rtl.scss */
 .views-submit-button {
   padding-left: 0 !important;
 }
 
 /************  design select  ************/
-/* line 509, ../sass/components/arts-rtl.scss */
+/* line 513, ../sass/components/arts-rtl.scss */
 #block-lang-dropdown-language select, #block-views-arts-block select {
   text-align: right;
   padding-right: 7px;
 }
-/* line 513, ../sass/components/arts-rtl.scss */
+/* line 517, ../sass/components/arts-rtl.scss */
 #block-lang-dropdown-language .form-type-select, #block-views-arts-block .form-type-select {
   float: left;
 }
 
 /************  contact   **************/
-/* line 521, ../sass/components/arts-rtl.scss */
+/* line 525, ../sass/components/arts-rtl.scss */
 .node-webform .field-name-field-text {
   float: right;
 }
-/* line 524, ../sass/components/arts-rtl.scss */
+/* line 528, ../sass/components/arts-rtl.scss */
 .node-webform #webform-client-form-11 {
   float: left;
 }
-/* line 527, ../sass/components/arts-rtl.scss */
+/* line 531, ../sass/components/arts-rtl.scss */
 .node-webform #webform-client-form-11 input.form-submit, .node-webform #webform-client-form-11 textarea.form-submit {
   float: left;
 }

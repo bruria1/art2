@@ -45,10 +45,14 @@ else if ($exhimg==2){
   $heightsquare = $(window).height()+200;
 
 $(window).resize(function() {
-  $height = $(window).height();
   $width = ($(window).width()-1310)/2+240;
+  $height = $(window).height();
   $simplewidth = $(window).width();
   $heightsquare = $(window).height()+200;
+  $("#ovr1 .ovr_inner").css("height", $height);  
+  $(".i18n-he #triangle-topleft").css("right", $width);  
+  $(".i18n-en #triangle-topleft").css("left", $width);  
+  $(".display-menu #square").css("width", $width);
       if ($simplewidth < 768){
       $(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
@@ -254,7 +258,9 @@ if ($("body").hasClass("node-type-art")){
 
 $("#edit-sort-order").val("ASC");
 
+/********  art overlay  ************/
 
+$("#ovr1 .ovr_inner").css("height", $height);  
 
   }
 };
