@@ -8,8 +8,6 @@
   function closeOvr(){
     jQuery("#ovr1").css("display","none");
   }
-  $("#ovr1").click(function(){
-  });
 </script>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
