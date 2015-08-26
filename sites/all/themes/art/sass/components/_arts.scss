@@ -361,9 +361,15 @@ p {
         padding: 0 15px!important;
       }
     }
-    a.active, a.active-trail, a:hover{
+    a.active, a.active-trail{
       color: $green;
       font-family:'almoni-900';
+      @include res(s-m){
+        color: #fff;
+      }
+    }
+    a:hover{
+      color: $green;
       @include res(s-m){
         color: #fff;
       }
@@ -420,10 +426,7 @@ p {
 
 @media (max-width: 1200px){
   #square{
-    width: 260px!important;
-    @include res(s-m){
-      width: 170px!important
-    }
+
   }
   #triangle-topleft{
     left: 260px!important;
@@ -437,6 +440,10 @@ p {
   position: absolute;
   z-index: -1;
   top: 0;
+  width: 280px!important;
+  @include res(s-m){
+    width: 170px!important
+  }
 }
 
 #triangle-topleft{
@@ -449,10 +456,12 @@ p {
   border-left-width: 0;
   border-right-width: 208px;
   z-index: -1;
+  left: 280px!important;
   @include res(s-m){
     border-color: rgba(77, 77, 77, 0.95) transparent transparent;
     border-left-width: 0;
     border-right-width: 90px;
+    left: 170px!important
   }
 }
 
@@ -481,6 +490,14 @@ p {
     }
   }
 }
+
+@media (min-width: 1290px){
+  header .wrapper-header, .menu-wrapper .menu-inside-wrapper, .region-navigation{
+    width: 100%!important;
+    padding: 0 35px!important;
+  }
+}
+
 /**********  menu and share in small screen  **********/
 
 @media (max-height: 472px){
@@ -760,19 +777,19 @@ header {
   }
   #text_resize_decrease{
     background-position: 0 -30px!important;
-    &:hover{
+    &:hover, &.active{
       background-position: 0 0px!important;
     }
   }
   #text_resize_reset{
     background-position: 0 -90px!important;
-    &:hover{
+    &:hover, &.active{
       background-position: 0 -60px!important;
     }
   }
   #text_resize_increase{
     background-position: 0 -150px!important;
-    &:hover{
+    &:hover, &.active{
       background-position: 0 -120px!important;
     }
   }
@@ -821,6 +838,12 @@ header {
     width: 17px;
   }
   
+}
+
+@media (max-width: 1160px){
+  #block-search-form{
+    display: none;
+  }
 }
 
 /************  design select  ************/
@@ -875,6 +898,7 @@ header {
       font-weight: normal;
       line-height: 0.8em;
       margin-right: 7px;
+      margin-left: 46px;
       padding-right: 11px;
       display: inline-block;
       width: auto;
@@ -1505,10 +1529,10 @@ header {
     @include res(s-m){
       background: none;
       padding: 0;
-      width: 50%;
+      width: 50%!important;
     }
     @include res(s){
-      width: 100%;
+      width: 100%!important;
       text-align: center!important;
     }
   }
@@ -1522,7 +1546,7 @@ header {
     @include res(s-m){
       clear: both;
       border: none;
-      width: 100%;
+      width: 100%!important;
       strong{
         display: none;
       }
@@ -1544,12 +1568,12 @@ header {
     float: right;
     text-align: right;
     @include res(s-m){
-      width: 50%;
+      width: 50%!important;
       margin: 0;
       text-align: right;
     }
     @include res(s){
-      width: 100%;
+      width: 100%!important;
       text-align: center!important;
     }
   }

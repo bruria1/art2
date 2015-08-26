@@ -56,10 +56,12 @@
 #triangle-topleft{
   border-right-width: 0;
   border-left-width: 126px;
+  right: 280px!important;
   @include res(s-m){
     border-color: transparent rgba(77, 77, 77, 0.95) transparent transparent;
     border-right-width: 90px;
     border-left-width: 0;
+    right: 170px!important;
   }
 }
 
@@ -99,23 +101,6 @@
     padding-left: 0;
     @include res(s-m){
       padding-left: 10px;
-    }
-  }
-}
-
-@media (max-width: 1200px){
-  #triangle-topleft{
-    right: 260px!important;
-    @include res(s-m){
-      right: 170px!important;
-    }
-  }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
-  #triangle-topleft{
-    @include res(s-m){
-      right: 169px!important;
     }
   }
 }
@@ -281,7 +266,7 @@
       padding-left: 11px;
       border-right: none;
       padding-right: 0;
-      margin-right: 0;
+      margin-right: 46px;
     }  
   }
   .treasurers-designers{
