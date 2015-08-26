@@ -1,3 +1,16 @@
+<div id='ovr1' class='overlay' onclick='closeOvr()'>
+  <div class='ovr_inner'>
+ <!--   <span class='close_btn'>close</span> -->
+    <img />
+  </div>
+</div>
+<script>
+  function closeOvr(){
+    jQuery("#ovr1").css("display","none");
+  }
+  $("#ovr1").click(function(){
+  });
+</script>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -60,21 +73,24 @@
 
 </div><?php /* class view */ ?>
 <script>
-
-	
-	jQuery(function(){		
-		jQuery('.i18n-he .view-display-id-block .owl-carousel').owlCarousel({
-			rtl:true,
-			loop:false,
-			margin:10,
-			nav:true,
+  jQuery(".views-field-field-art-gallery img").click(function(){      
+      jQuery("#ovr1 img").attr("src" , this.src.replace(/styles.+?public\//g,""));      
+      jQuery("#ovr1").css("display","block");
+  });
+  
+  jQuery(function(){    
+    jQuery('.i18n-he .view-display-id-block .owl-carousel').owlCarousel({
+      rtl:true,
+      loop:false,
+      margin:10,
+      nav:true,
       dots: true,
-			responsive:{
-				0:{
-					items:1
-				}
-			}
-		});	
+      responsive:{
+        0:{
+          items:1
+        }
+      }
+    }); 
 });
 
   jQuery(function(){    

@@ -437,8 +437,6 @@ p {
   position: absolute;
   z-index: -1;
   top: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
 }
 
 #triangle-topleft{
@@ -450,8 +448,6 @@ p {
   top: 0;
   border-left-width: 0;
   border-right-width: 208px;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
   z-index: -1;
   @include res(s-m){
     border-color: rgba(77, 77, 77, 0.95) transparent transparent;
@@ -629,7 +625,7 @@ body.front{
     margin: 0;
   }
   .flex-direction-nav a{
-    top: 30%;
+    top: 50%;
   }
   .flex-direction-nav{
     @include res(s-m){
@@ -853,8 +849,6 @@ header {
     overflow: hidden;
     float: right;
     width: 100%;
-    height: 27px;
-    line-height: 31px;
     text-align:-moz-center;
     text-align:-webkit-center;
     margin: 0px;
@@ -1351,6 +1345,7 @@ header {
     width: auto;
     margin: 0 auto;
     display: block;
+    cursor: pointer;
   }
   .owl-nav{
     @include res(s-m){
@@ -1731,6 +1726,33 @@ header {
   }
 }
 
+
+// overlay
+
+.overlay{
+  position: fixed;
+  display:none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 400;
+  background-color: rgba(0,0,0,0.5); /*dim the background*/
+.ovr_inner {
+  width: auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+    img {
+     margin: 0 auto;
+     display: block;
+      box-sizing: border-box;
+      max-height: 100%;
+    }
+  }
+}
+
 /*********  the gallery   ***********/
 
 .view-the-gallery{
@@ -1864,9 +1886,6 @@ header {
   a{
     color: #000;
   }
-  img{
-    border:1px solid #bebebe;
-  }
   .views-field-field-artis{
     font-size: 0.7em;
     line-height: 0.9;
@@ -1900,6 +1919,7 @@ header {
       display: block;
       overflow: hidden;
       margin: 0 auto;
+      border:1px solid #bebebe;
       img{
         display: block;
         -webkit-transition: all 1s ease; /* Safari and Chrome */
@@ -1921,7 +1941,7 @@ header {
     margin: 0 auto;
   }
   select{
-    height: 23px;
+    padding: 5px 0 1px;
     color: #fff;
     width: 216px!important;
   }
@@ -1935,9 +1955,8 @@ header {
     background-color: $green;
     border: medium none;
     color: #fff;
-    height: 27px;
     margin: 0;
-    padding: 2px 16px 10px;
+    padding: 2px 16px 3px;
     font-family: 'almoni-900', sans-serif;
     font-size: 1.1em;
   }
@@ -1974,6 +1993,10 @@ header {
         display: none;
       }
     }
+  }
+  .views-exposed-widgets {
+      margin: 0 auto;
+      width: 54%;
   }
 }
 
