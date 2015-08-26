@@ -7,9 +7,8 @@
 <script>
   function closeOvr(){
     jQuery("#ovr1").css("display","none");
+    jQuery("#ovr1 img").attr("src" , "");      
   }
-  $("#ovr1").click(function(){
-  });
 </script>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
@@ -77,7 +76,7 @@
       jQuery("#ovr1 img").attr("src" , this.src.replace(/styles.+?public\//g,""));      
       jQuery("#ovr1").css("display","block");
   });
-    
+
 	jQuery(function(){		
 		jQuery('.i18n-he .view-display-id-block_2 .owl-carousel').owlCarousel({
 			rtl:true,
