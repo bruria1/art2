@@ -4,11 +4,6 @@
     <img />
   </div>
 </div>
-<script>
-  function closeOvr(){
-    jQuery("#ovr1").css("display","none");
-  }
-</script>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>

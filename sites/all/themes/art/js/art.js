@@ -258,9 +258,14 @@ if ($("body").hasClass("node-type-art")){
 
 $("#edit-sort-order").val("ASC");
 
-/********  art overlay  ************/
+/********  art and exhibition overlay  ************/
 
-$("#ovr1 .ovr_inner").css("height", $height);  
+$("#ovr1 .ovr_inner").css("height", $height); 
+$(".overlay").click(function(){
+    jQuery("#ovr1").css("display","none");
+    jQuery("#ovr1 img").attr("src" , "");      
+  });
+
 
   }
 };
