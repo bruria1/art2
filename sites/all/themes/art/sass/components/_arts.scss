@@ -425,9 +425,6 @@ p {
 }
 
 @media (max-width: 1200px){
-  #square{
-
-  }
   #triangle-topleft{
     left: 260px!important;
     @include res(s-m){
@@ -495,6 +492,9 @@ p {
   header .wrapper-header, .menu-wrapper .menu-inside-wrapper, .region-navigation{
     width: 100%!important;
     padding: 0 35px!important;
+  }
+  .scroll #header {
+    padding: 7px 0 10px !important;
   }
 }
 
@@ -1785,6 +1785,7 @@ header {
     overflow: hidden;
     img{
       margin-bottom: -8px;
+      width: 100%;
     }
   }
   .place1{
