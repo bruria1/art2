@@ -1700,7 +1700,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1437679945');
+  background-image: url('../images/progress.gif?1440610731');
 }
 
 /***********  fonts ****************/
@@ -2763,7 +2763,7 @@ header #logo .logo-mobile {
   font-size: 0.8;
   cursor: pointer;
   text-indent: 0.01px;
-  text-overflow: Γא£Γא¥;
+  text-overflow: “”;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
