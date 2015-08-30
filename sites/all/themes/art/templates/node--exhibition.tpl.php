@@ -90,6 +90,7 @@
   </div>
 
   <?php print render($content['field_text']); ?>
+  <?php print render($content['field_download_file']); ?>
 
 <div id="share">
   <div class="pinterest link">

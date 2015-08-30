@@ -45,6 +45,28 @@ function exhibition_image_default_styles() {
         ),
         'weight' => 2,
       ),
+      19 => array(
+        'name' => 'canvasactions_definecanvas',
+        'data' => array(
+          'RGB' => array(
+            'HEX' => '#fff',
+          ),
+          'under' => 1,
+          'exact' => array(
+            'width' => 1120,
+            'height' => 421,
+            'xpos' => 'center',
+            'ypos' => 'center',
+          ),
+          'relative' => array(
+            'leftdiff' => '',
+            'rightdiff' => '',
+            'topdiff' => '',
+            'bottomdiff' => '',
+          ),
+        ),
+        'weight' => 2,
+      ),
     ),
   );
 

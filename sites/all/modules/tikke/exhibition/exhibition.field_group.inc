@@ -147,6 +147,7 @@ function exhibition_field_group_info() {
     'weight' => '26',
     'children' => array(
       0 => 'field_exh_gallery_top',
+      1 => 'field_download_file',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
