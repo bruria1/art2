@@ -356,6 +356,9 @@ p {
       font-size: 1.5em;
       color: #fff;
       padding: 0 18px!important;
+      outline: 0;
+      outline-style:none;
+      outline-width:0;
       @include res(s-m){
         font-size: 1em;
         padding: 0 15px!important;
@@ -2040,7 +2043,7 @@ header {
       text-align: center;
     }
   }
-  #webform-client-form-11{
+  #webform-client-form-11, #webform-client-form-2626{
     width: 48%;
     float: right;
     .grippie{
@@ -2070,5 +2073,13 @@ header {
         }
       }
     }
+  }
+}
+
+/*********  forward  ***********/
+
+#forward-form{
+  .edit-page, .edit-subject, .edit-body{
+    display: none;
   }
 }
