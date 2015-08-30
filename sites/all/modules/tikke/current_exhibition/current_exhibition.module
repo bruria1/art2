@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the current exhibition feature.
+ */
+
+include_once 'current_exhibition.features.inc';

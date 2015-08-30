@@ -17,18 +17,19 @@
   <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
 </div>
 
-<div id="block-views-exhibition-gallery-block" class="block">
-    <?php
-    $my_block = module_invoke('views', 'block_view', 'exhibition_gallery-block');
-    print render($my_block['content']);?>
-</div> 
-<div id="block-views-exhibition-gallery-block-2" class="block">
-    <?php
-    $my_block = module_invoke('views', 'block_view', 'exhibition_gallery-block_2');
-    print render($my_block['content']); 
-?>
-</div>
-
+<?php if ($node->nid != "2619") { ?>
+  <div id="block-views-exhibition-gallery-block" class="block">
+      <?php
+      $my_block = module_invoke('views', 'block_view', 'exhibition_gallery-block');
+      print render($my_block['content']);?>
+  </div> 
+  <div id="block-views-exhibition-gallery-block-2" class="block">
+      <?php
+      $my_block = module_invoke('views', 'block_view', 'exhibition_gallery-block_2');
+      print render($my_block['content']); 
+  ?>
+  </div>
+<?php } ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($title_prefix || $title_suffix || $display_submitted || !$page && $title): ?>
