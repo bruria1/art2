@@ -9,6 +9,7 @@
 ?>
 
 
+
       <?php if ($unpublished): ?>
         <mark class="unpublished"><?php print t('Unpublished'); ?></mark>
       <?php endif; ?>

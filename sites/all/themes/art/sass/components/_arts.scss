@@ -887,7 +887,7 @@ header {
 
 /**********  exhibition page ************/
 
-.node-type-exhibition{
+.node-type-exhibition, .page-node-2619, .page-node-2625{
   #wrapper-title{
     margin: 48px auto 0;
     text-align: center;
@@ -1073,6 +1073,28 @@ header {
     .field-item{
       display: inline;
     }
+  }
+}
+
+/**********  current exhibition  ********/
+
+.page-node-2619, .page-node-2625{
+  #block-views-now-exhibition-block{
+    article header{
+      display: none;
+    }
+  }
+  #content > #wrapper-title{
+    margin: 0;
+    #page-title{
+      padding: 0!important;
+      border: none!important;
+      margin: 0 0 10px!important;
+      font-size: 2em;
+    }
+  }
+  .view-empty{
+    text-align: center;
   }
 }
 
@@ -1333,6 +1355,7 @@ header {
 /**********  exhibition & art gallery************/
 
 #block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block,
+#block-views-now-exhibition-block-1, #block-views-now-exhibition-block-2,
 #block-views-arts-galleries-block, #block-views-arts-galleries-block-2{
   .view-footer{
     float: right;
@@ -1433,13 +1456,16 @@ header {
   }
 }
 
-#block-views-exhibition-gallery-block{
+#block-views-exhibition-gallery-block, #block-views-now-exhibition-block-2{
   &.ex-one-img, &.ex-two-img{
     display: none;
   }
+  img{
+    width: 100%!important;
+  }
 }
 
-#block-views-exhibition-gallery-block-2{
+#block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1{
   &.ex-one-img, &.ex-two-img{
     display: block!important;
     .view{
@@ -1465,7 +1491,7 @@ header {
   }
 }
 
-#block-views-arts-galleries-block-2, #block-views-exhibition-gallery-block{
+#block-views-arts-galleries-block-2, #block-views-exhibition-gallery-block, #block-views-now-exhibition-block-2{
   overflow: hidden;
   @include res(s-m){
     display: none;
@@ -1485,7 +1511,7 @@ header {
   }
 }
 
-#block-views-arts-galleries-block, #block-views-exhibition-gallery-block-2{
+#block-views-arts-galleries-block, #block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1{
   .hide.view{
     @include res(s-m){
       height: auto;

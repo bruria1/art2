@@ -1,0 +1,11 @@
+name = current exhibition
+core = 7.x
+package = Features
+dependencies[] = context
+dependencies[] = views
+features[context][] = current_exhibition
+features[ctools][] = context:context:3
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = now_exhibition
+features_exclude[dependencies][ctools] = ctools

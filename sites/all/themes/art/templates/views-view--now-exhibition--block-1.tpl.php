@@ -66,37 +66,38 @@
 
 </div><?php /* class view */ ?>
 <script>
-    jQuery(".views-field-field-exh-gallery-top img").click(function(){      
+	  jQuery(".views-field-field-exh-gallery-top img").click(function(){      
       jQuery("#ovr1 img").attr("src" , this.src.replace(/styles.+?public\//g,""));      
       jQuery("#ovr1").css("display","block");
   });
 
 	jQuery(function(){		
-		jQuery('.i18n-he .view-display-id-block .owl-carousel').owlCarousel({
+		jQuery('.i18n-he .view-display-id-block_1 .owl-carousel').owlCarousel({
 			rtl:true,
 			loop:false,
 			margin:10,
 			nav:true,
 			responsive:{
 				0:{
-					items:3
+					items:1
 				}
 			}
 		});	
 });
- 
+
   jQuery(function(){    
-    jQuery('.i18n-en .view-display-id-block .owl-carousel').owlCarousel({
+    jQuery('.i18n-en .view-display-id-block_1 .owl-carousel').owlCarousel({
       rtl:false,
       loop:false,
       margin:10,
       nav:true,
       responsive:{
         0:{
-          items:3
+          items:1
         }
       }
     }); 
 });
+
 </script>
 
