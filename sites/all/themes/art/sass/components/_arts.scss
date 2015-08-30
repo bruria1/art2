@@ -122,6 +122,7 @@ p {
 }
 
 #page-title{
+  text-align: center;
   @include res(s-m){
     background-color: #515252;
     color: #fff;
@@ -1465,6 +1466,7 @@ header {
 }
 
 #block-views-arts-galleries-block-2, #block-views-exhibition-gallery-block{
+  overflow: hidden;
   @include res(s-m){
     display: none;
   }

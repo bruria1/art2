@@ -185,7 +185,7 @@ $(".menu-button").click(function(){
 
 $("#block-search-form .form-type-textfield label").removeClass("element-invisible");
 
-if ($("body").hasClass("node-type-exhibition")){
+if (($("body").hasClass("node-type-exhibition")) || ($("body").hasClass("node-type-page"))){
 
     $(".view-exhibition-gallery .grid").click(function(){
       $("#block-views-exhibition-gallery-block .view").addClass("display").removeClass("hide");
