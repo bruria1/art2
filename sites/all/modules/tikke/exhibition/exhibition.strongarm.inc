@@ -63,7 +63,7 @@ function exhibition_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '16',
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
@@ -164,14 +164,14 @@ function exhibition_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_exhibition_he_pattern';
-  $strongarm->value = 'תערוכה/[node:nid]/[node:title]';
+  $strongarm->value = '';
   $export['pathauto_node_exhibition_he_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_exhibition_pattern';
-  $strongarm->value = 'exhibition/[node:nid]/[node:title]';
+  $strongarm->value = '';
   $export['pathauto_node_exhibition_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

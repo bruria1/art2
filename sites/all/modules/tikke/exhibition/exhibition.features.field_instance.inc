@@ -49,7 +49,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 22,
+      'weight' => 27,
     ),
   );
 
@@ -72,7 +72,7 @@ function exhibition_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 21,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -120,7 +120,7 @@ function exhibition_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -141,7 +141,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 28,
+      'weight' => 33,
     ),
   );
 
@@ -191,7 +191,7 @@ function exhibition_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 21,
+      'weight' => 22,
     ),
   );
 
@@ -247,7 +247,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+10',
       ),
       'type' => 'date_select',
-      'weight' => 27,
+      'weight' => 32,
     ),
   );
 
@@ -296,7 +296,53 @@ function exhibition_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 23,
+      'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance: 'node-exhibition-field_download_file'
+  $field_instances['node-exhibition-field_download_file'] = array(
+    'bundle' => 'exhibition',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'download_file',
+        'settings' => array(
+          'field_delimiter' => '',
+        ),
+        'type' => 'direct_download',
+        'weight' => 22,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_download_file',
+    'label' => 'קובץ להורדה',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => '',
+      'file_extensions' => 'pdf doc docx',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'file_entity_inline' => 1,
+        'file_entity_inline_fields' => array(),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 14,
     ),
   );
 
@@ -310,7 +356,7 @@ function exhibition_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -393,7 +439,7 @@ function exhibition_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 23,
+      'weight' => 28,
     ),
   );
 
@@ -449,7 +495,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+10',
       ),
       'type' => 'date_popup',
-      'weight' => 25,
+      'weight' => 30,
     ),
   );
 
@@ -505,7 +551,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+0',
       ),
       'type' => 'date_popup',
-      'weight' => 29,
+      'weight' => 34,
     ),
   );
 
@@ -561,7 +607,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+10',
       ),
       'type' => 'date_select',
-      'weight' => 26,
+      'weight' => 31,
     ),
   );
 
@@ -617,7 +663,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+0',
       ),
       'type' => 'date_select',
-      'weight' => 30,
+      'weight' => 35,
     ),
   );
 
@@ -632,7 +678,7 @@ function exhibition_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -653,7 +699,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 24,
+      'weight' => 29,
     ),
   );
 
@@ -676,7 +722,7 @@ function exhibition_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 20,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -722,12 +768,9 @@ function exhibition_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-        ),
-        'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 22,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -748,7 +791,7 @@ function exhibition_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 21,
+      'weight' => 26,
     ),
   );
 
@@ -807,7 +850,7 @@ function exhibition_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -930,7 +973,7 @@ function exhibition_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 22,
+      'weight' => 23,
     ),
   );
 
@@ -986,7 +1029,7 @@ function exhibition_field_default_field_instances() {
         'year_range' => '-100:+0',
       ),
       'type' => 'date_select',
-      'weight' => 31,
+      'weight' => 36,
     ),
   );
 
@@ -997,6 +1040,7 @@ function exhibition_field_default_field_instances() {
   t('לשימוש פנימי בלבד, אין צורך למלא שדה זה.');
   t('מיקום התערוכה');
   t('מיקום התערוכה באתר');
+  t('קובץ להורדה');
   t('קמפוס ');
   t('שמות אמנים');
   t('שמות האוצרים');
