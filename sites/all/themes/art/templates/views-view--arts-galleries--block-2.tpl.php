@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 <div id='ovr1' class='overlay' onclick='closeOvr()'>
   <div class='ovr_inner'>	  	  
 	
+=======
+<div id='ovr_art_block0' class='overlay'> 
+  <div class='ovr_inner'>   
+ <!--   <span class='cur_i'>0</span> Of <span class='cur_total'>0</span> -->
+ <!--   <span class='close_btn'>close</span> -->
+>>>>>>> ceb8aaa7ce1876ca0c6f666b8cb723d36054196d
     <img />
+    <span class='next_i'></span>
+    <span class='prev_i'></span>
   </div>
 </div>
-
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -101,5 +109,15 @@
     }); 
 });
 
+function owlClick(event){
+  var nav = jQuery(".owl-controls .owl-nav");
+  nav.removeClass("first last");
+  if(event.item.index==0){
+    nav.addClass("first");
+  }
+  if(event.item.count == (event.item.index+1)){
+    nav.addClass("last");
+  }
+}
 </script>
 
