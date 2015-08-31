@@ -48,7 +48,7 @@ $(window).resize(function() {
   $simplewidth = $(window).width();
   $heightsquare = $(window).height()+200;
   $(".display-menu #square").css("height", $heightsquare); 
-  $("#ovr1 .ovr_inner").css("height", $height);  
+  $(".overlay .ovr_inner").css("height", $height);  
       if ($simplewidth < 768){
       $(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
@@ -264,11 +264,12 @@ $("#edit-sort-order").val("ASC");
 
 /********  art and exhibition overlay  ************/
 
-$("#ovr1 .ovr_inner").css("height", $height); 
+$(".overlay .ovr_inner").css("height", $height); 
 $(".overlay").click(function(){
     jQuery("#ovr1").css("display","none");
     jQuery("#ovr1 img").attr("src" , "");      
   });
+
 
 
 /********  text resize  ************/
