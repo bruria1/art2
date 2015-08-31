@@ -1700,7 +1700,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1440610731');
+  background-image: url('../images/progress.gif?1437679945');
 }
 
 /***********  fonts ****************/
@@ -2730,7 +2730,7 @@ header #logo .logo-mobile {
   font-weight: normal;
   z-index: 200;
   margin-right: -39px;
-  padding-top: 1px;
+  padding-top: 2px;
   padding-left: 5px;
 }
 /* line 818, ../sass/components/_arts.scss */
@@ -2748,7 +2748,7 @@ header #logo .logo-mobile {
   padding-top: 2px;
   width: 143px;
   background-color: transparent;
-  height: 26px;
+  height: 28px;
 }
 /* line 833, ../sass/components/_arts.scss */
 #block-search-form input.form-submit {
@@ -2775,7 +2775,7 @@ header #logo .logo-mobile {
   font-size: 0.8;
   cursor: pointer;
   text-indent: 0.01px;
-  text-overflow: “”;
+  text-overflow: Γא£Γא¥;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
