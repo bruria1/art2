@@ -1,5 +1,5 @@
 <div id='ovr1' class='overlay' onclick='closeOvr()'>
-  <div class='ovr_inner'>
+  <div class='ovr_inner'>	  
  <!--   <span class='close_btn'>close</span> -->
     <img />
   </div>
@@ -69,7 +69,7 @@
     jQuery(".views-field-field-exh-gallery-top img").click(function(){      
       jQuery("#ovr1 img").attr("src" , this.src.replace(/styles.+?public\//g,""));      
       jQuery("#ovr1").css("display","block");
-  });
+    });
 
 	jQuery(function(){		
 		jQuery('.i18n-he .view-display-id-block .owl-carousel').owlCarousel({

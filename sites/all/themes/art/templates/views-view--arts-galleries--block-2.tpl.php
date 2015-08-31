@@ -1,6 +1,6 @@
 <div id='ovr1' class='overlay' onclick='closeOvr()'>
-  <div class='ovr_inner'>
- <!--   <span class='close_btn'>close</span> -->
+  <div class='ovr_inner'>	  	  
+	
     <img />
   </div>
 </div>
@@ -68,9 +68,10 @@
 </div><?php /* class view */ ?>
 <script>
 	  jQuery(".views-field-field-art-gallery img").click(function(){      
-      jQuery("#ovr1 img").attr("src" , this.src.replace(/styles.+?public\//g,""));      
-      jQuery("#ovr1").css("display","block");
-  });
+		console.log("aaa");
+		jQuery("#ovr1 img").attr("src" , this.src.replace(/styles.+?public\//g,""));      
+		jQuery("#ovr1").css("display","block");
+	  });
 
 	jQuery(function(){		
 		jQuery('.i18n-he .view-display-id-block_2 .owl-carousel').owlCarousel({

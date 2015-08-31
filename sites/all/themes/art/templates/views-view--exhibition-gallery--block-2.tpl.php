@@ -1,5 +1,5 @@
 <div id='ovr1' class='overlay' onclick='closeOvr()'>
-  <div class='ovr_inner'>
+  <div class='ovr_inner'>	  
  <!--   <span class='close_btn'>close</span> -->
     <img />
   </div>
