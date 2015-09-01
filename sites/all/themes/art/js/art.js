@@ -50,7 +50,7 @@ $(window).resize(function() {
   $(".display-menu #square").css("height", $heightsquare); 
   $(".overlay .ovr_inner").css("height", $height);  
       if ($simplewidth < 768){
-      $(".i18n-en #triangle-topleft").css("border-top-width", $height);
+      $OverLayHandler(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
       $(".i18n-he #triangle-topleft").css("border-bottom-width", $height);
       $(".i18n-he #triangle-topleft").css("border-top-width", "0");
@@ -309,6 +309,61 @@ $('.block-text-resize .changer').click(function(){
 
   }
 };
-
-
 })(jQuery, Drupal, this, this.document);
+/*** 
+ * add classes to owl 
+ ****/
+function owlClick(event){
+  var nav = jQuery(event.target).find(".owl-nav");
+  gal_items = 1;
+  if(jQuery(event.target).hasClass("owl_3_items")){
+	gal_items = 3;
+  }
+  nav.removeClass("first last");
+  if(event.item.index==0){
+    nav.addClass("first");
+  }
+  if(event.item.count == (event.item.index+gal_items)){
+    nav.addClass("last");
+  }
+}
+
+/*** overlay ***/
+function OverLayHandler(galId , OvrLayId){
+   var OvrId =OvrLayId;
+   var self = this;
+   this.cur_i = 0;   
+   var imgList = jQuery("#"+galId+" .views-field-field-art-gallery img");  
+   jQuery("#"+galId+" .views-field-field-art-gallery img").click(function(){    
+    var i = imgList.index(this);        
+    self.change(i); 
+   });
+   jQuery("#"+OvrLayId+" .next_i").click(function(e){ 
+    e.stopPropagation(); 
+    if(imgList.length>(self.cur_i+1)){
+      console.log("next",self.cur_i);
+      self.change(++self.cur_i); 
+    }
+   });
+   jQuery("#"+OvrLayId+" .prev_i").click(function(e){ 
+    e.stopPropagation();  
+    if(self.cur_i>0){       
+      console.log("prev",self.cur_i);   
+      self.change(--self.cur_i); 
+    }
+   });
+   jQuery("#"+OvrLayId).click(function(){
+     jQuery(this).css("display","none");
+   });
+   this.next = function(){
+      this.change(i++);
+   }
+   this.change =function(i){       
+      this.cur_i = i; 
+      var img = imgList[i];            
+      jQuery("#"+OvrId+" img").attr("src" , img.src);//.replace(/styles.+?public\//g,""));    
+      jQuery("#"+OvrId+"").css("display","block");
+      jQuery("#"+OvrId+" .cur_i").html((imgList.index(this)+1));
+      jQuery("#"+OvrId+" .cur_total").html(imgList.length);
+   }
+}  
