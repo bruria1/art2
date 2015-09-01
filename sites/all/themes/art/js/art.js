@@ -262,13 +262,7 @@ if ($("body").hasClass("node-type-art")){
 
 $("#edit-sort-order").val("ASC");
 
-/********  art and exhibition overlay  ************/
 
-$(".overlay .ovr_inner").css("height", $height); 
-$(".overlay").click(function(){
-    jQuery("#ovr1").css("display","none");
-    jQuery("#ovr1 img").attr("src" , "");      
-  });
 
 
 
@@ -306,6 +300,13 @@ $('.block-text-resize .changer').click(function(){
   }
 });
 
+/********  art and exhibition overlay  ************/
+
+$(".overlay .ovr_inner").css("height", $height); 
+$(".overlay").click(function(){
+    jQuery("#ovr1").css("display","none");
+    jQuery(".overlay img").attr("src" , "");      
+  });
 
   }
 };
@@ -333,8 +334,8 @@ function OverLayHandler(galId , OvrLayId){
    var OvrId =OvrLayId;
    var self = this;
    this.cur_i = 0;   
-   var imgList = jQuery("#"+galId+" .views-field-field-art-gallery img");  
-   jQuery("#"+galId+" .views-field-field-art-gallery img").click(function(){    
+   var imgList = jQuery("#"+galId+" .views-field img");  
+   jQuery("#"+galId+" .views-field img").click(function(){    
     var i = imgList.index(this);        
     self.change(i); 
    });
@@ -361,7 +362,7 @@ function OverLayHandler(galId , OvrLayId){
    this.change =function(i){       
       this.cur_i = i; 
       var img = imgList[i];            
-      jQuery("#"+OvrId+" img").attr("src" , img.src);//.replace(/styles.+?public\//g,""));    
+      jQuery("#"+OvrId+" img").attr("src" , img.src.replace(/styles.+?public\//g,""));    
       jQuery("#"+OvrId+"").css("display","block");
       jQuery("#"+OvrId+" .cur_i").html((imgList.index(this)+1));
       jQuery("#"+OvrId+" .cur_total").html(imgList.length);

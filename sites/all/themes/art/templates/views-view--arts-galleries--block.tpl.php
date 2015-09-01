@@ -3,8 +3,8 @@
  <!--   <span class='cur_i'>0</span> Of <span class='cur_total'>0</span> -->
  <!--   <span class='close_btn'>close</span> -->
     <img />
-    <span class='next_i'>Next</span>
-    <span class='prev_i'>Prev</span>
+    <span class='next_i'></span>
+    <span class='prev_i'></span>
   </div>
 </div>
 
