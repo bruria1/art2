@@ -304,7 +304,7 @@ $('.block-text-resize .changer').click(function(){
 
 $(".overlay .ovr_inner").css("height", $height); 
 $(".overlay").click(function(){
-    jQuery("#ovr1").css("display","none");
+    jQuery(".overlay").css("display","none");
     jQuery(".overlay img").attr("src" , "");      
   });
 

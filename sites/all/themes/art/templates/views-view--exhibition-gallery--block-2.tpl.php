@@ -1,12 +1,4 @@
-<div id='ovr_art_block1' class='overlay'> 
-  <div class='ovr_inner'>   
- <!--   <span class='cur_i'>0</span> Of <span class='cur_total'>0</span> -->
- <!--   <span class='close_btn'>close</span> -->
-    <img />
-    <span class='next_i'></span>
-    <span class='prev_i'></span>
-  </div>
-</div>
+
 
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>

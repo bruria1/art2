@@ -1,4 +1,4 @@
-<div id='ovr_art_block0' class='overlay'> 
+<div id='ovr_art_block2' class='overlay'> 
   <div class='ovr_inner'>   
  <!--   <span class='cur_i'>0</span> Of <span class='cur_total'>0</span> -->
  <!--   <span class='close_btn'>close</span> -->
@@ -69,39 +69,32 @@
   <?php endif; ?>
 
 </div><?php /* class view */ ?>
-<script>
-    jQuery(".views-field-field-exh-gallery-top img").click(function(){      
-      jQuery("#ovr1 img").attr("src" , this.src.replace(/styles.+?public\//g,""));      
-      jQuery("#ovr1").css("display","block");
-  });
-
-  jQuery(function(){    
-    jQuery('.i18n-he .view-display-id-block_2 .owl-carousel').owlCarousel({
-      rtl:true,
-      loop:false,
-      margin:10,
-      nav:true,
-      responsive:{
+<script>  
+  
+  var ovrLay = new OverLayHandler("block-views-exhibition-gallery-block-2","ovr_art_block2");
+  
+  var owlBlock2 = jQuery('.i18n-he .view-display-id-block_2 .owl-carousel ,'+
+            '.i18n-en .view-display-id-block_2 .owl-carousel');
+        
+  jQuery(function(){   
+    owlBlock2.each(function(i,n){
+      var isRtl = jQuery(n).parents("body").hasClass("i18n-he");
+      jQuery(n).owlCarousel({
+        rtl:isRtl,
+        loop:false,
+        margin:10,
+        nav:true,
+        dots: true,
+        responsive:{
         0:{
           items:3
         }
-      }
-    }); 
-});
-
-  jQuery(function(){    
-    jQuery('.i18n-en .view-display-id-block_2 .owl-carousel').owlCarousel({
-      rtl:false,
-      loop:false,
-      margin:10,
-      nav:true,
-      responsive:{
-        0:{
-          items:3
         }
-      }
-    }); 
-});
-
+      }); 
+      jQuery(".view-display-id-block_2 .owl-controls .owl-nav").addClass("first");
+    });    
+  });   
+  owlBlock2.addClass("owl_3_items");
+  owlBlock2.on('changed.owl.carousel', owlClick);  
 </script>
 

@@ -3543,7 +3543,7 @@ header #logo .logo-mobile {
   display: none;
 }
 /* line 1477, ../sass/components/_arts.scss */
-#block-views-exhibition-gallery-block img, #block-views-now-exhibition-block-2 img {
+#block-views-exhibition-gallery-block .field-items img, #block-views-now-exhibition-block-2 .field-items img {
   width: 100% !important;
 }
 
