@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <div id='ovr1' class='overlay' onclick='closeOvr()'>
   <div class='ovr_inner'>	  
-=======
-<div id='ovr_art_block0' class='overlay'> 
-  <div class='ovr_inner'>   
  <!--   <span class='cur_i'>0</span> Of <span class='cur_total'>0</span> -->
->>>>>>> ceb8aaa7ce1876ca0c6f666b8cb723d36054196d
  <!--   <span class='close_btn'>close</span> -->
     <img />
     <span class='next_i'></span>

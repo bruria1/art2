@@ -69,50 +69,10 @@
   <?php endif; ?>
 
 </div><?php /* class view */ ?>
-<script>
-/*** overlay ***/
-  function OverLayHandler(OvrLayId , galClass){
-   var OvrId =OvrLayId;
-   var self = this;
-   this.cur_i = 0;
-   var imgList = jQuery(".view-id-arts_galleries.view-display-id-block .views-field-field-art-gallery img");  
-   jQuery("."+galClass+" img").click(function(){    
-    var i = imgList.index(this);        
-    self.change(i); 
-   });
-   jQuery("#"+OvrLayId+" .next_i").click(function(e){ 
-    e.stopPropagation(); 
-    if(imgList.length>(self.cur_i+1)){
-      console.log("next",self.cur_i);
-      self.change(++self.cur_i); 
-    }
-   });
-   jQuery("#"+OvrLayId+" .prev_i").click(function(e){ 
-    e.stopPropagation();  
-    if(self.cur_i>0){       
-      console.log("prev",self.cur_i);   
-      self.change(--self.cur_i); 
-    }
-   });
-   jQuery("#"+OvrLayId).click(function(){
-     jQuery(this).css("display","none");
-   });
-   this.next = function(){
-      this.change(i++);
-   }
-   this.change =function(i){       
-      this.cur_i = i; 
-      var img = imgList[i];        
-      jQuery("#"+OvrId+" img").attr("src" , img.src.replace(/styles.+?public\//g,""));    
-      jQuery("#"+OvrId+"").css("display","block");
-      jQuery("#"+OvrId+" .cur_i").html((imgList.index(this)+1));
-      jQuery("#"+OvrId+" .cur_total").html(imgList.length);
-   }
-  }     
-  
- var ovrLay = new OverLayHandler("ovr_art_block0","views-field-field-art-gallery");
- /*** end overlay ***/
-  var owlBlock = jQuery('.i18n-he .view-display-id-block .owl-carousel ,'+
+<script>  
+ var ovrLay = new OverLayHandler("block-views-arts-galleries-block","ovr_art_block0");
+
+ var owlBlock = jQuery('.i18n-he .view-display-id-block .owl-carousel ,'+
             '.i18n-en .view-display-id-block .owl-carousel');
         
   jQuery(function(){   
@@ -136,15 +96,6 @@
   });  
   owlBlock.on('changed.owl.carousel', owlClick);
 
-function owlClick(event){
-  var nav = jQuery(".view-display-id-block .owl-controls .owl-nav");
-  nav.removeClass("first last");
-  if(event.item.index==0){
-    nav.addClass("first");
-  }
-  if(event.item.count == (event.item.index+1)){
-    nav.addClass("last");
-  }
-}
+
 </script>
 
