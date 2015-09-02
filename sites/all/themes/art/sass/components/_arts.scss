@@ -235,8 +235,6 @@ p {
 }
 
 .menu-button{
-	background-color: $green;
-	color: #fff;
 	overflow: hidden;
 	float: left;
 	padding:5px 13px 7px;
@@ -252,13 +250,12 @@ p {
 		width: 20px;
 		height: 2px;
 		margin-bottom: 4px;
-		background-color: #fff;
+		background-color: #000;
 		display: block;  
 		transition: all 0.5s;
   	-webkit-transition: all 0.5s;
     @include res(s-m){
       width: 25px;
-      background-color: #000; 
       margin-bottom: 6px;
     }
 	}
@@ -281,8 +278,10 @@ p {
 }
 
 .display-menu .menu-button{
+  color: #fff;
   span{
     margin: 0;
+    background-color: #fff;
   }
   .line1{
     transform: rotate(45deg);
