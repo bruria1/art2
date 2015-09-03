@@ -1143,23 +1143,30 @@ header {
     @include res(s-m){
       opacity: 1;
     }
-    a{
-      padding: 27.5% 0;
+    .field-content{
       position: absolute;
+      display: table;
       width: 100%;
-      display: block;
+      @include res(s-m){
+        bottom: -47px;
+      }
+    }
+    a{
+      width: 100%;
+      display: table-cell;
+      vertical-align: middle;
       font-family:'almoni-900';
       font-size: 1.17em;
       color: #fff;
+      height: 115px;
       @include res(s-m){
         font-size: 0.7em;
         color: #000;
         line-height: 1em;
-        bottom: -30px;
-        height: 28px;
         padding: 0;
         text-align: center;
         font-family:'almoni-700';
+        height: 60px;
       } 
     }
   }
