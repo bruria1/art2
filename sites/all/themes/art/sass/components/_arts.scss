@@ -1876,7 +1876,7 @@ header {
       width: 100%;
     }
   }
-  .place4, .place5{
+  .place4, .place6{
     float: right;
     width: 36.8%;
     clear: right;
@@ -1887,7 +1887,7 @@ header {
       width: 100%;
     }
   }
-  .place6{
+  .place5{
     float: left;
     width: 60%;
     .views-field-field-exh-gallery-top{
@@ -1898,7 +1898,7 @@ header {
     }
   }
   .place2, .place4{
-    margin-bottom: 37px;
+    margin-bottom: 43px;
     @include res(l){
       margin-bottom: 3.5%;
     }

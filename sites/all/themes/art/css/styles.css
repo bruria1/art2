@@ -4054,39 +4054,39 @@ header #logo .logo-mobile {
   }
 }
 /* line 1879, ../sass/components/_arts.scss */
-.view-the-gallery .place4, .view-the-gallery .place5 {
+.view-the-gallery .place4, .view-the-gallery .place6 {
   float: right;
   width: 36.8%;
   clear: right;
 }
 /* line 1883, ../sass/components/_arts.scss */
-.view-the-gallery .place4 .views-field-field-exh-gallery-top-1, .view-the-gallery .place5 .views-field-field-exh-gallery-top-1 {
+.view-the-gallery .place4 .views-field-field-exh-gallery-top-1, .view-the-gallery .place6 .views-field-field-exh-gallery-top-1 {
   display: none;
 }
 @media (max-width: 767px) {
   /* line 1879, ../sass/components/_arts.scss */
-  .view-the-gallery .place4, .view-the-gallery .place5 {
+  .view-the-gallery .place4, .view-the-gallery .place6 {
     width: 100%;
   }
 }
 /* line 1890, ../sass/components/_arts.scss */
-.view-the-gallery .place6 {
+.view-the-gallery .place5 {
   float: left;
   width: 60%;
 }
 /* line 1893, ../sass/components/_arts.scss */
-.view-the-gallery .place6 .views-field-field-exh-gallery-top {
+.view-the-gallery .place5 .views-field-field-exh-gallery-top {
   display: none;
 }
 @media (max-width: 767px) {
   /* line 1890, ../sass/components/_arts.scss */
-  .view-the-gallery .place6 {
+  .view-the-gallery .place5 {
     width: 100%;
   }
 }
 /* line 1900, ../sass/components/_arts.scss */
 .view-the-gallery .place2, .view-the-gallery .place4 {
-  margin-bottom: 37px;
+  margin-bottom: 43px;
 }
 @media (max-width: 1195px) {
   /* line 1900, ../sass/components/_arts.scss */
