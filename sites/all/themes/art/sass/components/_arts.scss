@@ -1146,9 +1146,10 @@ header {
     .field-content{
       position: absolute;
       display: table;
-      width: 100%;
+      width: 166px;
       @include res(s-m){
         bottom: -47px;
+        width: 100%;
       }
     }
     a{
