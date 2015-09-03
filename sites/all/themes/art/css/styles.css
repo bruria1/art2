@@ -4073,7 +4073,7 @@ header #logo .logo-mobile {
 .view-the-gallery .place5 {
   float: left;
   width: 60%;
-  max-width: 37px;
+  margin-top: 37px;
 }
 /* line 1894, ../sass/components/_arts.scss */
 .view-the-gallery .place5 .views-field-field-exh-gallery-top {
