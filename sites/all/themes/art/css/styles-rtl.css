@@ -865,12 +865,12 @@ html.js .collapsed .fieldset-legend {
   float: right;
 }
 /* line 443, ../sass/components/arts-rtl.scss */
-.view-the-gallery .place4, .view-the-gallery .place5 {
+.view-the-gallery .place4, .view-the-gallery .place6 {
   float: left;
   clear: left;
 }
 /* line 447, ../sass/components/arts-rtl.scss */
-.view-the-gallery .place6 {
+.view-the-gallery .place5 {
   float: right;
 }
 /* line 451, ../sass/components/arts-rtl.scss */
