@@ -4073,8 +4073,9 @@ header #logo .logo-mobile {
 .view-the-gallery .place5 {
   float: left;
   width: 60%;
+  max-width: 37px;
 }
-/* line 1893, ../sass/components/_arts.scss */
+/* line 1894, ../sass/components/_arts.scss */
 .view-the-gallery .place5 .views-field-field-exh-gallery-top {
   display: none;
 }
@@ -4084,26 +4085,26 @@ header #logo .logo-mobile {
     width: 100%;
   }
 }
-/* line 1900, ../sass/components/_arts.scss */
+/* line 1901, ../sass/components/_arts.scss */
 .view-the-gallery .place2, .view-the-gallery .place4 {
   margin-bottom: 43px;
 }
 @media (max-width: 1195px) {
-  /* line 1900, ../sass/components/_arts.scss */
+  /* line 1901, ../sass/components/_arts.scss */
   .view-the-gallery .place2, .view-the-gallery .place4 {
     margin-bottom: 3.5%;
   }
 }
-/* line 1906, ../sass/components/_arts.scss */
+/* line 1907, ../sass/components/_arts.scss */
 .view-the-gallery .place1, .view-the-gallery .place4 {
   clear: both;
   margin-top: 37px;
 }
-/* line 1910, ../sass/components/_arts.scss */
+/* line 1911, ../sass/components/_arts.scss */
 .view-the-gallery .views-row-first {
   margin-top: 0;
 }
-/* line 1913, ../sass/components/_arts.scss */
+/* line 1914, ../sass/components/_arts.scss */
 .view-the-gallery .views-field-title {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
@@ -4115,7 +4116,7 @@ header #logo .logo-mobile {
   -webkit-transition: all 0.5s;
 }
 @media (max-width: 767px) {
-  /* line 1913, ../sass/components/_arts.scss */
+  /* line 1914, ../sass/components/_arts.scss */
   .view-the-gallery .views-field-title {
     bottom: 7px;
     margin-bottom: 20px;
@@ -4124,7 +4125,7 @@ header #logo .logo-mobile {
     font-size: 1em;
   }
 }
-/* line 1929, ../sass/components/_arts.scss */
+/* line 1930, ../sass/components/_arts.scss */
 .view-the-gallery .views-field-title a {
   color: #fff;
   padding: 12px 0;
@@ -4132,12 +4133,12 @@ header #logo .logo-mobile {
   display: block;
 }
 @media (max-width: 767px) {
-  /* line 1929, ../sass/components/_arts.scss */
+  /* line 1930, ../sass/components/_arts.scss */
   .view-the-gallery .views-field-title a {
     color: #000;
   }
 }
-/* line 1938, ../sass/components/_arts.scss */
+/* line 1939, ../sass/components/_arts.scss */
 .view-the-gallery .views-field-title .title {
   font-family: 'almoni-700', arial;
   display: inline-block;
@@ -4145,83 +4146,83 @@ header #logo .logo-mobile {
   padding-right: 10px;
   margin-right: 2px;
 }
-/* line 1947, ../sass/components/_arts.scss */
+/* line 1948, ../sass/components/_arts.scss */
 .view-the-gallery .views-row:hover .views-field-title {
   bottom: 0;
 }
 
-/* line 1953, ../sass/components/_arts.scss */
+/* line 1954, ../sass/components/_arts.scss */
 .page-taxonomy-term {
   text-align: center;
 }
-/* line 1955, ../sass/components/_arts.scss */
+/* line 1956, ../sass/components/_arts.scss */
 .page-taxonomy-term #block-views-term-description-block {
   max-width: 884px;
   margin: 0 auto 20px;
 }
 @media (max-width: 767px) {
-  /* line 1959, ../sass/components/_arts.scss */
+  /* line 1960, ../sass/components/_arts.scss */
   .page-taxonomy-term #main {
     padding: 0;
   }
 }
 
 /**** art at the capus **/
-/* line 1969, ../sass/components/_arts.scss */
+/* line 1970, ../sass/components/_arts.scss */
 .page-node-9 #wrapper-title, .page-node-10 #wrapper-title {
   text-align: center;
   font-family: 'almoni-900', sans-serif;
 }
-/* line 1973, ../sass/components/_arts.scss */
+/* line 1974, ../sass/components/_arts.scss */
 .page-node-9 .field-name-field-text, .page-node-10 .field-name-field-text {
   text-align: center;
 }
 
-/* line 1979, ../sass/components/_arts.scss */
+/* line 1980, ../sass/components/_arts.scss */
 #block-views-arts-block a {
   color: #000;
 }
-/* line 1982, ../sass/components/_arts.scss */
+/* line 1983, ../sass/components/_arts.scss */
 #block-views-arts-block .views-field-field-artis {
   font-size: 0.7em;
   line-height: 0.9;
   margin: 15px auto 0;
   width: 78%;
 }
-/* line 1987, ../sass/components/_arts.scss */
+/* line 1988, ../sass/components/_arts.scss */
 #block-views-arts-block .views-field-field-artis .title {
   font-family: 'almoni-700', sans-serif;
 }
 @media (max-width: 767px) {
-  /* line 1982, ../sass/components/_arts.scss */
+  /* line 1983, ../sass/components/_arts.scss */
   #block-views-arts-block .views-field-field-artis {
     text-align: center;
   }
 }
-/* line 1994, ../sass/components/_arts.scss */
+/* line 1995, ../sass/components/_arts.scss */
 #block-views-arts-block .views-field-field-teaser {
   font-size: 0.7em;
   margin: 0 auto;
   width: 78%;
 }
 @media (max-width: 767px) {
-  /* line 1994, ../sass/components/_arts.scss */
+  /* line 1995, ../sass/components/_arts.scss */
   #block-views-arts-block .views-field-field-teaser {
     display: none;
   }
 }
-/* line 2002, ../sass/components/_arts.scss */
+/* line 2003, ../sass/components/_arts.scss */
 #block-views-arts-block .masonry-item {
   width: 24%;
   margin-bottom: 40px;
 }
 @media (max-width: 767px) {
-  /* line 2002, ../sass/components/_arts.scss */
+  /* line 2003, ../sass/components/_arts.scss */
   #block-views-arts-block .masonry-item {
     width: 48%;
   }
 }
-/* line 2010, ../sass/components/_arts.scss */
+/* line 2011, ../sass/components/_arts.scss */
 #block-views-arts-block .views-field-field-art-gallery a {
   width: 78%;
   display: block;
@@ -4229,7 +4230,7 @@ header #logo .logo-mobile {
   margin: 0 auto;
   border: 1px solid #bebebe;
 }
-/* line 2016, ../sass/components/_arts.scss */
+/* line 2017, ../sass/components/_arts.scss */
 #block-views-arts-block .views-field-field-art-gallery a img {
   display: block;
   -webkit-transition: all 1s ease;
@@ -4242,7 +4243,7 @@ header #logo .logo-mobile {
   /* Opera */
   transition: all 1s ease;
 }
-/* line 2026, ../sass/components/_arts.scss */
+/* line 2027, ../sass/components/_arts.scss */
 #block-views-arts-block .views-row:hover img {
   -webkit-transform: scale(1.1);
   /* Safari and Chrome */
@@ -4254,25 +4255,25 @@ header #logo .logo-mobile {
   /* Opera */
   transform: scale(1.1);
 }
-/* line 2033, ../sass/components/_arts.scss */
+/* line 2034, ../sass/components/_arts.scss */
 #block-views-arts-block .view-content {
   margin: 0 auto;
 }
-/* line 2036, ../sass/components/_arts.scss */
+/* line 2037, ../sass/components/_arts.scss */
 #block-views-arts-block select {
   padding: 5px 0 1px;
   color: #fff;
   width: 216px !important;
 }
-/* line 2041, ../sass/components/_arts.scss */
+/* line 2042, ../sass/components/_arts.scss */
 #block-views-arts-block .form-type-select {
   background: url("../images/sort-triangle.png") no-repeat right center #3e3e3f;
 }
-/* line 2044, ../sass/components/_arts.scss */
+/* line 2045, ../sass/components/_arts.scss */
 #block-views-arts-block #edit-field-campus-tid-wrapper .form-type-select {
   background: url("../images/sort-triangle.png") no-repeat right center #00A193;
 }
-/* line 2047, ../sass/components/_arts.scss */
+/* line 2048, ../sass/components/_arts.scss */
 #block-views-arts-block input.form-submit {
   background-color: #00A193;
   border: medium none;
@@ -4282,105 +4283,105 @@ header #logo .logo-mobile {
   font-family: 'almoni-900', sans-serif;
   font-size: 1.1em;
 }
-/* line 2056, ../sass/components/_arts.scss */
+/* line 2057, ../sass/components/_arts.scss */
 #block-views-arts-block .views-submit-button {
   padding-right: 0 !important;
 }
-/* line 2059, ../sass/components/_arts.scss */
+/* line 2060, ../sass/components/_arts.scss */
 #block-views-arts-block .views-exposed-form {
   margin-bottom: 30px;
 }
-/* line 2061, ../sass/components/_arts.scss */
+/* line 2062, ../sass/components/_arts.scss */
 #block-views-arts-block .views-exposed-form label {
   display: none;
 }
-/* line 2065, ../sass/components/_arts.scss */
+/* line 2066, ../sass/components/_arts.scss */
 #block-views-arts-block .views-widget-sort-order {
   display: none;
 }
 @media (max-width: 767px) {
-  /* line 2068, ../sass/components/_arts.scss */
+  /* line 2069, ../sass/components/_arts.scss */
   #block-views-arts-block .views-widget-filter-field_art_type_tid {
     padding: 0;
   }
 }
-/* line 2072, ../sass/components/_arts.scss */
+/* line 2073, ../sass/components/_arts.scss */
 #block-views-arts-block .views-widget-filter-field_art_type_tid select {
   width: 112px !important;
 }
 @media (max-width: 767px) {
-  /* line 2072, ../sass/components/_arts.scss */
+  /* line 2073, ../sass/components/_arts.scss */
   #block-views-arts-block .views-widget-filter-field_art_type_tid select {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  /* line 2079, ../sass/components/_arts.scss */
+  /* line 2080, ../sass/components/_arts.scss */
   #block-views-arts-block .views-widget-sort-by {
     padding: 0;
   }
 }
-/* line 2083, ../sass/components/_arts.scss */
+/* line 2084, ../sass/components/_arts.scss */
 #block-views-arts-block .views-widget-sort-by select {
   width: 111px !important;
 }
 @media (max-width: 767px) {
-  /* line 2083, ../sass/components/_arts.scss */
+  /* line 2084, ../sass/components/_arts.scss */
   #block-views-arts-block .views-widget-sort-by select {
     display: none;
   }
 }
-/* line 2090, ../sass/components/_arts.scss */
+/* line 2091, ../sass/components/_arts.scss */
 #block-views-arts-block .views-exposed-widgets {
   margin: 0 auto;
   width: 54%;
 }
 
-/* line 2096, ../sass/components/_arts.scss */
+/* line 2097, ../sass/components/_arts.scss */
 .ajax-progress {
   display: none;
 }
 
 /************  contact   **************/
-/* line 2103, ../sass/components/_arts.scss */
+/* line 2104, ../sass/components/_arts.scss */
 .node-webform .field-name-field-text {
   width: 48%;
   float: left;
 }
 @media (max-width: 767px) {
-  /* line 2103, ../sass/components/_arts.scss */
+  /* line 2104, ../sass/components/_arts.scss */
   .node-webform .field-name-field-text {
     width: 100%;
     text-align: center;
   }
 }
-/* line 2111, ../sass/components/_arts.scss */
+/* line 2112, ../sass/components/_arts.scss */
 .node-webform #webform-client-form-11, .node-webform #webform-client-form-2626 {
   width: 48%;
   float: right;
 }
-/* line 2114, ../sass/components/_arts.scss */
+/* line 2115, ../sass/components/_arts.scss */
 .node-webform #webform-client-form-11 .grippie, .node-webform #webform-client-form-2626 .grippie {
   display: none;
 }
 @media (max-width: 767px) {
-  /* line 2111, ../sass/components/_arts.scss */
+  /* line 2112, ../sass/components/_arts.scss */
   .node-webform #webform-client-form-11, .node-webform #webform-client-form-2626 {
     width: 100%;
   }
 }
-/* line 2120, ../sass/components/_arts.scss */
+/* line 2121, ../sass/components/_arts.scss */
 .node-webform #webform-client-form-11 label, .node-webform #webform-client-form-2626 label {
   font-weight: normal;
   padding: 5px;
 }
-/* line 2124, ../sass/components/_arts.scss */
+/* line 2125, ../sass/components/_arts.scss */
 .node-webform #webform-client-form-11 input, .node-webform #webform-client-form-11 textarea, .node-webform #webform-client-form-2626 input, .node-webform #webform-client-form-2626 textarea {
   padding: 5px;
   border: 1px solid #000;
   width: 100%;
 }
-/* line 2128, ../sass/components/_arts.scss */
+/* line 2129, ../sass/components/_arts.scss */
 .node-webform #webform-client-form-11 input.form-submit, .node-webform #webform-client-form-11 textarea.form-submit, .node-webform #webform-client-form-2626 input.form-submit, .node-webform #webform-client-form-2626 textarea.form-submit {
   width: auto;
   padding: 10px 20px;
@@ -4391,14 +4392,14 @@ header #logo .logo-mobile {
   margin-bottom: 20px;
 }
 @media (max-width: 767px) {
-  /* line 2128, ../sass/components/_arts.scss */
+  /* line 2129, ../sass/components/_arts.scss */
   .node-webform #webform-client-form-11 input.form-submit, .node-webform #webform-client-form-11 textarea.form-submit, .node-webform #webform-client-form-2626 input.form-submit, .node-webform #webform-client-form-2626 textarea.form-submit {
     width: 100%;
   }
 }
 
 /*********  forward  ***********/
-/* line 2147, ../sass/components/_arts.scss */
+/* line 2148, ../sass/components/_arts.scss */
 #forward-form .edit-page, #forward-form .edit-subject, #forward-form .edit-body {
   display: none;
 }
