@@ -1,13 +1,4 @@
-<div id='ovr_art_block1' class='overlay'> 
-  <div class='ovr_inner'>   
- <!--   <span class='cur_i'>0</span> Of <span class='cur_total'>0</span> -->
- <!--   <span class='close_btn'>close</span> -->
-    <img />
-    <span class='next_i'></span>
-    <span class='prev_i'></span>
-  </div>
-</div>
-
+<?=_print_one_overlay();?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -69,13 +60,10 @@
   <?php endif; ?>
 
 </div><?php /* class view */ ?>
-<script>  
-  
-  var ovrLay = new OverLayHandler("block-views-exhibition-gallery-block","ovr_art_block1");
-  
+<script>    
+  var ovrLay = new OverLayHandler("block-views-exhibition-gallery-block");  
   var owlBlock2 = jQuery('.i18n-he .view-display-id-block .owl-carousel ,'+
-            '.i18n-en .view-display-id-block .owl-carousel');
-        
+            '.i18n-en .view-display-id-block .owl-carousel');        
   jQuery(function(){   
     owlBlock2.each(function(i,n){
       var isRtl = jQuery(n).parents("body").hasClass("i18n-he");

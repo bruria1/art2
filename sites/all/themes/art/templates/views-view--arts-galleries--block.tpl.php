@@ -1,13 +1,4 @@
-<div id='ovr_art_block0' class='overlay'> 
-  <div class='ovr_inner'>   
- <!--   <span class='cur_i'>0</span> Of <span class='cur_total'>0</span> -->
- <!--   <span class='close_btn'>close</span> -->
-    <img />
-    <span class='next_i'></span>
-    <span class='prev_i'></span>
-  </div>
-</div>
-
+<?=_print_one_overlay();?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -70,7 +61,7 @@
 
 </div><?php /* class view */ ?>
 <script>  
- var ovrLay = new OverLayHandler("block-views-arts-galleries-block","ovr_art_block0");
+ var ovrLay = new OverLayHandler("block-views-arts-galleries-block");
 
  var owlBlock = jQuery('.i18n-he .view-display-id-block .owl-carousel ,'+
             '.i18n-en .view-display-id-block .owl-carousel');

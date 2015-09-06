@@ -330,8 +330,7 @@ function owlClick(event){
 }
 
 /*** overlay ***/
-function OverLayHandler(galId , OvrLayId){
-   var OvrId =OvrLayId;
+function OverLayHandler(galId){	
    var self = this;
    this.cur_i = 0;   
    var imgList = jQuery("#"+galId+" .views-field img");  
@@ -339,21 +338,21 @@ function OverLayHandler(galId , OvrLayId){
     var i = imgList.index(this);        
     self.change(i); 
    });
-   jQuery("#"+OvrLayId+" .next_i").click(function(e){ 
+   jQuery("#art_overlay .next_i").click(function(e){ 
     e.stopPropagation(); 
     if(imgList.length>(self.cur_i+1)){
       console.log("next",self.cur_i);
       self.change(++self.cur_i); 
     }
    });
-   jQuery("#"+OvrLayId+" .prev_i").click(function(e){ 
+   jQuery("#art_overlay .prev_i").click(function(e){ 
     e.stopPropagation();  
     if(self.cur_i>0){       
       console.log("prev",self.cur_i);   
       self.change(--self.cur_i); 
     }
    });
-   jQuery("#"+OvrLayId).click(function(){
+   jQuery("#art_overlay").click(function(){
      jQuery(this).css("display","none");
    });
    this.next = function(){
@@ -361,10 +360,22 @@ function OverLayHandler(galId , OvrLayId){
    }
    this.change =function(i){       
       this.cur_i = i; 
+      if(this.cur_i === 0){
+		  jQuery("#art_overlay .prev_i").addClass("first");
+	  }
+	  else {
+		   jQuery("#art_overlay .prev_i").removeClass("first");
+	  }
+	   if(this.cur_i+1 >= imgList.length){
+		  jQuery("#art_overlay .next_i").addClass("last");
+	  }
+	  else {
+		   jQuery("#art_overlay .next_i").removeClass("last");
+	  }
       var img = imgList[i];            
-      jQuery("#"+OvrId+" img").attr("src" , img.src.replace(/styles.+?public\//g,""));    
-      jQuery("#"+OvrId+"").css("display","block");
-      jQuery("#"+OvrId+" .cur_i").html((imgList.index(this)+1));
-      jQuery("#"+OvrId+" .cur_total").html(imgList.length);
+      jQuery("#art_overlay img").attr("src" , img.src.replace(/styles.+?public\//g,""));    
+      jQuery("#art_overlay").css("display","block");
+      jQuery("#art_overlay .cur_i").html((imgList.index(this)+1));
+      jQuery("#art_overlay .cur_total").html(imgList.length);
    }
 }  

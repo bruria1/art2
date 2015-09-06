@@ -1,5 +1,4 @@
-
-
+<?=_print_one_overlay();?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -62,7 +61,7 @@
 
 </div><?php /* class view */ ?>
 <script>  
- var ovrLay = new OverLayHandler("block-views-exhibition-gallery-block-2","ovr_art_block1");
+ var ovrLay = new OverLayHandler("block-views-exhibition-gallery-block-2");
 
  var owlBlock = jQuery('.i18n-he .view-display-id-block_2 .owl-carousel ,'+
             '.i18n-en .view-display-id-block_2 .owl-carousel');

@@ -130,8 +130,55 @@ function art_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
-
-
+$overlay = false;
+function _print_one_overlay(){
+	global $overlay;
+	
+	if(!$overlay){
+		$overlay = true;
+		return "<div id='art_overlay' class='overlay'> 
+				  <div class='ovr_inner'>   
+					<img />
+					<span class='next_i'></span>
+					<span class='prev_i'></span>
+				  </div>
+				</div>";		
+	}
+	return "";
+}
+/*
+function _print_view_gal_js($view , $numberOfItems = 1 ){
+	$view_name = str_replace("_","-",$view->name);
+	$dispaly_name = $view->current_display;
+	$dispaly_name2 = str_replace("_","-",$dispaly_name);
+	return "<script>
+ var ovrLay = new OverLayHandler('block-views-".$view_name."-".$dispaly_name2."');
+ var owlBlock = jQuery('.i18n-he .view-display-id-".$dispaly_name." .owl-carousel ,'+
+            '.i18n-en .view-display-id-".$dispaly_name." .owl-carousel');
+        
+  jQuery(function(){   
+    owlBlock.each(function(i,n){
+      var isRtl = jQuery(n).parents('body').hasClass('i18n-he');
+      jQuery(n).owlCarousel({
+        rtl:isRtl,
+        loop:false,
+        margin:10,
+        nav:true,
+        dots: true,
+        responsive:{
+        0:{
+          items:".$numberOfItems."
+        }
+        }
+      }); 
+      jQuery('.view-display-id-".$dispaly_name." .owl-controls .owl-nav').addClass('first');
+    });  
+  });  
+  owlBlock.on('changed.owl.carousel', owlClick);
+  </script>
+  ";
+}
+*/
 function art_form_alter(&$form, $form_state, $form_id) {
   if($form['#id'] == 'views-exposed-form-arts-block'){
     foreach ($form['field_campus_tid']['#options'] as $key => &$option) {
