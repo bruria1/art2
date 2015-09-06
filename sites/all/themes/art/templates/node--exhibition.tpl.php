@@ -91,6 +91,7 @@
 
   <?php print render($content['field_text']); ?>
   <?php print render($content['field_download_file']); ?>
+  <?php print render($content['field_youtube_video']); ?>
 
 <div id="share">
   <div class="pinterest link">
