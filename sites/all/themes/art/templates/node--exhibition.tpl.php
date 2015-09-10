@@ -58,8 +58,11 @@
   <?php print render($content['field_campus']); ?>
   <?php print render($content['field_exh_location']); ?>
   <div class="treasurers-designers">
-    <?php print render($content['field_treasurers_name']); ?>
-    <?php print render($content['field_designers']); ?>
+    <?php print render($content['field_treasurers_name']); 
+     if ((render($content['field_treasurers_name'])) && (render($content['field_designers']))) { ?>
+      <span class="line-place">|</span>
+    <?php }
+    print render($content['field_designers']); ?>
   </div>
   <div class="dates">
     <div class="open">
@@ -74,8 +77,8 @@
           <?php print render($content['field_date_year']); 
     }?> 
     </div> 
-    <div class="close"><?php
-  if (render($content['field_full_date_2'])){?>
+        <div class="close">
+  <?php  if (render($content['field_full_date_2'])){?>
       <div class="label"><?php print t("Closing Date:");?></div>
       <?php print render($content['field_full_date_2']); 
   } else if (render($content['field_month_date_2'])){?>

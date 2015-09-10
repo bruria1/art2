@@ -335,6 +335,7 @@ function owlClick(event){
 }
 
 /*** overlay ***/
+
 function OverLayHandler(galId){	
    var self = this;
    this.cur_i = 0;   

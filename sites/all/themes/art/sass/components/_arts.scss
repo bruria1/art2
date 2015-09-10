@@ -898,13 +898,9 @@ header {
     }
     #page-title{
       font-family:'almoni-900', arial;
-      border-right: 1px solid;
       font-size: 1.3em;
       font-weight: normal;
       line-height: 0.8em;
-      margin-right: 7px;
-      margin-left: 46px;
-      padding-right: 11px;
       display: inline-block;
       width: auto;
       @include res(s-m){
@@ -915,6 +911,9 @@ header {
     .sub-title{
       font-size: 1.3em;
       display: inline;
+      border-left: 1px solid;
+      margin-left: 7px;
+      padding-left: 11px;
       @include res(s-m){
         color: #fff;
       }
@@ -1004,14 +1003,15 @@ header {
       }
     }
     .field-name-field-treasurers-name{
-      border-right: 1px solid;
-      margin-right: 7px;
-      padding-right: 11px;
+      margin-right: 18px;
       @include res(s){
-        border: none!important;
         margin: 0!important;
-        padding: 0!important;
       }
+    }
+    .line-place{
+      margin-left: 6px;
+      position: relative;
+      top: -13px;
     }
     .field-name-field-designers, .field-name-field-treasurers-name{
       .field-item{
@@ -1042,10 +1042,10 @@ header {
         }
       }
     }
-    .open{
-      border-right: 1px solid;
-      margin-right: 7px;
-      padding-right: 11px;
+    .close{
+      border-left: 1px solid;
+      margin-left: 7px;
+      padding-left: 11px;
       @incclude res(s){
         border: none;
       }
@@ -1091,6 +1091,21 @@ header {
   #block-views-now-exhibition-block{
     article header{
       display: none;
+    }
+    .view-footer{
+      width: 146px;
+      margin: 0 auto;
+      a{
+        color: #fdfdfd;
+        background-color: $green;
+        padding: 5px 10px;
+        font-family: "almoni-900";
+        display: inline-block;
+      }
+      .views-row{
+        float: none;
+        width: 100%;
+      }
     }
   }
   #content > #wrapper-title{
@@ -1421,16 +1436,6 @@ header {
     }
   }
   .owl-controls{
-    .first{
-      .owl-prev{
-        opacity: 0.5;
-      }
-    }
-    .last{
-      .owl-next{
-        opacity: 0.5;
-      }
-    }
     .owl-next, .owl-prev{
       height: 24px;
       width: 17px;
@@ -1488,9 +1493,6 @@ header {
     .owl-controls{
       display: none;
     }
-  }
-  .field-items img{
-    width: 100%!important;
   }
 }
 
@@ -1726,7 +1728,7 @@ header {
     }
   }
   #page-title{
-    font-size: 1.2em;
+    font-size: 1em;
     float: left;
     line-height: 1em;
     font-weight: normal;
@@ -1736,7 +1738,7 @@ header {
     margin-right: 5px;
   }
   .field-name-field-art-date{
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1em;
     float: left;
   }
@@ -1821,7 +1823,7 @@ header {
   width: 100%;
   height: 100%;
   z-index: 400;
-  background-color: rgba(0,0,0,0.5); /*dim the background*/
+  background-color: rgba(0,0,0,0.9); /*dim the background*/
   .ovr_inner {
     width: auto;
     display: block;
@@ -1836,15 +1838,12 @@ header {
       }
     }
     .next_i, .prev_i{
-        background:  url("../images/arrows.png") no-repeat 8px 5px rgba(0, 0, 0, 0.7);
+        background:  url("../images/arrows.png") no-repeat 8px 5px;
         height: 60px;
         width: 50px;
         top:40%;
         position: absolute;
         cursor: pointer;
-        &.first, &.last{
-          opacity: 0.2;
-        }
     }
   .next_i{
     left: 20px;
@@ -2179,8 +2178,16 @@ header {
 .node-type-page{
   #block-views-exhibition-gallery-block{
     padding-bottom: 53px;
+    .hide{
+      height: auto;
+    }
     .view-footer{
       display: none;
     }
+  }
+  .field-name-field-text{
+    max-width: 877px;
+    margin: 0 auto 0px;
+    font-size: 18px!important;
   }
 }

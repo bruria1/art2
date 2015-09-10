@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$green".
-        on line 472 of c:/users/user/sites//art2/sites/all/themes/art/sass/components/arts-rtl.scss
+        on line 467 of c:/users/user/sites//art2/sites/all/themes/art/sass/components/arts-rtl.scss
 
-467: #block-views-arts-block{
-468:   .form-type-select {
-469:     background: url("../images/sort-triangle.png") no-repeat left center #3e3e3f;
-470:   }
-471:   #edit-field-campus-tid-wrapper .form-type-select {
-472:     background: url("../images/sort-triangle.png") no-repeat left center $green;
-473:   }
-474:   .views-widget-sort-order{
-475:     display: none;
-476:   }
-477:   select{
+462: #block-views-arts-block{
+463:   .form-type-select {
+464:     background: url("../images/sort-triangle.png") no-repeat left center #3e3e3f;
+465:   }
+466:   #edit-field-campus-tid-wrapper .form-type-select {
+467:     background: url("../images/sort-triangle.png") no-repeat left center $green;
+468:   }
+469:   .views-widget-sort-order{
+470:     display: none;
+471:   }
+472:   select{
 
 Backtrace:
-c:/users/user/sites//art2/sites/all/themes/art/sass/components/arts-rtl.scss:472
+c:/users/user/sites//art2/sites/all/themes/art/sass/components/arts-rtl.scss:467
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
@@ -81,4 +81,4 @@ C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/vendor/listen/lib/listen/adapter
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 472 of c:/users/user/sites//art2/sites/all/themes/art/sass/components/arts-rtl.scss\A \A 467: #block-views-arts-block{\A 468:   .form-type-select {\A 469:     background: url(\"../images/sort-triangle.png\") no-repeat left center #3e3e3f;\A 470:   }\A 471:   #edit-field-campus-tid-wrapper .form-type-select {\A 472:     background: url(\"../images/sort-triangle.png\") no-repeat left center $green;\A 473:   }\A 474:   .views-widget-sort-order{\A 475:     display: none;\A 476:   }\A 477:   select{"; }
+  content: "Error: Undefined variable: \"$green\".\A         on line 467 of c:/users/user/sites//art2/sites/all/themes/art/sass/components/arts-rtl.scss\A \A 462: #block-views-arts-block{\A 463:   .form-type-select {\A 464:     background: url(\"../images/sort-triangle.png\") no-repeat left center #3e3e3f;\A 465:   }\A 466:   #edit-field-campus-tid-wrapper .form-type-select {\A 467:     background: url(\"../images/sort-triangle.png\") no-repeat left center $green;\A 468:   }\A 469:   .views-widget-sort-order{\A 470:     display: none;\A 471:   }\A 472:   select{"; }
