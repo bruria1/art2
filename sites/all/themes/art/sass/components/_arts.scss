@@ -1969,6 +1969,7 @@ header {
     margin: 0 auto 20px;
   }
   #main{
+    width: 1180px!important;
     @include res(s-m){
       padding: 0;
     }
