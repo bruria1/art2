@@ -853,20 +853,20 @@ html.js .collapsed .fieldset-legend {
 /*********  the gallery   ***********/
 /* line 435, ../sass/components/arts-rtl.scss */
 .view-the-gallery .place1 {
-  float: left;
+  float: right;
 }
 /* line 438, ../sass/components/arts-rtl.scss */
 .view-the-gallery .place2, .view-the-gallery .place3 {
-  float: right;
+  float: left;
 }
 /* line 441, ../sass/components/arts-rtl.scss */
 .view-the-gallery .place4, .view-the-gallery .place6 {
-  float: left;
-  clear: left;
+  float: right;
+  clear: right;
 }
 /* line 445, ../sass/components/arts-rtl.scss */
 .view-the-gallery .place5 {
-  float: right;
+  float: left;
 }
 /* line 449, ../sass/components/arts-rtl.scss */
 .view-the-gallery .views-field-title .title {
@@ -893,54 +893,55 @@ html.js .collapsed .fieldset-legend {
 }
 /* line 472, ../sass/components/arts-rtl.scss */
 #block-views-arts-block select {
-  width: 200px !important;
+  width: 268px !important;
 }
 /* line 475, ../sass/components/arts-rtl.scss */
 #block-views-arts-block .form-item-field-art-type-tid select {
-  width: 110px !important;
+  width: 129px !important;
 }
-/* line 478, ../sass/components/arts-rtl.scss */
-#block-views-arts-block .form-item-sort-by select {
-  width: 100px !important;
+/* line 479, ../sass/components/arts-rtl.scss */
+#block-views-arts-block .views-widget-sort-by select {
+  width: 131px !important;
 }
-/* line 481, ../sass/components/arts-rtl.scss */
+/* line 483, ../sass/components/arts-rtl.scss */
 #block-views-arts-block .views-exposed-widgets {
   margin: 0 auto;
-  width: 48%;
+  width: 570px;
+  max-width: 100%;
 }
 
-/* line 487, ../sass/components/arts-rtl.scss */
+/* line 490, ../sass/components/arts-rtl.scss */
 .views-exposed-form .views-exposed-widget {
   float: right;
   padding: 0.5em  0 0 1em;
 }
 
-/* line 492, ../sass/components/arts-rtl.scss */
+/* line 495, ../sass/components/arts-rtl.scss */
 .views-submit-button {
   padding-left: 0 !important;
 }
 
 /************  design select  ************/
-/* line 500, ../sass/components/arts-rtl.scss */
+/* line 503, ../sass/components/arts-rtl.scss */
 #block-lang-dropdown-language select, #block-views-arts-block select {
   text-align: right;
   padding-right: 7px;
 }
-/* line 504, ../sass/components/arts-rtl.scss */
+/* line 507, ../sass/components/arts-rtl.scss */
 #block-lang-dropdown-language .form-type-select, #block-views-arts-block .form-type-select {
   float: left;
 }
 
 /************  contact   **************/
-/* line 512, ../sass/components/arts-rtl.scss */
+/* line 515, ../sass/components/arts-rtl.scss */
 .node-webform .field-name-field-text {
   float: right;
 }
-/* line 515, ../sass/components/arts-rtl.scss */
+/* line 518, ../sass/components/arts-rtl.scss */
 .node-webform #webform-client-form-11 {
   float: left;
 }
-/* line 518, ../sass/components/arts-rtl.scss */
+/* line 521, ../sass/components/arts-rtl.scss */
 .node-webform #webform-client-form-11 input.form-submit, .node-webform #webform-client-form-11 textarea.form-submit {
   float: left;
 }

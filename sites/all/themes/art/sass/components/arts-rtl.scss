@@ -433,17 +433,17 @@
 
 .view-the-gallery{
   .place1{
-    float: left;
+    float: right;
   }
   .place2, .place3{
-    float: right;
+    float: left;
   }
   .place4, .place6{
-    float: left;
-    clear: left;
+    float: right;
+    clear: right;
   }
   .place5{
-    float: right;
+    float: left;
   }
   .views-field-title{
     .title{
@@ -470,17 +470,20 @@
     display: none;
   }
   select{
-    width: 200px!important;
+    width: 268px!important;
   }
   .form-item-field-art-type-tid select{
-    width: 110px!important;
+    width: 129px!important;
   }
-  .form-item-sort-by select{
-    width: 100px!important;
+  .views-widget-sort-by{
+    select{
+      width: 131px!important;
+    }
   }
-    .views-exposed-widgets {
+  .views-exposed-widgets {
       margin: 0 auto;
-      width: 48%;
+      width: 570px;
+      max-width: 100%;
   }
 }
 

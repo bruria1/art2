@@ -124,6 +124,8 @@ p {
 
 #page-title{
   text-align: center;
+  font-family: 'almoni-900';
+  font-size: 1.4em;
   @include res(s-m){
     background-color: #515252;
     color: #fff;
@@ -1866,7 +1868,7 @@ header {
     }
   }
   .place1{
-    float: right;
+    float: left;
     width: 60%;
     .views-field-field-exh-gallery-top{
       display: none;
@@ -1876,7 +1878,7 @@ header {
     }
   }
   .place2, .place3{
-    float: left;
+    float: right;
     width: 36.8%;
     .views-field-field-exh-gallery-top-1{
       display: none;
@@ -1886,9 +1888,9 @@ header {
     }
   }
   .place4, .place6{
-    float: right;
+    float: left;
     width: 36.8%;
-    clear: right;
+    clear: left;
     .views-field-field-exh-gallery-top-1{
       display: none;
     }
@@ -1897,7 +1899,7 @@ header {
     }
   }
   .place5{
-    float: left;
+    float: right;
     width: 60%;
     margin-top: 37px;
     .views-field-field-exh-gallery-top{
@@ -1922,9 +1924,9 @@ header {
   }
   .views-field-title{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(102, 102, 102, 0.73);
     width: 100%;
-    bottom: -48px;
+    bottom: -73px;
     text-align: center;
     font-size: 1.6em;
     transition: all 0.5s;
@@ -1970,6 +1972,9 @@ header {
     @include res(s-m){
       padding: 0;
     }
+  }
+  #page-title{
+    margin-bottom: 30px;
   }
 }
 
@@ -2042,11 +2047,13 @@ header {
   }
   .view-content{
     margin: 0 auto;
+    width: 1120px!important;
+    max-width: 100%!important;
   }
   select{
     padding: 5px 0 1px;
     color: #fff;
-    width: 216px!important;
+    width: 285px!important;
   }
   .form-type-select {
     background: url("../images/sort-triangle.png") no-repeat right center #3e3e3f;
@@ -2080,18 +2087,20 @@ header {
       padding: 0;
     }
     select{
-      width: 112px!important;
+      width: 140px!important;
       @include res(s-m){
         display: none;
       }
     }
   }
   .views-widget-sort-by{
+    padding-right: 0;
+    padding-left: 0;
     @include res(s-m){
-      padding: 0;
-    } 
+      padding: 0
+    }
     select{
-      width: 111px!important;
+      width: 138px!important;
       @include res(s-m){
         display: none;
       }
@@ -2099,12 +2108,13 @@ header {
   }
   .views-exposed-widgets {
       margin: 0 auto;
-      width: 54%;
+      width: 605px;
+      max-width: 100%;
   }
 }
 
 .ajax-progress{
-  display: none;
+  position: absolute;
 }
 
 /************  contact   **************/
