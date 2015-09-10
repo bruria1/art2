@@ -48,3 +48,38 @@
 [06-Sep-2015 14:45:57 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '"' in /home/art/public_html/sites/all/themes/art/template.php on line 154
 [06-Sep-2015 14:45:59 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '"' in /home/art/public_html/sites/all/themes/art/template.php on line 154
 [06-Sep-2015 14:46:38 Asia/Jerusalem] PHP Fatal error:  Call to undefined function _print_one_overlay() in /home/art/public_html/sites/all/themes/art/templates/views-view--now-exhibition--block-1.tpl.php on line 1
+[07-Sep-2015 12:07:06 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:08 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:09 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:09 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:09 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:09 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:09 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:09 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:09 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:09 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:07:13 Asia/Jerusalem] PHP Fatal error:  Call to undefined function args() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 12
+[07-Sep-2015 12:26:23 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:26:24 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:26:24 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:27:00 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 77
+[07-Sep-2015 12:27:02 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 77
+[07-Sep-2015 12:27:02 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 77
+[07-Sep-2015 12:27:02 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 77
+[07-Sep-2015 12:27:02 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 77
+[07-Sep-2015 12:27:46 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 77
+[07-Sep-2015 12:28:33 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:34 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:34 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:35 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:35 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:35 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:35 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:36 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:36 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:36 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:36 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:36 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 12:28:45 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected '}' in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 78
+[07-Sep-2015 13:36:21 Asia/Jerusalem] PHP Fatal error:  Call to undefined function image_style_path() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 18
+[07-Sep-2015 13:41:06 Asia/Jerusalem] PHP Fatal error:  Call to undefined function image_style_path() in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module on line 18

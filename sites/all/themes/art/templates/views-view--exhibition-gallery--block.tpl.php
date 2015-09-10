@@ -25,7 +25,9 @@
 
   <?php if ($rows): ?>
     <div class="owl-carousel view-content">
-      <?php print $rows; ?>
+      <?php 
+      print $rows; 
+      ?>
     </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
