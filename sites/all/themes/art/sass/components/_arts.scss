@@ -1485,7 +1485,9 @@ header {
 
 #block-views-exhibition-gallery-block, #block-views-now-exhibition-block-2{
   &.ex-one-img, &.ex-two-img{
-    display: none;
+    .owl-controls{
+      display: none;
+    }
   }
   .field-items img{
     width: 100%!important;
