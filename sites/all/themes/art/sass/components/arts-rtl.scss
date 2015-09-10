@@ -185,7 +185,7 @@
 #block-lang-dropdown-language {
   float: left;
   .form-type-select {
-    background: url("../images/lang_triangle.png") no-repeat right center transparent;
+    background: url("../images/lang_triangle.png") no-repeat right 40% transparent;
   }
 }
 
@@ -353,13 +353,12 @@
 /*****************  footer  ************/
 
 #footer{
-  width: 810px;
   #block-block-1{
     background: url("../images/huji.png") no-repeat right center transparent;
     float: right;
-    padding: 12px 55px 12px 6px;
+    padding: 2px 55px 12px 0px;
     text-align: right;
-    width: 33%;
+    width: 32%;
     @include res(s-m){
       background: none;
       padding: 0;
@@ -368,6 +367,9 @@
   #block-block-3{
     float: right;
     width: 45%;
+    margin: 0 1%;
+    line-height: 1.3em;
+    padding-top: 1px;
     @include res(m){
       p{
         float: right;
@@ -378,11 +380,12 @@
     }
   }
   #block-block-2{
-    padding-right: 6px;
+    padding-right: 0px;
     padding-left: 0;
+    margin-top: 4px;
     float: left;
     text-align: left;
-    width: 21%;
+    width: 20%;
     @include res(s-m){
       margin: 0;
       text-align: left;

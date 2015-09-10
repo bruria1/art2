@@ -97,7 +97,7 @@ body{
 #content{
   padding: 54px 0 0 0;
   @include res(s-m){
-    padding: 20px 0 0;
+    padding: 83px 0 0;
   }
 }
 
@@ -352,10 +352,11 @@ p {
 		width: 100%;
     padding-bottom: 13px!important;
     position: relative;
+    margin: 0 15px;
     a{
       font-size: 1.5em;
       color: #fff;
-      padding: 0 18px!important;
+      padding: 0 23px!important;
       outline: 0;
       outline-style:none;
       outline-width:0;
@@ -636,7 +637,8 @@ body.front{
       float: left;
       clear: left;
       background-color: $green;
-      padding: 0 16px 5px;
+      padding: 0 16px 7px;
+      line-height: 16px;
     }
   }
   .flex-active-slide, .slides, .flexslider, .view-content, .view, #block-views-home-page-slideshow-block{
@@ -763,7 +765,7 @@ header {
       width: 70px!important;
    }
   .form-type-select {
-    background: url("../images/lang_triangle.png") no-repeat left center transparent;
+    background: url("../images/lang_triangle.png") no-repeat left 40% transparent;
   }
 }
 
@@ -1554,8 +1556,8 @@ header {
   @include width;
   margin: 43px auto 0;
   font-size: 0.66em;
-  width: 815px;
-  padding: 0 0 20px 0;
+  width: 880px;
+  padding: 0 3% 20px;
   line-height: 1.2em;
   @include res(s-m){
     background-color: $gray;
@@ -1579,8 +1581,8 @@ header {
     background: url("../images/huji.png") no-repeat left center transparent;
     box-sizing: border-box;
     float: left;
-    padding: 12px 6px 12px 55px;
-    width: 31%;
+    padding: 2px 0px 12px 55px;
+    width: 30%;
     text-align: left;
     @include res(s-m){
       background: none;
@@ -1593,12 +1595,13 @@ header {
     }
   }
   #block-block-3{
-    width: 50%;
+    width: 51%;
+    margin: 0 0.5%;
     float: left;
     text-align: center;
     border-right: 1px solid;
     border-left: 1px solid;
-    margin-top: 12px;
+    line-height: 1.5em;
     @include res(s-m){
       clear: both;
       border: none;
@@ -1617,10 +1620,8 @@ header {
     }
   }
   #block-block-2{
-    width: 18%;
+    width: 17%;
     box-sizing: border-box;
-    padding-left: 6px;
-    margin-top: 12px;
     float: right;
     text-align: right;
     @include res(s-m){
@@ -2135,7 +2136,7 @@ header {
       width: 100%;
       &.form-submit{
         width: auto;
-        padding: 10px 20px;
+        padding: 5px 10px;
         float: right;
         background-color: $green;
         color: #fff;
@@ -2149,10 +2150,35 @@ header {
   }
 }
 
+.page-node-2630, .page-node-2631{
+  .field-name-field-text{
+    a{
+        padding: 5px 10px;
+        background-color: $green;
+        color: #fff;
+        transition: opacity 0.5s;
+        -webkit-transition: opacity 0.5s;
+        &:hover{
+          opacity: 0.8;
+        }
+    }
+  }
+}
 /*********  forward  ***********/
 
 #forward-form{
   .edit-page, .edit-subject, .edit-body{
     display: none;
+  }
+}
+
+/*********  regulat page  ***********/
+
+.node-type-page{
+  #block-views-exhibition-gallery-block{
+    padding-bottom: 53px;
+    .view-footer{
+      display: none;
+    }
   }
 }

@@ -1,0 +1,23 @@
+<?php
+
+function art_costum_menu() {
+  $items ['art_img'] = array(    
+    'page callback' => 'art_img',
+    'access arguments' => array('access content'),
+    'type' => MENU_SUGGESTED_ITEM,
+  );
+  return $items;
+}
+function art_costum_init(){
+	variable_set('image_allow_insecure_derivatives', false);
+}
+function art_img(){	
+	$base_path = str_replace("art_img","", $_GET['q']);
+	$image_uri = "public://".$base_path;	
+	$styleName = "overlay";
+	$style = image_style_load($styleName);
+	$derivative_uri = image_style_path($styleName , $image_uri);		
+	$scheme = "public";	
+	variable_set('image_allow_insecure_derivatives', true);
+	$oo = image_style_deliver($style, $scheme,$base_path);
+}

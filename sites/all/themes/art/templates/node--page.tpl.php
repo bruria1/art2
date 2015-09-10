@@ -23,12 +23,7 @@
       $my_block = module_invoke('views', 'block_view', 'exhibition_gallery-block');
       print render($my_block['content']);?>
   </div> 
-  <div id="block-views-exhibition-gallery-block-2" class="block">
-      <?php
-      $my_block = module_invoke('views', 'block_view', 'exhibition_gallery-block_2');
-      print render($my_block['content']); 
-  ?>
-  </div>
+
 <?php } ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
