@@ -137,6 +137,7 @@ function _print_one_overlay(){
 	if(!$overlay){
 		$overlay = true;
 		return "<div id='art_overlay' class='overlay'> 
+          <div class='close-button'>✖</div>
 				  <div class='ovr_inner'>   
 					<img />
 					<span class='next_i'></span>
