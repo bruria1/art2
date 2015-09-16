@@ -28,7 +28,7 @@ preg_match('/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\']*)/i', $fields['field_i
 
 <?php print $fields['field_link']->content; ?>
 
-<div class="slide desk" style="background:  url('<?php print $matches[1]; ?>') no-repeat center 0 fixed;"></div>
+<div class="slide desk" style="background:  url('<?php print $matches[1]; ?>') no-repeat center 0;"></div>
 
 <?php preg_match('/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\']*)/i', $fields['field_image_slideshow_mobile']->content, $mobile); ?>
 

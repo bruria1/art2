@@ -141,6 +141,9 @@ p {
   }
 }
 
+div#admin-toolbar.vertical{
+  z-index: 200;
+}
 /***********  header scroll  **********/
 
 .scroll{
@@ -367,7 +370,7 @@ p {
         padding: 0 15px!important;
       }
     }
-    a.active, a.active-trail{
+    a.active, a.active-trail, a:hover{
       color: $green;
       font-family:'almoni-900';
       @include res(s-m){
@@ -565,13 +568,18 @@ body.front{
 	width: 100%;
 	bottom: 0;
   overflow: hidden;
-  .slide{
+  .slide.mobile{
       -webkit-background-size: cover!important;
       -moz-background-size: cover!important;
       -o-background-size: cover!important;
       background-size: cover!important;
       height: 100%;
       width: 100%;
+  }
+  .slide.desk{
+    background-size: auto 100%!important;
+    height: 100%;
+    width: 100%;
   }
   .desk{
     @include res(s-m){
