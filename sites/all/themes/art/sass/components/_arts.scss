@@ -1847,8 +1847,7 @@ header {
   }
   .ovr_inner {
     width: auto;
-    display: table-cell;
-    vertical-align: middle;
+    display: block;
     position: relative;
     box-sizing: border-box;
     padding: 20px;
