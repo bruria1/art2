@@ -53,7 +53,6 @@ $(window).resize(function() {
   $simplewidth = $(window).width();
   $heightsquare = $(window).height()+200;
   $(".display-menu #square").css("height", $heightsquare); 
-  $(".overlay .ovr_inner").css("height", $height);  
       if ($simplewidth < 768){
       $OverLayHandler(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
@@ -307,7 +306,6 @@ $('.block-text-resize .changer').click(function(){
 
 /********  art and exhibition overlay  ************/
 
-$(".overlay .ovr_inner").css("height", $height); 
 $(".overlay").click(function(){
     jQuery(".overlay").css("display","none");
     jQuery(".overlay img").attr("src" , "");      
@@ -381,7 +379,7 @@ function OverLayHandler(galId){
       var img = imgList[i];      
       var fileName = img.src.replace(/styles.+?public\//g,"");
       jQuery("#art_overlay img").attr("src" ,Drupal.settings.basePath+"art_img/"+fileName.match(/files\/(.*)\?/)[1]);    
-      jQuery("#art_overlay").css("display","block");
+      jQuery("#art_overlay").css("display","table");
       jQuery("#art_overlay .cur_i").html((imgList.index(this)+1));
       jQuery("#art_overlay .cur_total").html(imgList.length);
    }
