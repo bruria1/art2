@@ -379,7 +379,8 @@ function OverLayHandler(galId){
 		   jQuery("#art_overlay .next_i").removeClass("last");
 	  }
       var img = imgList[i];      
-      jQuery("#art_overlay img").attr("src" , img.src.replace(/styles.+?public\//g,"styles/overlay/public/"));    
+      var fileName = img.src.replace(/styles.+?public\//g,"");
+      jQuery("#art_overlay img").attr("src" ,Drupal.settings.basePath+"art_img/"+fileName.match(/files\/(.*)\?/)[1]);    
       jQuery("#art_overlay").css("display","block");
       jQuery("#art_overlay .cur_i").html((imgList.index(this)+1));
       jQuery("#art_overlay .cur_total").html(imgList.length);
