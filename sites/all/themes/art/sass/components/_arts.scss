@@ -1847,10 +1847,16 @@ header {
   }
   .ovr_inner {
     width: auto;
-    display: block;
     position: relative;
     box-sizing: border-box;
     padding: 20px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
       img {
        margin: 0 auto;
        display: block;
