@@ -1506,9 +1506,11 @@ header {
   }
 }
 
-#block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1{
-  &.ex-one-img, &.ex-two-img{
+#block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1, 
+.view-arts-galleries{
+  &.ex-one-img, &.ex-two-img, &.one-img, &.two-img{
     display: block!important;
+    height: auto!important;
     .view{
       height: auto!important;
     }
@@ -1863,6 +1865,9 @@ header {
         top:40%;
         position: absolute;
         cursor: pointer;
+        &.last, &.first{
+          opacity: 0.4;
+        }
     }
   .next_i{
     left: 20px;

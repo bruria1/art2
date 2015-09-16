@@ -78,17 +78,18 @@
     }?> 
     </div> 
         <div class="close">
-  <?php  if (render($content['field_full_date_2'])){?>
-      <div class="label"><?php print t("Closing Date:");?></div>
-      <?php print render($content['field_full_date_2']); 
-  } else if (render($content['field_month_date_2'])){?>
+   <?php if (render($content['field_month_date_2'])){?>
         <div class="label"><?php print t("Closing Date:");?></div>
         <?php print render($content['field_month_date_2']); 
     }
     else if (render($content['field_year_date_2'])){?>
         <div class="label"><?php print t("Closing Date:");?></div>
         <?php print render($content['field_year_date_2']); 
-    }?>
+    }
+    else if (render($content['field_full_date_2'])){?>
+      <div class="label"><?php print t("Closing Date:");?></div>
+      <?php print render($content['field_full_date_2']); 
+    } ?>
     </div>
   </div>
 
