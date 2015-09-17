@@ -1498,6 +1498,9 @@ header {
   }
 }
 
+#block-views-arts-galleries-block-2 .one-img{
+  height: auto!important;
+}
 #block-views-exhibition-gallery-block, #block-views-now-exhibition-block-2{
   &.ex-one-img, &.ex-two-img{
     .owl-controls{
@@ -1525,7 +1528,13 @@ header {
   }
 }
 
-
+#block-views-arts-galleries-block{
+  .one-img{
+    .owl-controls{
+      display: none;
+    }
+  }
+}
 
 #block-views-arts-galleries-block-2, #block-views-exhibition-gallery-block, #block-views-now-exhibition-block-2{
   overflow: hidden;
