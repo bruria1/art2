@@ -3503,7 +3503,7 @@ header #logo .logo-mobile {
 #block-views-now-exhibition-block-1 .owl-controls .owl-prev, #block-views-now-exhibition-block-2 .owl-controls .owl-next, #block-views-now-exhibition-block-2 .owl-controls .owl-prev,
 #block-views-arts-galleries-block .owl-controls .owl-next,
 #block-views-arts-galleries-block .owl-controls .owl-prev, #block-views-arts-galleries-block-2 .owl-controls .owl-next, #block-views-arts-galleries-block-2 .owl-controls .owl-prev {
-  height: 24px;
+  height: 28px;
   width: 17px;
   background: url("../images/gallery-arrows.png") no-repeat 0 0 transparent;
   padding: 0;
