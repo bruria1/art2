@@ -742,9 +742,9 @@ html.js .collapsed .fieldset-legend {
 #block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-next,
 #block-views-now-exhibition-block-1 .owl-controls .owl-next, #block-views-now-exhibition-block-2 .owl-controls .owl-next,
 #block-views-arts-galleries-block .owl-controls .owl-next, #block-views-arts-galleries-block-2 .owl-controls .owl-next {
-  right: 30px;
+  right: 24px;
   left: auto;
-  background-position: 0px 0;
+  background-position: 7px 0;
 }
 /* line 340, ../sass/components/arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-prev,
@@ -752,7 +752,7 @@ html.js .collapsed .fieldset-legend {
 #block-views-arts-galleries-block .owl-controls .owl-prev, #block-views-arts-galleries-block-2 .owl-controls .owl-prev {
   right: 0px;
   left: auto;
-  background-position: -28px 0;
+  background-position: -11px 0;
 }
 
 /*****************  footer  ************/
