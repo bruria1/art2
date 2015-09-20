@@ -108,6 +108,7 @@
 #block-locale-language{
   clear: right;
   float: right;
+  padding: 0 32px;
 }
 /*********  share  *********/
 /*
@@ -179,6 +180,15 @@
       margin-right: 0!important;
       float: left!important;
     }
+}
+
+.logo-mobile{
+  &.en{
+    display: none!important;
+  }
+  &.he{
+    display: block!important;
+  }
 }
 
 // The language switcher blcok
