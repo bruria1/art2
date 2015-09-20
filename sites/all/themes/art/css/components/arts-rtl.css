@@ -2,7 +2,7 @@
 Error: Undefined variable: "$green".
         on line 467 of c:/users/user/sites/art2/sites/all/themes/art/sass/components/arts-rtl.scss
 
-462: #block-views-arts-block{
+462: #block-views-arts-block-1{
 463:   .form-type-select {
 464:     background: url("../images/sort-triangle.png") no-repeat left center #3e3e3f;
 465:   }
@@ -81,4 +81,4 @@ C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.15/vendor/listen/lib/listen/adapter
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 467 of c:/users/user/sites/art2/sites/all/themes/art/sass/components/arts-rtl.scss\A \A 462: #block-views-arts-block{\A 463:   .form-type-select {\A 464:     background: url(\"../images/sort-triangle.png\") no-repeat left center #3e3e3f;\A 465:   }\A 466:   #edit-field-campus-tid-wrapper .form-type-select {\A 467:     background: url(\"../images/sort-triangle.png\") no-repeat left center $green;\A 468:   }\A 469:   .views-widget-sort-order{\A 470:     display: none;\A 471:   }\A 472:   select{"; }
+  content: "Error: Undefined variable: \"$green\".\A         on line 467 of c:/users/user/sites/art2/sites/all/themes/art/sass/components/arts-rtl.scss\A \A 462: #block-views-arts-block-1{\A 463:   .form-type-select {\A 464:     background: url(\"../images/sort-triangle.png\") no-repeat left center #3e3e3f;\A 465:   }\A 466:   #edit-field-campus-tid-wrapper .form-type-select {\A 467:     background: url(\"../images/sort-triangle.png\") no-repeat left center $green;\A 468:   }\A 469:   .views-widget-sort-order{\A 470:     display: none;\A 471:   }\A 472:   select{"; }

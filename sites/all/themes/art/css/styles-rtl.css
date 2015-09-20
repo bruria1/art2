@@ -880,31 +880,31 @@ html.js .collapsed .fieldset-legend {
 
 /**** art at the capus **/
 /* line 463, ../sass/components/arts-rtl.scss */
-#block-views-arts-block .form-type-select {
+#block-views-arts-block-1 .form-type-select {
   background: url("../images/sort-triangle.png") no-repeat left center #3e3e3f;
 }
 /* line 466, ../sass/components/arts-rtl.scss */
-#block-views-arts-block #edit-field-campus-tid-wrapper .form-type-select {
+#block-views-arts-block-1 #edit-field-campus-tid-wrapper .form-type-select {
   background: url("../images/sort-triangle.png") no-repeat left center #00A294;
 }
 /* line 469, ../sass/components/arts-rtl.scss */
-#block-views-arts-block .views-widget-sort-order {
+#block-views-arts-block-1 .views-widget-sort-order {
   display: none;
 }
 /* line 472, ../sass/components/arts-rtl.scss */
-#block-views-arts-block select {
+#block-views-arts-block-1 select {
   width: 268px !important;
 }
 /* line 475, ../sass/components/arts-rtl.scss */
-#block-views-arts-block .form-item-field-art-type-tid select {
+#block-views-arts-block-1 .form-item-field-art-type-tid select {
   width: 129px !important;
 }
 /* line 479, ../sass/components/arts-rtl.scss */
-#block-views-arts-block .views-widget-sort-by select {
+#block-views-arts-block-1 .views-widget-sort-by select {
   width: 131px !important;
 }
 /* line 483, ../sass/components/arts-rtl.scss */
-#block-views-arts-block .views-exposed-widgets {
+#block-views-arts-block-1 .views-exposed-widgets {
   margin: 0 auto;
   width: 570px;
   max-width: 100%;
@@ -923,12 +923,12 @@ html.js .collapsed .fieldset-legend {
 
 /************  design select  ************/
 /* line 503, ../sass/components/arts-rtl.scss */
-#block-views-arts-block select {
+#block-views-arts-block-1 select {
   text-align: right;
   padding-right: 7px;
 }
 /* line 507, ../sass/components/arts-rtl.scss */
-#block-views-arts-block .form-type-select {
+#block-views-arts-block-1 .form-type-select {
   float: left;
 }
 
