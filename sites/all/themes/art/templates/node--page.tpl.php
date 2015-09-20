@@ -12,11 +12,6 @@
    <mark class="unpublished"><?php print t('Unpublished'); ?></mark>
 <?php endif; ?>
 
-
-<div id="wrapper-title">
-  <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-</div>
-
 <?php if ($node->nid != "2619") { ?>
   <div id="block-views-exhibition-gallery-block" class="block">
       <?php
@@ -25,6 +20,18 @@
   </div> 
 
 <?php } ?>
+
+<div id="wrapper-title">
+    <div class="title">
+     <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+     <?php if(isset($node->field_sub_title['und'][0]['value'])) { ?>
+        <div class="sub-title"> 
+           <?php print $node->field_sub_title['und'][0]['value']; ?>
+        </div>
+   <?php }?>
+ </div>
+
+
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($title_prefix || $title_suffix || $display_submitted || !$page && $title): ?>
@@ -49,6 +56,7 @@
     // We hide the comments and links now so that we can render them later.
     hide($content['comments']);
     hide($content['links']);
+    hide($content['field_sub_title']);
     print render($content);
   ?>
 

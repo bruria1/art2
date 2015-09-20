@@ -772,7 +772,8 @@ header {
     select {
       height: 27px;
       color: #000;
-      width: 70px!important;
+      width: 60px!important;
+      text-align: right!important;
    }
   .form-type-select {
     background: url("../images/lang_triangle.png") no-repeat left 40% transparent;
@@ -783,8 +784,8 @@ header {
 // The text resize block
 .block-text-resize {
   float: right;
-  margin-left: 6px;
-  a{
+  margin-left: 14px;
+  a.changer{
     background: url("../images/aa-en.png") no-repeat center center transparent!important;
     width: 29px!important;
     height: 28px!important;
@@ -1840,10 +1841,10 @@ header {
   z-index: 400;
   background-color: rgba(0,0,0,0.9); /*dim the background*/
   .close-button{
-        color: #fff;
-    font-size: 30px;
+    color: #fff;
+    font-size: 20px;
     position: absolute;
-    right: 30px;
+    left: 20px;
     top: 30px;
     cursor: pointer;
     z-index: 500;
@@ -1868,22 +1869,23 @@ header {
       }
     }
     .next_i, .prev_i{
-        background:  url("../images/arrows.png") no-repeat 8px 5px;
-        height: 60px;
-        width: 50px;
-        top:40%;
+        background:  url("../images/arrows.png") no-repeat 0px 0px;
+        height: 35px;
+        width: 16px;
+        top:47%;
         position: absolute;
         cursor: pointer;
+        background-size: 66px;
         &.last, &.first{
           opacity: 0.4;
         }
     }
   .next_i{
-    left: 20px;
+    right: 20px;
+    background-position: -50px 5px;
   }
  .prev_i{
-    right: 20px;
-    background-position: -80px 5px;
+    left: 20px;
   }
 }
 
@@ -2218,6 +2220,36 @@ header {
 /*********  regulat page  ***********/
 
 .node-type-page{
+    #wrapper-title{
+      margin: 0 auto;
+      text-align: center;
+      @include res(s-m){
+        background-color: $gray;
+        padding: 10px 3%;
+      }
+      #page-title{
+        font-family:'almoni-900', arial;
+        font-size: 1.3em;
+        font-weight: normal;
+        line-height: 0.8em;
+        display: inline-block;
+        width: auto;
+        @include res(s-m){
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }  
+      .sub-title{
+        font-size: 1.3em;
+        display: inline;
+        border-left: 1px solid;
+        margin-left: 7px;
+        padding-left: 11px;
+        @include res(s-m){
+          color: #fff;
+        }
+      }
+    }
   #block-views-exhibition-gallery-block{
     padding-bottom: 53px;
     .hide{

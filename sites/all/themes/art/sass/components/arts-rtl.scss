@@ -193,7 +193,7 @@
   float: left;
   margin-right: 6px;
   margin-left: 0;
-  a{
+  a.changer{
         background: url("../images/aa-heb.png") no-repeat center center transparent!important;
   }
 }
@@ -501,8 +501,9 @@
 
 #block-lang-dropdown-language, #block-views-arts-block {
   select {
-    text-align: right;
+    text-align: left!important;
     padding-right: 7px;
+    width: 55px!important;
   }
   .form-type-select {
     float: left;
@@ -522,5 +523,39 @@
         float: left;
       }
     }
+  }
+}
+
+/*********  regulat page  ***********/
+
+.node-type-page{ 
+  #wrapper-title{
+    .sub-title{
+      border-right: 1px solid;
+      margin-right: 7px;
+      padding-right: 11px;
+      border-left: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+// overlay
+
+.overlay{
+  .close-button{
+    right: 20px;
+    left: auto;
+  }
+  .next_i{
+    left: 20px;
+    right: auto;
+    background-position: 0px 5px;
+  }
+ .prev_i{
+    right: 20px;
+    left: auto;
+    background-position: -50px 5px;
   }
 }
