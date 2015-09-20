@@ -864,7 +864,7 @@ header {
 
 /************  design select  ************/
 
-#block-lang-dropdown-language, #block-views-arts-block {
+#block-lang-dropdown-language, #block-views-arts-block, #block-views-arts-block-1 {
   select {
     font-size: 0.8;
     cursor: pointer;
@@ -2024,7 +2024,7 @@ header {
   }
 }
 
-#block-views-arts-block{
+#block-views-arts-block, #block-views-arts-block-1{
   a{
     color: #000;
   }
