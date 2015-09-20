@@ -2393,7 +2393,7 @@ div#admin-toolbar.vertical {
  ****************************************/
 /* line 542, ../sass/components/_arts.scss */
 .front #page-title {
-  display: none;
+  display: none !important;
 }
 
 /* line 547, ../sass/components/_arts.scss */
