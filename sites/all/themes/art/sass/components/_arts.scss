@@ -136,7 +136,7 @@ p {
     box-sizing:border-box;
     font-family:'almoni-900', arial;
     font-weight: normal;
-    font-size: 1.6em;
+    font-size: 1em!important;
     line-height: 1em;
   }
 }
@@ -947,6 +947,7 @@ header {
       padding-left: 11px;
       @include res(s-m){
         color: #fff;
+        font-size: 1em;
       }
     }
   }
@@ -990,6 +991,7 @@ header {
     }
     @include res(s-m){
       margin-top: 20px;
+      font-size: 15px;
       &:before{
         border-top: 1px solid;
         content: "";
@@ -1737,6 +1739,9 @@ header {
   .field-name-field-artis{
     font-size: 1.2em;
     font-family:'almoni-700', arial;
+    @include res(s-m){
+      font-size: 1em;
+    }
   }
   article{
     @include res(s-m){
@@ -1794,6 +1799,7 @@ header {
       .field-name-field-material, .field-name-field-sizes{
         display: inline-block;
         line-height: 1em;
+        font-size: 15px;
       }
     }
     .line{
@@ -1835,6 +1841,9 @@ header {
   .field-name-field-text{
     max-width: 655px;
     margin: 0 auto;
+    @include res(s-m){
+      font-size: 15px;
+    }
     &:before{
       @include res(s-m){
         border-top: 1px solid;
@@ -2276,6 +2285,7 @@ header {
         padding-left: 11px;
         @include res(s-m){
           color: #fff;
+          font-size: 1em;
         }
       }
     }
@@ -2287,10 +2297,23 @@ header {
     .view-footer{
       display: none;
     }
+    @include res(s-m){
+      display: none!important;
+    }
+  }
+  #block-views-exhibition-gallery-block-2{
+    display: none;
+    @include res(s-m){
+      display: block!important;
+      margin-top: 20px;
+    }
   }
   .field-name-field-text{
     max-width: 877px;
     margin: 0 auto 0px;
     font-size: 18px!important;
+    @include res(s-m){
+      font-size: 15px;
+    }
   }
 }
