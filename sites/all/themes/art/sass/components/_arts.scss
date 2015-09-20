@@ -202,6 +202,8 @@ div#admin-toolbar.vertical{
     .logo-mobile{
       @include res(s-m){
         margin: 0!important;
+        width: 190px!important;
+        padding: 7px 0;
       }
     }
   }
@@ -287,6 +289,9 @@ div#admin-toolbar.vertical{
   span{
     margin: 0;
     background-color: #fff;
+    @include res(s-m){
+      background-color: #000;
+    }
   }
   .line1{
     transform: rotate(45deg);
@@ -373,15 +378,9 @@ div#admin-toolbar.vertical{
     a.active, a.active-trail, a:hover{
       color: $green;
       font-family:'almoni-900';
-      @include res(s-m){
-        color: #fff;
-      }
     }
     a:hover{
       color: $green;
-      @include res(s-m){
-        color: #fff;
-      }
     }
     ul{
       padding-top: 10px!important;
@@ -475,7 +474,9 @@ div#admin-toolbar.vertical{
   display: none;
   clear: left;
   float: left;
-  padding: 0 25px;
+  padding: 0 40px;
+  text-transform: uppercase;
+  margin-top: 20px;
   @include res(s-m){
     display: block;
   }
@@ -539,7 +540,7 @@ div#admin-toolbar.vertical{
  ****************************************/
 
 .front{
-	#page-title{
+	#wrapper-title{
 		display: none!important;
 	}
 }
@@ -629,6 +630,9 @@ body.front{
         background-color: $green;
         padding: 8px 14px 5px;
         overflow: hidden;
+        @include res(s-m){
+          padding: 3px 14px 3px;
+        }
     }
     .title{
       float: left;
@@ -637,10 +641,18 @@ body.front{
       border-right: 1px solid #fff;
       margin-right: 10px;
       padding-right: 10px;
+      @include res(s-m){
+        font-size: 1.1em;
+        line-height: 0.8em;
+      }
     }
     .second-title{
       font-size: 1.3em;
       float: left;
+      @include res(s-m){
+        font-size: 0.9em;
+        line-height: 0.9em;
+      }
     }
     .continue{
       margin-top: 6px;
@@ -649,6 +661,10 @@ body.front{
       background-color: $green;
       padding: 0 16px 7px;
       line-height: 16px;
+      @include res(s-m){
+        line-height: 0.4em;
+        padding: 0 10px 8px;
+      }
     }
   }
   .flex-active-slide, .slides, .flexslider, .view-content, .view, #block-views-home-page-slideshow-block{
@@ -716,7 +732,7 @@ header {
     padding: 12px 12px 15px!important;
     height: auto;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.93);
-    z-index: 400;
+      z-index: 400;
   }
   .wrapper-header{
     @include width;
@@ -748,6 +764,10 @@ header {
       @include res(s-m){
         display: block;
         margin-top: 9px;
+        width: 237px;
+      }
+      &.he{
+        display: none;
       }
     }
   }
@@ -1500,6 +1520,12 @@ header {
   }
 }
 
+#block-views-exhibition-gallery-block{
+  @include res(s-m){
+    display: block!important;
+    margin-top: 20px;
+  }
+}
 #block-views-arts-galleries-block-2 .one-img{
   height: auto!important;
 }
@@ -2188,7 +2214,10 @@ header {
         border: none;
         margin-bottom: 20px;
         @include res(s-m){
-          width: 100%;
+          width: 150px;
+          float: none!important;
+          margin: 0 auto 30px;
+          display: block;
         }
       }
     }
