@@ -190,7 +190,6 @@ header .logo-mobile{
   }
   &.he{
     @include res(s-m){
-      display: block!important;
     }
   }
 }
