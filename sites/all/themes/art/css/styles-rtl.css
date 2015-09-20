@@ -923,32 +923,42 @@ html.js .collapsed .fieldset-legend {
 
 /************  design select  ************/
 /* line 503, ../sass/components/arts-rtl.scss */
-#block-lang-dropdown-language select, #block-views-arts-block select {
+#block-views-arts-block select {
+  text-align: right;
+  padding-right: 7px;
+}
+/* line 507, ../sass/components/arts-rtl.scss */
+#block-views-arts-block .form-type-select {
+  float: left;
+}
+
+/* line 513, ../sass/components/arts-rtl.scss */
+#block-lang-dropdown-language select {
   text-align: left !important;
   padding-right: 7px;
   width: 55px !important;
 }
-/* line 508, ../sass/components/arts-rtl.scss */
-#block-lang-dropdown-language .form-type-select, #block-views-arts-block .form-type-select {
+/* line 518, ../sass/components/arts-rtl.scss */
+#block-lang-dropdown-language .form-type-select {
   float: left;
 }
 
 /************  contact   **************/
-/* line 516, ../sass/components/arts-rtl.scss */
+/* line 525, ../sass/components/arts-rtl.scss */
 .node-webform .field-name-field-text {
   float: right;
 }
-/* line 519, ../sass/components/arts-rtl.scss */
+/* line 528, ../sass/components/arts-rtl.scss */
 .node-webform #webform-client-form-11 {
   float: left;
 }
-/* line 522, ../sass/components/arts-rtl.scss */
+/* line 531, ../sass/components/arts-rtl.scss */
 .node-webform #webform-client-form-11 input.form-submit, .node-webform #webform-client-form-11 textarea.form-submit {
   float: left;
 }
 
 /*********  regulat page  ***********/
-/* line 533, ../sass/components/arts-rtl.scss */
+/* line 542, ../sass/components/arts-rtl.scss */
 .node-type-page #wrapper-title .sub-title {
   border-right: 1px solid;
   margin-right: 7px;
@@ -958,18 +968,18 @@ html.js .collapsed .fieldset-legend {
   padding-left: 0;
 }
 
-/* line 547, ../sass/components/arts-rtl.scss */
+/* line 556, ../sass/components/arts-rtl.scss */
 .overlay .close-button {
   right: 20px;
   left: auto;
 }
-/* line 551, ../sass/components/arts-rtl.scss */
+/* line 560, ../sass/components/arts-rtl.scss */
 .overlay .next_i {
   left: 20px;
   right: auto;
   background-position: 0px 5px;
 }
-/* line 556, ../sass/components/arts-rtl.scss */
+/* line 565, ../sass/components/arts-rtl.scss */
 .overlay .prev_i {
   right: 20px;
   left: auto;

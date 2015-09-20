@@ -499,7 +499,17 @@
 
 /************  design select  ************/
 
-#block-lang-dropdown-language, #block-views-arts-block {
+#block-views-arts-block {
+  select {
+    text-align: right;
+    padding-right: 7px;
+  }
+  .form-type-select {
+    float: left;
+  }
+}
+
+#block-lang-dropdown-language {
   select {
     text-align: left!important;
     padding-right: 7px;
@@ -509,7 +519,6 @@
     float: left;
   }
 }
-
 /************  contact   **************/
 
 .node-webform{
