@@ -760,7 +760,6 @@ header {
       }
     }
     .logo-mobile{
-      display: none;
       @include res(s-m){
         display: block;
         margin-top: 9px;
@@ -768,6 +767,12 @@ header {
       }
       &.he{
         display: none;
+      }
+      &.en{
+        display: none;
+        @include res(s-m){
+          display: block;
+        }
       }
     }
   }

@@ -182,12 +182,16 @@
     }
 }
 
-.logo-mobile{
+header .logo-mobile{
   &.en{
-    display: none!important;
+    @include res(s-m){
+      display: none!important;
+    }
   }
   &.he{
-    display: block!important;
+    @include res(s-m){
+      display: block!important;
+    }
   }
 }
 
