@@ -181,7 +181,7 @@ function _print_view_gal_js($view , $numberOfItems = 1 ){
 }
 */
 function art_form_alter(&$form, $form_state, $form_id) {
-  if($form['#id'] == 'views-exposed-form-arts-block'){
+  if(($form['#id'] == 'views-exposed-form-arts-block') || ($form['#id'] == 'views-exposed-form-arts-block-1')){
     foreach ($form['field_campus_tid']['#options'] as $key => &$option) {
       if ($key == 'All') {
         $option = t('Campus Name');
