@@ -2045,6 +2045,12 @@ header {
     @include res(s-m){
       margin-bottom: 0px!important;
       margin-top: 0!important;
+      .views-field-field-exh-gallery-top{
+        display: block!important;
+      }
+      .views-field-field-exh-gallery-top-1{
+        display: none!important;
+      }
     }
   }
   .views-row-first{
@@ -2189,8 +2195,16 @@ header {
   .form-type-select {
     background: url("../images/sort-triangle.png") no-repeat right center #3e3e3f;
   }
-  #edit-field-campus-tid-wrapper .form-type-select {
-    background: url("../images/sort-triangle.png") no-repeat right center $green;
+  #edit-field-campus-tid-wrapper{
+    @include res(s-m){
+      float: none;
+      margin: 0 auto;
+      padding: 0;
+      width: 268px;
+    }
+    .form-type-select {
+      background: url("../images/sort-triangle.png") no-repeat right center $green;
+    }
   }
   input.form-submit{
     background-color: $green;
