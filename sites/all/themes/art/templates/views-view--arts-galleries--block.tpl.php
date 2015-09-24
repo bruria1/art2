@@ -71,7 +71,7 @@
       var isRtl = jQuery(n).parents("body").hasClass("i18n-he");
       jQuery(n).owlCarousel({
         rtl:isRtl,
-        loop:true,
+        loop:false,
         margin:10,
         nav:true,
         dots: true,
