@@ -3004,7 +3004,7 @@ header #logo .logo-mobile.en {
   left: 0;
   position: absolute;
   top: 0;
-  width: 100% !important;
+  max-width: 100%;
   margin: 0 auto 20px;
 }
 /* line 1037, ../sass/components/_arts.scss */
