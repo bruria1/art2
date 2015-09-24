@@ -75,6 +75,8 @@
         margin:10,
         nav:true,
         dots: true,
+        touchDrag: true,
+        lazyLoad: true,
         responsive:{
         0:{
           items:1
