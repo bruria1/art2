@@ -70,7 +70,6 @@
     owlBlock.each(function(i,n){
       var isRtl = jQuery(n).parents("body").hasClass("i18n-he");
       jQuery(n).owlCarousel({
-        rtl:isRtl,
         loop:true,
         margin:10,
         nav:true,
