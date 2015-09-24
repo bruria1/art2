@@ -189,7 +189,7 @@ function art_form_alter(&$form, $form_state, $form_id) {
     }
     foreach ($form['field_art_type_tid']['#options'] as $key => &$option) {
       if ($key == 'All') {
-        $option = t('Art Type');
+        $option = t('All Art Types');
       } 
     }
 
