@@ -127,10 +127,7 @@ p {
   font-family: 'almoni-900';
   font-size: 1.4em;
   @include res(s-m){
-    background-color: #515252;
-    color: #fff;
     margin-top: 5px;
-    padding: 15px 3% 10px;
     width: 100%;
     text-align: center;
     box-sizing:border-box;
@@ -219,6 +216,23 @@ div#admin-toolbar.vertical{
   }
 }
 
+.scroll-500{
+  @include res(s-m){
+    #wrapper-title{
+      background-color: rgba(81, 82, 82, 0.95);
+      position: fixed;
+      top: 60px;
+      color: #fff;
+      width: 100%;
+      margin: 0!important;
+      box-sizing: border-box;
+      z-index: 300;
+    }
+    .field-name-field-copyright{
+        color: #fff;
+    }
+  }
+}
 /* 
  * main menu
  ****************************************/
@@ -748,6 +762,19 @@ header {
       float: right;
       margin-bottom: 7px;
     }
+    @include res(m){
+      width: 100%!important;
+      .logo-mobile{
+        width: 100%!important;
+        img{
+          display: block;
+        }
+      }
+    }
+    @include res(l){
+      width: 56%;
+      margin-left: 20%;
+    }
     img{
       margin: 0 auto;
       @include res(s-m){
@@ -763,7 +790,7 @@ header {
       @include res(s-m){
         display: block;
         margin-top: 9px;
-        width: 237px;
+        width: auto;
       }
       &.he{
         display: none;
@@ -788,6 +815,9 @@ header {
   margin-top: 10px;
   @include res(s-m){
     display: none;
+  }
+  @include res(l){
+    width: 24%;
   }
 }
 
@@ -929,8 +959,8 @@ header {
     margin: 48px auto 0;
     text-align: center;
     @include res(s-m){
-      background-color: $gray;
       padding: 10px 3%;
+      margin-top: 0;
     }
     #page-title{
       font-family:'almoni-900', arial;
@@ -951,7 +981,6 @@ header {
       margin-left: 7px;
       padding-left: 11px;
       @include res(s-m){
-        color: #fff;
         font-size: 1em;
       }
     }
@@ -1067,6 +1096,7 @@ header {
     .close, .open{
       display: inline-block;
       margin-bottom: 11px;
+      box-sizing: border-box ;
       @include res(s){
         width: 100%;
         .label{
@@ -1114,9 +1144,6 @@ header {
     }
   }
   .field-name-field-copyright{
-    @include res(s-m){
-      color: #fff;
-    }
     .field-item{
       display: inline;
     }
@@ -1536,6 +1563,7 @@ header {
 #block-views-arts-galleries-block-2 .one-img{
   height: auto!important;
 }
+
 #block-views-exhibition-gallery-block, #block-views-now-exhibition-block-2{
   &.ex-one-img, &.ex-two-img{
     .owl-controls{
@@ -1732,6 +1760,7 @@ header {
       margin-bottom: 60px;
       @include res(s-m){
         width: 100%;
+        margin-bottom: 0;
       }
   }
   .right{
@@ -1756,9 +1785,7 @@ header {
   #wrapper-title{
     @include res(s-m){
       margin-top: 5px;
-      background-color: $gray;
       width: 100%;
-      color: #fff;
       padding: 15px 0 10px;
       text-align: center;
       .field-name-field-artis{
@@ -2267,7 +2294,6 @@ header {
       margin: 0 auto;
       text-align: center;
       @include res(s-m){
-        background-color: $gray;
         padding: 10px 3%;
       }
       #page-title{
@@ -2278,8 +2304,7 @@ header {
         display: inline-block;
         width: auto;
         @include res(s-m){
-          padding-top: 0;
-          padding-bottom: 0;
+          padding: 0;
         }
       }  
       .sub-title{
@@ -2289,13 +2314,16 @@ header {
         margin-left: 7px;
         padding-left: 11px;
         @include res(s-m){
-          color: #fff;
           font-size: 1em;
         }
       }
     }
   #block-views-exhibition-gallery-block{
     padding-bottom: 53px;
+    direction: ltr;
+    .view{
+    padding-bottom: 53px;
+    }
     .hide{
       height: auto;
     }
@@ -2304,6 +2332,7 @@ header {
     }
     @include res(s-m){
       display: none!important;
+      padding-bottom: 10px;
     }
   }
   #block-views-exhibition-gallery-block-2{
@@ -2319,6 +2348,16 @@ header {
     font-size: 18px!important;
     @include res(s-m){
       font-size: 15px;
+    }
+  }
+  #block-views-exhibition-gallery-block.ex-one-img{
+    display: block!important;
+    .owl-item, .owl-stage{
+      width: 100%!important;
+    }
+    img{
+      height: 200px!important;
+      width: auto!important;
     }
   }
 }

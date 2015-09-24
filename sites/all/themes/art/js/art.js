@@ -17,7 +17,29 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
+/*********   scroll  *******/
+
+$(document).ready(function(){       
+      $scroll_pos = 0;
+      $(document).scroll(function() { 
+        $scroll_pos = $(this).scrollTop();
+        if($scroll_pos > 20) {
+            $("body").addClass('scroll');
+        }
+        else {
+            $("body").removeClass('scroll');
+        }
+        if($scroll_pos > 300) {
+            $("body").addClass('scroll-500');
+        }
+        else {
+            $("body").removeClass('scroll-500');
+        }
+      });
+});
+
 /*********   lang switcher  *******/
+
 
 $(".i18n-he #block-lang-dropdown-language option:last").html("Heb");
 $(".i18n-he #block-lang-dropdown-language option:first").html("Eng");
@@ -66,18 +88,6 @@ $(window).resize(function() {
     }
 });
 
-$(document).ready(function(){       
-      $scroll_pos = 0;
-      $(document).scroll(function() { 
-        $scroll_pos = $(this).scrollTop();
-        if($scroll_pos > 20) {
-            $("body").addClass('scroll');
-        }
-        else {
-            $("body").removeClass('scroll');
-        }
-      });
-});
 
 if ($("div").hasClass("view-the-gallery")) {
    $i = 1;
