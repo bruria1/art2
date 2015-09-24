@@ -141,6 +141,12 @@ p {
 div#admin-toolbar.vertical{
   z-index: 200;
 }
+
+.line, .line-place{
+  @include res(s){
+    display: none;
+  }
+}
 /***********  header scroll  **********/
 
 .scroll{
@@ -1054,6 +1060,9 @@ header {
     line-height: 0.6em;
     .field{
       display: inline-block;
+      @include res(s){
+        width: 100%;
+      }
     }
     .field-label{
       @include res(s){
@@ -1085,6 +1094,11 @@ header {
         float: left;
         margin-right: 5px;
         text-align: left;
+        @include res(s){
+          text-align: center!important;
+          float: none!important;
+          display: inline;
+        }
       }
     }
   }
@@ -1114,8 +1128,10 @@ header {
       border-left: 1px solid;
       margin-left: 7px;
       padding-left: 11px;
-      @incclude res(s){
-        border: none;
+      @include res(s){
+        border: none!important;
+        padding: 0!important;
+        margin: 0!important;
       }
     }
     .label{
@@ -1482,6 +1498,12 @@ header {
       }
     }
   }
+  img{
+    @include res(s-m){
+      height: 200px;
+      width: auto;
+    }
+  }
   .hide.view{
     height: 0;
     overflow: hidden;
@@ -1840,7 +1862,7 @@ header {
     }
     .line, .line-place{
       display: none;
-      @include res(s-m){
+      @include res(m){
         display: inline-block;
       }
     }
@@ -2019,6 +2041,11 @@ header {
     clear: both;
     margin-top: 37px;
   }
+  .views-row{
+    @include res(s-m){
+      margin-bottom: 20px!important;
+    }
+  }
   .views-row-first{
     margin-top: 0;
   }
@@ -2033,7 +2060,6 @@ header {
     -webkit-transition: all 0.5s;
     @include res(s-m){
       bottom: 7px;
-      margin-bottom: 20px;
       position: relative;
       background-color: transparent;
       font-size: 1em;
@@ -2058,6 +2084,9 @@ header {
   .views-row:hover{
     .views-field-title{
       bottom: 0;
+      @include res(s-m){
+        bottom: 7px;
+      }
     }
   }
 }
@@ -2322,7 +2351,10 @@ header {
     padding-bottom: 53px;
     direction: ltr;
     .view{
-    padding-bottom: 53px;
+      padding-bottom: 53px;
+      @include res(s-m){
+        padding-bottom: 0;
+      }
     }
     .hide{
       height: auto;
