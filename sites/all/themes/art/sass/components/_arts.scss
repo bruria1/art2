@@ -232,7 +232,7 @@ div#admin-toolbar.vertical{
       width: 100%;
       margin: 0!important;
       box-sizing: border-box;
-      z-index: 300;
+      z-index: 250;
     }
     .field-name-field-copyright{
         color: #fff;
@@ -1020,18 +1020,23 @@ header {
     margin: 0 auto 20px;
   }
   .field-name-field-youtube-video{
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    position: relative;
+    @include res(s-m){
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      padding-top: 30px;
+      position: relative;
+    }
     iframe{
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      max-width: 100%;
       margin: 0 auto 20px;
+      display: block;
+      @include res(s-m){
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        max-width: 100%;
+      }
     }
   }
   .field-name-field-text{
