@@ -1019,10 +1019,20 @@ header {
     max-width: 877px;
     margin: 0 auto 20px;
   }
-  .field-name-field-youtube-video iframe{
-    margin: 0 auto 20px;
-    display: block;
-    max-width: 100%;
+  .field-name-field-youtube-video{
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    iframe{
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      margin: 0 auto 20px;
+    }
   }
   .field-name-field-text{
     max-width: 877px;
