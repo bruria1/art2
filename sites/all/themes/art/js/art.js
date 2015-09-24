@@ -329,6 +329,7 @@ $(".overlay").click(function(){
 /*** 
  * add classes to owl 
  ****/
+
 function owlClick(event){
   var nav = jQuery(event.target).find(".owl-nav");
   gal_items = 1;
