@@ -2043,7 +2043,8 @@ header {
   }
   .views-row{
     @include res(s-m){
-      margin-bottom: 20px!important;
+      margin-bottom: 0px!important;
+      margin-top: 0!important;
     }
   }
   .views-row-first{
