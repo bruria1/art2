@@ -184,7 +184,7 @@ function art_form_alter(&$form, $form_state, $form_id) {
   if(($form['#id'] == 'views-exposed-form-arts-block') || ($form['#id'] == 'views-exposed-form-arts-block-1')){
     foreach ($form['field_campus_tid']['#options'] as $key => &$option) {
       if ($key == 'All') {
-        $option = t('Campus Name');
+        $option = t('All Campuses');
       } 
     }
     foreach ($form['field_art_type_tid']['#options'] as $key => &$option) {
