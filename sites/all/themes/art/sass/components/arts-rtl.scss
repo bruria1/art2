@@ -1,4 +1,3 @@
-
  @mixin res($media) {
   @if $media == s {
     @media (max-width: 480px) { @content; }
@@ -8,6 +7,9 @@
   }
   @if $media == s-m {
     @media (max-width: 767px) { @content; }
+  }
+  @if $media == l {
+    @media (max-width: 1195px) { @content; }
   }
 }
 
@@ -179,6 +181,9 @@
     @include res(s-m){
       margin-right: 0!important;
       float: left!important;
+    }
+    @include res(l){
+      margin-right: 20%!important;
     }
 }
 
