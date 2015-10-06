@@ -1993,7 +1993,7 @@ header {
         cursor: pointer;
         background-size: 66px;
         &.last, &.first{
-          opacity: 0.4;
+          display: none;
         }
     }
   .next_i{

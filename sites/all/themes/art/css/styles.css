@@ -3757,7 +3757,7 @@ header #logo .logo-mobile.en {
   display: none;
 }
 /* line 1637, ../sass/components/_arts.scss */
-#block-views-exhibition-gallery-block-2.ex-two-imgm .owl-controls, #block-views-now-exhibition-block-1.ex-two-imgm .owl-controls, #block-views-arts-galleries-block-2.ex-two-imgm .owl-controls {
+#block-views-exhibition-gallery-block-2.ex-two-img .owl-controls, #block-views-now-exhibition-block-1.ex-two-img .owl-controls, #block-views-arts-galleries-block-2.ex-two-img .owl-controls {
   height: 52px;
 }
 
@@ -4215,7 +4215,7 @@ header #logo .logo-mobile.en {
 }
 /* line 1995, ../sass/components/_arts.scss */
 .overlay .next_i.last, .overlay .next_i.first, .overlay .prev_i.last, .overlay .prev_i.first {
-  opacity: 0.4;
+  display: none;
 }
 /* line 1999, ../sass/components/_arts.scss */
 .overlay .next_i {
