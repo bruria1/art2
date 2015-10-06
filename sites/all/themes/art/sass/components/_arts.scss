@@ -205,8 +205,10 @@ div#admin-toolbar.vertical{
     .logo-mobile{
       @include res(s-m){
         margin: 0!important;
-        width: 190px!important;
         padding: 7px 0;
+      }
+      @include res(m){
+        width: 190px!important;
       }
     }
   }
@@ -227,7 +229,7 @@ div#admin-toolbar.vertical{
     #wrapper-title{
       background-color: rgba(81, 82, 82, 0.95);
       position: fixed;
-      top: 60px;
+      top: 53px;
       color: #fff;
       width: 100%;
       margin: 0!important;
@@ -236,6 +238,11 @@ div#admin-toolbar.vertical{
     }
     .field-name-field-copyright{
         color: #fff;
+    }
+  }
+  @include res(s){
+    #wrapper-title{
+      top: 48px;
     }
   }
 }
@@ -617,6 +624,7 @@ body.front{
     li a{
       background-color: #fff;
       box-shadow: none;
+      border: 1px solid $green;
     }
     li a.flex-active{
       background-color: $green;
@@ -1198,6 +1206,8 @@ header {
         padding: 5px 10px;
         font-family: "almoni-900";
         display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
       }
       .views-row{
         float: none;
@@ -1610,11 +1620,12 @@ header {
   }
 }
 
-#block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1{
-  &.ex-one-img, &.ex-two-img{
+#block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1, #block-views-arts-galleries-block-2{
+  display: block!important;
+  &.ex-one-img, &.ex-two-img, .one-img{
     display: block!important;
     height: auto!important;
-    .view{
+    .view, &.view{
       height: auto!important;
     }
     .view-footer{
