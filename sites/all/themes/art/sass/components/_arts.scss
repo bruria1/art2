@@ -541,9 +541,12 @@ div#admin-toolbar.vertical{
   #navigation{
     position: absolute;
   }
-  #block-system-main-menu, #square{
-    height: 472px!important;
+  #block-system-main-menu{
+    height: 420px!important;
   }
+  #square{
+    height: 472px!important;
+  } 
   #triangle-topleft{
   border-bottom-width: 472px!important;
   }
