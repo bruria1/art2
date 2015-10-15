@@ -1,4 +1,3 @@
-<?=_print_one_overlay();?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -24,7 +23,7 @@
   <?php endif; ?>
 
   <?php if ($rows): ?>
-    <div class="owl-carousel view-content">
+    <div class="view-content throbber">
       <?php print $rows; ?>
     </div>
   <?php elseif ($empty): ?>
@@ -60,33 +59,3 @@
   <?php endif; ?>
 
 </div><?php /* class view */ ?>
-<script>  
-  
-  var ovrLay = new OverLayHandler("block-views-now-exhibition-block-2");
-  
-  var owlBlock2 = jQuery('.i18n-he .view-display-id-block_2 .owl-carousel ,'+
-            '.i18n-en .view-display-id-block_2 .owl-carousel');
-        
-  jQuery(function(){   
-    owlBlock2.each(function(i,n){
-      var isRtl = jQuery(n).parents("body").hasClass("i18n-he");
-      jQuery(n).owlCarousel({
-        rtl:isRtl,
-        loop:true,
-        margin:10,
-        singleItem: true,
-        nav:true,
-        dots: true,
-        responsive:{
-        0:{
-          items:3
-        }
-        }
-      }); 
-      jQuery(".view-display-id-block_2 .owl-controls .owl-nav").addClass("first");
-    });    
-  });   
-  owlBlock2.addClass("owl_3_items");
-  owlBlock2.on('changed.owl.carousel', owlClick);  
-</script>
-
