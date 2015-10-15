@@ -4787,6 +4787,18 @@ header #logo .logo-mobile.en {
   width: auto !important;
 }
 
+/* line 2439, ../sass/components/_arts.scss */
+.throbber {
+  background-image: url("../images/throbber.gif");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+/* line 2444, ../sass/components/_arts.scss */
+.throbber * {
+  visibility: hidden;
+}
+
 /**
  * @file
  * Print styling

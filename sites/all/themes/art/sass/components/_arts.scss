@@ -2435,3 +2435,12 @@ header {
     }
   }
 }
+
+.throbber {
+  background-image: url('../images/throbber.gif');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.throbber * {
+  visibility: hidden;
+}
