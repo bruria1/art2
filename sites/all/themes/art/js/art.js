@@ -29,7 +29,7 @@ $(document).ready(function(){
         else {
             $("body").removeClass('scroll');
         }
-        if($scroll_pos > 300) {
+        if($scroll_pos > 330) {
             $("body").addClass('scroll-500');
         }
         else {
