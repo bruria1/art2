@@ -2392,7 +2392,6 @@ header {
       }
     }
   #block-views-exhibition-gallery-block{
-    padding-bottom: 53px;
     .view{
       padding-bottom: 53px;
       @include res(s-m){
@@ -2411,7 +2410,7 @@ header {
     }
   }
   #block-views-exhibition-gallery-block-2{
-    display: none;
+    display: none!important;
     @include res(s-m){
       display: block!important;
       margin-top: 20px;

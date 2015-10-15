@@ -4725,25 +4725,21 @@ header #logo .logo-mobile.en {
     font-size: 1em;
   }
 }
-/* line 2394, ../sass/components/_arts.scss */
-.node-type-page #block-views-exhibition-gallery-block {
-  padding-bottom: 53px;
-}
-/* line 2396, ../sass/components/_arts.scss */
+/* line 2395, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block .view {
   padding-bottom: 53px;
 }
 @media (max-width: 767px) {
-  /* line 2396, ../sass/components/_arts.scss */
+  /* line 2395, ../sass/components/_arts.scss */
   .node-type-page #block-views-exhibition-gallery-block .view {
     padding-bottom: 0;
   }
 }
-/* line 2402, ../sass/components/_arts.scss */
+/* line 2401, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block .hide {
   height: auto;
 }
-/* line 2405, ../sass/components/_arts.scss */
+/* line 2404, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block .view-footer {
   display: none;
 }
@@ -4754,38 +4750,38 @@ header #logo .logo-mobile.en {
     padding-bottom: 10px;
   }
 }
-/* line 2413, ../sass/components/_arts.scss */
+/* line 2412, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block-2 {
-  display: none;
+  display: none !important;
 }
 @media (max-width: 767px) {
-  /* line 2413, ../sass/components/_arts.scss */
+  /* line 2412, ../sass/components/_arts.scss */
   .node-type-page #block-views-exhibition-gallery-block-2 {
     display: block !important;
     margin-top: 20px;
   }
 }
-/* line 2420, ../sass/components/_arts.scss */
+/* line 2419, ../sass/components/_arts.scss */
 .node-type-page .field-name-field-text {
   max-width: 877px;
   margin: 0 auto 0px;
   font-size: 18px !important;
 }
 @media (max-width: 767px) {
-  /* line 2420, ../sass/components/_arts.scss */
+  /* line 2419, ../sass/components/_arts.scss */
   .node-type-page .field-name-field-text {
     font-size: 15px;
   }
 }
-/* line 2428, ../sass/components/_arts.scss */
+/* line 2427, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block.ex-one-img {
   display: block !important;
 }
-/* line 2430, ../sass/components/_arts.scss */
+/* line 2429, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block.ex-one-img .owl-item, .node-type-page #block-views-exhibition-gallery-block.ex-one-img .owl-stage {
   width: 100% !important;
 }
-/* line 2433, ../sass/components/_arts.scss */
+/* line 2432, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block.ex-one-img img {
   height: 200px !important;
   width: auto !important;
