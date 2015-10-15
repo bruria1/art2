@@ -4965,3 +4965,12 @@ header #logo .logo-mobile.en {
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+
+.throbber {
+  background-image: url('../images/throbber.gif');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.throbber * {
+  visibility: hidden;
+}

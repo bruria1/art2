@@ -72,6 +72,7 @@
         loop:true,
         margin:10,
         nav:true,
+        singleItem: true,
         dots: true,
         responsive:{
         0:{

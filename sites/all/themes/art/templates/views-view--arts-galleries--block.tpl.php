@@ -76,6 +76,7 @@
         nav:true,
         dots: true,
         lazyLoad: true,
+        singleItem: true,
         responsive:{
         0:{
           items:1

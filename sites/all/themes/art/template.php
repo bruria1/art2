@@ -139,7 +139,7 @@ function _print_one_overlay(){
 		return "<div id='art_overlay' class='overlay'> 
           <div class='close-button'>✖</div>
 				  <div class='ovr_inner'>   
-					<img />
+					<img alt='container'/>
 					<span class='next_i'></span>
 					<span class='prev_i'></span>
 				  </div>
@@ -195,4 +195,20 @@ function art_form_alter(&$form, $form_state, $form_id) {
 
   }
 
+}
+
+function art_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  $galleries = array(
+    'now_exhibition', 'exhibition_gallery', 'arts_galleries',
+  );
+  if (in_array($view->name, $galleries)) {
+    $path = drupal_get_path('theme', 'art');
+    drupal_add_js($path . '/js/art_galleries.js');
+  }
+}
+
+function art_preprocess_views_view_masonry(&$variables) {
+  $path = drupal_get_path('theme', 'art');
+  drupal_add_js($path . '/js/masonry_throber.js');
 }

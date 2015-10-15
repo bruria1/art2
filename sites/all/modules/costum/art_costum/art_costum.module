@@ -21,3 +21,15 @@ function art_img(){
 	variable_set('image_allow_insecure_derivatives', true);
 	$oo = image_style_deliver($style, $scheme,$base_path);
 }
+
+
+function art_costum_form_alter(&$form, &$form_state, $form_id) {
+  //drupal_set_message($form_id);
+  
+  if($form_id == 'lang_dropdown_form') {
+	$form['lang_dropdown_select']['#prefix'] = '<label for="lang-dropdown-select-language" style="display: none;" >'.t('Select Language:'). '</label>';
+//	$form['lang_dropdown_select']['#attributes']['title'] = t('Select Language');
+//	dpm($form);
+  }
+  //dpm($form_id);
+}
