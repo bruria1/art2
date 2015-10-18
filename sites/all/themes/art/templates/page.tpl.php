@@ -114,28 +114,11 @@
 
       <?php if ($main_menu): ?>
       <div class="wrapper-width">
-        <nav id="main-menu" class="hide" role="navigation" tabindex="-1">
-          <?php
-          // This code snippet is hard to modify. We recommend turning off the
-          // "Main menu" on your sub-theme's settings form, deleting this PHP
-          // code block, and, instead, using the "Menu block" module.
-          // @see https://drupal.org/project/menu_block
-          print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => t('Main menu'),
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
-        </nav>
       </div>
       <?php endif; ?>
-
-      <?php print render($page['navigation']); ?>
+      <div id="main-menu">
+        <?php print render($page['navigation']); ?>
+      </div>
       <div id="square" class="hide"></div>
       <div id="triangle-topleft" class="hide"></div>
     </div>

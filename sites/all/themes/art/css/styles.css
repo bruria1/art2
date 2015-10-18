@@ -4799,6 +4799,13 @@ header #logo .logo-mobile.en {
   visibility: hidden;
 }
 
+/* line 2448, ../sass/components/_arts.scss */
+#skip-link {
+  position: absolute;
+  z-index: 500;
+  width: 100%;
+}
+
 /**
  * @file
  * Print styling
