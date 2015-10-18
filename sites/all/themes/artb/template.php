@@ -12,7 +12,7 @@ function artb_preprocess_views_view(&$variables) {
 }
 
 $overlay = false;
-function _print_one_overlay(){
+function artb_print_one_overlay(){
 	global $overlay;
 	
 	if(!$overlay){
