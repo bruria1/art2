@@ -99,18 +99,10 @@ $(window).resize(function() {
   $heightsquare = $(window).height()+200;
   $(".display-menu #square").css("height", $heightsquare); 
   $(".overlay .ovr_inner").css("height", $height);  
-<<<<<<< HEAD
-      if ($simplewidth < 768){
-      if (typeof OverLayHandler == 'function') {
-        OverLayHandler("triangle-topleft");
-      }
-=======
     if ($simplewidth < 768){
       $OverLayHandler(".i18n-en #triangle-topleft").css("border-top-width", $height);
->>>>>>> 84ba82c6a2d801b4422cd43fe7ad962b6a1eaa18
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
       $(".i18n-he #triangle-topleft").css("border-bottom-width", $height);
-      $(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-he #triangle-topleft").css("border-top-width", "0");
     }
     else{
@@ -386,4 +378,74 @@ $(".overlay").click(function(){
   }
 };
 })(jQuery, Drupal, this, this.document);
-  
+/*** 
+ * add classes to owl 
+ ****/
+
+function owlClick(event){
+  var nav = jQuery(event.target).find(".owl-nav");
+  gal_items = 1;
+  if(jQuery(event.target).hasClass("owl_3_items")){
+  gal_items = 3;
+  }
+  nav.removeClass("first last");
+  if(event.item.index==0){
+    nav.addClass("first");
+  }
+  if(event.item.count == (event.item.index+gal_items)){
+    nav.addClass("last");
+  }
+}
+
+/*** overlay ***/
+
+function OverLayHandler(galId){ 
+   var self = this;
+   this.cur_i = 0;   
+   var imgList = jQuery("#"+galId+" .views-field img");  
+   jQuery("#"+galId+" .views-field img").click(function(){    
+    var i = imgList.index(this);        
+    self.change(i); 
+   });
+   jQuery("#art_overlay .next_i").click(function(e){ 
+    e.stopPropagation(); 
+    if(imgList.length>(self.cur_i+1)){
+      console.log("next",self.cur_i);
+      self.change(++self.cur_i); 
+    }
+   });
+   jQuery("#art_overlay .prev_i").click(function(e){ 
+    e.stopPropagation();  
+    if(self.cur_i>0){       
+      console.log("prev",self.cur_i);   
+      self.change(--self.cur_i); 
+    }
+   });
+   jQuery("#art_overlay").click(function(){
+     jQuery(this).css("display","none");
+   });
+   this.next = function(){
+      this.change(i++);
+   }
+   this.change =function(i){       
+      this.cur_i = i; 
+      if(this.cur_i === 0){
+      jQuery("#art_overlay .prev_i").addClass("first");
+    }
+    else {
+       jQuery("#art_overlay .prev_i").removeClass("first");
+    }
+     if(this.cur_i+1 >= imgList.length){
+      jQuery("#art_overlay .next_i").addClass("last");
+    }
+    else {
+       jQuery("#art_overlay .next_i").removeClass("last");
+    }
+      var img = imgList[i];      
+      var fileName = img.src.replace(/styles.+?public\//g,"");
+      jQuery("#art_overlay img").attr("src" ,Drupal.settings.basePath+"art_img/"+fileName.match(/files\/(.*)\?/)[1]);    
+      jQuery("#art_overlay").css("display","block");
+      jQuery("#art_overlay .cur_i").html((imgList.index(this)+1));
+      jQuery("#art_overlay .cur_total").html(imgList.length);
+   }
+}  
