@@ -17,6 +17,29 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
+
+function InitializeSelect(elem) {
+    $("#" + elem).each(function () {
+        var val = $(".select").children("option:selected").text();
+        $(".select").next(".selecttext").text(val);
+        $(".select").change(function () {
+            var val = $(".select").children("option:selected").text();
+            $(".select").next(".selecttext").text(val);
+        });
+        var selectId = $(".select").attr('id');
+        if (selectId !== undefined) {
+            var linkClass = selectId;
+        }
+        if (linkClass) {
+            $(".select").parent('.selectbox').addClass(linkClass);
+        }
+    });
+}
+
+$(document).ready(function(){
+    InitializeSelect('mySelect');
+});
+
 /*********   scroll  *******/
 
 $(document).ready(function(){       
@@ -76,10 +99,15 @@ $(window).resize(function() {
   $heightsquare = $(window).height()+200;
   $(".display-menu #square").css("height", $heightsquare); 
   $(".overlay .ovr_inner").css("height", $height);  
+<<<<<<< HEAD
       if ($simplewidth < 768){
       if (typeof OverLayHandler == 'function') {
         OverLayHandler("triangle-topleft");
       }
+=======
+    if ($simplewidth < 768){
+      $OverLayHandler(".i18n-en #triangle-topleft").css("border-top-width", $height);
+>>>>>>> 84ba82c6a2d801b4422cd43fe7ad962b6a1eaa18
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
       $(".i18n-he #triangle-topleft").css("border-bottom-width", $height);
       $(".i18n-en #triangle-topleft").css("border-top-width", $height);
@@ -149,6 +177,37 @@ $(".region-top").click(function(){
 //});
 
 $(".menu-button").click(function(){
+  if ($("body").hasClass("display-menu")){
+    $("#square").addClass("hide").removeClass("display");
+    $("#triangle-topleft").addClass("hide").removeClass("display");
+    $("#block-system-main-menu").addClass("hide").removeClass("display");
+    $("body").removeClass("display-menu");
+    $("#navigation").addClass("close-menu");
+  }
+  else {
+    $("#triangle-topleft").addClass("display").removeClass("hide");
+    $("#square").addClass("display").removeClass("hide");
+    $("#block-system-main-menu").addClass("display").removeClass("hide");
+    $("body").addClass("display-menu");
+    $(".display-menu #square").css("height", $heightsquare); 
+    if ($simplewidth < 768){
+      $(".i18n-en #triangle-topleft").css("border-top-width", $heightsquare);
+      $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
+      $(".i18n-he #triangle-topleft").css("border-bottom-width", $heightsquare);
+      $(".i18n-he #triangle-topleft").css("border-top-width", "0");
+    }
+    else{
+      $("#triangle-topleft").css("border-bottom-width", $heightsquare);
+      $("#triangle-topleft").css("border-top-width", "0");
+    }
+    $("#navigation").removeClass("close-menu");
+    $("body").removeClass("display-social");
+//    $("#share-mobile").addClass("hide");
+//    $(".share-triangle").addClass("hide");
+  }
+});
+
+$(".element-focusable").click(function(){
   if ($("body").hasClass("display-menu")){
     $("#square").addClass("hide").removeClass("display");
     $("#triangle-topleft").addClass("hide").removeClass("display");
