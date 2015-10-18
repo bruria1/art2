@@ -91,3 +91,5 @@
 [14-Oct-2015 14:39:03 Asia/Jerusalem] PHP Fatal error:  Cannot redeclare art_form_alter() (previously declared in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module:25) in /home/art/public_html/sites/all/themes/art/template.php on line 198
 [14-Oct-2015 14:39:04 Asia/Jerusalem] PHP Fatal error:  Cannot redeclare art_form_alter() (previously declared in /home/art/public_html/sites/all/modules/costum/art_costum/art_costum.module:25) in /home/art/public_html/sites/all/themes/art/template.php on line 198
 [14-Oct-2015 14:50:51 Asia/Jerusalem] PHP Fatal error:  Call to undefined function _print_one_overlay() in /home/art/public_html/sites/all/themes/art/templates/views-view--arts-galleries--block-2.tpl.php on line 1
+[18-Oct-2015 11:07:49 Asia/Jerusalem] PHP Fatal error:  Call to undefined function _print_one_overlay() in /home/art/public_html/sites/all/themes/artb/templates/views-view--arts-galleries--block.tpl.php on line 1
+[18-Oct-2015 11:07:53 Asia/Jerusalem] PHP Fatal error:  Call to undefined function _print_one_overlay() in /home/art/public_html/sites/all/themes/artb/templates/views-view--arts-galleries--block.tpl.php on line 1

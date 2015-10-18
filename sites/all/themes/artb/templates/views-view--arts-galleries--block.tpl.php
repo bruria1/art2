@@ -60,13 +60,14 @@
   <?php endif; ?>
 
 </div><?php /* class view */ ?>
-<script>
-  var ovrLay = new OverLayHandler("block-views-arts-galleries-block-2");
-  var owlBlock2 = jQuery('.i18n-he .view-display-id-block_2 .owl-carousel ,'+
-            '.i18n-en .view-display-id-block_2 .owl-carousel');
+<script>  
+ var ovrLay = new OverLayHandler("block-views-arts-galleries-block");
+
+ var owlBlock = jQuery('.i18n-he .view-display-id-block .owl-carousel ,'+
+            '.i18n-en .view-display-id-block .owl-carousel');
         
   jQuery(function(){   
-    owlBlock2.each(function(i,n){
+    owlBlock.each(function(i,n){
       var isRtl = jQuery(n).parents("body").hasClass("i18n-he");
       jQuery(n).owlCarousel({
         rtl:isRtl,
@@ -74,17 +75,20 @@
         margin:10,
         nav:true,
         dots: true,
-        responsiveClass: true,
+        lazyLoad: true,
+        singleItem: true,
         responsive:{
-          0:{
-            items:3
-          }
+        0:{
+          items:1
+        }
         }
       }); 
-      jQuery(".view-display-id-block_2 .owl-controls .owl-nav").addClass("first");
-    });    
-  });  	
-  owlBlock2.addClass("owl_3_items");
-  owlBlock2.on('changed.owl.carousel', owlClick);
+      jQuery(".view-display-id-block .owl-controls .owl-nav").addClass("first");
+    });
+    
+  });  
+  owlBlock.on('changed.owl.carousel', owlClick);
+
+
 </script>
 

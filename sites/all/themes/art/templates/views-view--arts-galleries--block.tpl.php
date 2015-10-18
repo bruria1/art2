@@ -76,11 +76,11 @@
         nav:true,
         dots: true,
         lazyLoad: true,
-        singleItem: true,
+        responsiveClass: true,
         responsive:{
-        0:{
-          items:1
-        }
+          0:{
+            items:1
+          }
         }
       }); 
       jQuery(".view-display-id-block .owl-controls .owl-nav").addClass("first");
@@ -88,7 +88,5 @@
     
   });  
   owlBlock.on('changed.owl.carousel', owlClick);
-
-
 </script>
 

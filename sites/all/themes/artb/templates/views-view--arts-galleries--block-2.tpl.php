@@ -60,7 +60,7 @@
   <?php endif; ?>
 
 </div><?php /* class view */ ?>
-<script>
+<script>	  
   var ovrLay = new OverLayHandler("block-views-arts-galleries-block-2");
   var owlBlock2 = jQuery('.i18n-he .view-display-id-block_2 .owl-carousel ,'+
             '.i18n-en .view-display-id-block_2 .owl-carousel');
@@ -73,18 +73,18 @@
         loop:true,
         margin:10,
         nav:true,
+        singleItem: true,
         dots: true,
-        responsiveClass: true,
         responsive:{
-          0:{
-            items:3
-          }
+        0:{
+          items:3
+        }
         }
       }); 
       jQuery(".view-display-id-block_2 .owl-controls .owl-nav").addClass("first");
     });    
   });  	
   owlBlock2.addClass("owl_3_items");
-  owlBlock2.on('changed.owl.carousel', owlClick);
+  owlBlock2.on('changed.owl.carousel', owlClick);  
 </script>
 

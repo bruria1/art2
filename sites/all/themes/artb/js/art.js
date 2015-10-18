@@ -29,7 +29,7 @@ $(document).ready(function(){
         else {
             $("body").removeClass('scroll');
         }
-        if($scroll_pos > 330) {
+        if($scroll_pos > 300) {
             $("body").addClass('scroll-500');
         }
         else {
@@ -79,10 +79,10 @@ $(window).resize(function() {
       if ($simplewidth < 768){
       if (typeof OverLayHandler == 'function') {
         OverLayHandler("triangle-topleft");
+        $('#triangle-topleft').css("border-top-width", $height);
       }
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
       $(".i18n-he #triangle-topleft").css("border-bottom-width", $height);
-      $(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-he #triangle-topleft").css("border-top-width", "0");
     }
     else{
@@ -327,4 +327,4 @@ $(".overlay").click(function(){
   }
 };
 })(jQuery, Drupal, this, this.document);
-  
+ 
