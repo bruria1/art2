@@ -67,7 +67,6 @@ function OverLayHandler(galId){
       var fileName = img.src.replace(/styles.+?public\//g,"");
       jQuery("#art_overlay img").attr("src" ,Drupal.settings.basePath+"art_img/"+fileName.match(/files\/(.*)\?/)[1]);    
       jQuery('#art_overlay').addClass('throbber');
-    console.log('added throbber');
       jQuery("#art_overlay img").load(function(ev) {
         jQuery('#art_overlay').removeClass('throbber');
       });

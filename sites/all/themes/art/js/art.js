@@ -100,9 +100,12 @@ $(window).resize(function() {
   $(".display-menu #square").css("height", $heightsquare); 
   $(".overlay .ovr_inner").css("height", $height);  
     if ($simplewidth < 768){
-      $OverLayHandler(".i18n-en #triangle-topleft").css("border-top-width", $height);
+      if (typeof OverlayHandler == 'function') {
+        OverLayHandler("triangle-topleft");
+      }
       $(".i18n-en #triangle-topleft").css("border-bottom-width", "0");
       $(".i18n-he #triangle-topleft").css("border-bottom-width", $height);
+      $(".i18n-en #triangle-topleft").css("border-top-width", $height);
       $(".i18n-he #triangle-topleft").css("border-top-width", "0");
     }
     else{
