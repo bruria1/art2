@@ -1,4 +1,4 @@
-<?=_print_one_overlay();?>
+<?= artb_print_one_overlay();?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
