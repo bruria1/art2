@@ -1537,7 +1537,6 @@ header {
     overflow: hidden;
   }
   .owl-stage{
-    margin: 0 auto;
   }
   .owl-carousel .owl-item img{
     width: auto;
@@ -1612,6 +1611,9 @@ header {
 }
 #block-views-arts-galleries-block-2 .one-img{
   height: auto!important;
+  .owl-stage{
+    margin: 0 auto;
+  }
 }
 
 #block-views-exhibition-gallery-block, #block-views-now-exhibition-block-2{
