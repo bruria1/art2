@@ -4765,7 +4765,6 @@ header #logo .logo-mobile.en {
 .node-type-page .field-name-field-text {
   max-width: 877px;
   margin: 0 auto 0px;
-  font-size: 18px !important;
 }
 @media (max-width: 767px) {
   /* line 2419, ../sass/components/_arts.scss */
@@ -4773,33 +4772,33 @@ header #logo .logo-mobile.en {
     font-size: 15px;
   }
 }
-/* line 2427, ../sass/components/_arts.scss */
+/* line 2426, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block.ex-one-img {
   display: block !important;
 }
-/* line 2429, ../sass/components/_arts.scss */
+/* line 2428, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block.ex-one-img .owl-item, .node-type-page #block-views-exhibition-gallery-block.ex-one-img .owl-stage {
   width: 100% !important;
 }
-/* line 2432, ../sass/components/_arts.scss */
+/* line 2431, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block.ex-one-img img {
   height: 200px !important;
   width: auto !important;
 }
 
-/* line 2439, ../sass/components/_arts.scss */
+/* line 2438, ../sass/components/_arts.scss */
 .throbber {
   background-image: url("../images/throbber.gif");
   background-repeat: no-repeat;
   background-position: top center;
 }
 
-/* line 2444, ../sass/components/_arts.scss */
+/* line 2443, ../sass/components/_arts.scss */
 .throbber * {
   visibility: hidden;
 }
 
-/* line 2448, ../sass/components/_arts.scss */
+/* line 2447, ../sass/components/_arts.scss */
 #skip-link {
   position: absolute;
   z-index: 500;
