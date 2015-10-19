@@ -608,8 +608,9 @@ body.front{
   }
   .slide.desk{
     background-size: auto 100%!important;
-    height: 100%;
+    height: calc(100% - 94px);
     width: 100%;
+    margin-top: 94px;
   }
   .desk{
     @include res(s-m){
