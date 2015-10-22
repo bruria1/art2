@@ -1610,12 +1610,6 @@ header {
     margin-top: 20px;
   }
 }
-#block-views-arts-galleries-block-2 .one-img{
-  height: auto!important;
-  .owl-stage{
-    margin: 0 auto;
-  }
-}
 
 #block-views-exhibition-gallery-block, #block-views-now-exhibition-block-2{
   &.ex-one-img, &.ex-two-img{
@@ -1628,11 +1622,6 @@ header {
 #block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1, #block-views-arts-galleries-block-2{
   display: block!important;
   &.ex-one-img, &.ex-two-img, .one-img{
-    display: block!important;
-    height: auto!important;
-    .view, &.view{
-      height: auto!important;
-    }
     .view-footer{
       display: none;
     }
