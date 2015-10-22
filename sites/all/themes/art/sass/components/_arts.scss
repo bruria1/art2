@@ -1619,7 +1619,8 @@ header {
   }
 }
 
-#block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1, #block-views-arts-galleries-block-2{
+#block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1, #block-views-arts-galleries-block-2,
+#block-views-now-exhibition-block-1{
   display: block!important;
   &.ex-one-img, &.ex-two-img, .one-img{
     .view-footer{
@@ -1634,8 +1635,8 @@ header {
   }
 }
 
-#block-views-arts-galleries-block{
-  .one-img{
+#block-views-arts-galleries-block, #block-views-now-exhibition-block-1{
+  .one-img, &.ex-one-img{
     .owl-controls{
       display: none;
     }

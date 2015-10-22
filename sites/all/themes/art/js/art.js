@@ -88,6 +88,13 @@ else if ($exhimg==2){
   $("#block-views-exhibition-gallery-block-2").addClass("ex-two-img");
 }
 
+$exhimgnow=$(".view-now-exhibition .view-header").html();
+if ($exhimgnow==1){
+  $("#block-views-now-exhibition-block-1").addClass("ex-one-img");
+}
+else if ($exhimgnow==2){
+  $("#block-views-now-exhibition-block-1").addClass("ex-two-img");
+}
 
   $height = $(window).height();
   $simplewidth = $(window).width();
