@@ -29,6 +29,16 @@ function OverLayHandler(galId){
     var i = imgList.index(this);        
     self.change(i); 
    });
+   
+   jQuery('#' + galId + ' .view-content').on('click', 'img', function() {
+    for (var iter=0; iter < imgList.length; iter++){
+      if (imgList[iter].src == this.src) {
+        self.change(iter);
+        break;
+      }
+    }
+   });
+
    jQuery("#art_overlay .next_i").click(function(e){ 
     e.stopPropagation(); 
     if(imgList.length>(self.cur_i+1)){
@@ -51,13 +61,13 @@ function OverLayHandler(galId){
    }
    this.change =function(i){       
       this.cur_i = i; 
-      if(this.cur_i === 0){
+          if(this.cur_i === 0){
 		  jQuery("#art_overlay .prev_i").addClass("first");
 	  }
 	  else {
 		   jQuery("#art_overlay .prev_i").removeClass("first");
 	  }
-	   if(this.cur_i+1 >= imgList.length){
+	  if(this.cur_i+1 >= imgList.length){
 		  jQuery("#art_overlay .next_i").addClass("last");
 	  }
 	  else {
