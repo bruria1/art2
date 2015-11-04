@@ -215,6 +215,9 @@ header .logo-mobile{
   a.changer{
         background: url("../images/aa-heb.png") no-repeat center center transparent!important;
   }
+  a{
+    float: right!important;
+  }
 }
 
 /*********  front  ***********/
@@ -251,27 +254,26 @@ header .logo-mobile{
   .flex-direction-nav{
     a{
       &.flex-prev {
-        background-position: 29px 0;
+        background:  url("../images/arrow-right.png") no-repeat center center;
         right: 20px;
         left: auto;
       }
       &.flex-next {
         left: 20px;
         right: auto;
-        background-position: 120px 0px;
+        background:  url("../images/arrow-left.png") no-repeat center center;
       }
     }
   }
-  .flexslider:hover .flex-direction-nav a.flex-next{
-    left: 20px!important;
+  .flexslider:hover .flex-direction-nav a.flex-next,
+  .flexslider .flex-direction-nav a.flex-next{
+    left: 0;
     right: auto;
   }
-  .flexslider:hover .flex-direction-nav a.flex-prev{
-    right: 20px!important;
+  .flexslider:hover .flex-direction-nav a.flex-prev,
+  .flexslider .flex-direction-nav a.flex-prev{
+    right: 0;
     left: auto;
-  }
-  .flexslider:hover .flex-direction-nav a.flex-next{
-    right: auto!important;
   }
 }
 
@@ -420,12 +422,8 @@ header .logo-mobile{
     text-align: right;
   }
   #wrapper-title{
-    .field-name-field-art-date{
-      float: right;
-    }
     span{
-      float: right;
-      margin-right: 0px;
+      margin-right: -5px;
       margin-left: 5px;
     }
     @include res(s-m){
@@ -577,13 +575,13 @@ header .logo-mobile{
     left: auto;
   }
   .next_i{
-    left: 20px;
+    left: 0px;
     right: auto;
-    background-position: 0px 5px;
+    background:  url("../images/arrow-left-g.png") no-repeat center center;
   }
  .prev_i{
-    right: 20px;
+    right: 0px;
     left: auto;
-    background-position: -50px 5px;
+    background:  url("../images/arrow-right-g.png") no-repeat center center;
   }
 }
