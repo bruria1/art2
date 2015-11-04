@@ -18,6 +18,7 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
 
+
 function InitializeSelect(elem) {
     $("#" + elem).each(function () {
         var val = $(".select").children("option:selected").text();

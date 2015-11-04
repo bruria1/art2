@@ -2490,3 +2490,28 @@ header {
   z-index: 500;
   width: 100%;
 }
+
+#block-lang-dropdown-language{
+  select:focus > option:checked, select option:focus, select option[selected=selected] {
+    box-shadow: 0 0 10px 100px #000 inset;
+      color: #fff!important;
+
+  }
+}
+
+#edit-field-campus-tid-wrapper{
+   select:focus > option:checked, select option:focus, select option[selected=selected] {
+    box-shadow: 0 0 10px 100px $green inset;
+      color: #fff!important;
+
+  } 
+}
+
+#edit-field-art-type-tid-wrapper, .views-widget-sort-by{
+   select:focus > option:checked, select option:focus, select option[selected=selected] {
+    box-shadow: 0 0 10px 100px #3e3e3f inset;
+      color: #fff!important;
+
+  }   
+}
+ 

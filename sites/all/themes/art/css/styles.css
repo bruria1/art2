@@ -4848,6 +4848,24 @@ header #logo .logo-mobile.en {
   width: 100%;
 }
 
+/* line 2495, ../sass/components/_arts.scss */
+#block-lang-dropdown-language select:focus > option:checked, #block-lang-dropdown-language select option:focus, #block-lang-dropdown-language select option[selected=selected] {
+  box-shadow: 0 0 10px 100px #000 inset;
+  color: #fff !important;
+}
+
+/* line 2503, ../sass/components/_arts.scss */
+#edit-field-campus-tid-wrapper select:focus > option:checked, #edit-field-campus-tid-wrapper select option:focus, #edit-field-campus-tid-wrapper select option[selected=selected] {
+  box-shadow: 0 0 10px 100px #00A294 inset;
+  color: #fff !important;
+}
+
+/* line 2511, ../sass/components/_arts.scss */
+#edit-field-art-type-tid-wrapper select:focus > option:checked, #edit-field-art-type-tid-wrapper select option:focus, #edit-field-art-type-tid-wrapper select option[selected=selected], .views-widget-sort-by select:focus > option:checked, .views-widget-sort-by select option:focus, .views-widget-sort-by select option[selected=selected] {
+  box-shadow: 0 0 10px 100px #3e3e3f inset;
+  color: #fff !important;
+}
+
 /**
  * @file
  * Print styling
