@@ -2443,8 +2443,10 @@ header {
       display: none;
     }
     @include res(s-m){
-      display: none!important;
-      padding-bottom: 10px;
+      height: 0;
+      overflow: hidden;
+      padding: 0px;
+      margin: 0;
     }
   }
   #block-views-exhibition-gallery-block-2{

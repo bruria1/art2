@@ -4789,57 +4789,59 @@ header #logo .logo-mobile.en {
 @media (max-width: 767px) {
   /* line 2432, ../sass/components/_arts.scss */
   .node-type-page #block-views-exhibition-gallery-block {
-    display: none !important;
-    padding-bottom: 10px;
+    height: 0;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0;
   }
 }
-/* line 2450, ../sass/components/_arts.scss */
+/* line 2452, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block-2 {
   display: none !important;
 }
 @media (max-width: 767px) {
-  /* line 2450, ../sass/components/_arts.scss */
+  /* line 2452, ../sass/components/_arts.scss */
   .node-type-page #block-views-exhibition-gallery-block-2 {
     display: block !important;
     margin-top: 20px;
   }
 }
-/* line 2457, ../sass/components/_arts.scss */
+/* line 2459, ../sass/components/_arts.scss */
 .node-type-page .field-name-field-text {
   max-width: 877px;
   margin: 0 auto 0px;
 }
 @media (max-width: 767px) {
-  /* line 2457, ../sass/components/_arts.scss */
+  /* line 2459, ../sass/components/_arts.scss */
   .node-type-page .field-name-field-text {
     font-size: 15px;
   }
 }
-/* line 2465, ../sass/components/_arts.scss */
+/* line 2467, ../sass/components/_arts.scss */
 .node-type-page #block-views-exhibition-gallery-block.ex-one-img .owl-item, .node-type-page #block-views-exhibition-gallery-block.ex-one-img .owl-stage {
   width: 100% !important;
 }
 @media (max-width: 767px) {
-  /* line 2468, ../sass/components/_arts.scss */
+  /* line 2470, ../sass/components/_arts.scss */
   .node-type-page #block-views-exhibition-gallery-block.ex-one-img .view img {
     height: 200px !important;
     width: auto !important;
   }
 }
 
-/* line 2477, ../sass/components/_arts.scss */
+/* line 2479, ../sass/components/_arts.scss */
 .throbber {
   background-image: url("../images/throbber.gif");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-/* line 2482, ../sass/components/_arts.scss */
+/* line 2484, ../sass/components/_arts.scss */
 .throbber * {
   visibility: hidden;
 }
 
-/* line 2486, ../sass/components/_arts.scss */
+/* line 2488, ../sass/components/_arts.scss */
 #skip-link {
   position: absolute;
   z-index: 500;
