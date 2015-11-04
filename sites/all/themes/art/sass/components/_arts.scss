@@ -558,9 +558,7 @@ div#admin-toolbar.vertical{
   } 
   #triangle-topleft{
     border-bottom-width: 482px!important;
-    @include res(s-m){
-    border-top-width: 482px!important;
-    }
+
 
   }
   .scroll #block-system-main-menu ul, #block-system-main-menu ul{
@@ -1998,6 +1996,7 @@ header {
     top: 30px;
     cursor: pointer;
     z-index: 500;
+    padding: 0 0 20px 20px;
   }
   .ovr_inner {
     width: auto;
@@ -2150,6 +2149,10 @@ header {
       border-right: 1px solid;
       padding-right: 10px;
       margin-right: 2px;
+      @include res(s){
+        border: none!important;
+        width: 100%;
+      }
     }
   }
   .views-row:hover{
