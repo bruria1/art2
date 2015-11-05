@@ -961,14 +961,12 @@ header {
       @include res(s-m){
         padding-top: 0;
         padding-bottom: 0;
+        width: 100%;
       }
     }  
     .sub-title{
       font-size: 1.3em;
       display: inline;
-      border-left: 1px solid;
-      margin-left: 7px;
-      padding-left: 11px;
       @include res(s-m){
         font-size: 1em;
       }
@@ -982,7 +980,7 @@ header {
     margin-bottom: 20px;
   }
   .field-name-field-campus{
-    margin-top: 33px;
+    margin-top: 25px;
     @include res(s-m){
       margin-top: 9px;
     }
@@ -1150,6 +1148,11 @@ header {
     font-family:'almoni-900';
     .empty{
       display: none;
+    }
+    li{
+      @include res(s-m){
+        display: block;
+      }
     }
     a{
       color: #fdfdfd;

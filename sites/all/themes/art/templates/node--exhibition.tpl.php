@@ -19,6 +19,7 @@
      <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
      <?php if(isset($node->field_sub_title['und'][0]['value'])) { ?>
         <div class="sub-title"> 
+          <span class="line-place">|</span>
            <?php print $node->field_sub_title['und'][0]['value']; ?>
         </div>
    <?php }?>
