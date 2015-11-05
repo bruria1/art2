@@ -858,21 +858,6 @@ header {
   }
 }
 
-// The language switcher blcok
-#block-lang-dropdown-language {
-  float: right;
-    select {
-      height: 27px;
-      color: #000;
-      width: 60px!important;
-      text-align: right!important;
-   }
-  .form-type-select {
-    background: url("../images/lang_triangle.png") no-repeat left 40% transparent;
-  }
-}
-
-
 // The text resize block
 .block-text-resize {
   float: right;
@@ -953,41 +938,6 @@ header {
 
 @media (max-width: 1160px){
   #block-search-form{
-    display: none;
-  }
-}
-
-/************  design select  ************/
-
-#block-lang-dropdown-language, #block-views-arts-block, #block-views-arts-block-1 {
-  select {
-    font-size: 0.8;
-    cursor: pointer;
-    text-indent: 0.01px;
-    text-overflow: “”;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    max-width: 150%;
-    border: none;
-    text-align: left;
-    padding-left: 7px;
-    position: relative;
-    top: -2px;
-  }
-  option{
-    background-color: #fff;
-    color: #000;
-  }
-  .form-type-select {
-    overflow: hidden;
-    float: right;
-    width: 100%;
-    text-align:-moz-center;
-    text-align:-webkit-center;
-    margin: 0px;
-  }
-  .form-type-select select::-ms-expand {
     display: none;
   }
 }
@@ -2254,25 +2204,6 @@ header {
     width: 1120px!important;
     max-width: 100%!important;
   }
-  select{
-    padding: 5px 0 1px;
-    color: #fff;
-    width: 285px!important;
-  }
-  .form-type-select {
-    background: url("../images/sort-triangle.png") no-repeat right center #3e3e3f;
-  }
-  #edit-field-campus-tid-wrapper{
-    @include res(s-m){
-      float: none;
-      margin: 0 auto;
-      padding: 0;
-      width: 268px;
-    }
-    .form-type-select {
-      background: url("../images/sort-triangle.png") no-repeat right center $green;
-    }
-  }
   input.form-submit{
     background-color: $green;
     border: medium none;
@@ -2294,12 +2225,17 @@ header {
   .views-widget-sort-order{
     display: none;
   }
+  #edit-field-art-type-tid-wrapper, .views-widget-sort-by{
+    @include res(s-m){
+      display: none;
+    }
+  }
   .views-widget-filter-field_art_type_tid{
     @include res(s-m){
       padding: 0;
     }
     select{
-      width: 140px!important;
+      width: 155px!important;
       @include res(s-m){
         display: none;
       }
@@ -2320,7 +2256,7 @@ header {
   }
   .views-exposed-widgets {
       margin: 0 auto;
-      width: 615px;
+      width: 652px;
       max-width: 100%;
   }
 }
@@ -2491,27 +2427,118 @@ header {
   width: 100%;
 }
 
-#block-lang-dropdown-language{
-  select:focus > option:checked, select option:focus, select option[selected=selected] {
-    box-shadow: 0 0 10px 100px #000 inset;
-      color: #fff!important;
+/********   design select  **********/
 
+// The language switcher blcok
+#block-lang-dropdown-language {
+    float: right;
+    text-align: right;
+    select {
+      height: 27px;
+      color: #000;
+      width: 60px!important;
+      text-align: right!important;
+   }
+  .select2-container .select2-choice .select2-arrow b {
+    background: url("../images/lang_triangle.png") no-repeat left 47% transparent;
+  }
+  .select2-container .select2-choice .select2-arrow{
+    right:auto;
+    left: 0;
+    border: none;
+  }
+  .select2-chosen{
+    margin: 0;
   }
 }
 
-#edit-field-campus-tid-wrapper{
-   select:focus > option:checked, select option:focus, select option[selected=selected] {
-    box-shadow: 0 0 10px 100px $green inset;
-      color: #fff!important;
+.select2-container .select2-choice{
+    border: none;
+    background: none;
+}
 
+.select2-container .select2-choice .select2-arrow{
+    background: none;
+}
+
+#select2-results-1{
+  border: 1px solid #000;
+  .select2-result-label{
+      text-align: right;
   } 
+  .select2-highlighted{
+    background-color: #000;
+    color: #fff;
+  }
 }
 
-#edit-field-art-type-tid-wrapper, .views-widget-sort-by{
-   select:focus > option:checked, select option:focus, select option[selected=selected] {
-    box-shadow: 0 0 10px 100px #3e3e3f inset;
-      color: #fff!important;
-
-  }   
+#select2-drop{
+  border:none;
 }
- 
+
+#select2-drop, .select2-container .select2-choice{
+  border-radius: 0;
+}
+
+.select2-results{
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.select2-choice{
+    box-shadow: none!important;
+    -webkit-box-shadow:none!important;
+}
+
+.select2-container .select2-choice .select2-arrow{
+  border: none!important;
+}
+
+// exposed filter
+
+#block-views-arts-block, #block-views-arts-block-1{
+    .form-type-select {
+    background-color: #3e3e3f;
+  }
+  #edit-field-campus-tid-wrapper .form-type-select {
+    background-color: $green;
+  }
+  select{
+    padding: 5px 0 1px;
+    color: #fff;
+    width: 285px!important;
+  }
+  .select2-container .select2-choice .select2-arrow b {
+    background: url("../images/sort-triangle.png") no-repeat right center #3e3e3f;
+  }
+  #edit-field-campus-tid-wrapper{
+    @include res(s-m){
+      float: none;
+      margin: 0 auto;
+      padding: 0;
+      width: 268px;
+    }
+  .select2-container .select2-choice .select2-arrow b {
+      background: url("../images/sort-triangle.png") no-repeat right center $green;
+    }
+  }
+  .select2-chosen{
+    color: #fff;
+  }
+}
+
+#select2-results-2{
+  border: 1px solid $green;
+  .select2-highlighted{
+    background-color: $green;
+    color: #fff;
+  }
+}
+
+#select2-results-3, #select2-results-4{
+  border: 1px solid $gray;
+  .select2-highlighted{
+    background-color: $gray;
+    color: #fff;
+  }
+}

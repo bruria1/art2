@@ -67,7 +67,9 @@ $(document).ready(function(){
 
 $(".i18n-he #block-lang-dropdown-language option:last").html("Heb");
 $(".i18n-he #block-lang-dropdown-language option:first").html("Eng");
+$(".i18n-he #select2-chosen-1").html("Heb");
 $(".i18n-en #block-lang-dropdown-language option:first").html("אנגלית");
+$(".i18n-en #select2-chosen-1").html("אנגלית");
 
 /*********   number of image at gallery  *******/
 
