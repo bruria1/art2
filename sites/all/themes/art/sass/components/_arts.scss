@@ -1004,6 +1004,7 @@ header {
     margin: 0 auto 20px;
   }
   .field-name-field-youtube-video{
+    margin-top: 40px;
     @include res(s-m){
       height: 0;
       overflow: hidden;
@@ -1079,20 +1080,18 @@ header {
       }
     }
     .field-name-field-treasurers-name{
-      margin-right: 18px;
       @include res(s){
         margin: 0!important;
       }
     }
     .line-place{
-      margin-left: 6px;
       position: relative;
       top: -13px;
     }
     .field-name-field-designers, .field-name-field-treasurers-name{
       .field-item{
         float: left;
-        margin-right: 5px;
+        margin-left: 5px;
         text-align: left;
         @include res(s){
           text-align: center!important;
@@ -1125,13 +1124,16 @@ header {
       }
     }
     .close{
-      border-left: 1px solid;
-      margin-left: 7px;
-      padding-left: 11px;
       @include res(s){
         border: none!important;
         padding: 0!important;
         margin: 0!important;
+      }
+      .line-place{
+        margin-right: 6px;
+        position: relative;
+        top: 0px;
+        float: left;
       }
     }
     .label{
@@ -1248,6 +1250,7 @@ header {
     -webkit-transition: all 0.5s;
     @include res(s-m){
       opacity: 1;
+      width: 100%;
     }
     .field-content{
       position: absolute;
@@ -1684,7 +1687,7 @@ header {
     background: url("../images/huji.png") no-repeat left center transparent;
     box-sizing: border-box;
     float: left;
-    padding: 2px 0px 12px 55px;
+    padding: 2px 0px 22px 55px;
     width: 30%;
     text-align: left;
     @include res(s-m){
@@ -1709,6 +1712,7 @@ header {
       clear: both;
       border: none;
       width: 100%!important;
+      margin-left: 0;
       strong{
         display: none;
       }
@@ -2294,6 +2298,7 @@ header {
       border: 1px solid #000;
       width: 100%;
       &.form-submit{
+        border-radius: 0!important;
         width: auto;
         padding: 5px 10px;
         float: right;
@@ -2541,4 +2546,8 @@ header {
     background-color: $gray;
     color: #fff;
   }
+}
+
+.page-node-2619 #page-title, .page-node-2625 #page-title{
+  display: none;
 }

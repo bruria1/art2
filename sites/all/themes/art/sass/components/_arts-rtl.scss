@@ -291,26 +291,24 @@ header .logo-mobile{
     }
   }
   .treasurers-designers{
-    .field-name-field-treasurers-name{
-      margin-right: 18px;
-    }
+
+
     .field-name-field-designers, .field-name-field-treasurers-name{
       .field-item{
         float: right;
-        margin-left: 5px;
-        margin-right: 0;
+        margin-right: 5px;
+        margin-left: 0;
         text-align: right;
       }
     }
   }
   .dates{
     .close{
-      border-right: 1px solid;
-      margin-right: 7px;
-      padding-right: 11px;
-      border-left: none;
-      margin-left: 0;
-      padding-left: 0;
+      .line-place{
+        margin-left: 6px;
+        margin-right: 0;
+        float: right;
+      }
     }
     .label{
       float: right;
@@ -372,7 +370,7 @@ header .logo-mobile{
   #block-block-1{
     background: url("../images/huji.png") no-repeat right center transparent;
     float: right;
-    padding: 2px 55px 12px 0px;
+    padding: 2px 55px 22px 0px;
     text-align: right;
     width: 32%;
     @include res(s-m){
@@ -393,6 +391,9 @@ header .logo-mobile{
       .view-last-update{
         float: left;
       }
+    }
+    @include res(s-m){
+      margin: 0;
     }
   }
   #block-block-2{
