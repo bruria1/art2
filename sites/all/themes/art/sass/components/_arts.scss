@@ -18,44 +18,44 @@
 /***********  fonts ****************/
 
 @font-face{
-	font-family:'almoni-700';
-	font-weight:700; /*(bold)*/
-	font-style: normal;
-	src: url('../fonts/almoni-dl-aaa-700.eot'); 
-	src: url('../fonts/almoni-dl-aaa-700.eot#iefix') format('embedded-opentype'), 
-		url('../fonts/almoni-dl-aaa-700.woff') format('woff'), 
-		url('../fonts/almoni-dl-aaa-700.ttf') format('truetype');
+  font-family:'almoni-700';
+  font-weight:700; /*(bold)*/
+  font-style: normal;
+  src: url('../fonts/almoni-dl-aaa-700.eot'); 
+  src: url('../fonts/almoni-dl-aaa-700.eot#iefix') format('embedded-opentype'), 
+    url('../fonts/almoni-dl-aaa-700.woff') format('woff'), 
+    url('../fonts/almoni-dl-aaa-700.ttf') format('truetype');
 }
 @font-face{
-	font-family:'almoni-900';
-	font-weight:900; /*(black)*/
-	font-style: normal;
-	src: url('../fonts/almoni-dl-aaa-900.eot'); 
-	src: url('../fonts/almoni-dl-aaa-900.eot#iefix') format('embedded-opentype'), 
-		url('../fonts/almoni-dl-aaa-900.woff') format('woff'), 
-		url('../fonts/almoni-dl-aaa-900.ttf') format('truetype');
+  font-family:'almoni-900';
+  font-weight:900; /*(black)*/
+  font-style: normal;
+  src: url('../fonts/almoni-dl-aaa-900.eot'); 
+  src: url('../fonts/almoni-dl-aaa-900.eot#iefix') format('embedded-opentype'), 
+    url('../fonts/almoni-dl-aaa-900.woff') format('woff'), 
+    url('../fonts/almoni-dl-aaa-900.ttf') format('truetype');
 }
 @font-face{
-	font-family:'almoni-300';
-	font-weight:300; /*(light)*/
-	font-style: normal;
-	src: url('../fonts/almoni-dl-aaa-300.eot'); 
-	src: url('../fonts/almoni-dl-aaa-300.eot#iefix') format('embedded-opentype'), 
-		url('../fonts/almoni-dl-aaa-300.woff') format('woff'), 
-		url('../fonts/almoni-dl-aaa-300.ttf') format('truetype');
+  font-family:'almoni-300';
+  font-weight:300; /*(light)*/
+  font-style: normal;
+  src: url('../fonts/almoni-dl-aaa-300.eot'); 
+  src: url('../fonts/almoni-dl-aaa-300.eot#iefix') format('embedded-opentype'), 
+    url('../fonts/almoni-dl-aaa-300.woff') format('woff'), 
+    url('../fonts/almoni-dl-aaa-300.ttf') format('truetype');
 }
 @font-face{
-	font-family:'almoni-400';
-	font-weight:400; /*(regular)*/
-	font-style: normal;
-	src: url('../fonts/almoni-dl-aaa-400.eot'); 
-	src: url('../fonts/almoni-dl-aaa-400.eot#iefix') format('embedded-opentype'), 
-		url('../fonts/almoni-dl-aaa-400.woff') format('woff'), 
-		url('../fonts/almoni-dl-aaa-400.ttf') format('truetype');
+  font-family:'almoni-400';
+  font-weight:400; /*(regular)*/
+  font-style: normal;
+  src: url('../fonts/almoni-dl-aaa-400.eot'); 
+  src: url('../fonts/almoni-dl-aaa-400.eot#iefix') format('embedded-opentype'), 
+    url('../fonts/almoni-dl-aaa-400.woff') format('woff'), 
+    url('../fonts/almoni-dl-aaa-400.ttf') format('truetype');
 }
 
 a {
-	@include links;
+  @include links;
 }
 
 textarea:focus, input:focus{
@@ -69,13 +69,13 @@ textarea:focus, input:focus{
 }
 
 body{
-	font-family:   'almoni-400', sans-serif;
-	font-size: 18px;
-	background-color: #fcfcfc;
+  font-family:   'almoni-400', sans-serif;
+  font-size: 18px;
+  background-color: #fcfcfc;
 }
 
 .wrapper-width{
-	@include width;
+  @include width;
 }
 
 .block{
@@ -268,46 +268,46 @@ div#admin-toolbar.vertical{
 }
 
 .menu-button{
-	overflow: hidden;
-	float: left;
-	padding:5px 13px 7px;
-	z-index: 200;
-	cursor: pointer;
+  overflow: hidden;
+  float: left;
+  padding:5px 13px 7px;
+  z-index: 200;
+  cursor: pointer;
   @include res(s-m){
     padding: 0!important;
     z-index: 300;
     background-color: transparent;
     height: 25px;
   }
-	span{
-		width: 20px;
-		height: 2px;
-		margin-bottom: 4px;
-		background-color: #000;
-		display: block;  
-		transition: all 0.5s;
-  	-webkit-transition: all 0.5s;
+  span{
+    width: 20px;
+    height: 2px;
+    margin-bottom: 4px;
+    background-color: #000;
+    display: block;  
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
     @include res(s-m){
       width: 25px;
       margin-bottom: 6px;
     }
-	}
-	.text{
-		float: left;
-		font-family:   'almoni-700', sans-serif;
-		font-size: 1.5em;
+  }
+  .text{
+    float: left;
+    font-family:   'almoni-700', sans-serif;
+    font-size: 1.5em;
         transition: all 0.5s;
     -webkit-transition: all 0.5s;
     width: 65px;
     @include res(s-m){
       display: none;
     }
-	}
-	.lines{
-		float: left;
-		padding-left: 7px;
+  }
+  .lines{
+    float: left;
+    padding-left: 7px;
     padding-top: 6px;
-	}
+  }
 }
 
 .display-menu .menu-button{
@@ -343,7 +343,7 @@ div#admin-toolbar.vertical{
 #block-system-main-menu{
   width: 260px;
   box-sizing:border-box;
-	float: left;
+  float: left;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   position: relative;
@@ -382,7 +382,7 @@ div#admin-toolbar.vertical{
     }
   }
   li{
-		width: 100%;
+    width: 100%;
     padding-bottom: 13px!important;
     position: relative;
     margin: 0 15px;
@@ -422,7 +422,7 @@ div#admin-toolbar.vertical{
         color: #fff;
       }
     }
-	}
+  }
 }
 
 .node-type-art #dhtml_menu-641 a{ 
@@ -463,7 +463,7 @@ div#admin-toolbar.vertical{
 }
 
 #navigation{
-	margin-left: -100%;
+  margin-left: -100%;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
@@ -580,34 +580,34 @@ div#admin-toolbar.vertical{
  ****************************************/
 
 .front{
-	#wrapper-title{
-		display: none!important;
-	}
+  #wrapper-title{
+    display: none!important;
+  }
 }
 
 body.front{
-	height: 100%;
+  height: 100%;
 }
 
 .flexslider{
-	border: none;
+  border: none;
 }
 
 .view-home-page-gallery{
-	position: absolute;
-	top: 0;
-	z-index: -1;
-	.view-content{
-		position: relative;
-		top: -60px;
-	}
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  .view-content{
+    position: relative;
+    top: -60px;
+  }
 }
 
 .region-top{
-	height: 100%;
-	position: absolute;
-	width: 100%;
-	bottom: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   overflow: hidden;
   .slide.mobile{
       -webkit-background-size: cover!important;
@@ -845,8 +845,8 @@ header {
 
 // the Header region 
 .header__region {
-	float: right;
-	clear: none !important;
+  float: right;
+  clear: none !important;
   left: 0;
   width: 30%;
   margin-top: 10px;
