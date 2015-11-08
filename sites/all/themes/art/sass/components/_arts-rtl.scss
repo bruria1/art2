@@ -281,9 +281,11 @@ header .logo-mobile{
 
 .node-type-exhibition, .page-node-2619{
   .treasurers-designers{
-
-
     .field-name-field-designers, .field-name-field-treasurers-name{
+      .field-label{
+        margin-left: -5px;
+        margin-right: 0;
+      }
       .field-item{
         float: right;
         margin-right: 5px;

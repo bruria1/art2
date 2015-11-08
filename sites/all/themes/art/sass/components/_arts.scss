@@ -1086,6 +1086,9 @@ header {
       top: -13px;
     }
     .field-name-field-designers, .field-name-field-treasurers-name{
+      .field-label{
+        margin-right: -5px;
+      }
       .field-item{
         float: left;
         margin-left: 5px;
