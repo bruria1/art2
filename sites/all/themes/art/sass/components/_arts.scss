@@ -429,6 +429,51 @@ div#admin-toolbar.vertical{
   color: $green;
   font-family:'almoni-900';
 }
+
+.explace2 #dhtml_menu-1061, .explace2 #dhtml_menu-1070{
+  ul{
+    display: block;
+  }
+  #dhtml_menu-1064, #dhtml_menu-1073{
+  font-family:'almoni-900';
+  } 
+  > a{
+    color: $green;
+  font-family:'almoni-900';
+  }
+}
+
+.node-type-art #dhtml_menu-641 a{ 
+  color: $green;
+  font-family:'almoni-900';
+}
+
+.explace3 #dhtml_menu-1056, .explace3 #dhtml_menu-1066{
+  ul{
+    display: block;
+  }
+  #dhtml_menu-1058, #dhtml_menu-1068{
+  font-family:'almoni-900';
+  } 
+  > a{
+    color: $green;
+  font-family:'almoni-900';
+  }
+}
+
+.explace1 #dhtml_menu-1056, .explace1 #dhtml_menu-1066{
+  ul{
+    display: block;
+  }
+  #dhtml_menu-1059, #dhtml_menu-1067{
+  font-family:'almoni-900';
+  } 
+  > a{
+    color: $green;
+  font-family:'almoni-900';
+  }
+}
+
 /*
 .node-type-exhibition #dhtml_menu-1061 .menu{
   display: block;
@@ -944,6 +989,9 @@ header {
 /**********  exhibition page ************/
 
 .node-type-exhibition, .page-node-2619, .page-node-2625{
+.field-name-field-place-site{
+  display: none;
+}
   #wrapper-title{
     margin: 48px auto 0;
     text-align: center;
@@ -1618,6 +1666,12 @@ header {
     .owl-controls{
       height: 52px;
     }
+  }
+}
+
+#block-views-exhibition-gallery-block-2.ex-one-img{
+  .owl-controls{
+    display: none;
   }
 }
 

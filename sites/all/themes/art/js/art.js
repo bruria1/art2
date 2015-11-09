@@ -17,6 +17,19 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
+if (($(".node-type-exhibition .field-name-field-place-site").html()=="197") || 
+($(".node-type-exhibition .field-name-field-place-site").html()=="198")){
+  $('body').addClass('explace1');
+}
+else if (($(".node-type-exhibition .field-name-field-place-site").html()=="200") || 
+($(".node-type-exhibition .field-name-field-place-site").html()=="195")){
+  $('body').addClass('explace2');
+}
+else if (($(".node-type-exhibition .field-name-field-place-site").html()=="199") || 
+($(".node-type-exhibition .field-name-field-place-site").html()=="196")){
+  $('body').addClass('explace3');
+}
+
 
 
 function InitializeSelect(elem) {
