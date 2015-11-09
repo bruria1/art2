@@ -30,6 +30,14 @@ else if (($(".node-type-exhibition .field-name-field-place-site").html()=="199")
   $('body').addClass('explace3');
 }
 
+$("#dhtml_menu-1061 a").click(function(){
+  $("#dhtml_menu-1056 ul").css("display", "none"); 
+});
+
+$("#dhtml_menu-1056 a").click(function(){
+  $("#dhtml_menu-1061 ul").css("display", "none"); 
+});
+
 
 
 function InitializeSelect(elem) {
