@@ -126,8 +126,10 @@
 
 
 </div>  
-
-  <?php print render($content['flippy_pager']);?> 
+<?php if (($node->field_place_site['und'][0]['tid']==195)||
+($node->field_place_site['und'][0]['tid']==200))  {
+  print render($content['flippy_pager']);
+  } ?> 
 
   <?php print render($content['links']); ?>
 
