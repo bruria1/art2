@@ -33,3 +33,32 @@ function art_costum_form_alter(&$form, &$form_state, $form_id) {
   }
   //dpm($form_id);
 }
+
+function art_costum_query_alter_flippy_query_alter($query) {
+  $exhibition = FALSE;
+  $node = FALSE;
+  foreach ($query->conditions() as $condition) {
+    if (!is_array($condition) or !is_string($condition['field'])) {
+      continue;
+    }
+    if ($condition['field'] == 'type' and $condition['value'] == 'exhibition') {
+      $exhibition = TRUE;
+    }
+    if ($condition['field'] == 'n.nid') {
+      $node = node_load($condition['value']);
+    }
+  }
+
+  if (!$exhibition or !$node) {
+    return;
+  }
+  $place = field_get_items('node', $node, 'field_place_site');
+  if (!$place) {
+    return;
+  }
+  $tid = $place[0]['tid'];
+
+  $query->join('field_data_field_place_site', 'fps', 'fps.entity_id = n.nid and fps.bundle = ' . "'exhibition'");
+  $query->condition('fps.field_place_site_tid', $tid);
+  
+}
