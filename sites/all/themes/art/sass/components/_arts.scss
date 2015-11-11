@@ -719,6 +719,10 @@ body.front{
         @include res(s-m){
           padding: 3px 14px 3px;
         }
+        @include res(s){
+          background-color: transparent;
+          padding-right: 0;
+        }
     }
     .title{
       float: left;
@@ -732,10 +736,11 @@ body.front{
         line-height: 0.8em;
       }
       @include res(s){
-        padding: 0!important;
         margin: 0!important;
         border: none!important;
         float: none!important;
+        background-color: $green;
+        padding: 4px 14px 5px!important;
       }
     }
     .second-title{
@@ -746,8 +751,9 @@ body.front{
         line-height: 0.9em;
       }
       @include res(s){
-        float: none!important;
         margin-top: 3px;
+        background-color: $green;
+        padding: 4px 14px 5px!important;
       }
     }
     .continue{
