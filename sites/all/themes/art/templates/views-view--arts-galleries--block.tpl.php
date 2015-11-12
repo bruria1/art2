@@ -69,21 +69,22 @@
   jQuery(function(){   
     owlBlock.each(function(i,n){
       var isRtl = jQuery(n).parents("body").hasClass("i18n-he");
-      jQuery(n).owlCarousel({
+      var options = {
         rtl:isRtl,
-        loop:true,
         margin:10,
         nav:true,
-        afterAction: function() {console.log('sssssss'); },
         dots: true,
-        lazyLoad: true,
         responsiveClass: true,
         responsive:{
           0:{
             items:1
           }
         }
-      }); 
+      };
+      if (jQuery(n).find('.views-field').length > 1) {
+        options.loop = true;
+      }
+      jQuery(n).owlCarousel(options); 
       jQuery(".view-display-id-block .owl-controls .owl-nav").addClass("first");
     });
     
