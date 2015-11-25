@@ -1699,7 +1699,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1441094434');
+  background-image: url('../images/progress.gif?1440610731');
 }
 
 /***********  fonts ****************/
@@ -2599,14 +2599,14 @@ body.front {
 @media (max-width: 767px) {
   /* line 715, ../sass/components/_arts.scss */
   .region-top .text-slide .name {
-    padding: 3px 14px 3px;
+    padding: 3px 9px 3px 0;
   }
 }
 @media (max-width: 480px) {
   /* line 715, ../sass/components/_arts.scss */
   .region-top .text-slide .name {
     background-color: transparent;
-    padding-right: 0;
+    padding-left: 0;
   }
 }
 /* line 727, ../sass/components/_arts.scss */
@@ -2632,7 +2632,7 @@ body.front {
     border: none !important;
     float: none !important;
     background-color: #00A294;
-    padding: 4px 14px 5px !important;
+    padding: 4px 9px 5px !important;
   }
 }
 /* line 746, ../sass/components/_arts.scss */
@@ -2652,7 +2652,7 @@ body.front {
   .region-top .text-slide .second-title {
     margin-top: 3px;
     background-color: #00A294;
-    padding: 4px 14px 5px !important;
+    padding: 4px 9px 5px !important;
   }
 }
 /* line 759, ../sass/components/_arts.scss */

@@ -225,6 +225,12 @@ header .logo-mobile{
 .region-top{
   .text-slide{
     .wrapper{
+      .name{
+        @include res(s){
+          padding-left: 0;
+          padding-right: 0px;
+        }
+      }
       .text{
         left: 60px;
         right: auto;
@@ -241,10 +247,18 @@ header .logo-mobile{
         border-right: none;
         margin-right: 0;
         padding-right: 0;
+        @include res(s){
+          text-align: right;
+          float: right!important;
+        }
       }
       .second-title{
         float:right;
         text-align: right;
+        @include res(s){
+          float: right!important;
+          clear: right;
+        }
       }
       .continue{
         float: right;

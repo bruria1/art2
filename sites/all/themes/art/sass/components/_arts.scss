@@ -717,11 +717,11 @@ body.front{
         padding: 8px 14px 5px;
         overflow: hidden;
         @include res(s-m){
-          padding: 3px 14px 3px;
+          padding: 3px 9px 3px 0;
         }
         @include res(s){
           background-color: transparent;
-          padding-right: 0;
+          padding-left: 0;
         }
     }
     .title{
@@ -740,7 +740,7 @@ body.front{
         border: none!important;
         float: none!important;
         background-color: $green;
-        padding: 4px 14px 5px!important;
+        padding: 4px 9px 5px!important;
       }
     }
     .second-title{
@@ -753,7 +753,7 @@ body.front{
       @include res(s){
         margin-top: 3px;
         background-color: $green;
-        padding: 4px 14px 5px!important;
+        padding: 4px 9px 5px !important;
       }
     }
     .continue{
