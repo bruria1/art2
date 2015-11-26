@@ -90,7 +90,6 @@
     
   });  
   owlBlock.on('changed.owl.carousel', owlClick);
-
 </script>
 
 

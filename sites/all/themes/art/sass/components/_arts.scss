@@ -849,7 +849,7 @@ header {
       float: right;
       margin-bottom: 7px;
     }
-    @include res(m){
+    @include res(s-m){
       width: 100%!important;
       .logo-mobile{
         width: 100%!important;
@@ -866,6 +866,9 @@ header {
       margin: 0 auto;
       @include res(s-m){
         margin: 0 auto -8px;
+      }
+      @include res(s){
+        width: 185px;
       }
     }
    .header__logo-image{
@@ -1050,7 +1053,7 @@ header {
       }
     }
   }
-  .field-name-field-download-file{
+  article{
     max-width: 877px;
     margin: 0 auto 20px;
   }

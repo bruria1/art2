@@ -145,7 +145,6 @@ $(window).resize(function() {
     }
 });
 
-
 if ($("div").hasClass("view-the-gallery")) {
    $i = 1;
    $(".view-the-gallery .views-row").each(function(){

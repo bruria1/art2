@@ -61,7 +61,6 @@
 
 </div><?php /* class view */ ?>
 <script> 
- 
  var ovrLay = new OverLayHandler("block-views-exhibition-gallery-block-1");
 
  var owlBlock = jQuery('.i18n-he .view-display-id-block_1 .owl-carousel ,'+
@@ -91,7 +90,6 @@
     
   });  
   owlBlock.on('changed.owl.carousel', owlClick);
-
 </script>
 
 
