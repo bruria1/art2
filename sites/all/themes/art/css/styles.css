@@ -3037,7 +3037,7 @@ header #logo .logo-mobile.en {
   }
 }
 /* line 1056, ../sass/components/_arts.scss */
-.node-type-exhibition article, .page-node-2619 article, .page-node-2625 article {
+.node-type-exhibition .field-name-field-download-file, .page-node-2619 .field-name-field-download-file, .page-node-2625 .field-name-field-download-file {
   max-width: 877px;
   margin: 0 auto 20px;
 }
@@ -4819,13 +4819,13 @@ header #logo .logo-mobile.en {
   }
 }
 /* line 2468, ../sass/components/_arts.scss */
-.node-type-page .field-name-field-text {
+.node-type-page article {
   max-width: 877px;
   margin: 0 auto 0px;
 }
 @media (max-width: 767px) {
   /* line 2468, ../sass/components/_arts.scss */
-  .node-type-page .field-name-field-text {
+  .node-type-page article {
     font-size: 15px;
   }
 }

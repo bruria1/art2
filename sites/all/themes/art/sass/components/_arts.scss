@@ -1053,7 +1053,7 @@ header {
       }
     }
   }
-  article{
+  .field-name-field-download-file{
     max-width: 877px;
     margin: 0 auto 20px;
   }
@@ -2465,7 +2465,7 @@ header {
       margin-top: 20px;
     }
   }
-  .field-name-field-text{
+  article{
     max-width: 877px;
     margin: 0 auto 0px;
     @include res(s-m){
