@@ -72,7 +72,7 @@
       var options = {
         rtl:isRtl,
         margin:10,
-        nav:true,
+        nav:false,
         dots: true,
         responsiveClass: true,
         responsive:{

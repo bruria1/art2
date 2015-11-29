@@ -1538,7 +1538,8 @@ header {
 
 #block-views-exhibition-gallery-block-2, #block-views-exhibition-gallery-block,
 #block-views-now-exhibition-block-1, #block-views-now-exhibition-block-2,
-#block-views-arts-galleries-block, #block-views-arts-galleries-block-2{
+#block-views-arts-galleries-block, #block-views-arts-galleries-block-2,
+#block-views-exhibition-gallery-block-1{
   .view-footer{
     float: right;
     margin-top: 20px;
@@ -1660,6 +1661,12 @@ header {
 }
 #block-views-now-exhibition-block-2{
   margin-bottom: 50px;
+}
+
+.node-type-exhibition #block-views-exhibition-gallery-block-2{
+  @include res(s-m){
+    display: none!important;
+  }
 }
 
 #block-views-exhibition-gallery-block-2, #block-views-now-exhibition-block-1, #block-views-arts-galleries-block-2,
