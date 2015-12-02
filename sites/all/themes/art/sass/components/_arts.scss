@@ -2122,7 +2122,7 @@ header {
   .place5{
     float: right;
     width: 60%;
-    margin-top: 37px;
+    margin-bottom: 40px;
     .views-field-field-exh-gallery-top{
       display: none;
     }
@@ -2138,7 +2138,9 @@ header {
   }
   .place1, .place4{
     clear: both;
-    margin-top: 37px;
+  }
+  .place1{
+    margin-bottom: 40px;
   }
   .views-row{
     @include res(s-m){

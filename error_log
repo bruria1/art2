@@ -136,3 +136,4 @@
 [23-Nov-2015 13:51:36 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 86802977 bytes) in /home/art/public_html/modules/system/image.gd.inc on line 347
 [23-Nov-2015 13:51:46 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 86802977 bytes) in /home/art/public_html/modules/system/image.gd.inc on line 347
 [23-Nov-2015 14:27:39 Asia/Jerusalem] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 23620 bytes) in /home/art/public_html/modules/system/image.gd.inc on line 232
+[01-Dec-2015 10:16:31 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'SERVER_NAME' (T_STRING) in /home/art/public_html/sites/all/modules/forward/forward.theme on line 49
