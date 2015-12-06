@@ -738,9 +738,9 @@ body.front{
       @include res(s){
         margin: 0!important;
         border: none!important;
-        float: none!important;
         background-color: $green;
         padding: 4px 9px 5px!important;
+        text-align: left;
       }
     }
     .second-title{
@@ -754,6 +754,7 @@ body.front{
         margin-top: 3px;
         background-color: $green;
         padding: 4px 9px 5px !important;
+        clear: left;
       }
     }
     .continue{
