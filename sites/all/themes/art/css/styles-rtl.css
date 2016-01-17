@@ -607,8 +607,8 @@ html.js .collapsed .fieldset-legend {
   float: left;
 }
 /* line 206, ../sass/components/_arts-rtl.scss */
-#block-lang-dropdown-language .form-type-select {
-  background: url("../images/lang_triangle.png") no-repeat right 40% transparent;
+#block-lang-dropdown-language .select2-container .select2-choice .select2-arrow b {
+  background: url("../images/lang_triangle.png") no-repeat right 47% transparent;
 }
 
 /* line 211, ../sass/components/_arts-rtl.scss */
@@ -627,19 +627,26 @@ html.js .collapsed .fieldset-legend {
 }
 
 /*********  front  ***********/
-/* line 228, ../sass/components/_arts-rtl.scss */
+@media (max-width: 480px) {
+  /* line 228, ../sass/components/_arts-rtl.scss */
+  .region-top .text-slide .wrapper .name {
+    padding-left: 0;
+    padding-right: 0px;
+  }
+}
+/* line 234, ../sass/components/_arts-rtl.scss */
 .region-top .text-slide .wrapper .text {
   left: 60px;
   right: auto;
   text-align: left;
 }
 @media (max-width: 767px) {
-  /* line 228, ../sass/components/_arts-rtl.scss */
+  /* line 234, ../sass/components/_arts-rtl.scss */
   .region-top .text-slide .wrapper .text {
     left: 20px;
   }
 }
-/* line 236, ../sass/components/_arts-rtl.scss */
+/* line 242, ../sass/components/_arts-rtl.scss */
 .region-top .text-slide .wrapper .title {
   float: right;
   border-left: 1px solid #fff;
@@ -649,34 +656,49 @@ html.js .collapsed .fieldset-legend {
   margin-right: 0;
   padding-right: 0;
 }
-/* line 245, ../sass/components/_arts-rtl.scss */
+@media (max-width: 480px) {
+  /* line 242, ../sass/components/_arts-rtl.scss */
+  .region-top .text-slide .wrapper .title {
+    text-align: right;
+    float: right !important;
+  }
+}
+/* line 255, ../sass/components/_arts-rtl.scss */
 .region-top .text-slide .wrapper .second-title {
   float: right;
+  text-align: right;
 }
-/* line 248, ../sass/components/_arts-rtl.scss */
+@media (max-width: 480px) {
+  /* line 255, ../sass/components/_arts-rtl.scss */
+  .region-top .text-slide .wrapper .second-title {
+    float: right !important;
+    clear: right;
+  }
+}
+/* line 263, ../sass/components/_arts-rtl.scss */
 .region-top .text-slide .wrapper .continue {
   float: right;
   clear: right;
 }
-/* line 256, ../sass/components/_arts-rtl.scss */
+/* line 271, ../sass/components/_arts-rtl.scss */
 .region-top .flex-direction-nav a.flex-prev {
   background: url("../images/arrow-right.png") no-repeat center center;
   right: 20px;
   left: auto;
 }
-/* line 261, ../sass/components/_arts-rtl.scss */
+/* line 276, ../sass/components/_arts-rtl.scss */
 .region-top .flex-direction-nav a.flex-next {
   left: 20px;
   right: auto;
   background: url("../images/arrow-left.png") no-repeat center center;
 }
-/* line 268, ../sass/components/_arts-rtl.scss */
+/* line 283, ../sass/components/_arts-rtl.scss */
 .region-top .flexslider:hover .flex-direction-nav a.flex-next,
 .region-top .flexslider .flex-direction-nav a.flex-next {
   left: 0;
   right: auto;
 }
-/* line 273, ../sass/components/_arts-rtl.scss */
+/* line 288, ../sass/components/_arts-rtl.scss */
 .region-top .flexslider:hover .flex-direction-nav a.flex-prev,
 .region-top .flexslider .flex-direction-nav a.flex-prev {
   right: 0;
@@ -684,58 +706,47 @@ html.js .collapsed .fieldset-legend {
 }
 
 /**********  exhibition page ************/
-/* line 284, ../sass/components/_arts-rtl.scss */
-.node-type-exhibition #wrapper-title .sub-title, .page-node-2619 #wrapper-title .sub-title {
-  border-right: 1px solid;
-  margin-right: 7px;
-  padding-right: 11px;
-  border-left: none;
-  margin-left: 0;
-  padding-left: 0;
+/* line 300, ../sass/components/_arts-rtl.scss */
+.node-type-exhibition .treasurers-designers .field-name-field-designers .field-label, .node-type-exhibition .treasurers-designers .field-name-field-treasurers-name .field-label, .page-node-2619 .treasurers-designers .field-name-field-designers .field-label, .page-node-2619 .treasurers-designers .field-name-field-treasurers-name .field-label {
+  margin-left: -5px;
+  margin-right: 0;
 }
-/* line 294, ../sass/components/_arts-rtl.scss */
-.node-type-exhibition .treasurers-designers .field-name-field-treasurers-name, .page-node-2619 .treasurers-designers .field-name-field-treasurers-name {
-  margin-right: 18px;
-}
-/* line 298, ../sass/components/_arts-rtl.scss */
+/* line 304, ../sass/components/_arts-rtl.scss */
 .node-type-exhibition .treasurers-designers .field-name-field-designers .field-item, .node-type-exhibition .treasurers-designers .field-name-field-treasurers-name .field-item, .page-node-2619 .treasurers-designers .field-name-field-designers .field-item, .page-node-2619 .treasurers-designers .field-name-field-treasurers-name .field-item {
   float: right;
-  margin-left: 5px;
-  margin-right: 0;
+  margin-right: 5px;
+  margin-left: 0;
   text-align: right;
 }
-/* line 307, ../sass/components/_arts-rtl.scss */
-.node-type-exhibition .dates .close, .page-node-2619 .dates .close {
-  border-right: 1px solid;
-  margin-right: 7px;
-  padding-right: 11px;
-  border-left: none;
-  margin-left: 0;
-  padding-left: 0;
+/* line 314, ../sass/components/_arts-rtl.scss */
+.node-type-exhibition .dates .close .line-place, .page-node-2619 .dates .close .line-place {
+  margin-left: 6px;
+  margin-right: 0;
+  float: right;
 }
-/* line 315, ../sass/components/_arts-rtl.scss */
+/* line 320, ../sass/components/_arts-rtl.scss */
 .node-type-exhibition .dates .label, .page-node-2619 .dates .label {
   float: right;
   margin-left: 5px;
   margin-right: 0;
 }
-/* line 320, ../sass/components/_arts-rtl.scss */
+/* line 325, ../sass/components/_arts-rtl.scss */
 .node-type-exhibition .dates .field, .page-node-2619 .dates .field {
   float: right;
 }
 
-/* line 327, ../sass/components/_arts-rtl.scss */
+/* line 332, ../sass/components/_arts-rtl.scss */
 #block-views-also-intersting-block .views-row, #block-views-also-intersting-block-1 .views-row {
   margin-left: 3.5%;
   margin-right: 0;
 }
-/* line 331, ../sass/components/_arts-rtl.scss */
+/* line 336, ../sass/components/_arts-rtl.scss */
 #block-views-also-intersting-block .views-row-last, #block-views-also-intersting-block-1 .views-row-last {
   margin-left: 0;
 }
 
 /**********  exhibition gallery************/
-/* line 341, ../sass/components/_arts-rtl.scss */
+/* line 346, ../sass/components/_arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .view-footer, #block-views-exhibition-gallery-block .view-footer,
 #block-views-now-exhibition-block-1 .view-footer, #block-views-now-exhibition-block-2 .view-footer,
 #block-views-arts-galleries-block .view-footer, #block-views-arts-galleries-block-2 .view-footer {
@@ -743,7 +754,7 @@ html.js .collapsed .fieldset-legend {
   margin-left: 1px;
   margin-right: 0;
 }
-/* line 345, ../sass/components/_arts-rtl.scss */
+/* line 350, ../sass/components/_arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .view-footer div, #block-views-exhibition-gallery-block .view-footer div,
 #block-views-now-exhibition-block-1 .view-footer div, #block-views-now-exhibition-block-2 .view-footer div,
 #block-views-arts-galleries-block .view-footer div, #block-views-arts-galleries-block-2 .view-footer div {
@@ -751,7 +762,7 @@ html.js .collapsed .fieldset-legend {
   margin-right: 5px;
   margin-left: 0;
 }
-/* line 352, ../sass/components/_arts-rtl.scss */
+/* line 357, ../sass/components/_arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-prev,
 #block-views-now-exhibition-block-1 .owl-controls .owl-next,
 #block-views-now-exhibition-block-1 .owl-controls .owl-prev, #block-views-now-exhibition-block-2 .owl-controls .owl-next, #block-views-now-exhibition-block-2 .owl-controls .owl-prev,
@@ -760,7 +771,7 @@ html.js .collapsed .fieldset-legend {
   right: 0;
   left: auto;
 }
-/* line 356, ../sass/components/_arts-rtl.scss */
+/* line 361, ../sass/components/_arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .owl-controls .owl-next, #block-views-exhibition-gallery-block .owl-controls .owl-next,
 #block-views-now-exhibition-block-1 .owl-controls .owl-next, #block-views-now-exhibition-block-2 .owl-controls .owl-next,
 #block-views-arts-galleries-block .owl-controls .owl-next, #block-views-arts-galleries-block-2 .owl-controls .owl-next {
@@ -768,7 +779,7 @@ html.js .collapsed .fieldset-legend {
   left: auto;
   background-position: 7px 0;
 }
-/* line 361, ../sass/components/_arts-rtl.scss */
+/* line 366, ../sass/components/_arts-rtl.scss */
 #block-views-exhibition-gallery-block-2 .owl-controls .owl-prev, #block-views-exhibition-gallery-block .owl-controls .owl-prev,
 #block-views-now-exhibition-block-1 .owl-controls .owl-prev, #block-views-now-exhibition-block-2 .owl-controls .owl-prev,
 #block-views-arts-galleries-block .owl-controls .owl-prev, #block-views-arts-galleries-block-2 .owl-controls .owl-prev {
@@ -778,22 +789,22 @@ html.js .collapsed .fieldset-legend {
 }
 
 /*****************  footer  ************/
-/* line 372, ../sass/components/_arts-rtl.scss */
+/* line 377, ../sass/components/_arts-rtl.scss */
 #footer #block-block-1 {
   background: url("../images/huji.png") no-repeat right center transparent;
   float: right;
-  padding: 2px 55px 12px 0px;
+  padding: 2px 55px 22px 0px;
   text-align: right;
   width: 32%;
 }
 @media (max-width: 767px) {
-  /* line 372, ../sass/components/_arts-rtl.scss */
+  /* line 377, ../sass/components/_arts-rtl.scss */
   #footer #block-block-1 {
     background: none;
     padding: 0;
   }
 }
-/* line 383, ../sass/components/_arts-rtl.scss */
+/* line 388, ../sass/components/_arts-rtl.scss */
 #footer #block-block-3 {
   float: right;
   width: 45%;
@@ -802,16 +813,22 @@ html.js .collapsed .fieldset-legend {
   padding-top: 1px;
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  /* line 390, ../sass/components/_arts-rtl.scss */
+  /* line 395, ../sass/components/_arts-rtl.scss */
   #footer #block-block-3 p {
     float: right;
   }
-  /* line 393, ../sass/components/_arts-rtl.scss */
+  /* line 398, ../sass/components/_arts-rtl.scss */
   #footer #block-block-3 .view-last-update {
     float: left;
   }
 }
-/* line 398, ../sass/components/_arts-rtl.scss */
+@media (max-width: 767px) {
+  /* line 388, ../sass/components/_arts-rtl.scss */
+  #footer #block-block-3 {
+    margin: 0;
+  }
+}
+/* line 406, ../sass/components/_arts-rtl.scss */
 #footer #block-block-2 {
   padding-right: 0px;
   padding-left: 0;
@@ -821,7 +838,7 @@ html.js .collapsed .fieldset-legend {
   width: 20%;
 }
 @media (max-width: 767px) {
-  /* line 398, ../sass/components/_arts-rtl.scss */
+  /* line 406, ../sass/components/_arts-rtl.scss */
   #footer #block-block-2 {
     margin: 0;
     text-align: left;
@@ -829,25 +846,25 @@ html.js .collapsed .fieldset-legend {
 }
 
 /**********  art page  ***********/
-/* line 415, ../sass/components/_arts-rtl.scss */
+/* line 423, ../sass/components/_arts-rtl.scss */
 .node-type-art .region-content-top {
   float: left;
 }
-/* line 418, ../sass/components/_arts-rtl.scss */
+/* line 426, ../sass/components/_arts-rtl.scss */
 .node-type-art .right {
   float: right;
 }
-/* line 421, ../sass/components/_arts-rtl.scss */
+/* line 429, ../sass/components/_arts-rtl.scss */
 .node-type-art #page-title {
   text-align: right;
 }
-/* line 425, ../sass/components/_arts-rtl.scss */
+/* line 433, ../sass/components/_arts-rtl.scss */
 .node-type-art #wrapper-title span {
   margin-right: -5px;
   margin-left: 5px;
 }
 @media (max-width: 767px) {
-  /* line 430, ../sass/components/_arts-rtl.scss */
+  /* line 438, ../sass/components/_arts-rtl.scss */
   .node-type-art #wrapper-title .field-name-field-artis {
     border-left: 1px solid;
     margin-left: 5px;
@@ -857,35 +874,35 @@ html.js .collapsed .fieldset-legend {
     padding-right: 0;
   }
 }
-/* line 440, ../sass/components/_arts-rtl.scss */
+/* line 448, ../sass/components/_arts-rtl.scss */
 .node-type-art #page-title {
   float: right;
 }
-/* line 443, ../sass/components/_arts-rtl.scss */
+/* line 451, ../sass/components/_arts-rtl.scss */
 .node-type-art .place, .node-type-art .details {
   float: right;
   clear: right;
 }
 
 /*********  the gallery   ***********/
-/* line 452, ../sass/components/_arts-rtl.scss */
+/* line 460, ../sass/components/_arts-rtl.scss */
 .view-the-gallery .place1 {
   float: right;
 }
-/* line 455, ../sass/components/_arts-rtl.scss */
+/* line 463, ../sass/components/_arts-rtl.scss */
 .view-the-gallery .place2, .view-the-gallery .place3 {
   float: left;
 }
-/* line 458, ../sass/components/_arts-rtl.scss */
+/* line 466, ../sass/components/_arts-rtl.scss */
 .view-the-gallery .place4, .view-the-gallery .place6 {
   float: right;
   clear: right;
 }
-/* line 462, ../sass/components/_arts-rtl.scss */
+/* line 470, ../sass/components/_arts-rtl.scss */
 .view-the-gallery .place5 {
   float: left;
 }
-/* line 466, ../sass/components/_arts-rtl.scss */
+/* line 474, ../sass/components/_arts-rtl.scss */
 .view-the-gallery .views-field-title .title {
   border-left: 1px solid;
   padding-left: 10px;
@@ -896,86 +913,71 @@ html.js .collapsed .fieldset-legend {
 }
 
 /**** art at the capus **/
-/* line 480, ../sass/components/_arts-rtl.scss */
-#block-views-arts-block-1 .form-type-select {
-  background: url("../images/sort-triangle.png") no-repeat left center #3e3e3f;
-}
-/* line 483, ../sass/components/_arts-rtl.scss */
-#block-views-arts-block-1 #edit-field-campus-tid-wrapper .form-type-select {
-  background: url("../images/sort-triangle.png") no-repeat left center #00A294;
-}
-/* line 486, ../sass/components/_arts-rtl.scss */
+/* line 488, ../sass/components/_arts-rtl.scss */
 #block-views-arts-block-1 .views-widget-sort-order {
   display: none;
 }
-/* line 489, ../sass/components/_arts-rtl.scss */
+/* line 491, ../sass/components/_arts-rtl.scss */
 #block-views-arts-block-1 select {
   width: 268px !important;
 }
-/* line 492, ../sass/components/_arts-rtl.scss */
+/* line 494, ../sass/components/_arts-rtl.scss */
 #block-views-arts-block-1 .form-item-field-art-type-tid select {
-  width: 129px !important;
+  width: 140px !important;
 }
-/* line 496, ../sass/components/_arts-rtl.scss */
+/* line 498, ../sass/components/_arts-rtl.scss */
 #block-views-arts-block-1 .views-widget-sort-by select {
   width: 131px !important;
 }
-/* line 500, ../sass/components/_arts-rtl.scss */
+/* line 502, ../sass/components/_arts-rtl.scss */
 #block-views-arts-block-1 .views-exposed-widgets {
   margin: 0 auto;
-  width: 580px;
+  width: 592px;
   max-width: 100%;
 }
 
-/* line 507, ../sass/components/_arts-rtl.scss */
+/* line 509, ../sass/components/_arts-rtl.scss */
 .views-exposed-form .views-exposed-widget {
   float: right;
   padding: 0.5em  0 0 1em;
 }
 
-/* line 512, ../sass/components/_arts-rtl.scss */
+/* line 514, ../sass/components/_arts-rtl.scss */
 .views-submit-button {
   padding-left: 0 !important;
 }
 
 /************  design select  ************/
-/* line 520, ../sass/components/_arts-rtl.scss */
-#block-views-arts-block-1 select {
-  text-align: right;
-  padding-right: 7px;
+/* line 521, ../sass/components/_arts-rtl.scss */
+#block-lang-dropdown-language {
+  text-align: left;
 }
-/* line 524, ../sass/components/_arts-rtl.scss */
-#block-views-arts-block-1 .form-type-select {
-  float: left;
+/* line 523, ../sass/components/_arts-rtl.scss */
+#block-lang-dropdown-language .select2-container .select2-choice .select2-arrow {
+  right: 0;
+  left: auto;
 }
-
-/* line 530, ../sass/components/_arts-rtl.scss */
-#block-lang-dropdown-language select {
-  text-align: left !important;
-  padding-right: 7px;
-  width: 55px !important;
-}
-/* line 535, ../sass/components/_arts-rtl.scss */
-#block-lang-dropdown-language .form-type-select {
-  float: left;
+/* line 527, ../sass/components/_arts-rtl.scss */
+#block-lang-dropdown-language .select2-container .select2-choice > .select2-chosen {
+  margin-left: 6px;
 }
 
 /************  contact   **************/
-/* line 542, ../sass/components/_arts-rtl.scss */
+/* line 535, ../sass/components/_arts-rtl.scss */
 .node-webform .field-name-field-text {
   float: right;
 }
-/* line 545, ../sass/components/_arts-rtl.scss */
+/* line 538, ../sass/components/_arts-rtl.scss */
 .node-webform #webform-client-form-11 {
   float: left;
 }
-/* line 548, ../sass/components/_arts-rtl.scss */
+/* line 541, ../sass/components/_arts-rtl.scss */
 .node-webform #webform-client-form-11 input.form-submit, .node-webform #webform-client-form-11 textarea.form-submit {
   float: left;
 }
 
 /*********  regulat page  ***********/
-/* line 559, ../sass/components/_arts-rtl.scss */
+/* line 552, ../sass/components/_arts-rtl.scss */
 .node-type-page #wrapper-title .sub-title {
   border-right: 1px solid;
   margin-right: 7px;
@@ -985,22 +987,47 @@ html.js .collapsed .fieldset-legend {
   padding-left: 0;
 }
 
-/* line 573, ../sass/components/_arts-rtl.scss */
+/* line 566, ../sass/components/_arts-rtl.scss */
 .overlay .close-button {
   right: 20px;
   left: auto;
 }
-/* line 577, ../sass/components/_arts-rtl.scss */
+/* line 570, ../sass/components/_arts-rtl.scss */
 .overlay .next_i {
   left: 0px;
   right: auto;
   background: url("../images/arrow-left-g.png") no-repeat center center;
 }
-/* line 582, ../sass/components/_arts-rtl.scss */
+/* line 575, ../sass/components/_arts-rtl.scss */
 .overlay .prev_i {
   right: 0px;
   left: auto;
   background: url("../images/arrow-right-g.png") no-repeat center center;
+}
+
+/********   design select  **********/
+/* line 588, ../sass/components/_arts-rtl.scss */
+#block-lang-dropdown-language .select2-container .select2-choice .select2-arrow b {
+  background: url("../images/lang_triangle.png") no-repeat left 47% transparent;
+}
+/* line 591, ../sass/components/_arts-rtl.scss */
+#block-lang-dropdown-language .select2-container .select2-choice .select2-arrow {
+  right: 0;
+  left: auto;
+}
+
+/* line 598, ../sass/components/_arts-rtl.scss */
+#select2-results-1 .select2-result-label {
+  text-align: left;
+}
+
+/* line 607, ../sass/components/_arts-rtl.scss */
+#block-views-arts-block .select2-container .select2-choice .select2-arrow b, #block-views-arts-block-1 .select2-container .select2-choice .select2-arrow b {
+  background: url("../images/sort-triangle.png") no-repeat left center #3e3e3f;
+}
+/* line 611, ../sass/components/_arts-rtl.scss */
+#block-views-arts-block #edit-field-campus-tid-wrapper .select2-container .select2-choice .select2-arrow b, #block-views-arts-block-1 #edit-field-campus-tid-wrapper .select2-container .select2-choice .select2-arrow b {
+  background: url("../images/sort-triangle.png") no-repeat left center #00A294;
 }
 
 /* SMACSS theme rules */

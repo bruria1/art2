@@ -19,6 +19,7 @@
      <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
      <?php if(isset($node->field_sub_title['und'][0]['value'])) { ?>
         <div class="sub-title"> 
+          <span class="line-place">|</span>
            <?php print $node->field_sub_title['und'][0]['value']; ?>
         </div>
    <?php }?>
@@ -79,24 +80,27 @@
     </div> 
         <div class="close">
    <?php if (render($content['field_month_date_2'])){?>
+         <span class="line-place">|</span>
         <div class="label"><?php print t("Closing Date:");?></div>
         <?php print render($content['field_month_date_2']); 
     }
     else if (render($content['field_year_date_2'])){?>
+          <span class="line-place">|</span>
         <div class="label"><?php print t("Closing Date:");?></div>
         <?php print render($content['field_year_date_2']); 
     }
     else if (render($content['field_full_date_2'])){?>
+          <span class="line-place">|</span>
       <div class="label"><?php print t("Closing Date:");?></div>
       <?php print render($content['field_full_date_2']); 
     } ?>
     </div>
   </div>
-
   <?php print render($content['field_text']); ?>
   <?php print render($content['field_download_file']); ?>
   <?php print render($content['field_youtube_video']); ?>
 
+  <div class="field-name-field-place-site"><?php print $node->field_place_site['und'][0]['tid']; ?></div>
 <div id="share">
   <div class="pinterest link">
     <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
@@ -122,8 +126,10 @@
 
 
 </div>  
-
-  <?php print render($content['flippy_pager']);?> 
+<?php if (($node->field_place_site['und'][0]['tid']==195)||
+($node->field_place_site['und'][0]['tid']==200))  {
+  print render($content['flippy_pager']);
+  } ?> 
 
   <?php print render($content['links']); ?>
 

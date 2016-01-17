@@ -33,3 +33,75 @@ function art_costum_form_alter(&$form, &$form_state, $form_id) {
   }
   //dpm($form_id);
 }
+
+function art_costum_query_alter_flippy_query_alter($query) {
+  $exhibition = FALSE;
+  $node = FALSE;
+  foreach ($query->conditions() as $condition) {
+    if (!is_array($condition) or !is_string($condition['field'])) {
+      continue;
+    }
+    if ($condition['field'] == 'type' and $condition['value'] == 'exhibition') {
+      $exhibition = TRUE;
+    }
+    if ($condition['field'] == 'n.nid') {
+      $node = node_load($condition['value']);
+    }
+  }
+
+  if (!$exhibition or !$node) {
+    return;
+  }
+  $place = field_get_items('node', $node, 'field_place_site');
+  if (!$place) {
+    return;
+  }
+  $tid = $place[0]['tid'];
+
+  $query->join('field_data_field_place_site', 'fps', 'fps.entity_id = n.nid and fps.bundle = ' . "'exhibition'");
+  $query->condition('fps.field_place_site_tid', $tid);
+  
+}
+
+if (!function_exists('array_replace_recursive'))
+{
+  function art_costum_recurse($array, $array1)
+  {
+    foreach ($array1 as $key => $value)
+    {
+      // create new key in $array, if it is empty or not an array
+      if (!isset($array[$key]) || (isset($array[$key]) && !is_array($array[$key])))
+      {
+        $array[$key] = array();
+      }
+
+      // overwrite the value in the base array
+      if (is_array($value))
+      {
+        $value = art_costum_recurse($array[$key], $value);
+      }
+      $array[$key] = $value;
+    }
+    return $array;
+  }
+
+  function array_replace_recursive($array, $array1)
+  {
+ 
+    // handle the arguments, merge one by one
+    $args = func_get_args();
+    $array = $args[0];
+    if (!is_array($array))
+    {
+      return $array;
+    }
+    for ($i = 1; $i < count($args); $i++)
+    {
+      if (is_array($args[$i]))
+      {
+        $array = art_costum_recurse($array, $args[$i]);
+      }
+    }
+    return $array;
+  }
+}

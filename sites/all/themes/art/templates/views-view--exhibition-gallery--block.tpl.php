@@ -62,10 +62,10 @@
 </div><?php /* class view */ ?>
 <script>    
   var ovrLay = new OverLayHandler("block-views-exhibition-gallery-block");  
-  var owlBlock2 = jQuery('.i18n-he .view-display-id-block .owl-carousel ,'+
+  var owlBlock = jQuery('.i18n-he .view-display-id-block .owl-carousel ,'+
             '.i18n-en .view-display-id-block .owl-carousel');        
   jQuery(function(){   
-    owlBlock2.each(function(i,n){
+    owlBlock.each(function(i,n){
       var isRtl = jQuery(n).parents("body").hasClass("i18n-he");
       var options = {
         rtl:isRtl,
@@ -86,7 +86,7 @@
       jQuery(".view-display-id-block .owl-controls .owl-nav").addClass("first");
     });    
   });   
-  owlBlock2.addClass("owl_3_items");
-  owlBlock2.on('changed.owl.carousel', owlClick);  
+  owlBlock.addClass("owl_3_items");
+  owlBlock.on('changed.owl.carousel', owlClick);  
 </script>
 

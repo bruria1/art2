@@ -17,6 +17,27 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
+if (($(".node-type-exhibition .field-name-field-place-site").html()=="197") || 
+($(".node-type-exhibition .field-name-field-place-site").html()=="198")){
+  $('body').addClass('explace1');
+}
+else if (($(".node-type-exhibition .field-name-field-place-site").html()=="200") || 
+($(".node-type-exhibition .field-name-field-place-site").html()=="195")){
+  $('body').addClass('explace2');
+}
+else if (($(".node-type-exhibition .field-name-field-place-site").html()=="199") || 
+($(".node-type-exhibition .field-name-field-place-site").html()=="196")){
+  $('body').addClass('explace3');
+}
+
+$("#dhtml_menu-1061 a").click(function(){
+  $("#dhtml_menu-1056 ul").css("display", "none"); 
+});
+
+$("#dhtml_menu-1056 a").click(function(){
+  $("#dhtml_menu-1061 ul").css("display", "none"); 
+});
+
 
 
 function InitializeSelect(elem) {
@@ -67,7 +88,9 @@ $(document).ready(function(){
 
 $(".i18n-he #block-lang-dropdown-language option:last").html("Heb");
 $(".i18n-he #block-lang-dropdown-language option:first").html("Eng");
+$(".i18n-he #select2-chosen-1").html("Heb");
 $(".i18n-en #block-lang-dropdown-language option:first").html("אנגלית");
+$(".i18n-en #select2-chosen-1").html("אנגלית");
 
 /*********   number of image at gallery  *******/
 
@@ -121,7 +144,6 @@ $(window).resize(function() {
       $("#triangle-topleft").css("border-top-width", "0");
     }
 });
-
 
 if ($("div").hasClass("view-the-gallery")) {
    $i = 1;

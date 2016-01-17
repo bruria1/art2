@@ -203,8 +203,8 @@ header .logo-mobile{
 // The language switcher blcok
 #block-lang-dropdown-language {
   float: left;
-  .form-type-select {
-    background: url("../images/lang_triangle.png") no-repeat right 40% transparent;
+  .select2-container .select2-choice .select2-arrow b {
+    background: url("../images/lang_triangle.png") no-repeat right 47% transparent;
   }
 }
 
@@ -225,6 +225,12 @@ header .logo-mobile{
 .region-top{
   .text-slide{
     .wrapper{
+      .name{
+        @include res(s){
+          padding-left: 0;
+          padding-right: 0px;
+        }
+      }
       .text{
         left: 60px;
         right: auto;
@@ -241,9 +247,18 @@ header .logo-mobile{
         border-right: none;
         margin-right: 0;
         padding-right: 0;
+        @include res(s){
+          text-align: right;
+          float: right!important;
+        }
       }
       .second-title{
         float:right;
+        text-align: right;
+        @include res(s){
+          float: right!important;
+          clear: right;
+        }
       }
       .continue{
         float: right;
@@ -280,37 +295,27 @@ header .logo-mobile{
 /**********  exhibition page ************/
 
 .node-type-exhibition, .page-node-2619{
-  #wrapper-title{
-    .sub-title{
-      border-right: 1px solid;
-      margin-right: 7px;
-      padding-right: 11px;
-      border-left: none;
-      margin-left: 0;
-      padding-left: 0;
-    }
-  }
   .treasurers-designers{
-    .field-name-field-treasurers-name{
-      margin-right: 18px;
-    }
     .field-name-field-designers, .field-name-field-treasurers-name{
+      .field-label{
+        margin-left: -5px;
+        margin-right: 0;
+      }
       .field-item{
         float: right;
-        margin-left: 5px;
-        margin-right: 0;
+        margin-right: 5px;
+        margin-left: 0;
         text-align: right;
       }
     }
   }
   .dates{
     .close{
-      border-right: 1px solid;
-      margin-right: 7px;
-      padding-right: 11px;
-      border-left: none;
-      margin-left: 0;
-      padding-left: 0;
+      .line-place{
+        margin-left: 6px;
+        margin-right: 0;
+        float: right;
+      }
     }
     .label{
       float: right;
@@ -372,7 +377,7 @@ header .logo-mobile{
   #block-block-1{
     background: url("../images/huji.png") no-repeat right center transparent;
     float: right;
-    padding: 2px 55px 12px 0px;
+    padding: 2px 55px 22px 0px;
     text-align: right;
     width: 32%;
     @include res(s-m){
@@ -393,6 +398,9 @@ header .logo-mobile{
       .view-last-update{
         float: left;
       }
+    }
+    @include res(s-m){
+      margin: 0;
     }
   }
   #block-block-2{
@@ -477,12 +485,6 @@ header .logo-mobile{
 /**** art at the capus **/
 
 #block-views-arts-block-1{
-  .form-type-select {
-    background: url("../images/sort-triangle.png") no-repeat left center #3e3e3f;
-  }
-  #edit-field-campus-tid-wrapper .form-type-select {
-    background: url("../images/sort-triangle.png") no-repeat left center $green;
-  }
   .views-widget-sort-order{
     display: none;
   }
@@ -490,7 +492,7 @@ header .logo-mobile{
     width: 268px!important;
   }
   .form-item-field-art-type-tid select{
-    width: 129px!important;
+    width: 140px!important;
   }
   .views-widget-sort-by{
     select{
@@ -499,7 +501,7 @@ header .logo-mobile{
   }
   .views-exposed-widgets {
       margin: 0 auto;
-      width: 580px;
+      width: 592px;
       max-width: 100%;
   }
 }
@@ -516,26 +518,17 @@ header .logo-mobile{
 
 /************  design select  ************/
 
-#block-views-arts-block-1 {
-  select {
-    text-align: right;
-    padding-right: 7px;
+#block-lang-dropdown-language{
+  text-align: left;
+  .select2-container .select2-choice .select2-arrow{
+    right: 0;
+    left: auto;
   }
-  .form-type-select {
-    float: left;
+  .select2-container .select2-choice > .select2-chosen{
+    margin-left: 6px;
   }
 }
 
-#block-lang-dropdown-language {
-  select {
-    text-align: left!important;
-    padding-right: 7px;
-    width: 55px!important;
-  }
-  .form-type-select {
-    float: left;
-  }
-}
 /************  contact   **************/
 
 .node-webform{
@@ -583,5 +576,40 @@ header .logo-mobile{
     right: 0px;
     left: auto;
     background:  url("../images/arrow-right-g.png") no-repeat center center;
+  }
+}
+
+
+
+/********   design select  **********/
+
+// The language switcher blcok
+#block-lang-dropdown-language {
+  .select2-container .select2-choice .select2-arrow b {
+    background: url("../images/lang_triangle.png") no-repeat left 47% transparent;
+  }
+  .select2-container .select2-choice .select2-arrow{
+    right: 0;
+    left: auto;
+  }
+}
+
+#select2-results-1{
+  .select2-result-label{
+      text-align: left;
+  } 
+}
+
+
+// exposed filter
+
+#block-views-arts-block, #block-views-arts-block-1{
+  .select2-container .select2-choice .select2-arrow b {
+    background: url("../images/sort-triangle.png") no-repeat left center #3e3e3f;
+  }
+  #edit-field-campus-tid-wrapper{
+  .select2-container .select2-choice .select2-arrow b {
+      background: url("../images/sort-triangle.png") no-repeat left center $green;
+    }
   }
 }

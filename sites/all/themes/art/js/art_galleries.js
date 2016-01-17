@@ -55,8 +55,6 @@ function OverLayHandler(galId){
    });
    jQuery("#art_overlay").click(function(){
      jQuery(this).css("display","none");
-    jQuery("body").removeClass("overlay-gallery");
-
    });
    this.next = function(){
       this.change(i++);
@@ -83,7 +81,6 @@ function OverLayHandler(galId){
         jQuery('#art_overlay').removeClass('throbber');
       });
       jQuery("#art_overlay").css("display","block");
-      jQuery("body").addClass("overlay-gallery");
       jQuery("#art_overlay .cur_i").html((imgList.index(this)+1));
       jQuery("#art_overlay .cur_total").html(imgList.length);
    }
